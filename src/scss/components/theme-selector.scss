@@ -1,0 +1,19 @@
+
+footer {
+    #theme-selectors {
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 2rem;
+            opacity: 0.77;
+            svg {
+                height: 20px !important;
+                width: 20px !important;
+                fill: $colour_white;
+                &:hover {
+                    fill: $colour_sunny_side_up_yellow !important;
+                }
+            }
+        }
+    }
+}

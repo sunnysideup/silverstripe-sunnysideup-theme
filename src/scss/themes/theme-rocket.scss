@@ -1,0 +1,164 @@
+body.theme-rocket {
+    background-color: $colour_on_the_fence_green;
+    * {
+        color: $colour_white;
+    }
+    #header {
+        * {
+            color: $colour_blue_cobalter;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $colour_white;
+        }
+    }
+    a[data-add-class="theme-rocket"] {
+        text-decoration: none!important;
+    }
+    #nav {
+        #closed-icon {
+            .cls-1 {
+                fill: $colour_blue_cobalter;
+            }
+            .cls-2 {
+                fill: $colour_sunny_side_up_yellow;
+            }
+        }
+        #open-icon {
+            .cls-1 {
+                fill: $colour_blue_cobalter;
+            }
+            .cls-2 {
+                fill: $colour_sunny_side_up_yellow;
+            }
+        }
+        * {
+            color: $colour_sunny_side_up_yellow!important;
+        }
+    }
+    #main {
+        // background-color: #00000037;
+    }
+    #BackgroundImage {
+        display: block;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .typography {
+        *, a:link, a:visited {
+            color: $colour_white;
+        }
+        filter: drop-shadow(0 0 3px $colour_black);
+        h1, h2, h3, h4, h5, h6, address, p, ul {
+            filter: drop-shadow(0 0 3px $colour_black);
+        }
+        h1, h2 {
+            &:before {
+                border-top-color: transparent;
+            }
+        }
+        pre {
+            background-color: $colour_navy;
+            color: $colour_white;
+        }
+        th {
+            color: $colour_hypocrite_yellow;
+        }
+        hr {
+            border-color: $colour_hypocrite_yellow!important;
+        }
+    }
+
+    .typography pre {
+        background-color: $colour_navy;
+    }
+    .typography th {
+        color: $colour_white;
+    }
+    .typography hr {
+        border-color: $colour_white!important;
+    }
+    form {
+        * {
+            color: $colour_law_firm_report_cover!important;
+        }
+        .middleColumn {
+            input,
+            textarea,
+            select
+            {
+                border-bottom-color: $colour_law_firm_report_cover!important;
+            }
+        }
+        span.readonly {
+            border-bottom-color: $colour_law_firm_report_cover!important;
+        }
+        .btn-toolbar {
+            input {
+                background: $colour_hypocrite_yellow;
+            }
+        }
+    }
+    #Breadcrumbs {
+        border-color: $colour_white!important;
+    }
+    #footer {
+        background-color: $colour_purple_spirituality_in_the_sun;
+        * {
+            color: $colour_white;
+        }
+        p {
+            color: $colour_white;
+        }
+        #theme-selectors {
+            svg {
+                fill: $colour_white;
+            }
+            #theme-rocket {
+                svg {
+                    fill: $colour_sunny_side_up_yellow;
+                }
+            }
+        }
+    }
+    &.past-header {
+        #header {
+            background-color: hsla(0,0%,100%,0.7);
+            * {
+                color: $colour_black;
+                -webkit-text-stroke-width: 0px;
+            }
+        }
+    }
+    &.no-touch {
+        #footer, #nav {
+            opacity: 0.7;
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+        &.past-header {
+            #header {
+                h1 {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    &.menu-on {
+        #nav {
+            background-color: $colour_darker_grey_catch_22;
+        }
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    body.theme-rocket {
+        #nav {
+            background-color: $colour_darker_grey_catch_22;
+        }
+    }
+}

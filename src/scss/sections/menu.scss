@@ -1,0 +1,189 @@
+/**
+ * see responsive.css for media queries
+ */
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.7rem;
+    width: 3.7rem;
+    z-index: 5;
+    a {
+        text-decoration: none;
+    }
+    * {
+        font-family: $base_font_headers;
+        font-weight: 500;
+    }
+    i {
+        font-style: normal;
+    }
+
+    #menu-toggle {
+        height: 3.7rem;
+        width: 3.7rem;
+        line-height: 3.7rem; //required to center;
+        right: auto;
+        position: absolute;
+        left: 6vw;
+        top: 3vh;
+        opacity: 0.9;
+        z-index: 9;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+        text-decoration: none;
+        outline: 0;
+        svg {
+            height: calc(5.7rem * 0.7);
+            width: auto;
+            vertical-align: middle;
+        }
+    }
+
+    #nav-inner {
+        vertical-align: middle;
+        opacity: 0;
+        margin: 12vh 0 0 0;
+        padding: 0 0 0 15vw;
+        height: 0;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        overflow-x: visible;
+        overflow-y: auto;
+        ul {
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            li {
+                padding-left: 0;
+                margin-left: 0;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+                font-size: 2.5rem;
+                list-style: none;
+                text-transform: uppercase;
+                a {
+                    border-bottom: 3px solid transparent;
+                    &:hover {
+                        border-bottom: 3px solid $colour_blue_cobalter;
+                    }
+                }
+                ul {
+                    li {
+                        font-size: 1.7rem;
+                        margin-bottom: 1.3rem;
+                        margin-top: 1.3rem;
+                        ul {
+                            li {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+            li.current {
+                > a {
+                    border-bottom: 3px solid $colour_blue_cobalter;
+                }
+            }
+            li.section {
+                > a {
+                    // text-decoration: underline;
+                    // text-decoration-style: dashed;
+                }
+            }
+        }
+    }
+    #closed-icon {
+        display: inline-block;
+        opacity: 1;
+        color: #fff;
+        font-size: 5rem;
+    }
+    #open-icon {
+        font-size: 5rem;
+        display: none;
+        opacity: 0!important;
+    }
+}
+
+
+body.past-header,
+body.menu-on {
+    #nav {
+        #menu-toggle {
+            opacity: 1;
+            top: 0;
+            left: 6vw;
+            svg {
+                height: calc(3.7rem * 0.7);
+            }
+        }
+    }
+}
+
+body.menu-on {
+    #nav {
+        background-color: $colour_sunny_side_up_yellow;
+        opacity: 1;
+        height: 100vh;
+        width: 100vw;
+        #nav-inner {
+            opacity: 1!important;
+            display: block;
+            height: calc(100vh - 12vh);
+        }
+        #closed-icon {
+            display: none;
+            opacity: 0;
+        }
+        #open-icon {
+            display: inline-block;
+            opacity: 1!important;
+        }
+    }
+    @media only screen and (max-width: 1049px) {
+        #nav {
+            z-index: 999;
+        }
+    }
+}
+body.no-touch {
+    #nav {
+        #menu-toggle {
+            svg {
+                opacity: 0.9;
+            }
+            &:hover {
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+// body.scrolled-down:not(.menu-on) {
+//     @media only screen and (max-width: 1049px) {
+//         #nav,
+//         #menu-toggle {
+//             height: 0!important;
+//             padding: 0!important;
+//             margin-top: 20px!important;
+//             bottom: 0;
+//         }
+//         #menu-toggle {
+//             svg {
+//                 height: 0!important;
+//             }
+//         }
+//     }
+// }

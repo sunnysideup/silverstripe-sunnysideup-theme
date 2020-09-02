@@ -1,0 +1,15 @@
+{
+  "name": "sunnysideup/sunny-side-up-silverstripe-theme",
+  "description": "SilverStripe theme used in-house by Sunny Side Up",
+  "type": "silverstripe-theme",
+  "keywords": ["silverstripe", "theme"],
+  "license": "BSD-3-Clause",
+  "extra": {
+    "installer-name": "sun",
+    "expose": [
+      "dist"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

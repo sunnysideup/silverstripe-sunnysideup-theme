@@ -1,0 +1,10 @@
+body.theme-sun {
+    a[data-add-class="theme-sun"] {
+        text-decoration: none!important;
+    }
+    #theme-sun {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
+        }
+    }
+}

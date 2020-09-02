@@ -1,0 +1,32 @@
+
+
+.collapsibleList {
+    li {
+        position: relative;
+        &.collapsibleListClosed {
+            > span {
+                i.closed {
+                    display: none;
+                }
+            }
+        }
+        &.collapsibleListOpen {
+            > span {
+                i.open {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    span {
+        position: absolute;
+        left: -2.5rem;
+        top: 0;
+        width: 2.5rem;
+        display: block;
+        i {
+            display: block;
+        }
+    }
+}

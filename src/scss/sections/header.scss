@@ -1,0 +1,99 @@
+#header {
+    img {display: none;}
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    #logo {
+        display: block;
+        background-image: url(./images/logo-small.svg);
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: 6vw;
+        z-index: 3;
+    }
+    h1 {
+        font-weight: 500;
+        font-family: $base_font_headers;
+        text-transform: uppercase;
+        line-height: 1;
+        position: relative;
+        color: $colour_blue_cobalter;
+        position: absolute;
+        text-align: right;
+        z-index: 3;
+        margin-left: 17vw;
+        a {
+            text-decoration: none;
+        }
+        a, span {
+            opacity: 0.7;
+        }
+        a.page-title {
+            opacity: 1;
+        }
+    }
+}
+body.past-header {
+    #header {
+        height: calc(1.7rem + 2rem);
+        z-index: 3;
+        background-color: #fff;
+        position: fixed;
+        // &:before {
+        //     content: '';
+        //     line-height: 0;
+        //     font-size: 0;
+        //     width: 0;
+        //     height: 0;
+        //     border-top: calc( 2 * (1.7rem + 2rem)) solid $colour_burngreen;
+        //     border-bottom: 0px solid transparent;
+        //     border-left: calc( 1 * (1.7rem + 2rem)) solid transparent;
+        //     border-right: 0px solid transparent;
+        //     position: absolute;
+        //     top: calc( -1 * (1.7rem + 2rem));
+        //     left: calc( -1 * (1.7rem + 2rem));
+        // }
+        #logo {
+            height: 193px!important;
+            width: 193px!important;
+            opacity: 0.2!important;
+            margin-top: 0;
+            z-index: 0
+        }
+        h1 {
+            color: $colour_yep_thats_grey;
+            * {
+                color: $colour_yep_thats_grey;
+            }
+            .page-title {
+                color: $colour_blue_cobalter;
+            }
+            display: block;
+            font-size: 1.7rem;
+            right: 6vw;
+            opacity: 1;
+            top: 0px;
+        }
+        svg {
+            filter: grayscale(100%);
+        }
+    }
+}
+
+// body.footer-visible {
+//     #header,
+//     #header * {
+//         height: 0;
+//         overflow: hidden;
+//     }
+// }
+
+@media only screen and (max-width: 1049px) {
+    body.footer-visible {
+        #nav {
+            height: 0;
+        }
+    }
+}

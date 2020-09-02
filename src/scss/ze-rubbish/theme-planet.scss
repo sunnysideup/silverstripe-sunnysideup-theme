@@ -1,0 +1,93 @@
+// body.theme-planet {
+//     background-color: $colour_red;
+//     * {
+//         color: $colour_white;
+//     }
+//     #header {
+//         span {
+//             color: $colour_painty_green;
+//         }
+//         a {
+//             color: $colour_anthroposofia;
+//         }
+//         h1 {
+//             color: $colour_boot_black;
+//         }
+//         h1#fixed-h1 {
+//             color: $colour_blue;
+//         }
+//     }
+//     #nav {
+//         background-color: $colour_purple;
+//         #closed-icon {
+//             .cls-1 {
+//                 fill: $colour_anthroposofia;
+//             }
+//             .cls-2 {
+//                 fill: $colour_sunny_side_up_yellow;
+//             }
+//         }
+//         #open-icon {
+//             .cls-1 {
+//                 fill: $colour_anthroposofia;
+//             }
+//             .cls-2 {
+//                 fill: $colour_yellow;
+//             }
+//         }
+//     }
+//     .typography ul ul li,
+//     .typography ol ul li,
+//     .typography ul ol li,
+//     .typography ol ol li
+//     {
+//         color: $colour_hypocrite_yellow;
+//     }
+//     .typography pre {
+//         background-color: $colour_navy;
+//     }
+//     .typography th {
+//         color: $colour_white;
+//     }
+//     .typography hr {
+//         border-color: $colour_navy!important;
+//     }
+//     form * {
+//         color: $colour_navy;
+//     }
+//     #Breadcrumbs {
+//         border-color: $colour_white!important;
+//     }
+//     footer#footer {
+//         background-color: $colour_anthroposofia;
+//         * {
+//             color: $colour_white;
+//         }
+//         p {
+//             color: $colour_white;
+//         }
+//         #theme-selectors {
+//             svg {
+//                 fill: $colour_white;
+//             }
+//             #theme-planet {
+//                 svg {
+//                     fill: $colour_red;
+//                 }
+//             }
+//         }
+//     }
+//     &.past-header {
+//         #header {
+//             h1#fixed-h1 {
+//                 color: $colour_pink;
+//             }
+//         }
+//     }
+// }
+//
+// @media only screen and (min-width: 1350px) {
+//     body.theme-planet #theme-selectors {
+//         background-color: $colour_anthroposofia;
+//     }
+// }

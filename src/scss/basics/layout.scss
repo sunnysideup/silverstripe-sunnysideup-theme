@@ -1,0 +1,25 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: $colour_light_grey_aotrom;
+    font-family: $base_font;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $colour_light_grey_aotrom;
+    font-family: $base_font;
+}
+#BackgroundImage {
+    display: none;
+}
+main {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;
+}
+footer#footer {
+    padding: 2rem;
+}

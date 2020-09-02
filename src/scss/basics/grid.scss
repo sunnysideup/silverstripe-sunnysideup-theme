@@ -1,0 +1,11 @@
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+.center-align-row {
+    text-align: center;
+    * {
+        text-align: center;
+    }
+}

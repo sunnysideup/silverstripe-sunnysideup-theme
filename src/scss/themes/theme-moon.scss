@@ -1,0 +1,154 @@
+
+body.theme-moon {
+    background-color: $colour_law_firm_report_cover;
+    * {
+        color: $colour_hypocrite_yellow;
+    }
+    #header {
+        #logo {
+            background-image: url(./images/logo-small-inverted.svg);
+        }
+        span {
+            color: $colour_burned_sunny_side_up;
+        }
+        h1 {
+            color: $colour_burned_sunny_side_up;
+        }
+    }
+    a[data-add-class="theme-moon"] {
+        text-decoration: none!important;
+    }
+    #nav {
+        #closed-icon {
+            .cls-1 {
+                fill: $colour_blue_cobalter;
+            }
+            .cls-2 {
+                fill: $colour_burned_sunny_side_up;
+            }
+        }
+        #open-icon {
+            .cls-1 {
+                fill: $colour_blue_cobalter;
+            }
+            .cls-2 {
+                fill: $colour_hypocrite_yellow;
+            }
+        }
+    }
+    .typography {
+        *, a:link, a:visited {
+            color: $colour_hypocrite_yellow;
+        }
+        h1, h2 {
+            &:before {
+                border-top-color: $colour_hypocrite_yellow;
+            }
+        }
+        pre {
+            background-color: $colour_blue_cobalter;
+            color: $colour_white;
+        }
+        th {
+            color: $colour_hypocrite_yellow;
+        }
+        td {
+            background-color: $colour_white;
+            color: $colour_darker_grey_catch_22;
+            * {
+                color: $colour_darker_grey_catch_22!important;
+            }
+        }
+        hr {
+            border-color: $colour_hypocrite_yellow!important;
+        }
+        .media, img {
+            background-color: $colour_white;
+            border-color: $colour_white;
+        }
+    }
+
+    form {
+        * {
+            color: $colour_law_firm_report_cover!important;
+        }
+        .middleColumn {
+            input,
+            textarea,
+            select
+            {
+                border-bottom-color: $colour_law_firm_report_cover!important;
+            }
+        }
+        span.readonly {
+            border-bottom-color: $colour_law_firm_report_cover!important;
+        }
+        .btn-toolbar {
+            input {
+                background: $colour_hypocrite_yellow;
+            }
+        }
+    }
+    #Breadcrumbs {
+        border-color: $colour_hypocrite_yellow!important;
+    }
+    footer#footer {
+        background-color: $colour_rose_storm;
+        img {
+            // filter: invert(1);
+        }
+        * {
+            color: $colour_white;
+        }
+        p {
+            color: $colour_white;
+        }
+        li.current a, a:hover {
+            color: $colour_outer_space_love!important;
+        }
+        #theme-selectors {
+            svg {
+                fill: $colour_white;
+                &:hover {
+                    fill: $colour_outer_space_love !important;
+                }
+            }
+            #theme-moon {
+                svg {
+                    fill: $colour_outer_space_love !important;
+                }
+            }
+        }
+    }
+    &.past-header {
+        #header {
+            border-color: $colour_hypocrite_yellow;
+            background-color: $colour_burned_sunny_side_up;
+            // &:before {
+            //     border-top-color:  #000000c4;
+            // }
+            * {
+                color: #fff;
+            }
+            .page-title {
+                color: $colour_white;
+            }
+        }
+    }
+    &.menu-on {
+        #nav {
+            background-color: $colour_outer_space_love;
+        }
+    }
+    #BackgroundVideo {
+        background-color: $colour_black;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    body.theme-moon {
+        #nav {
+            background-color: $colour_outer_space_love;
+        }
+    }
+}

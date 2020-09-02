@@ -1,0 +1,43 @@
+/* The typing effect */
+/* @keyframes typing {
+    from { width: 0; height: 0; }
+    to { width: 100%; height: auto }
+} */
+/* The typewriter cursor effect */
+
+main#main {
+    blockquote {
+        padding: 0;
+        margin: 0;
+        margin-top: 0vh;
+        margin-top: 0vh;
+        padding-bottom: 12vh;
+        margin-right: 1.5vh;
+        p {
+            display: block;
+            margin: 0;
+            padding: 0;
+            font-size: calc(3.5vh + 3.5vw);
+            line-height: 1.2;
+            overflow: hidden;
+            letter-spacing: 0.1em;
+            font-weight: 200;
+            font-style: italic;
+            .blinker {
+                &:after {
+                    content: '▂';
+                    display: inline-block;
+                    text-align: center;
+                    font-size: calc(2.2vh + 2.2vw);
+                }
+                &:hover {
+                    &:after {
+                        content: '🚀';
+                    }
+                }
+
+                color: $colour_transparent;
+            }
+        }
+    }
+}

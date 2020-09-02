@@ -1,0 +1,80 @@
+//
+//
+// body.theme-star {
+//     background-color: $colour_black_rock_n_roll;
+//     * {
+//         color: $colour_organic_egg_yolk;
+//     }
+//     #header {
+//         #logo {
+//             background-image: url(./images/logo-small-inverted.svg);
+//         }
+//         span {
+//             color: $colour_center_shake_blue;
+//         }
+//         a {
+//             color: $colour_center_shake_blue;
+//         }
+//         h1 {
+//             color: $colour_organic_egg_yolk;
+//         }
+//         h1#fixed-h1 {
+//             color: $colour_hypocrite_yellow;
+//         }
+//     }
+//     #nav {
+//         background-color: $colour_center_shake_blue;
+//     }
+//     .typography ul ul li,
+//     .typography ol ul li,
+//     .typography ul ol li,
+//     .typography ol ol li
+//     {
+//         color: $colour_lucky_grey;
+//     }
+//     .typography pre {
+//         background-color: $colour_blue_cobalter;
+//         color: $colour_white;
+//     }
+//     .typography th {
+//         color: $colour_white;
+//     }
+//     .typography hr {
+//         border-color: $colour_blue_cobalter!important;
+//     }
+//     form * {
+//         color: $colour_blue_cobalter;
+//     }
+//     #Breadcrumbs {
+//         border-color: $colour_organic_egg_yolk!important;
+//     }
+//     footer#footer {
+//         background-color: $colour_organic_egg_yolk;
+//         * {
+//             color: $colour_black !important;
+//         }
+//         #theme-selectors {
+//             svg {
+//                 fill: $colour_black;
+//             }
+//             #theme-star {
+//                 svg {
+//                     fill: $colour_center_shake_blue;
+//                 }
+//             }
+//         }
+//     }
+//
+//     &.past-header {
+//         #header {
+//             h1#fixed-h1 {
+//                 color: $colour_blue_cobalter;
+//             }
+//         }
+//     }
+// }
+// @media only screen and (min-width: 1350px) {
+//     body.theme-star #theme-selectors {
+//         background-color: $colour_organic_egg_yolk!important;
+//     }
+// }

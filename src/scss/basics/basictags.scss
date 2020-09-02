@@ -1,0 +1,12 @@
+* {
+    color: $colour_blue_cobalter;
+}
+a {
+    color: $colour_blue_cobalter;
+    &:link {
+        color: $colour_blue_cobalter;
+    }
+    &:visited {
+        color: $colour_blue_cobalter;
+    }
+}

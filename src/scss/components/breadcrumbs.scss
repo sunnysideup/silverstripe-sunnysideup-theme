@@ -1,0 +1,14 @@
+#Breadcrumbs {
+    display: none;
+}
+
+body.past-header {
+    #Breadcrumbs {
+        color: $colour_white;
+        * {
+            color: $colour_white;
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+}
