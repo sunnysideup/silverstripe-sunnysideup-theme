@@ -1,0 +1,6 @@
+
+const script = () => {
+
+}
+
+script()

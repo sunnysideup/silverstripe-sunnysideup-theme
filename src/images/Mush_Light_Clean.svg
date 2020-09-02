@@ -1,0 +1,11 @@
+<svg width="23.34" height="22.938" version="1.1" viewBox="0 0 23.34 22.938" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>.cls-1{fill:#8ca6f9;}.cls-2{fill:#2d57ff;}</style>
+    </defs>
+    <g transform="translate(-11 -11.209)" data-name="Layer 2">
+        <rect class="cls-1" transform="rotate(-.42 23.096 26.004)" x="18.82" y="17.82" width="7.8" height="16.3" rx=".57" fill="#8ca6f9"/>
+        <path class="cls-1" d="m34.34 20.12c0 7.47-5.2 3.82-11.64 3.87s-11.62 4.25-11.7-3.7c0-5 5.15-9 11.59-9.08s11.71 3.94 11.75 8.91z" fill="#8ca6f9"/>
+        <path class="cls-2" d="m26.61 24.27c-0.36-0.83-0.82-5.45 1.15-5.4s3.6 1.44 3.68 2.67-1.61 2-2.13 2-0.82-1-1.45-1.1-1 2.42-1.25 1.83z" fill="#2d57ff"/>
+        <path class="cls-2" d="m18.88 24.39c0.34-0.83 0.73-5.45-1.24-5.38s-3.57 1.49-3.64 2.72 1.64 2 2.16 2 0.8-1 1.43-1.12 1.04 2.39 1.29 1.78z" fill="#2d57ff"/>
+    </g>
+</svg>
