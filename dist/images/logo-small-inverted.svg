@@ -1,0 +1,20 @@
+<svg width="82.4" height="82.4" version="1.1" viewBox="0 0 82.4 82.4" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+        .cls-1{fill:none;}
+        .cls-2{clip-path:url(#clip-path);}
+        .cls-3{fill:#191919;}
+        .cls-4{clip-path:url(#clip-path-2);}
+        .cls-5{fill:#000000;}
+        .cls-6{fill:#0832aa;}
+        </style>
+        <clipPath id="clip-path">
+            <rect class="cls-1" width="268.65" height="90.33" fill="none"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <rect class="cls-1" x="123.12" y="-.26" width="243.54" height="69.95" fill="none"/>
+        </clipPath>
+    </defs>
+    <circle class="cls-5" cx="41.2" cy="41.2" r="41.2" fill="#000000"/>
+    <circle class="cls-6" cx="48.2" cy="41.2" r="15.8" fill="#0832aa"/>
+</svg>
