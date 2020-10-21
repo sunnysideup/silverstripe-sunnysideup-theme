@@ -4,10 +4,11 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <% require themedCss('dist/main') %>
+    <%-- <% require themedCss('dist/main') %> --%>
+    <% include WebpackCSSLinks %>
 </head>
 
-<body class="theme-sun" id="top" data-bg-image="/resources$RandomImage">
+<body class="theme-sun" id="top" data-bg-image="$RandomImage">
     <% include Header %>
     <% include Nav %>
 
@@ -27,10 +28,10 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <% require themedCss('dist/main') %>
+    <% include WebpackCSSLinks %>
 </head>
 
-<body class="theme-sun" id="top" data-bg-image="/resources$RandomImage">
+<body class="theme-sun" id="top" data-bg-image="$RandomImage">
     <% include Header %>
     <% include Nav %>
 
@@ -41,7 +42,8 @@
     </main>
 
     <% include Footer %>
-    <% require themedJavascript('dist/main') %>
+    <% include WebpackJSLinks %>
+    <%-- <% require themedJavascript('sun/dist/main') %> --%>
 <% end_if %>
 </body>
 </html>
