@@ -12,6 +12,8 @@ const scrollManager = {
 
   timeOutFx: null,
 
+  justScrolledFxtFx: null,
+
   scrolledUpClass: 'scrolled-up',
 
   scrolledDownClass: 'scrolled-down',
@@ -28,6 +30,7 @@ const scrollManager = {
       'scroll',
       function () {
         window.clearTimeout(scrollManager.timeOutFx)
+        window.clearTimeout(this.justScrolledFx)
         if (window.scrollY === 0) {
           scrollManager.bodyObject.classList.remove('past-header')
         } else {
@@ -62,6 +65,13 @@ const scrollManager = {
             // Scroll Up
             scrollManager.bodyObject.classList.add(scrollManager.scrolledUpClass)
             scrollManager.bodyObject.classList.remove(scrollManager.scrolledDownClass)
+            scrollManager.bodyObject.classList.add('just-scrolled')
+            this.justScrolledFx = window.setTimeout(
+              function () {
+                scrollManager.bodyObject.classList.remove('just-scrolled')
+              },
+              3000
+            )
           } else {
             // console.log('do nothing')
           }

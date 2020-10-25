@@ -82,6 +82,24 @@ body.past-header {
     }
 }
 
+body.past-header{
+    #header {
+        opacity: 0;
+        display: none;
+    }
+}
+body.past-header.just-scrolled {
+    #header {
+        opacity: 1;
+        display: block;
+        animation-duration: 1s; /* the duration of the animation */
+        animation-timing-function: ease-out; /* how the animation will behave */
+        animation-delay: 2s; /* how long to delay the animation from starting */
+        animation-iteration-count: 1; /* how many times the animation will play */
+        animation-name: unloadTransition; /* the name of the animation we defined above */
+        animation-fill-mode: forwards;
+    }
+}
 // body.footer-visible {
 //     #header,
 //     #header * {
