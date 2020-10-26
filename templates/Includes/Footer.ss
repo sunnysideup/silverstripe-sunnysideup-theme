@@ -40,7 +40,7 @@
                 <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<% end_if %>
             </p>
             <% if $SiteConfig.ClimatePositivePage %>
-            <a href="$SiteConfig.ClimatePositivePage.Link" class="image-holder" id="ClimatePositive"><img src="resources/themes/sun_dist/images/climate-positive.png" alt="Climate Positive!" /></a>
+            <a href="$SiteConfig.ClimatePositivePage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/climate-positive.png)" alt="Climate Positive!" /></a>
             <% end_if %>
 
         </div>
