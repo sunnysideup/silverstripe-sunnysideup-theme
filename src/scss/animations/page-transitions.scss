@@ -5,6 +5,7 @@ body {
     animation-delay: 0s; /* how long to delay the animation from starting */
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: loadTransition; /* the name of the animation we defined above */
+    animation-fill-mode: forwards;
 }
 @keyframes loadTransition {
     0% {
@@ -21,6 +22,7 @@ body.body-unloaded {
     animation-delay: 0s; /* how long to delay the animation from starting */
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: unloadTransition; /* the name of the animation we defined above */
+    animation-fill-mode: forwards;
 }
 @keyframes unloadTransition {
     0% {
