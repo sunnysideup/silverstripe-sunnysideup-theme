@@ -9,9 +9,15 @@
             margin-top: calc(24vw * -0.1666666);
         }
         h1 {
+            margin-top: 0;
             font-size: calc(24vw / 3);
             right: calc(24vw / 2.3);
-            top: calc(24vw / 2.3);
+            top: calc(24vw / 1.6);
+        }
+    }
+    #nav {
+        #menu-toggle {
+            top: calc(24vw / 1.6);
         }
     }
     main {
@@ -24,6 +30,7 @@
             display: block;
         }
     }
+
 }
 @media only screen and (min-width: 450px) {
     #header {
@@ -35,12 +42,12 @@
         h1 {
             font-size: calc(18vw / 3);
             right: calc( 6vw + (18vw / 4.6));
-            top: calc(18vw / 2.3);
+            top: calc(18vw / 1.6);
         }
     }
     #nav {
         #menu-toggle {
-            top: 5vh; // important to also overrule, menu-on.
+            top: calc(18vw / 1.6); // important to also overrule, menu-on.
         }
         #nav-inner {
 
@@ -90,7 +97,7 @@
     body.menu-on{
         #nav {
             #menu-toggle {
-                top: 5vh;
+                top: calc(18vw / 1.6);
             }
         }
     }
@@ -105,26 +112,31 @@
         h1 {
             font-size: calc(12vw / 3);
             right: calc( 6vw + (12vw / 4.6));
-            top: calc(12vw / 2.2);
+            top: calc(12vw / 1.6);
+        }
+    }
+    #nav {
+        #menu-toggle {
+            top: calc(12vw / 1.6); // important to also overrule, menu-on.
         }
     }
     .past-header #Breadcrumbs  {
         display: inline;
     }
-    body.past-header,
+    body.past-header {
+        #nav {
+            #menu-toggle {
+                left: 6vw;
+                top: 0;
+            }
+        }
+    }
     body.menu-on {
         #nav {
             #menu-toggle {
                 left: 6vw;
+                top: calc(12vw / 1.6);
             }
-            // nav {
-            //     > ul {
-            //         columns: 2;
-            //         li {
-            //             break-inside: avoid-column;
-            //         }
-            //     }
-            // }
         }
     }
     main {
