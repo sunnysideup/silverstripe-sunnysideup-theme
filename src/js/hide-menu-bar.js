@@ -30,7 +30,7 @@ const scrollManager = {
       'scroll',
       function () {
         window.clearTimeout(scrollManager.timeOutFx)
-        window.clearTimeout(this.justScrolledFx)
+        window.clearTimeout(scrollManager.justScrolledFx)
         if (window.scrollY === 0) {
           scrollManager.bodyObject.classList.remove('past-header')
         } else {
@@ -43,7 +43,7 @@ const scrollManager = {
   },
 
   scrollUpOrDown: function () {
-    this.timeOutFx = window.setTimeout(
+    scrollManager.timeOutFx = window.setTimeout(
       function () {
         // console.log('running')
         if (scrollManager.didScroll) {

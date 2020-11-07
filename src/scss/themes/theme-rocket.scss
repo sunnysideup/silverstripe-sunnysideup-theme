@@ -125,6 +125,7 @@ body.theme-rocket {
     }
     &.past-header {
         #header {
+            border-bottom: 1px solid #fff;
             background-color: hsla(0,0%,100%,0.7);
             * {
                 color: $colour_black;

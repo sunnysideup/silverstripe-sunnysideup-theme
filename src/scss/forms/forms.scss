@@ -38,7 +38,8 @@ $background_color_6: transparent;
             }
             label {
                 font-size: 1.3rem;
-                font-style: italic;
+                // font-style: italic;
+                color: $colour_yep_thats_grey_revers!important;
             }
             .middleColumn {
                 display: block;
@@ -55,14 +56,20 @@ $background_color_6: transparent;
                     padding: 0.7em;
                     font-weight: 600;
                     -webkit-transition: all 0.5s ease 0s;
-                    border-bottom: 3px solid $colour_blue_cobalter;
-                    color: $colour_black;
+                    border-bottom: 3px solid $colour_modern_iron;
+                    color: $colour_black_lighter;
                     &:focus {
                         border-bottom: 3px solid $colour_sunny_side_up_yellow !important;
                         outline: none !important;
                     }
                     border-top-right-radius: 1rem;
                 }
+                input.no-value,
+                textarea.no-value,
+                select.no-value {
+                    border-bottom-color: $colour_blue_cobalter!important;
+                }
+
                 select {
                     width: 100%;
                 }
@@ -209,20 +216,25 @@ $background_color_6: transparent;
         .message {
             font-size: 1rem!important;
             line-height: 1;
-            border-bottom-left-radius: 1rem;
             margin-bottom: 0.5em;
             font-weight: 600;
             background-color: $colour_sunny_side_up_yellow;
             display: block;
             padding: 1rem;
             text-align: center;
-            color: $colour_white;
+            color: $colour_black_lighter;
             a {
                 display: inline-block;
                 color: $colour_white;
                 padding: 0 3px;
             }
         }
-
+        > p.message {
+            margin-bottom: -3.5rem!important;
+            width: calc(50% - 2rem);
+            z-index: 9;
+            position: relative;
+            left: 50%;
+        }
     }
 }
