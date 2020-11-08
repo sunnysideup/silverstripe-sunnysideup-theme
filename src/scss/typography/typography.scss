@@ -53,7 +53,9 @@
         font-size: 2rem;
         margin-top: 1.5em;
     }
-
+    p {
+        text-align: justify;
+    }
     p + ul,
     p + ol,
     p + p,
@@ -211,6 +213,7 @@
         font-weight: 200;
         font-style: italic;
         font-family: $base_font_condensed;
+        text-align: left;
     }
 
     a:hover {

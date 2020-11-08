@@ -4,7 +4,8 @@
         font-size: 1.5rem!important;
     }
     input {
-        display: none;
+        display: inline-block;
+        float: inherit!important;
         &+label {
             border: none;
             display: inline-block;
@@ -12,6 +13,7 @@
             -webkit-appearance: none;
             padding-left: 4.5rem;
             line-height: 1.7!important;
+            margin-left: -20px;
             &:after {
                 content: '×';
                 background-color: $colour_light_grey_aotrom;
@@ -20,7 +22,6 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                opacity: 0.77;
             }
         }
         &:checked {
@@ -60,12 +61,14 @@
             display: inline-block;
         }
         input {
-            display: none;
+            display: inline-block;
+            float: inherit!important;
             &+label {
                 position: relative;
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
+                margin-left: -20px;
                 &:after {
                     content: '×';
                     position: absolute;
@@ -74,7 +77,6 @@
                     text-align: center;
                     top: 0px;
                     left: 0px;
-                    opacity: 0.77;
                 }
             }
             &:checked {
@@ -88,12 +90,14 @@
             }
         }
         input[type='radio'] {
-            display: none;
+            display: inline-block;
+            float: inherit!important;
             &+label {
                 position: relative;
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
+                margin-left: -20px;
                 &:after {
                     content: '×';
                     position: absolute;
@@ -101,7 +105,6 @@
                     text-align: center;
                     top: 0px;
                     left: 0px;
-                    opacity: 0.77;
                 }
             }
             &:checked {

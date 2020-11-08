@@ -59,15 +59,17 @@ $background_color_6: transparent;
                     border-bottom: 3px solid $colour_modern_iron;
                     color: $colour_black_lighter;
                     &:focus {
-                        border-bottom: 3px solid $colour_sunny_side_up_yellow !important;
+                        border-bottom: 3px solid $colour_burngreen !important;
                         outline: none !important;
+                        background-color: $colour_burngreen ;
                     }
                     border-top-right-radius: 1rem;
-                }
-                input.no-value,
-                textarea.no-value,
-                select.no-value {
-                    border-bottom-color: $colour_blue_cobalter!important;
+                    &.no-value {
+                        border-bottom-color: $colour_blue_cobalter!important;
+                    }
+                    &.no-value:focus {
+                        border-bottom: 3px solid $colour_sunny_side_up_yellow !important;
+                    }
                 }
 
                 select {

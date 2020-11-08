@@ -21,7 +21,7 @@ body.theme-moon {
     #nav {
         #closed-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter;
+                fill: $colour_blue_cobalter_half;
             }
             .cls-2 {
                 fill: $colour_burned_sunny_side_up;
@@ -93,7 +93,7 @@ body.theme-moon {
         border-color: $colour_hypocrite_yellow!important;
     }
     footer#footer {
-        background-color: $colour_rose_storm;
+        background-color: $colour_boot_black;
         img {
             // filter: invert(1);
         }
@@ -104,18 +104,18 @@ body.theme-moon {
             color: $colour_white;
         }
         li.current a, a:hover {
-            color: $colour_outer_space_love!important;
+            color: $colour_rose_storm!important;
         }
         #theme-selectors {
             svg {
                 fill: $colour_white;
                 &:hover {
-                    fill: $colour_outer_space_love !important;
+                    fill: $colour_rose_storm !important;
                 }
             }
             #theme-moon {
                 svg {
-                    fill: $colour_outer_space_love !important;
+                    fill: $colour_rose_storm !important;
                 }
             }
         }

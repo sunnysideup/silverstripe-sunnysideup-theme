@@ -211,7 +211,7 @@
         h1 {
             font-size: calc(9vw / 3);
             right: calc( 6vw + (9vw / 4.6));
-            top: calc(9vw / 2.2);
+            top: calc(9vw / 1.6);
         }
     }
     main {
@@ -233,7 +233,7 @@
         z-index: 20;
         #menu-toggle {
             text-align: center;
-            top: 5vh;
+            top: calc(9vw / 1.77);
             left: 0!important;
             width: 18vw;
             svg {
@@ -258,19 +258,23 @@
         padding-left: calc(24vw + 24vw);
         // z-index: 30;
     }
-    body.past-header,
     body.menu-on {
+        #nav {
+            z-index: 999;
+            #menu-toggle {
+                top: calc(9vw / 1.77);
+            }
+        }
+    }
+    body.past-header,
+    body.menu-on.past-header {
         #nav {
             #menu-toggle {
                 top: 5vh;
             }
         }
     }
-    body.menu-on {
-        #nav {
-            z-index: 999;
-        }
-    }
+
 
     body.past-header {
         #header {

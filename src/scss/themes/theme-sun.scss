@@ -2,6 +2,13 @@ body.theme-sun {
     a[data-add-class="theme-sun"] {
         text-decoration: none!important;
     }
+    #nav {
+        #closed-icon {
+            .cls-1 {
+                fill:$colour_blue_cobalter_half;
+            }
+        }
+    }
     #theme-sun {
         svg {
             fill: $colour_sunny_side_up_yellow;

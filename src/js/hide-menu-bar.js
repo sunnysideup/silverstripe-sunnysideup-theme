@@ -6,7 +6,7 @@ const scrollManager = {
 
   lastScroll: 0,
 
-  didScrill: 0,
+  didScroll: 0,
 
   bodyObject: null,
 
@@ -23,6 +23,12 @@ const scrollManager = {
     this.scrollListener()
     this.scrollUpOrDown()
     this.lastScroll = window.scrollY
+    window.setTimeout(
+      function () {
+        window.scrollTo(window.pageXOffset, window.scrollY - this.minScrollForAction - 1)
+      },
+      50
+    )
   },
 
   scrollListener: function () {

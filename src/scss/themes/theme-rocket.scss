@@ -16,7 +16,7 @@ body.theme-rocket {
     #nav {
         #closed-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter;
+                fill: $colour_blue_cobalter_half;
             }
             .cls-2 {
                 fill: $colour_sunny_side_up_yellow;
@@ -135,7 +135,7 @@ body.theme-rocket {
     }
     &.no-touch {
         #footer, #nav {
-            opacity: 0.7;
+            opacity: 0.6;
             &:hover {
                 opacity: 1;
             }
@@ -155,7 +155,6 @@ body.theme-rocket {
         }
     }
 }
-
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
         #nav {
