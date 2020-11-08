@@ -213,7 +213,9 @@
         font-weight: 200;
         font-style: italic;
         font-family: $base_font_condensed;
-        text-align: left;
+    }
+    blockquote p {
+        text-align: right;
     }
 
     a:hover {
