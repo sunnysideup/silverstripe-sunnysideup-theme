@@ -13,16 +13,20 @@
             -webkit-appearance: none;
             padding-left: 4.5rem;
             line-height: 1.7!important;
-            margin-left: -20px;
+            margin-left: -2rem;
             &:after {
                 content: '×';
                 background-color: $colour_light_grey_aotrom;
+                color: brown;
                 width: 3rem;
                 text-align: center;
                 position: absolute;
                 top: 0px;
                 left: 0px;
             }
+        }
+        &:focus+label:after {
+            background-color: $colour_burngreen !important;
         }
         &:checked {
             &+label {
@@ -68,16 +72,20 @@
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
-                margin-left: -20px;
+                margin-left: -2rem;
                 &:after {
                     content: '×';
                     position: absolute;
                     background-color: $colour_light_grey_aotrom;
+                    color: brown;
                     width: 3rem;
                     text-align: center;
                     top: 0px;
                     left: 0px;
                 }
+            }
+            &:focus+label:after {
+                background-color: $colour_burngreen !important;
             }
             &:checked {
                 &+label {
@@ -97,15 +105,19 @@
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
-                margin-left: -20px;
+                margin-left: -2rem;
                 &:after {
                     content: '×';
                     position: absolute;
+                    color: brown;
                     width: 3rem;
                     text-align: center;
                     top: 0px;
                     left: 0px;
                 }
+            }
+            &:focus+label:after {
+                background-color: $colour_burngreen !important;
             }
             &:checked {
                 &+label {
