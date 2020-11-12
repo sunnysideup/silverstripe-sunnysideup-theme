@@ -1,5 +1,6 @@
 import { myCookie } from './cookie.js'
 
+
 const bodyClass = {
 
   bodyObject: null,

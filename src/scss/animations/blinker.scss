@@ -1,13 +1,1 @@
-@keyframes blinkcaret {
-    from,to {
-        color: transparent;
-    }
-    50% {
-        color: inherit;
-    }
-}
-
-.blinker {
-    animation: blinkcaret 1s step-end infinite;
-    animation-delay: 1.5s;
-}
+//** see blockquite **/

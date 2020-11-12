@@ -1,10 +1,3 @@
-/* The typing effect */
-/* @keyframes typing {
-    from { width: 0; height: 0; }
-    to { width: 100%; height: auto }
-} */
-/* The typewriter cursor effect */
-
 main#main {
     blockquote {
         padding: 0;
@@ -23,21 +16,47 @@ main#main {
             letter-spacing: 0.1em;
             font-weight: 200;
             font-style: italic;
+            .blinker-holder {
+                text-decoration: none!important;
+            }
             .blinker {
-                &:after {
+                font-size: 0!important;
+                text-decoration: none!important;
+                display: inline-block;
+                &:before {
                     content: '▂';
                     display: inline-block;
                     text-align: center;
+                    width: 1.5em;
+                    text-align: right;
                     font-size: calc(2.2vh + 2.2vw);
                 }
                 &:hover {
-                    &:after {
+                    &:before {
                         content: '🚀';
                     }
                 }
 
-                color: $colour_transparent;
+                color: transparent;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
+}
+
+@keyframes blinkcaret {
+    from,to {
+        color: transparent!important;
+    }
+    50% {
+        color: red!important;
+    }
+}
+
+.blinker {
+    display: block;
+    animation: blinkcaret 1s step-end infinite;
+    animation-delay: 2.5s;
 }
