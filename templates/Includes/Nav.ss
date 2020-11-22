@@ -23,7 +23,7 @@
     </a>
     <div id="nav-inner">
         <nav class="nav-item">
-            <ul class="collapsibleList">
+            <ul class="collapsibleList rotate-360-horizontal-fwd">
                 <% loop Menu(1) %>
                     <li class="$FirstLast $LinkingMode level1">
                         <a class="$LinkingMode level1" href="$Link">$MenuTitle</a>

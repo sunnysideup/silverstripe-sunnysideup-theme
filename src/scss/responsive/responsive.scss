@@ -241,7 +241,7 @@
             }
         }
         #nav-inner {
-            height: calc(100vh - 17vh) !important;
+            height: calc(100vh) !important;
             scrollbar-width: none;
             -ms-overflow-style: none;
             &::-webkit-scrollbar {

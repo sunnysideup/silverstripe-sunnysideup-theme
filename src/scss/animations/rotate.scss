@@ -1,0 +1,16 @@
+
+#menu-on {
+    .rotate-360-horizontal-fwd {
+    	animation: rotate-360-horizontal-fwd 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s infinite both;
+        transform: rotate(0);
+    }
+
+    @keyframes rotate-360-horizontal-fwd {
+      70% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+}
