@@ -1,34 +1,36 @@
 //to do!
-body {
+body main {
     animation-duration: 0.3s; /* the duration of the animation */
     animation-timing-function: ease-out; /* how the animation will behave */
     animation-delay: 0s; /* how long to delay the animation from starting */
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: loadTransition; /* the name of the animation we defined above */
     animation-fill-mode: forwards;
-}
-@keyframes loadTransition {
-    0% {
-        opacity: 0
-    }
-    100% {
-        opacity: 1;
+    opacity: 0;
+    @keyframes loadTransition {
+        0% {
+            opacity: 0
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }
 
-body.body-unloaded {
+body.body-unloaded main {
     animation-duration: 0.3s; /* the duration of the animation */
     animation-timing-function: ease-out; /* how the animation will behave */
     animation-delay: 0s; /* how long to delay the animation from starting */
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: unloadTransition; /* the name of the animation we defined above */
     animation-fill-mode: forwards;
-}
-@keyframes unloadTransition {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
+    opacity: 1;
+    @keyframes unloadTransition {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 }
