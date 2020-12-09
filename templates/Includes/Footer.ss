@@ -19,8 +19,10 @@
                 <a href="mailto:$SiteConfig.Email.HiddenEmailAddress">$SiteConfig.Email.HiddenEmailAddress</a>
             </p>
             <p>
+                <i>
+                <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<br /><% end_if %>
                 <% if $SiteConfig.CopyrightNotice %>&copy; $SiteConfig.CopyrightNotice<br /><% end_if %>
-                <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<% end_if %>
+                </i>
             </p>
         </div>
 
