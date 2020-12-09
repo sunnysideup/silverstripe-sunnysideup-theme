@@ -20,8 +20,8 @@
             </p>
             <p>
                 <i>
-                <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<br /><% end_if %>
-                <% if $SiteConfig.CopyrightNotice %>&copy; $SiteConfig.CopyrightNotice<br /><% end_if %>
+                    <br />
+                <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<br /><% end_if %>
                 </i>
             </p>
         </div>
