@@ -22,3 +22,9 @@ $Form
 <% include SiblingsAndChildren %>
 
 <% include Video %>
+
+<% if $LastEdited %>
+<p>
+This page was last updated {$LastEdited.Ago}.
+</p>
+<% end_if %>
