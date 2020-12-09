@@ -1,8 +1,13 @@
 
 .menu-on {
     .rotate-360-horizontal-fwd {
-    	animation: rotate-360-horizontal-fwd 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s infinite both;
+        animation-name: rotate-360-horizontal-fwd;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        animation-fill-mode: both;
         transform: rotate(0);
+        animation-iteration-count: 1;
     }
 
     @keyframes rotate-360-horizontal-fwd {
