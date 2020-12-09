@@ -18,6 +18,10 @@
             <p>
                 <a href="mailto:$SiteConfig.Email.HiddenEmailAddress">$SiteConfig.Email.HiddenEmailAddress</a>
             </p>
+            <p>
+                <% if $SiteConfig.CopyrightNotice %>&copy; $SiteConfig.CopyrightNotice<br /><% end_if %>
+                <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<% end_if %>
+            </p>
         </div>
 
         <div class="col">
@@ -35,12 +39,11 @@
         </div>
         <div class="col" >
             <% include FooterThemeSelector %>
-            <p>
-                <% if $SiteConfig.CopyrightNotice %>&copy; $SiteConfig.CopyrightNotice<br /><% end_if %>
-                <% if $LastEdited %>Paged last updated {$LastEdited.Ago}.<% end_if %>
-            </p>
             <% if $SiteConfig.ClimatePositivePage %>
             <a href="$SiteConfig.ClimatePositivePage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/climate-positive.png)" alt="Climate Positive!" /></a>
+            <% end_if %>
+            <% if $SiteConfig.ShopifyPartnerPage %>
+            <a href="$SiteConfig.ShopifyPartnerPage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/shopify-partner.webp)" alt="Shopify Partner" /></a>
             <% end_if %>
 
         </div>
