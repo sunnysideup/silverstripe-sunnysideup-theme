@@ -20,43 +20,27 @@ main#main {
                 text-decoration: none!important;
             }
             .blinker {
-                font-size: 0!important;
-                text-decoration: none!important;
                 display: inline-block;
-                &:before {
-                    content: '▂';
-                    display: inline-block;
-                    text-align: center;
-                    width: 1.5em;
-                    text-align: right;
-                    font-size: calc(2.2vh + 2.2vw);
-                }
-                &:hover {
-                    &:before {
-                        content: '🚀';
-                    }
-                }
-
-                color: transparent;
-                &:hover {
-                    cursor: pointer;
-                }
+                text-align: center;
+                text-align: right;
+                font-size: calc(2.2vh + 2.2vw);
+                animation: blink;
+                animation-duration: 0.8s;
+                animation-delay: 2.5s;
+                animation-iteration-count: infinite;
+                text-decoration: none!important;
             }
         }
     }
 }
 
-@keyframes blinkcaret {
-    from,to {
-        color: transparent!important;
+@keyframes blink {
+    0% {
     }
     50% {
-        color: red!important;
+        color: transparent;
     }
-}
+    100% {
+    }
 
-.blinker {
-    display: block;
-    animation: blinkcaret 1s step-end infinite;
-    animation-delay: 2.5s;
 }

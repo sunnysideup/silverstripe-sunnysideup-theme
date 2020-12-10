@@ -40,7 +40,7 @@ body.theme-moon {
         *, a:link, a:visited {
             color: $colour_hypocrite_yellow;
         }
-        h1, h2 {
+        #SiblingsAndChildren h2, h1, h2 {
             &:before {
                 border-top-color: $colour_hypocrite_yellow;
             }
