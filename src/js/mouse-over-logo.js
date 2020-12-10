@@ -1,6 +1,5 @@
 const showRocketMode = {
   init: function () {
-    console.log('start')
     const toggleClassOnHover = (e) => {
       document.querySelector('body')
         .classList
