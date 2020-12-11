@@ -32,6 +32,7 @@
             display: block;
             content: ' ';
             margin-top: -2rem;
+            opacity: 0.5;
         }
         &:first-child {
             &:before {
@@ -227,5 +228,7 @@
 
     .last-updated {
         color: $colour_yep_thats_grey;
+        font-style: italic;
+        font-weight: 200;
     }
 }
