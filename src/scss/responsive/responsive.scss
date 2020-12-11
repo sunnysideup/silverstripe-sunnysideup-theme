@@ -17,7 +17,7 @@
     }
     #nav {
         #menu-toggle {
-            top: calc(24vw / 1.6);
+            // top: calc(24vw / 1.6);
         }
     }
     main {
@@ -47,7 +47,7 @@
     }
     #nav {
         #menu-toggle {
-            top: calc(18vw / 1.6); // important to also overrule, menu-on.
+            // top: calc(18vw / 1.6); // important to also overrule, menu-on.
         }
         #nav-inner {
 
@@ -97,7 +97,7 @@
     body.menu-on{
         #nav {
             #menu-toggle {
-                top: calc(18vw / 1.6);
+                // bottom: calc(18vw / 1.6);
             }
         }
     }
@@ -117,7 +117,7 @@
     }
     #nav {
         #menu-toggle {
-            top: calc(12vw / 1.6); // important to also overrule, menu-on.
+            // top: calc(12vw / 1.6); // important to also overrule, menu-on.
         }
     }
     .past-header #Breadcrumbs  {
@@ -125,17 +125,12 @@
     }
     body.past-header {
         #nav {
-            #menu-toggle {
-                left: 6vw;
-                top: 0;
-            }
         }
     }
     body.menu-on {
         #nav {
             #menu-toggle {
-                left: 6vw;
-                top: calc(12vw / 1.6);
+                // left: 6vw;
             }
         }
     }
@@ -226,6 +221,10 @@
         margin-left: 24vw;
     }
     #nav {
+        border: none;
+        border-radius: 0;
+        margin-left: 0;
+        margin-bottom: 0;
         background-color: $colour_sunny_side_up_yellow;
         opacity: 1;
         position: fixed;
@@ -273,6 +272,14 @@
     body.past-header,
     body.menu-on.past-header {
         #nav {
+            border: none;
+            border-radius: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            width: 18vw;
+            height: 100vw;
+            margin-left: 0;
+            left: 0;
             #menu-toggle {
                 top: 5vh;
             }
