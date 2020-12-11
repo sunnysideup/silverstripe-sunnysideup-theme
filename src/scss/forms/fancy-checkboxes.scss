@@ -13,7 +13,7 @@
             -webkit-appearance: none;
             padding-left: 4.5rem;
             line-height: 1.7!important;
-            margin-left: -2rem;
+            margin-top: -2rem;
             &:after {
                 content: '×';
                 background-color: $colour_light_grey_aotrom;
@@ -60,6 +60,7 @@
     li {
         padding: 0px !important;
         margin: 0px !important;
+        margin-bottom: 0.5rem!important;
         width: 100%;
         label {
             display: inline-block;
@@ -72,7 +73,7 @@
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
-                margin-left: -2rem;
+                margin-top: -2rem;
                 &:after {
                     content: '×';
                     position: absolute;
@@ -82,6 +83,7 @@
                     text-align: center;
                     top: 0px;
                     left: 0px;
+                    border-radius: 7px;
                 }
             }
             &:focus+label:after {
@@ -93,6 +95,7 @@
                         color: $colour_black;
                         content: '✔';
                         opacity: 1;
+                        background-color: $colour_sunny_side_up_yellow;
                     }
                 }
             }
@@ -105,7 +108,7 @@
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
                 line-height: 1.7!important;
-                margin-left: -2rem;
+                margin-top: -2rem;
                 &:after {
                     content: '×';
                     position: absolute;
@@ -114,6 +117,7 @@
                     text-align: center;
                     top: 0px;
                     left: 0px;
+                    border-radius: 7px;
                 }
             }
             &:focus+label:after {

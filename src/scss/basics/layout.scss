@@ -15,10 +15,12 @@ body {
     display: none;
 }
 main {
+    overflow-x: hidden;
     padding: 2rem;
     position: relative;
     z-index: 2;
     min-height: 80vh;
+
 }
 footer#footer {
     padding: 2rem;

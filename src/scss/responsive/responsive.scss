@@ -161,7 +161,6 @@
             h4,
             h5,
             h6,
-            img,
             form,
             address,
             div.captionImage {
@@ -169,9 +168,14 @@
                 padding-top: 0;
                 margin-top: 0;
             }
-            p img,
-            li img {
-                margin-left: 0;
+            .image-container {
+                padding-left: 0!important;
+                padding-right: 0!important;
+                margin-left: -24vw!important;
+                width: calc(100% + 24vw);
+                img {
+                    margin-left: 24vw;
+                }
             }
         }
     }

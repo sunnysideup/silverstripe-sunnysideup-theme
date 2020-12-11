@@ -93,6 +93,7 @@ $background_color_6: transparent;
                     list-style: none !important;
                     margin-top: 0px;
                     padding-top: 0px;
+                    padding-bottom: 0.5rem;
                 }
                 .radio, .checkbox  {
                     border: 0;
@@ -125,15 +126,19 @@ $background_color_6: transparent;
             }
             span.message {
                 margin-top: -1em;
+                font-weight: 900px;
             }
             span.bad {
                 background-color: $colour_bad;
+                color: $colour_white;
             }
             span.required {
                 background-color: $colour_bad;
+                color: $colour_white;
             }
             span.good {
                 background-color: $colour_good;
+                color: $colour_white;
             }
 
             input.password,

@@ -14,7 +14,6 @@ for (var J = formfields.length - 1; J >= 0; --J) {
 }
 
 function adjustStyling (zEvent) {
-  console.log(zEvent)
   var inpVal = zEvent.target.value
   if (inpVal && inpVal.replace(/^\s+|\s+$/g, '')) {
     zEvent.target.classList.remove('no-value')

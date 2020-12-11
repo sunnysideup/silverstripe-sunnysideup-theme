@@ -114,54 +114,36 @@
         font-size: 2rem;
         margin-bottom: 0;
     }
-
-    img {
-        background-color: #fff;
-        position: relative;
-        &:before{
-          content:"";
-          z-index:-1;
-          position:absolute;
-          top:0;
-          bottom:0;
-          left:-100vw;
-          right:-100vw;
-          background:#fff;
+    .image-container {
+        img {
+            display: block;
+            background-color: #fff;
+            max-width: 100%!important;
+            width: auto;
+            height: auto;
         }
     }
-    .media {
+    .captionImage {
+        p.caption {
+            font-style: italic;
+            font-size: 1.3rem;
+            width: 100%;
+            text-align: left;
+            margin-left: 0;
+            margin-top: 0rem;
+        }
+    }
+
+    .media, .image-container {
         display: block;
-        padding: calc(2vw + 2vh)!important;
+        padding: 2rem 0;
         background-color: $colour_white;
         margin: 2rem auto!important;
         border: 1px dashed $colour_modern_iron;
         border-top-right-radius: 1rem!important;
         box-sizing: border-box;
-        width: 61%;
-    }
-    .captionImage {
-        overflow: visible;
-        width: auto!important;
-        img {
-            max-width: 100%!important;
-            width: auto;
-            height: auto;
-        }
-        p.caption {
-            font-style: italic;
-            font-size: 1.3rem;
-            width: 100%;
-            text-align: center;
-            margin-left: 0;
-            margin-top: -1rem;
-        }
-    }
-
-    .media {
         width: 100%;
-        margin: 2rem 0;
         text-align: center;
-        border: 1px dashed $colour_modern_iron;
         iframe {
             margin: 0 auto;
             display: block;
