@@ -93,6 +93,11 @@ body.theme-rocket {
         pre {
             background-color: $colour_navy;
         }
+        .media, .image-container {
+            background-color: transparent;
+            background: transparent;
+            border-color: transparent;
+        }
     }
 
     form {
