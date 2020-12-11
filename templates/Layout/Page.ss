@@ -21,7 +21,7 @@ $Form
 <% include Video %>
 
 <% if $LastEdited %>
-<p>
+<p class="last-updated">
 This page was last updated {$LastEdited.Ago}.
 </p>
 <% end_if %>

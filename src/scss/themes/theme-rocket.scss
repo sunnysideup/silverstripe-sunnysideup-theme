@@ -70,21 +70,31 @@ body.theme-rocket {
             color: $colour_white;
         }
         th {
-            color: $colour_hypocrite_yellow;
+            color: $colour_white;
         }
         hr {
-            border-color: $colour_hypocrite_yellow!important;
+            border-color: $colour_white!important;
+        }
+        .last-updated {
+            color: $colour_hypocrite_yellow!important;
+        }
+        pre {
+            background-color: $colour_navy;
         }
     }
-
-    .typography pre {
-        background-color: $colour_navy;
+    #content-below-quote, #SiblingsAndChildren {
+        background-color: rgba(129,206,134,0.7);
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 2rem;
+        padding: 1rem 4rem;
     }
-    .typography th {
-        color: $colour_white;
+    #content-below-quote {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
-    .typography hr {
-        border-color: $colour_white!important;
+    #SiblingsAndChildren {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     form {
         * {
