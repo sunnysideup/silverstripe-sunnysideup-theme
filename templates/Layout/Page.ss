@@ -12,16 +12,17 @@
 </blockquote>
 <div  id="quote-end"></div>
 <% end_if %>
-<div  id="content-below-quote">$Content</div>
+<div  id="content-below-quote">
+    $Content
+    $Form
 
-$Form
+    <% include SiblingsAndChildren %>
 
-<% include SiblingsAndChildren %>
+    <% include Video %>
 
-<% include Video %>
-
-<% if $LastEdited %>
-<p class="last-updated">
-This page was last updated {$LastEdited.Ago}.
-</p>
-<% end_if %>
+    <% if $LastEdited %>
+        <p class="last-updated">
+            This page was last updated {$LastEdited.Ago}.
+        </p>
+    <% end_if %>
+</div>

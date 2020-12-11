@@ -41,6 +41,18 @@ body.theme-rocket {
         #content-below-quote {
             padding-top: 3rem;
         }
+        #content-below-quote {
+
+            // background-color: rgba(0,0,0,0.5);
+            border-radius: 2rem;
+            padding: 3rem 4rem;
+            &:hover {
+                background-color: rgba(129,206,134,0.66);
+            }
+        }
+        #content-below-quote {
+        }
+
         // background-color: #00000037;
     }
     #BackgroundImage {
@@ -82,20 +94,7 @@ body.theme-rocket {
             background-color: $colour_navy;
         }
     }
-    #content-below-quote, #SiblingsAndChildren {
-        background-color: rgba(129,206,134,0.7);
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 2rem;
-        padding: 1rem 4rem;
-    }
-    #content-below-quote {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    #SiblingsAndChildren {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
+
     form {
         * {
             color: $colour_law_firm_report_cover!important;
