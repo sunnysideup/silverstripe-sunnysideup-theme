@@ -37,7 +37,7 @@ main#main {
 @keyframes blink {
     0% {
     }
-    50% {
+    25%, 75% {
         color: transparent;
     }
     100% {

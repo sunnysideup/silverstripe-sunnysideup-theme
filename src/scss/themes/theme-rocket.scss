@@ -54,7 +54,7 @@ body.theme-rocket {
         h1, h2, h3, h4, h5, h6, address, p, ul {
             filter: drop-shadow(0 0 3px $colour_black);
         }
-        h1, h2 {
+        #SiblingsAndChildren h2, h1, h2 {
             &:before {
                 border-top-color: transparent;
             }
