@@ -144,7 +144,6 @@ const bodyClass = {
       const classes = bodyClass.getClassesFromList(string)
       for (let i = 0, len = classes.length; i < len; i++) {
         const value = classes[i]
-        console.log('remove '+value)
         bodyClass.bodyObject.classList.remove(value)
       }
     }
