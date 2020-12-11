@@ -8,7 +8,6 @@ const imageWrapper = () => {
 
   // get all divs
   const images = document.querySelectorAll('.typography img')
-  console.log(images)
   // get the body element
   // apply class to container div
 

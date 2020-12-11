@@ -56,8 +56,8 @@ const bodyClass = {
       myCookie.eraseCookie('bodyClassClasses')
       hash = ''
       // console.log(reset);
-    } else if (hash) {
-      this.runClickForElement(hash)
+    } else if (this.runClickForElement(hash)) {
+      // do nothing
     } else {
       classes = myCookie.getCookie('bodyClassClasses')
       classes = String(classes)
@@ -73,20 +73,16 @@ const bodyClass = {
   },
 
   runClickForElement: function (hash) {
-    if (hash === 'body-loaded') {
-      return
-    }
-    if (hash === 'touch') {
-      return
-    }
     hash = hash.trim()
     if (hash.length) {
       const obj = document.getElementById(hash)
-      if (obj) {
+      if (obj && obj.classList.contains('theme-selector')) {
         this.removeBodyClassesBasedOnAttribute(obj)
         bodyClass.bodyObject.classList.add(hash)
+        return true
       }
     }
+    return false
   },
 
   addOrToggleBodyClass: function (objSelector, keep) {
@@ -148,7 +144,7 @@ const bodyClass = {
       const classes = bodyClass.getClassesFromList(string)
       for (let i = 0, len = classes.length; i < len; i++) {
         const value = classes[i]
-        // console.log('remove '+value);
+        console.log('remove '+value)
         bodyClass.bodyObject.classList.remove(value)
       }
     }

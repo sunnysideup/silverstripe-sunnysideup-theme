@@ -35,6 +35,12 @@ body.theme-rocket {
         }
     }
     #main {
+        blockquote.main-quote {
+            padding-bottom: 60vh;
+        }
+        #content-below-quote {
+            padding-top: 3rem;
+        }
         // background-color: #00000037;
     }
     #BackgroundImage {
