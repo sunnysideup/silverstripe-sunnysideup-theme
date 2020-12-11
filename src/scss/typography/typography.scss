@@ -117,13 +117,13 @@
     .image-container {
         img {
             display: block;
-            background-color: #fff;
             max-width: 100%!important;
             width: auto;
             height: auto;
         }
     }
     .captionImage {
+        width: auto!important;
         p.caption {
             font-style: italic;
             font-size: 1.3rem;

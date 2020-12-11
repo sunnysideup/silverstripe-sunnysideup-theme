@@ -62,9 +62,9 @@ body.theme-moon {
         hr {
             border-color: $colour_hypocrite_yellow!important;
         }
-        .media, img {
-            background-color: $colour_white;
-            border-color: $colour_white;
+        .media, .image-container {
+            background-color: $colour_black;
+            border-color: $colour_hypocrite_yellow;
         }
     }
 
