@@ -23,9 +23,9 @@
     </a>
     <div id="nav-inner">
         <nav class="nav-item">
-            <ul class="collapsibleList rotate-360-horizontal-fwd">
+            <ul class="collapsibleList">
                 <% loop Menu(1) %>
-                    <li class="$FirstLast $LinkingMode level1">
+                    <li class="$FirstLast $LinkingMode level1  rotate-360-horizontal-fwd">
                         <a class="$LinkingMode level1" href="$Link">$MenuTitle</a>
                         <% if Children %>
                         <ul>
