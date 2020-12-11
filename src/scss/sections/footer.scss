@@ -5,6 +5,10 @@ footer#footer {
     padding-bottom: 6vh;
     position: relative;
     z-index: 9;
+    div.col {
+        padding-bottom: 4vh;
+        text-align: center;
+    }
     p {
         padding: 0;
         margin: 0;

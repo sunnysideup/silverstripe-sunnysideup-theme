@@ -83,6 +83,10 @@
                 margin-left: 0rem;
             }
         }
+        div.col {
+            text-align: left;
+            padding-top: 0;
+        }
     }
     .row {
         grid-template-columns: 1fr 1fr;

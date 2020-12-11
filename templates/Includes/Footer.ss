@@ -18,12 +18,6 @@
             <p>
                 <a href="mailto:$SiteConfig.Email.HiddenEmailAddress">$SiteConfig.Email.HiddenEmailAddress</a>
             </p>
-            <p>
-                <i>
-                    <br />
-                <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<br /><% end_if %>
-                </i>
-            </p>
         </div>
 
         <div class="col">
