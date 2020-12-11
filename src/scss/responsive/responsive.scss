@@ -95,8 +95,14 @@
         }
     }
     body.menu-on{
+
+    }
+    body.past-header.menu-on {
         #nav {
             #menu-toggle {
+                top: 5vh;
+                bottom: auto;
+                left: 6vw;
                 // bottom: calc(18vw / 1.6);
             }
         }
@@ -272,17 +278,27 @@
     body.past-header,
     body.menu-on.past-header {
         #nav {
+            background-color: $colour_sunny_side_up_yellow;
             border: none;
             border-radius: 0;
             margin-left: 0;
             margin-bottom: 0;
-            width: 18vw;
             height: 100vw;
             margin-left: 0;
             left: 0;
             #menu-toggle {
                 top: 5vh;
             }
+        }
+    }
+    body.past-header {
+        #nav {
+            width: 18vw;
+        }
+    }
+    body.menu-on.past-header {
+        #nav {
+            width: 100vw;
         }
     }
 

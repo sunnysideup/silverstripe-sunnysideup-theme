@@ -7,7 +7,7 @@
     left: 0;
     height: 20rem;
     width: 20rem;
-    z-index: 5;
+    z-index: 25;
     margin-left: -10rem;
     margin-bottom: -10rem;
     background-color: $colour_white;
@@ -118,6 +118,7 @@
 
 body.past-header {
     #nav {
+        background-color: transparent;
         border: 0px solid $colour_blue_cobalter;
         bottom: auto;
         top: 0;

@@ -19,6 +19,8 @@ body.theme-moon {
         text-decoration: none!important;
     }
     #nav {
+        background-color: $colour_black;
+        border-color: $colour_hypocrite_yellow;
         #closed-icon {
             .cls-1 {
                 fill: $colour_blue_cobalter_half;
@@ -137,6 +139,9 @@ body.theme-moon {
                 color: $colour_white;
             }
         }
+        #nav {
+            background-color: transparent;
+        }
     }
     &.menu-on {
         #nav {
@@ -149,7 +154,8 @@ body.theme-moon {
 }
 
 @media only screen and (min-width: 1050px) {
-    body.theme-moon {
+    body.theme-moon,
+    body.theme-moon.past-header {
         #nav {
             background-color: $colour_outer_space_love;
         }
