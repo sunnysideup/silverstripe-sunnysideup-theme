@@ -156,6 +156,12 @@ body.menu-on {
         left: 0;
         #menu-toggle {
             opacity: 1;
+            bottom: 2rem;
+            left: 2rem;
+            top: auto;
+            svg {
+                height: calc(3.7rem * 0.7);
+            }
         }
 
         #nav-inner {
@@ -182,9 +188,7 @@ body.menu-on {
 body.past-header.menu-on {
     #nav {
         #menu-toggle {
-            top: auto;
-            left: 2rem;
-            bottom: 2rem;
+
         }
     }
 }
