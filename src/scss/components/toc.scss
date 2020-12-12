@@ -8,6 +8,9 @@ body.toc-on {
             }
             h1, h2 {
                 display: block;
+                &:before {
+                    border-top-color: transparent;
+                }
             }
         }
     }

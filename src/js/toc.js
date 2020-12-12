@@ -17,7 +17,8 @@ const toc = () => {
         function (e) {
           body.classList.toggle('toc-on')
           if (body.classList.contains('toc-on') === false) {
-            window.location.hash = this.id
+            document.querySelector('#' + this.id).scrollIntoView()
+            window.setTimeout(function () { window.location.hash = this.id }, 500)
           }
         },
         false
