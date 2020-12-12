@@ -1,0 +1,22 @@
+
+
+body.toc-on {
+    .typography {
+        #content-below-quote {
+            * {
+                display: none;
+            }
+            h1, h2 {
+                display: block;
+            }
+        }
+    }
+}
+
+body.has-toc {
+    .typography {
+        h1, h2 {
+            cursor: pointer;
+        }
+    }
+}
