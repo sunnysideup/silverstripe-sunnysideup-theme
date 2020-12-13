@@ -20,10 +20,10 @@ body.theme-moon {
     }
     #nav {
         background-color: $colour_black;
-        border-color: $colour_hypocrite_yellow;
+        border-color: $colour_painty_green;
         #closed-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter_half;
+                fill: $colour_painty_green;
             }
             .cls-2 {
                 fill: $colour_burned_sunny_side_up;
@@ -70,9 +70,9 @@ body.theme-moon {
             border-color: $colour_black;
 
         }
-        .last-updated {
-            color: $colour_white!important;
-        }
+        // .last-updated {
+        //     color: $colour_white!important;
+        // }
     }
 
     form {

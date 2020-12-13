@@ -39,7 +39,12 @@
             <a href="$SiteConfig.ClimatePositivePage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/climate-positive.png)" alt="Climate Positive!" /></a>
             <% end_if %>
             <% if $SiteConfig.ShopifyPartnerPage %>
-            <a href="$SiteConfig.ShopifyPartnerPage.Link" class="image-holder" id="ShopifyPartner"><img src="$resourceURL(/themes/sun/dist/images/shopify-partner.webp)" alt="Shopify Partner" /></a>
+            <a href="$SiteConfig.ShopifyPartnerPage.Link" class="image-holder" id="ShopifyPartner">
+                <picture>
+                    <source srcset="$resourceURL(/themes/sun/dist/images/shopify-partner.webp)" type="image/webp">
+                    <img src="$resourceURL(/themes/sun/dist/images/shopify-partners.png)" alt="shopify partners" />
+                </picture>
+            </a>
             <% end_if %>
 
         </div>
