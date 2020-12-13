@@ -111,18 +111,18 @@ body.theme-moon {
             color: $colour_white;
         }
         li.current a, a:hover {
-            color: $colour_rose_storm!important;
+            color: $colour_painty_green!important;
         }
         #theme-selectors {
             svg {
                 fill: $colour_white;
                 &:hover {
-                    fill: $colour_rose_storm !important;
+                    fill: $colour_painty_green !important;
                 }
             }
             #theme-moon {
                 svg {
-                    fill: $colour_rose_storm !important;
+                    fill: $colour_painty_green !important;
                 }
             }
         }
