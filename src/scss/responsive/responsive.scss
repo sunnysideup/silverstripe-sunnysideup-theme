@@ -71,7 +71,15 @@
     main {
         padding: 4rem 6vw;
         padding-top: calc(18vw * 1.4);
+        .typography {
+            .image-container {
+                img {
+                    max-width: 92%!important;
+                }
+            }
+        }
     }
+
     footer#footer {
         padding: 4rem 6vw;
         #theme-selectors {
