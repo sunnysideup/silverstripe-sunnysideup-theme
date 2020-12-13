@@ -22,7 +22,7 @@ const toc = () => {
             document.querySelector('#' + hash).scrollIntoView()
             const scrolledY = window.scrollY
             if (scrolledY) {
-              window.scroll(0, scrolledY - 60)
+              window.scroll(0, scrolledY - 75)
             }
           }
           return false
