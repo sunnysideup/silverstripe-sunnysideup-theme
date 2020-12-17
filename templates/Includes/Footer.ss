@@ -4,7 +4,7 @@
             <address>
                 <strong>Sunny Side Up Ltd.</strong><br />
                 32 Salamanca Road<br />
-                kelburn<br />
+                Kelburn<br />
                 Wellington 6012<br />
                 Aotearoa New Zealand
             </address>
