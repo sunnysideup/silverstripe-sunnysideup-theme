@@ -16,7 +16,7 @@ body.theme-rocket {
     #nav {
         #closed-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter_half;
+                fill: $colour_purple_spirituality_in_the_sun;
             }
             .cls-2 {
                 fill: $colour_sunny_side_up_yellow;
@@ -48,6 +48,9 @@ body.theme-rocket {
             padding: 3rem 4rem;
             &:hover {
                 background-color: rgba(129,206,134,0.66);
+                * {
+                    filter: none;
+                }
             }
         }
         #content-below-quote {
@@ -68,7 +71,6 @@ body.theme-rocket {
         *, a:link, a:visited {
             color: $colour_white;
         }
-        filter: drop-shadow(0 0 3px $colour_black);
         h1, h2, h3, h4, h5, h6, address, p, ul {
             filter: drop-shadow(0 0 3px $colour_black);
         }
@@ -87,11 +89,16 @@ body.theme-rocket {
         hr {
             border-color: $colour_white!important;
         }
-        .last-updated {
-            color: $colour_hypocrite_yellow!important;
-        }
+        // .last-updated {
+        //     color: $colour_hypocrite_yellow!important;
+        // }
         pre {
             background-color: $colour_navy;
+        }
+        .media, .image-container {
+            background-color: transparent;
+            background: transparent;
+            border-color: transparent;
         }
     }
 
@@ -160,6 +167,18 @@ body.theme-rocket {
             #header {
                 h1 {
                     background-color: transparent;
+                }
+            }
+            #content-below-quote {
+
+                // background-color: rgba(0,0,0,0.5);
+                border-radius: 2rem;
+                padding: 3rem 4rem;
+                &:hover {
+                    background-color: rgba(129,206,134,0.66);
+                    * {
+                        filter: none;
+                    }
                 }
             }
         }

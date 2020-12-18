@@ -4,13 +4,16 @@ footer#footer {
     padding-right: 6vw;
     padding-bottom: 6vh;
     position: relative;
-    z-index: 9;
+    z-index: 35;
+    div.col {
+        padding-bottom: 2vh;
+        text-align: center;
+    }
     p {
         padding: 0;
         margin: 0;
         clear: both;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
         color: $colour_white;
     }
     address {
@@ -22,15 +25,12 @@ footer#footer {
         clear: both;
         padding-bottom: 1rem;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
-        font-size: 1.3rem;
     }
     ul {
         padding: 0;
         margin: 0;
         clear: both;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
         list-style: none;
     }
     li {
@@ -38,7 +38,6 @@ footer#footer {
         margin: 0;
         clear: both;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
         list-style: none;
     }
     #theme-selectors {
@@ -46,10 +45,10 @@ footer#footer {
         margin: 0;
         clear: both;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
         display: none;
     }
     * {
+        font-size: 2rem;
         color: $colour_white;
     }
     a {

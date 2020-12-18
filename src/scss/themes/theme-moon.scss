@@ -19,9 +19,11 @@ body.theme-moon {
         text-decoration: none!important;
     }
     #nav {
+        background-color: $colour_black;
+        border-color: $colour_painty_green;
         #closed-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter_half;
+                fill: $colour_painty_green;
             }
             .cls-2 {
                 fill: $colour_burned_sunny_side_up;
@@ -64,11 +66,13 @@ body.theme-moon {
         }
         .media, .image-container {
             background-color: $colour_black;
-            border-color: $colour_hypocrite_yellow;
+            background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_black, $colour_law_firm_report_cover);
+            border-color: $colour_black;
+
         }
-        .last-updated {
-            color: $colour_rose_storm!important;
-        }
+        // .last-updated {
+        //     color: $colour_white!important;
+        // }
     }
 
     form {
@@ -107,18 +111,18 @@ body.theme-moon {
             color: $colour_white;
         }
         li.current a, a:hover {
-            color: $colour_rose_storm!important;
+            color: $colour_painty_green!important;
         }
         #theme-selectors {
             svg {
                 fill: $colour_white;
                 &:hover {
-                    fill: $colour_rose_storm !important;
+                    fill: $colour_painty_green !important;
                 }
             }
             #theme-moon {
                 svg {
-                    fill: $colour_rose_storm !important;
+                    fill: $colour_painty_green !important;
                 }
             }
         }
@@ -137,6 +141,9 @@ body.theme-moon {
                 color: $colour_white;
             }
         }
+        #nav {
+            background-color: transparent;
+        }
     }
     &.menu-on {
         #nav {
@@ -149,7 +156,8 @@ body.theme-moon {
 }
 
 @media only screen and (min-width: 1050px) {
-    body.theme-moon {
+    body.theme-moon,
+    body.theme-moon.past-header {
         #nav {
             background-color: $colour_outer_space_love;
         }

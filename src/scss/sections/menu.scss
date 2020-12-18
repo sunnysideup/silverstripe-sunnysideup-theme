@@ -3,12 +3,16 @@
  */
 #nav {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    right: 0;
-    height: 3.7rem;
-    width: 3.7rem;
-    z-index: 5;
+    height: 20rem;
+    width: 20rem;
+    z-index: 25;
+    margin-left: -10rem;
+    margin-bottom: -10rem;
+    background-color: $colour_white;
+    border-radius: 50%;
+    border: 1px solid $colour_blue_cobalter;
     a {
         text-decoration: none;
     }
@@ -21,14 +25,12 @@
     }
 
     #menu-toggle {
-        height: 3.7rem;
-        width: 3.7rem;
-        line-height: 3.7rem; //required to center;
-        right: auto;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem; //required to center;
         position: absolute;
-        left: 6vw;
-        top: 3vh;
-        opacity: 0.9;
+        right: 3.5rem;
+        top: 3.5rem;
         z-index: 9;
         display: table-cell;
         text-align: left;
@@ -36,69 +38,19 @@
         text-decoration: none;
         outline: 0;
         svg {
-            margin-top: -0.3rem;
-            height: calc(5.7rem * 0.7);
+            height: 5rem;
             width: auto;
             vertical-align: middle;
         }
     }
 
     #nav-inner {
-        vertical-align: middle;
-        opacity: 0;
-        margin: 6vh 0 0 0;
-        padding: 0 0 0 15vw;
+        width: 0;
         height: 0;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        overflow-x: visible;
-        overflow-y: auto;
-        ul {
-            padding-left: 0;
-            margin-left: 0;
-            list-style: none;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-            li {
-                padding-left: 0;
-                margin-left: 0;
-                margin-bottom: 1rem;
-                margin-top: 1rem;
-                font-size: 2.5rem;
-                list-style: none;
-                text-transform: uppercase;
-                a {
-                    border-bottom: 3px solid transparent;
-                    &:hover {
-                        border-bottom: 3px solid $colour_blue_cobalter;
-                    }
-                }
-                ul {
-                    li {
-                        font-size: 1.7rem;
-                        margin-bottom: 1.3rem;
-                        margin-top: 1.3rem;
-                        ul {
-                            li {
-                                font-size: 1.3rem;
-                            }
-                        }
-                    }
-                }
-            }
-            li.current {
-                > a {
-                    border-bottom: 3px solid $colour_blue_cobalter;
-                }
-            }
-            li.section {
-                > a {
-                    // text-decoration: underline;
-                    // text-decoration-style: dashed;
-                }
-            }
+        position: absolute;
+        opacity: 0;
+        nav {
+            display: none;
         }
     }
     #closed-icon {
@@ -115,15 +67,24 @@
 }
 
 
-body.past-header,
-body.menu-on {
+body.past-header {
     #nav {
+        background-color: transparent;
+        border: 0px solid $colour_blue_cobalter;
+        bottom: auto;
+        top: 0;
+        margin: 0;
+        left: 6vw;
+        width: 2rem;
+        height: 2rem;
+
         #menu-toggle {
-            opacity: 1;
+            line-height: 6rem;
+            left: 0;
             top: 0;
-            left: 6vw;
+            right: auto;
             svg {
-                height: calc(3.7rem * 0.7);
+                height: 4rem;
             }
         }
     }
@@ -131,14 +92,88 @@ body.menu-on {
 
 body.menu-on {
     #nav {
+        border: 0px solid $colour_blue_cobalter;
         background-color: $colour_sunny_side_up_yellow;
         opacity: 1;
         height: 100vh;
         width: 100vw;
+        border-radius: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        left: 0;
+        #menu-toggle {
+            opacity: 1;
+            bottom: 2rem;
+            left: 2rem;
+            top: auto;
+            svg {
+                height: calc(3.7rem * 0.7);
+            }
+        }
+
         #nav-inner {
             opacity: 1!important;
-            display: block;
-            height: calc(100vh - 12vh);
+            height: auto!important;
+            width: auto!important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            vertical-align: middle;
+            margin: 0;
+            padding: 0 0 0 3rem;
+            overflow: hidden;
+            nav {
+                display: block;
+            }
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            ul {
+                padding-left: 0;
+                margin-left: 0;
+                list-style: none;
+                text-transform: uppercase;
+                li {
+                    padding-left: 0;
+                    margin-left: 0;
+                    margin-bottom: 2vh;
+                    margin-top: 2vh;
+                    font-size: calc(2rem + 2vh);
+                    list-style: none;
+                    text-transform: uppercase;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    a {
+                        border-bottom: 3px solid transparent;
+                        &:hover {
+                            border-bottom: 3px solid $colour_blue_cobalter;
+                        }
+                    }
+                    ul {
+                        li {
+                            font-size: calc(1rem + 2vh);
+                            margin-bottom: 1vh;
+                            margin-top: 1vh;
+                            ul {
+                                li {
+                                    font-size: calc(1rem + 1vh);
+                                }
+                            }
+                        }
+                    }
+                }
+                li.current {
+                    > a {
+                        border-bottom: 3px solid $colour_blue_cobalter;
+                    }
+                }
+                li.section {
+                    > a {
+                        // text-decoration: underline;
+                        // text-decoration-style: dashed;
+                    }
+                }
+            }
         }
         #closed-icon {
             display: none;
@@ -152,6 +187,15 @@ body.menu-on {
     @media only screen and (max-width: 1049px) {
         #nav {
             z-index: 999;
+        }
+    }
+}
+
+body.past-header.menu-on {
+    #nav {
+        #menu-toggle {
+            top: 2rem;
+            bottom: auto;
         }
     }
 }

@@ -15,9 +15,6 @@ main#main {
             letter-spacing: 0.1em;
             font-weight: 200;
             font-style: italic;
-            .blinker-holder {
-                text-decoration: none!important;
-            }
             .blinker {
                 display: inline-block;
                 text-align: center;
@@ -28,12 +25,13 @@ main#main {
                 animation-delay: 2.5s;
                 animation-iteration-count: infinite;
                 text-decoration: none!important;
+                font-style: normal;
             }
         }
     }
 
     #quote-end {
-        margin-bottom: 12vh;
+        margin-bottom: 18vh;
     }
 }
 

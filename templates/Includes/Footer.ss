@@ -4,7 +4,7 @@
             <address>
                 <strong>Sunny Side Up Ltd.</strong><br />
                 32 Salamanca Road<br />
-                kelburn<br />
+                Kelburn<br />
                 Wellington 6012<br />
                 Aotearoa New Zealand
             </address>
@@ -17,12 +17,6 @@
             </p>
             <p>
                 <a href="mailto:$SiteConfig.Email.HiddenEmailAddress">$SiteConfig.Email.HiddenEmailAddress</a>
-            </p>
-            <p>
-                <i>
-                    <br />
-                <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<br /><% end_if %>
-                </i>
             </p>
         </div>
 
@@ -45,7 +39,12 @@
             <a href="$SiteConfig.ClimatePositivePage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/climate-positive.png)" alt="Climate Positive!" /></a>
             <% end_if %>
             <% if $SiteConfig.ShopifyPartnerPage %>
-            <a href="$SiteConfig.ShopifyPartnerPage.Link" class="image-holder" id="ClimatePositive"><img src="$resourceURL(/themes/sun/dist/images/shopify-partner.webp)" alt="Shopify Partner" /></a>
+            <a href="$SiteConfig.ShopifyPartnerPage.Link" class="image-holder" id="ShopifyPartner">
+                <picture>
+                    <source srcset="$resourceURL(/themes/sun/dist/images/shopify-partner.webp)" type="image/webp">
+                    <img src="$resourceURL(/themes/sun/dist/images/shopify-partners.png)" alt="shopify partners" />
+                </picture>
+            </a>
             <% end_if %>
 
         </div>
