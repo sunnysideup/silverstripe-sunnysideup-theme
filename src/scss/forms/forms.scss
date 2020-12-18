@@ -7,6 +7,9 @@ $background_color_6: transparent;
 
 .typography {
     form {
+        * {
+            font-size: 2rem;
+        }
         margin-top: 2rem;
         margin-bottom: 4rem;
         fieldset,
@@ -18,26 +21,27 @@ $background_color_6: transparent;
             background-color: $colour_white;
             margin: 2rem 0;
             h1, h2, h3, h4, h5, h6 {
-                font-size: 1.7rem;
+                font-size: 2rem;
                 text-transform: uppercase;
+                font-weight: bold;
                 &:before {
                     border: none!important;
                 }
             }
             h1, h2, h3, h4, h5, h6, p, ul, ol {
-                padding-top: 1em;
+                padding-top: 1rem;
                 padding-bottom: 0em;
                 margin: 0;
                 float: none;
                 line-height: 1.2;
             }
             .field {
-                padding-top: 1em;
+                padding-top: 3rem;
                 width: 100%;
-                padding-bottom: 0.8em;
+                padding-bottom: 0.8rem;
             }
             label {
-                font-size: 1.3rem;
+                font-size: 2rem;
                 // font-style: italic;
                 color: $colour_yep_thats_grey_revers!important;
             }
@@ -49,11 +53,11 @@ $background_color_6: transparent;
                 select
                 {
                     background-color: $colour_light_grey_aotrom;
-                    width: calc(100% - 1.4em);
+                    width: calc(100% - 3rem);
                     border: none;
                     transition: all 0.5s ease 0s;
                     margin-top: 0px;
-                    padding: 0.7em;
+                    padding: 1.5rem;
                     font-weight: 600;
                     -webkit-transition: all 0.5s ease 0s;
                     border-bottom: 3px solid $colour_modern_iron;
@@ -88,7 +92,7 @@ $background_color_6: transparent;
                 }
                 li {
                     &:nth-child(odd) {
-                        margin-right: 3em !important;
+                        margin-right: 3rem !important;
                     }
                     list-style: none !important;
                     margin-top: 0px;
@@ -115,17 +119,17 @@ $background_color_6: transparent;
                 }
             }
             label {
-                padding-bottom: 0.2em;
+                padding-bottom: 0.2rem;
                 display: block;
             }
             label.FormHeading {
                 display: block;
                 color: $colour_vexy;
                 font-weight: 600;
-                margin-bottom: 1em;
+                margin-bottom: 1rem;
             }
             span.message {
-                margin-top: -1em;
+                margin-top: 0;
                 font-weight: 900px;
             }
             span.bad {
@@ -140,12 +144,15 @@ $background_color_6: transparent;
                 background-color: $colour_good;
                 color: $colour_white;
             }
+            .field + span.message {
+                margin-top: -0.8rem;
+            }
 
             input.password,
             input.numeric,
             input.currency,
             input.date {
-                max-width: 17em;
+                max-width: 27rem;
             }
             .optionset, .checkboxset {
                 label.left {
@@ -177,7 +184,7 @@ $background_color_6: transparent;
                 }
             }
             span.readonly {
-                padding: 0.7em;
+                padding: 0.7rem;
                 margin-top: 0px;
                 color: $colour_black;
                 font-weight: 600;
@@ -185,13 +192,14 @@ $background_color_6: transparent;
                 display: block;
                 background-color: $colour_light_grey_aotrom;
                 border-top-right-radius: 1rem;
+                font-size: 2rem;
             }
         }
         .btn-toolbar {
             display: block;
             text-align: left;
             input {
-                padding: 1.3em 1.7em;
+                padding: 1.3rem 1.7rem;
                 background: $colour_blue_cobalter;
                 border-top-right-radius: 0;
                 border-bottom-left-radius: 1rem;
@@ -214,16 +222,16 @@ $background_color_6: transparent;
         p {
             margin-top: 1.7rem!important;
             margin-left: 0!important;
-            font-size: 1.3rem!important;
+            font-size: 2rem!important;
         }
         p.ForgotPassword {
             display: block;
             text-align: left;
         }
         .message {
-            font-size: 1rem!important;
+            font-size: 2rem!important;
             line-height: 1;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.5rem;
             font-weight: 600;
             background-color: $colour_sunny_side_up_yellow;
             display: block;
