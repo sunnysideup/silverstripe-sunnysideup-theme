@@ -42,16 +42,6 @@ body.theme-rocket {
             padding-top: 3rem;
         }
         #content-below-quote {
-
-            // background-color: rgba(0,0,0,0.5);
-            border-radius: 2rem;
-            padding: 3rem 4rem;
-            &:hover {
-                background-color: rgba(129,206,134,0.66);
-                * {
-                    filter: none;
-                }
-            }
         }
         #content-below-quote {
         }
@@ -71,8 +61,8 @@ body.theme-rocket {
         *, a:link, a:visited {
             color: $colour_white;
         }
-        h1, h2, h3, h4, h5, h6, address, p, ul {
-            filter: drop-shadow(0 0 3px $colour_black);
+        h1, h2, h3, h4, h5, h6, address, p, li {
+            filter: drop-shadow(0 0 12px $colour_black);
         }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
@@ -172,12 +162,9 @@ body.theme-rocket {
             #content-below-quote {
 
                 // background-color: rgba(0,0,0,0.5);
-                border-radius: 2rem;
-                padding: 3rem 4rem;
                 &:hover {
-                    background-color: rgba(129,206,134,0.66);
-                    * {
-                        filter: none;
+                    p, li, h1, h2, h3, h4, h5, h6 {
+                        filter: drop-shadow(0 0 24px black)
                     }
                 }
             }
