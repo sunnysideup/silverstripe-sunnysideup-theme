@@ -90,6 +90,9 @@ body.theme-rocket {
             background: transparent;
             border-color: transparent;
         }
+        #BackgroundVideo {
+            background: transparent;
+        }
     }
 
     form {
@@ -146,7 +149,7 @@ body.theme-rocket {
         }
     }
     &.no-touch {
-        #footer, #nav {
+        #footer {
             opacity: 0.6;
             &:hover {
                 opacity: 1;
@@ -161,12 +164,6 @@ body.theme-rocket {
             }
             #content-below-quote {
 
-                // background-color: rgba(0,0,0,0.5);
-                &:hover {
-                    p, li, h1, h2, h3, h4, h5, h6 {
-                        filter: drop-shadow(0 0 24px black)
-                    }
-                }
             }
         }
     }
@@ -179,7 +176,7 @@ body.theme-rocket {
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
         #nav {
-            background-color: $colour_darker_grey_catch_22;
+            background-color: transparent;
         }
     }
 }

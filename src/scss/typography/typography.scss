@@ -28,7 +28,7 @@
             width: 100%;
             left: 0;
             right: 0;
-            border-top: 1px dashed $colour_blue_cobalter;
+            border-top: 1px dashed $colour_blue_cobalter_half;
             display: block;
             content: ' ';
             margin-top: -2rem;
@@ -44,7 +44,7 @@
         h1, h2 {
             text-transform: uppercase;
             &:before {
-                border-top: 1px dashed $colour_blue_cobalter;
+                border-top: 1px dashed $colour_blue_cobalter_half;
             }
         }
     }
