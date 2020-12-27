@@ -37,7 +37,7 @@ const scrollManager = {
       function () {
         window.clearTimeout(scrollManager.timeOutFx)
         window.clearTimeout(scrollManager.justScrolledFx)
-        if (window.scrollY === 0) {
+        if (window.scrollY < 10) {
           scrollManager.bodyObject.classList.remove('past-header')
         } else {
           scrollManager.bodyObject.classList.add('past-header')

@@ -11,3 +11,7 @@ a {
         color: $colour_blue_cobalter;
     }
 }
+//all teims with id set scroll-margin-top higher
+*[id] {
+    scroll-margin-top: 10rem;
+}

@@ -6,7 +6,7 @@ const toc = () => {
   const headings = document.querySelectorAll('.typography h1, .typography h2')
   // get the body element
   // apply class to container div
-  if (headings.length > 2) {
+  if (headings.length > 3) {
     body.classList.add('has-toc')
     body.classList.add('toc-off')
     for (let i = 0; i < headings.length; i++) {
@@ -22,14 +22,19 @@ const toc = () => {
           body.classList.toggle('toc-on')
           body.classList.toggle('toc-off')
           const hash = this.id
-          if (hash) {
+          if (hash && body.classList.contains('toc-off')) {
             // scroll to item!
             window.location.hash = hash
-            const scrolledY = window.scrollY
-            document.querySelector('#' + hash).scrollIntoView()
-            if (scrolledY > 120) {
-              window.scroll(0, scrolledY - 120)
-            }
+            window.setTimeout(
+              function () {
+                document.querySelector('#' + hash).scrollIntoView({
+                  behavior: 'smooth', // smooth scroll
+                  block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                })
+              },
+              300
+            )
+          } else {
           }
           return false
         },
