@@ -222,15 +222,21 @@
     blockquote p {
         text-align: right;
     }
-
+    a {
+        transition: 2.7s;
+    }
     a:hover {
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #f7cd5577;
+        -webkit-text-stroke-color: inherit;
+        filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
+        // border-bottom: 3px solid $colour_blue_cobalter;
     }
 
     .last-updated {
-
-        font-style: italic;
         font-weight: 200;
+        color: $colour_yep_thats_grey;
+        font-size: 1.3rem;
+        margin-top: 3rem!important;
+        font-family: $base_font_headers;
     }
 }

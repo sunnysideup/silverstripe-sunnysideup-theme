@@ -1,5 +1,6 @@
 * {
     color: $colour_blue_cobalter;
+    scroll-behavior: smooth;
 }
 a {
     color: $colour_blue_cobalter;
@@ -9,4 +10,8 @@ a {
     &:visited {
         color: $colour_blue_cobalter;
     }
+}
+//all teims with id set scroll-margin-top higher
+*[id] {
+    scroll-margin-top: 10rem;
 }
