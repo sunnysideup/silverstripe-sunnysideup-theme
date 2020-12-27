@@ -5,16 +5,19 @@ main#main {
         margin-top: 0vh;
         margin-top: 0vh;
         margin-right: 1.5vh;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         p {
             display: block;
             margin: 0;
             padding: 0;
-            font-size: calc(3.5vh + 3.5vw);
+            font-size: calc(1.75vh + 3.5vw);
             line-height: 1.2;
             overflow: hidden;
             letter-spacing: 0.1em;
             font-weight: 200;
             font-style: italic;
+            text-align: right;
             .blinker {
                 display: inline-block;
                 text-align: center;
@@ -30,9 +33,6 @@ main#main {
         }
     }
 
-    #quote-end {
-        margin-bottom: 18vh;
-    }
 }
 
 @keyframes blink {

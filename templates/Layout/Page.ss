@@ -10,7 +10,6 @@
         <a href="#quote-end" class="blinker">▂</a>
     </p>
 </blockquote>
-<div  id="quote-end"></div>
 <% end_if %>
 <div  id="content-below-quote">
     $Content
