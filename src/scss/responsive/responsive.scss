@@ -217,6 +217,11 @@
             animation-fill-mode: forwards;
         }
     }
+    body.past-header.just-scrolled.toc-on {
+        #header {
+            display: none!important;
+        }
+    }
     #header {
         #logo {
             width: 9vw;

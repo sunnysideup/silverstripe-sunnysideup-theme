@@ -228,7 +228,8 @@
 
     a:hover {
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #f7cd5577;
+        -webkit-text-stroke-color: inherit;
+        text-decoration: none;
     }
 
     .last-updated {

@@ -11,18 +11,24 @@ const toc = () => {
     body.classList.add('toc-off')
     for (let i = 0; i < headings.length; i++) {
       const el = headings[i]
-      el.id = 'toc-' + i
+      el.id = 'toc-' + (i + 1)
+      const span = document.createElement('span')
+      // span.addEventListener('click', handleClick.bind(null, el))
+      span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
+      el.insertBefore(span, el.firstChild)
       el.addEventListener(
         'click',
         function (e) {
           body.classList.toggle('toc-on')
+          body.classList.toggle('toc-off')
           const hash = this.id
           if (hash) {
-            // window.location.hash = hash
-            document.querySelector('#' + hash).scrollIntoView()
+            // scroll to item!
+            window.location.hash = hash
             const scrolledY = window.scrollY
-            if (scrolledY) {
-              window.scroll(0, scrolledY - 75)
+            document.querySelector('#' + hash).scrollIntoView()
+            if (scrolledY > 120) {
+              window.scroll(0, scrolledY - 120)
             }
           }
           return false
