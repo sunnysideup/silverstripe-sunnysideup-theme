@@ -6,7 +6,7 @@ const toc = () => {
   const headings = document.querySelectorAll('.typography h1, .typography h2')
   // get the body element
   // apply class to container div
-  if (headings.length > 4) {
+  if (headings.length > 2) {
     body.classList.add('has-toc')
     body.classList.add('toc-off')
     for (let i = 0; i < headings.length; i++) {
