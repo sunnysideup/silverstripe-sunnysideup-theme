@@ -6,8 +6,11 @@ main#main {
         margin-top: 0vh;
         margin-right: 1.5vh;
         padding-top: 0;
-        padding-bottom: calc(10vh - 2rem);
+        padding-bottom: calc(10vh);
         p {
+            &.has-typing-mode {
+                visibility: hidden;
+            }
             display: block;
             margin: 0;
             padding: 0;
@@ -33,6 +36,24 @@ main#main {
         }
     }
 
+}
+
+main#main {
+    blockquote {
+        padding: 0;
+        margin: 0;
+        margin-top: 0vh;
+        margin-top: 0vh;
+        margin-right: 1.5vh;
+        padding-top: 0;
+        padding-bottom: calc(10vh);
+        p {
+            .Typewriter__wrapper,
+            .Typewriter__wrapper * {
+                visibility: visible;
+            }
+        }
+    }
 }
 
 @keyframes blink {
