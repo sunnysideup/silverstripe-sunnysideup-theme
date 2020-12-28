@@ -58,7 +58,6 @@ new Typewriter(
     pauseFor: 30 * 1000,
     cursor: '',
     loop: true,
-    delay: 27,
   }
 )
 </script>
