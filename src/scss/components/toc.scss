@@ -7,9 +7,10 @@ body.toc-on {
                 display: none;
             }
             h1, h2 {
+                width: auto!important;
                 display: block;
                 &:before {
-                    border-top-color: transparent;
+                    border-top-color: transparent!important;
                 }
             }
             #SiblingsAndChildren {
