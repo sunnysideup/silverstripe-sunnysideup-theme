@@ -1,7 +1,9 @@
 
+
+
 <% if $Quote %>
 <blockquote class="main-quote">
-    <p>
+    <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %>">
         <% if $IsHomePage %>
         We are here to make your website
         <a href="#" data-add-class="theme-sun" data-remove-class="theme-moon, theme-rocket" class="set-theme current">shine</a>
@@ -10,7 +12,6 @@
         <a href="#content-below-quote" class="blinker">▂</a>
     </p>
 </blockquote>
-<div id="quote-end"></div>
 <% end_if %>
 <div  id="content-below-quote">
     $Content
