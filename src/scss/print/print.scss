@@ -48,13 +48,13 @@
         }
         #main {
 
-            h1, h2{
-                page-break-before: always;
-            }
-            h1:first-child, h2:first-child,
-            h1:first-of-type, h2:first-of-type {
-                page-break-before:auto;
-            }
+            // h1, h2{
+            //     page-break-before: always;
+            // }
+            // h1:first-child, h2:first-child,
+            // h1:first-of-type, h2:first-of-type {
+            //     page-break-before:auto;
+            // }
             padding: 1rem 5rem!important;
             &:before {
                 display: block;
@@ -66,6 +66,31 @@
             }
             p {
                 padding-bottom: 2rem;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            h3 {
+                font-size: 20px
+            }
+            p, li, address {
+                font-size: 15px;
+            }
+            ul, ol, li {
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            ul, ol, li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            ul, ol {
+                padding-bottom: 20px;
             }
         }
     }
