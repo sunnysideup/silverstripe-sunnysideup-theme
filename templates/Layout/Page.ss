@@ -23,7 +23,7 @@
 
     <% if $LastEdited %>
         <p class="last-updated">
-        This page was last updated {$LastEdited.Ago}. <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<% end_if %>
+        { This page was last updated {$LastEdited.Ago}. <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<% end_if %> }
         </p>
     <% end_if %>
 </div>
