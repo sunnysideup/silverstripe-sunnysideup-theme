@@ -38,6 +38,7 @@
                 text-transform: uppercase;
                 font-weight: 500;
                 font-family: $base_font_headers;
+                color: $colour_blue_cobalter!important;
             }
         }
 
@@ -119,6 +120,18 @@
                     border: 1px solid $colour_black_rock_n_roll!important;
                 }
             }
+            pre {
+                white-space: pre-wrap;       /* css-3 */
+                white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                white-space: -pre-wrap;      /* Opera 4-6 */
+                white-space: -o-pre-wrap;    /* Opera 7 */
+                word-wrap: break-word;       /* Internet Explorer 5.5+ */
+                color: $colour_blue_cobalter;
+            }
+            a {
+                text-decoration-color: $colour_blue_cobalter!important;
+            }
         }
     }
+
 }
