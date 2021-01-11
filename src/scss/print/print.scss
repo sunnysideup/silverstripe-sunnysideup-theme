@@ -1,16 +1,18 @@
+@page {
+    size: auto;
+    margin: 0!important;
+    padding: 0!important;
+    margin-bottom: 40mm!important;
+    margin-top: 20mm!important;
+}
+@page:first {
+    margin-top: 0mm!important;
+}
 @media print {
-    @page {
-        size: auto;
-        margin: 0!important;
-        padding: 0!important;
-        margin-bottom: 40mm!important;
-        margin-top: 20mm!important;
-    }
-    @page:first {
-        margin-top: 0mm!important;
-    }
     body,
     html {
+        width: 210mm;
+        height: 297mm;
         font-size: 10px!important;
         *, *:before {
             color: $colour_black_rock_n_roll!important;
@@ -54,7 +56,7 @@
             display: none!important;
         }
         #main {
-            padding: 1rem 12rem!important;
+            padding: 1rem 12rem 4rem 12rem!important;
 
             &:before {
                 display: block;
