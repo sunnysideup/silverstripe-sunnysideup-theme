@@ -2,7 +2,7 @@
     @page {
         margin: 0!important;
         padding: 0!important;
-        margin-bottom: 20mm!important;
+        margin-bottom: 40mm!important;
         margin-top: 20mm!important;
     }
     @page:first {
@@ -27,7 +27,7 @@
                 float: right;
             }
             h1 {
-                padding-left: 5rem!important;
+                padding-left: 12rem!important;
                 clear: right;
                 font-size: 3rem;
                 text-transform: uppercase;
@@ -44,27 +44,30 @@
         embed,
         #header,
         #BackgroundVideo,
+        span .open,
+        span .closed,
         .last-updated {
-            display: none;
+            display: none!important;
         }
         #main {
+            padding: 1rem 12rem!important;
 
-            // h1, h2{
-            //     page-break-before: always;
-            // }
-            // h1:first-child, h2:first-child,
-            // h1:first-of-type, h2:first-of-type {
-            //     page-break-before:auto;
-            // }
-            padding: 1rem 5rem!important;
             &:before {
                 display: block;
-                background-image: url(images/SSU_Logo_horizontal_.png)!important;
+                background-image: url(./images/SSU_Logo_horizontal_.png)!important;
                 background-position: top left;
                 background-size: contain;
                 height: 100px;
                 width: 100%;
             }
+            h1, h2{
+                page-break-before: always;
+            }
+            h1:first-child, h2:first-child,
+            h1:first-of-type, h2:first-of-type {
+                page-break-before:auto;
+            }
+
             p {
                 padding-bottom: 2rem;
             }
@@ -78,22 +81,18 @@
                 font-size: 20px
             }
             p, li, address {
-                font-size: 15px;
+                font-size: 12px;
             }
-            ul, ol, li {
-                padding-top: 0;
-                padding-bottom: 0;
-                margin-top: 0;
-                margin-bottom: 0;
+            ul, ol, li, p {
+                padding-top: 0!important;
+                padding-bottom: 0!important;
+                margin-top: 0!important;
+                margin-bottom: 0!important;
             }
-            ul, ol, li {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            ul, ol {
-                padding-bottom: 20px;
+            li, p {
+                padding-top: 5px!important;
+                padding-bottom: 5px!important;
             }
         }
     }
-
 }
