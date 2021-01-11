@@ -1,30 +1,5 @@
 
 
-body.toc-on {
-    .typography {
-        #content-below-quote {
-            > * {
-                display: none;
-            }
-            h1, h2 {
-                width: auto!important;
-                display: block;
-                &:before {
-                    border-top-color: transparent!important;
-                }
-            }
-            #SiblingsAndChildren {
-                display: block;
-            }
-            #SiblingsAndChildren > * {
-                display: none;
-            }
-            #SiblingsAndChildren h2, #SiblingsAndChildren h1 {
-                display: block;
-            }
-        }
-    }
-}
 
 body.has-toc {
     .typography {
@@ -47,13 +22,32 @@ body.has-toc {
     }
 }
 body.toc-on {
-    .typography {
-        h1, h2 {
-            i.closed {
+    #main {
+        .typography {
+            > * {
                 display: none;
             }
-            i.open {
-                display: inline-block;
+            h1, h2 {
+                width: auto!important;
+                display: block;
+                &:before {
+                    border-top-color: transparent!important;
+                }
+                i.closed {
+                    display: none;
+                }
+                i.open {
+                    display: inline-block;
+                }
+            }
+            #SiblingsAndChildren {
+                display: block;
+            }
+            #SiblingsAndChildren > * {
+                display: none;
+            }
+            #SiblingsAndChildren h2, #SiblingsAndChildren h1 {
+                display: block;
             }
         }
     }
