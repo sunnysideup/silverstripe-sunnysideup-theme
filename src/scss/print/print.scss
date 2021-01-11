@@ -20,6 +20,9 @@
         header#print {
             box-shadow: inset 0 0 0 1000px  $colour_light_grey_aotrom;
             display: block!important;
+            top: 0;
+            left: 0;
+            right: 0;
             img {
                 display: block;
                 width: 100px;
@@ -52,7 +55,7 @@
             display: none!important;
         }
         #main {
-            padding: 1rem 12rem!important;
+            padding: 9rem 12rem 1rem 12rem!important;
 
             &:before {
                 display: block;
@@ -62,12 +65,12 @@
                 height: 100px;
                 width: 100%;
             }
-            h1, h2{
-            }
-            h1:first-child, h2:first-child,
-            h1:first-of-type, h2:first-of-type {
-                page-break-before:auto;
-            }
+            // h1, h2{
+            // }
+            // h1:first-child, h2:first-child,
+            // h1:first-of-type, h2:first-of-type {
+            //     page-break-before:auto;
+            // }
 
             p {
                 padding-bottom: 2rem;
@@ -82,14 +85,23 @@
                 font-size: 20px
             }
             h1, h2, h3, h4, h5, h6 {
+                page-break-before: auto;
+                &:before, &:after {
+                    page-break-after: avoid;
+                    page-break-inside: avoid;
+                }
                 page-break-after: avoid;
                 page-break-inside: avoid;
+                & + p,
+                & + ul,
+                & + ol {
+                    page-break-before: avoid;
+                }
             }
             p, li, address {
                 font-size: 12px;
             }
             ul, ol, li, p {
-                page-break-inside: avoid;
                 padding-top: 0!important;
                 padding-bottom: 0!important;
                 margin-top: 0!important;
@@ -99,8 +111,8 @@
                 padding-top: 5px!important;
                 padding-bottom: 5px!important;
             }
-            ol, ul {
-                page-break-before: avoid;
+            table {
+                page-break-inside: avoid;
             }
         }
     }
