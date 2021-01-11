@@ -113,8 +113,8 @@
             }
             table {
                 page-break-inside: avoid;
-                tr, td {
-                    border: 1px solid $colour_black_rock_n_roll;
+                th, td {
+                    border: 1px solid $colour_black_rock_n_roll!important;
                 }
             }
         }
