@@ -14,7 +14,6 @@
         font-size: 10px!important;
         *, *:before {
             color: $colour_black_rock_n_roll!important;
-            border-top-color: $colour_black_rock_n_roll!important;
         }
 
         header#print {
@@ -114,6 +113,9 @@
             }
             table {
                 page-break-inside: avoid;
+                tr, td {
+                    border: 1px solid $colour_black_rock_n_roll;
+                }
             }
         }
     }
