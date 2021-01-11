@@ -89,6 +89,7 @@
                 &:before, &:after {
                     page-break-after: avoid;
                     page-break-inside: avoid;
+                    display: none;
                 }
                 page-break-after: avoid;
                 page-break-inside: avoid;
