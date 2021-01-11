@@ -1,29 +1,29 @@
 
-
-
 body.has-toc {
     .typography {
-        h1, h2 {
-            cursor: pointer;
-            i {
-                display: inline-block;
-                width: 1.7rem;
-                font-family: $base_font_headers;
-                font-style: normal;
+        #content-below-quote {
+            h1, h2 {
+                cursor: pointer;
+                i {
+                    display: inline-block;
+                    width: 1.7rem;
+                    font-family: $base_font_headers;
+                    font-style: normal;
+                }
+                i.open {
+                    display: none;
+                }
+                i.closed {
+                    display: inline-block;
+                }
             }
-            i.open {
-                display: none;
-            }
-            i.closed {
-                display: inline-block;
-            }
-
         }
     }
 }
+
 body.toc-on {
-    #main {
-        .typography {
+    .typography {
+        #content-below-quote {
             > * {
                 display: none;
             }
@@ -52,5 +52,3 @@ body.toc-on {
         }
     }
 }
-
-// <

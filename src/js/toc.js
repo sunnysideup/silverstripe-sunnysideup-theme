@@ -3,7 +3,7 @@ const toc = () => {
   // create the container div
   const body = document.querySelector('body')
   // get all divs
-  const headings = document.querySelectorAll('.typography h1, .typography h2')
+  const headings = document.querySelectorAll('.typography #content-below-quote h1, .typography #content-below-quote h2')
   // get the body element
   // apply class to container div
   if (headings.length > 3) {
