@@ -63,7 +63,6 @@
                 width: 100%;
             }
             h1, h2{
-                page-break-before: always;
             }
             h1:first-child, h2:first-child,
             h1:first-of-type, h2:first-of-type {
@@ -84,6 +83,7 @@
             }
             h1, h2, h3, h4, h5, h6 {
                 page-break-after: avoid;
+                page-break-inside: avoid;
             }
             p, li, address {
                 font-size: 12px;
@@ -98,6 +98,9 @@
             li, p {
                 padding-top: 5px!important;
                 padding-bottom: 5px!important;
+            }
+            ol, ul {
+                page-break-before: avoid;
             }
         }
     }
