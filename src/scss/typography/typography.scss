@@ -96,23 +96,25 @@
     h3 {
         line-height: 1.7;
         font-size: 2rem;
-        padding-bottom: 0.3rem;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
     }
     h4 {
         line-height: 1.7;
         font-size: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
     }
     h5 {
         line-height: 1.7;
         font-size: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
     }
     h6 {
         line-height: 1.7;
         font-size: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+        font-weight: 200;
+        font-family: $base_font_condensed;
     }
     .image-container {
         img {
