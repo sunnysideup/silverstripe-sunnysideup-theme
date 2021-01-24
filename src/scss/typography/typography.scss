@@ -187,7 +187,10 @@
                 padding: 0;
             }
             li {
-                list-style: inside;
+                list-style: none;
+                &:before {
+                    content: '- ';
+                }
             }
             li, p {
                 padding-bottom: 1.3rem;
