@@ -16,7 +16,7 @@ const bodyClass = {
         window.scrollTo(window.pageXOffset, window.pageYOffset + 2)
         window.scrollTo(window.pageXOffset, window.pageYOffset - 2)
         const hash = bodyClass.getHashFromURL()
-        if (hash) {
+        if (hash && document.getElementById(hash)) {
           document.querySelector('#' + hash).scrollIntoView({
             behavior: 'smooth', // smooth scroll
             block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.

@@ -226,10 +226,12 @@
         transition: 0.3s;
     }
     a:hover {
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: inherit;
         filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
         // border-bottom: 3px solid $colour_blue_cobalter;
+    }
+    a:active {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: inherit;
     }
 
     .last-updated {

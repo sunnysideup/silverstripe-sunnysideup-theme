@@ -12,7 +12,7 @@ const scrollManager = {
 
   timeOutFx: null,
 
-  justScrolledFxtFx: null,
+  justScrolledFx: null,
 
   scrolledUpClass: 'scrolled-up',
 
@@ -53,6 +53,7 @@ const scrollManager = {
       function () {
         // console.log('running')
         if (scrollManager.didScroll) {
+          // reset so that we know each call is a real call.
           scrollManager.didScroll = false
           const newScroll = window.scrollY
           // console.log('last scroll: ' + scrollManager.lastScroll)

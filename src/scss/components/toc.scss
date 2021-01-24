@@ -16,6 +16,18 @@ body.has-toc {
                 i.closed {
                     display: inline-block;
                 }
+                i.active {
+                    display: none;
+                }
+                &.toc-active {
+                    i.active {
+                        display: inline-block;
+                    }
+                    i.open,
+                    i.closed {
+                        display: none;
+                    }
+                }
             }
         }
     }
