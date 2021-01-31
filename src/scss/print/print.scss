@@ -59,7 +59,6 @@
         #main {
             overflow: visible!important;
             padding: 1rem 12rem 4rem 12rem!important;
-
             &:before {
                 display: block;
                 background-image: url(./images/SSU_Logo_horizontal_.png)!important;
@@ -131,6 +130,12 @@
             }
             a {
                 text-decoration-color: $colour_blue_cobalter!important;
+                &:after{
+                    content: " (" attr(href) ") ";
+                    font-size: 10px;
+                    word-break: break-all;
+                }
+
             }
         }
     }
