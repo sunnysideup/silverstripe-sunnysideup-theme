@@ -1,6 +1,6 @@
 @media only screen and (min-width: 0px) {
     html {
-        font-size: calc(8px + 0.17vw) !important;
+        font-size: calc(8px + 0.13vw) !important;
     }
     #header {
         #logo {
@@ -160,7 +160,7 @@
         padding-top: calc(12vw + 10vh);
         .typography {
             p {
-                text-align: justify;
+                // text-align: justify;
             }
 
             h1, h2 {
@@ -241,7 +241,6 @@
         }
         h1 {
             font-size: calc(9vw / 3);
-            right: calc( 6vw + (9vw / 4.6));
             top: calc(9vw / 1.6);
         }
     }
@@ -250,7 +249,6 @@
         padding: 0;
         padding-top: calc(9vw + 10vh);
         padding-bottom: 4rem;
-        margin-right: 6vw;
         margin-left: 24vw;
     }
     #nav {
@@ -345,6 +343,14 @@
 
 }
 @media only screen and (min-width: 1350px) {
+    #header {
+        #logo {
+            right: 9vw;
+        }
+        h1 {
+            right: calc( 9vw + (9vw / 4.6));
+        }
+    }
     #nav {
         #nav-inner {
             nav {
@@ -356,6 +362,9 @@
     }
     .row {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #main {
+        margin-right: 9vw;
     }
     //
     // #theme-selectors {
