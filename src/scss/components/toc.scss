@@ -49,8 +49,14 @@ body.toc-on {
                 i.closed {
                     display: none;
                 }
-                i.open {
-                    display: inline-block;
+                &.toc-active {
+                    i.closed {
+                        display: inline-block;
+                    }
+                    i.open,
+                    i.active {
+                        display: none;
+                    }
                 }
             }
             #SiblingsAndChildren {
