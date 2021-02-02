@@ -14,7 +14,7 @@ main#main {
             display: block;
             margin: 0;
             padding: 0;
-            font-size: calc(2.75vh + 4.5vw);
+            font-size: calc( ( ( 2.75vh + 4.5vw) * 0.5) + 20px);
             line-height: 1.2;
             overflow: hidden;
             letter-spacing: 0.1em;

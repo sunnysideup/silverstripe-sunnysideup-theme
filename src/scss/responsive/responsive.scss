@@ -343,12 +343,14 @@
 
 }
 @media only screen and (min-width: 1350px) {
-    #header {
-        #logo {
-            right: 9vw;
-        }
-        h1 {
-            right: calc( 9vw + (9vw / 4.6));
+    body, body.past-header {
+        #header {
+            #logo {
+                right: 9vw;
+            }
+            h1 {
+                right: calc( 9vw + (9vw / 4.6));
+            }
         }
     }
     #nav {
