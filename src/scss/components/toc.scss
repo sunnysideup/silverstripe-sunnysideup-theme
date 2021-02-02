@@ -34,7 +34,7 @@ body.has-toc {
     }
 }
 
-body.toc-on {
+body.has-toc.toc-on {
     .typography {
         #content-below-quote {
             > * {
@@ -49,11 +49,14 @@ body.toc-on {
                 i.closed {
                     display: none;
                 }
+                i.open {
+                    display: inline-block;
+                }
                 &.toc-active {
-                    i.closed {
+                    i.open {
                         display: inline-block;
                     }
-                    i.open,
+                    i.closed,
                     i.active {
                         display: none;
                     }
