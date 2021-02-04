@@ -17,6 +17,10 @@ body.theme-sun {
     @media only screen and (min-width: 1050px) {
         #nav {
             #closed-icon {
+                opacity: 0.77;
+                &:hover {
+                    opacity: 1;
+                }
                 .cls-1 {
                     fill: $colour_white;
                 }
@@ -24,6 +28,7 @@ body.theme-sun {
                     fill: $colour_burned_sunny_side_up;
                 }
             }
+
         }
     }
 }
