@@ -138,7 +138,7 @@ body.menu-on {
                     margin-left: 0;
                     margin-bottom: 2vh;
                     margin-top: 2vh;
-                    font-size: calc(2rem + 2vh);
+                    font-size: calc(2rem + 1vh);
                     list-style: none;
                     text-transform: uppercase;
                     padding-top: 0;
@@ -214,6 +214,24 @@ body.no-touch {
     }
 }
 
+@media only screen and (min-height: 750px) {
+    body.menu-on {
+        #nav {
+            #nav-inner {
+                ul {
+                    li {
+                        font-size: calc(2rem + 2vh);
+                        ul {
+                            li {
+                                font-size: calc(1rem + 2vh);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 // body.scrolled-down:not(.menu-on) {
