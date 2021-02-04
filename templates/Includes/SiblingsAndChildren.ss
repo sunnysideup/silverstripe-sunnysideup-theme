@@ -7,7 +7,7 @@
             Please also visit our <% loop MenuChildren %><a href="$Link">$Title</a><% end_loop %> page.
         </p>
     <% else %>
-        <p>In the <a href="#top">$MenuTitle</a> section of our site, you can find:</p>
+        <p>Pages in the <a href="#top">$MenuTitle</a> section of our site:</p>
         <ul>
             <% loop MenuChildren %><li class="$FirstLast $LinkingMode"><a href="$Link">$MenuTitle</a></li><% end_loop %>
         </ul>
