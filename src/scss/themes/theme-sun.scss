@@ -14,4 +14,18 @@ body.theme-sun {
             fill: $colour_sunny_side_up_yellow;
         }
     }
+    @media only screen and (min-width: 1050px) {
+        #nav {
+            background-color: $colour_black;
+            border-color: $colour_painty_green;
+            #closed-icon {
+                .cls-1 {
+                    fill: $colour_white;
+                }
+                .cls-2 {
+                    fill: $colour_burned_sunny_side_up;
+                }
+            }
+        }
+    }
 }
