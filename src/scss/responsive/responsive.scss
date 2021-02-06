@@ -248,7 +248,8 @@
     }
     main {
         // padding-top: calc(9vw * 1.5);
-        padding: calc(9vw + 10vh) 6vw 4rem 0;
+        padding: calc(9vw + 10vh) 0 4rem 0;
+        margin-right: 6vw;
         margin-left: 24vw;
     }
     #nav {
