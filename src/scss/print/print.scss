@@ -1,9 +1,13 @@
 @page {
-    size: auto;
-    margin: 0!important;
-    padding: 0!important;
-    margin-bottom: 40mm!important;
+    // width: 210mm;
+    // height: 297mm;
     margin-top: 20mm!important;
+    margin-bottom: auto!important;
+    margin-right: 0!important;
+    margin-left: 0!important;
+    overflow: visible!important;
+    // padding-bottom: 4rem!important;
+    margin-bottom: 10rem!important;
 }
 @page:first {
     margin-top: 0mm!important;
@@ -11,8 +15,8 @@
 @media print {
     body,
     html {
-        width: 210mm;
-        height: 297mm;
+        overflow: visible!important;
+        margin-bottom: auto!important;
         font-size: 10px!important;
         *, *:before {
             color: $colour_black_rock_n_roll!important;
@@ -57,13 +61,18 @@
             display: none!important;
         }
         #main {
+            margin-bottom: 0!important;
+            padding-bottom: 0!important;
             overflow: visible!important;
-            padding: 1rem 12rem 4rem 12rem!important;
+            * {
+                overflow: visible!important;
+            }
+            padding: 1rem 12rem 12rem 12rem!important;
             &:before {
                 display: block;
                 background-image: url(./images/SSU_Logo_horizontal_.png)!important;
                 background-position: top left;
-                background-size: contain;
+                 background-size: contain;
                 height: 100px;
                 width: 100%;
             }
@@ -83,22 +92,18 @@
             h2 {
                 font-size: 25px;
             }
+            h1, h2 {
+                margin-top: 2rem!important;
+            }
             h3 {
                 font-size: 20px
             }
             h1, h2, h3, h4, h5, h6 {
                 page-break-before: auto;
-                &:before, &:after {
-                    page-break-after: avoid;
-                    page-break-inside: avoid;
-                    display: none;
-                }
-                page-break-after: avoid;
                 page-break-inside: avoid;
-                & + p,
-                & + ul,
-                & + ol {
-                    page-break-before: avoid;
+                page-break-after: avoid;
+                &:before, &:after {
+                    display: none;
                 }
             }
             p, li, address {
