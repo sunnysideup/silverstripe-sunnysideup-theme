@@ -2,12 +2,11 @@
     // width: 210mm;
     // height: 297mm;
     margin-top: 20mm!important;
-    margin-bottom: auto!important;
     margin-right: 0!important;
     margin-left: 0!important;
     overflow: visible!important;
+    margin-bottom: auto!important;
     // padding-bottom: 4rem!important;
-    margin-bottom: 10rem!important;
 }
 @page:first {
     margin-top: 0mm!important;
@@ -61,13 +60,12 @@
             display: none!important;
         }
         #main {
-            margin-bottom: 0!important;
-            padding-bottom: 0!important;
+            margin-bottom: auto!important;
             overflow: visible!important;
+            padding: 1rem 12rem auto 12rem!important;
             * {
                 overflow: visible!important;
             }
-            padding: 1rem 12rem 12rem 12rem!important;
             &:before {
                 display: block;
                 background-image: url(./images/SSU_Logo_horizontal_.png)!important;
@@ -76,12 +74,6 @@
                 height: 100px;
                 width: 100%;
             }
-            // h1, h2{
-            // }
-            // h1:first-child, h2:first-child,
-            // h1:first-of-type, h2:first-of-type {
-            //     page-break-before:auto;
-            // }
 
             p {
                 padding-bottom: 2rem;
@@ -126,11 +118,7 @@
                 }
             }
             pre {
-                white-space: pre-wrap;       /* css-3 */
-                white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-                white-space: -pre-wrap;      /* Opera 4-6 */
-                white-space: -o-pre-wrap;    /* Opera 7 */
-                word-wrap: break-word;       /* Internet Explorer 5.5+ */
+                white-space: pre-wrap;
                 color: $colour_blue_cobalter;
             }
             a {
