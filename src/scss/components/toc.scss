@@ -3,29 +3,47 @@ body.has-toc {
     .typography {
         #content-below-quote {
             h1, h2 {
+                padding-left: 2.17rem;
                 cursor: pointer;
-                i {
+                > span:first-child {
                     display: inline-block;
-                    width: 1.7rem;
-                    font-family: $base_font_headers;
-                    font-style: normal;
                     width: 2.17rem;
+                    margin-left: -2.17rem;
+                    i {
+                        color: $colour_yep_thats_grey_semi;
+                    }
                 }
-                i.open {
-                    display: none;
-                }
-                i.closed {
+                > span:last-child {
                     display: inline-block;
+                    padding-left: 1rem;
                 }
-                i.active {
-                    display: none;
+                span {
+                    i {
+                        font-family: $base_font_headers;
+                        font-style: normal;
+                        font-weight: 200;
+                    }
+                    i.open {
+                        display: none;
+                    }
+                    i.closed {
+                        display: inline-block;
+                    }
+                    i.active {
+                        display: none;
+                        animation: blinktoc;
+                        animation-duration: 0.8s;
+                        animation-delay: 0s;
+                        animation-iteration-count: infinite;
+                        font-size: 2rem!important;
+
+                    }
                 }
                 &.toc-active {
                     i.active {
                         display: inline-block;
                     }
-                    i.open,
-                    i.closed {
+                    i.open {
                         display: none;
                     }
                 }
@@ -33,6 +51,19 @@ body.has-toc {
         }
     }
 }
+
+
+@keyframes blinktoc {
+    0% {
+    }
+    25%, 75% {
+        color: transparent;
+    }
+    100% {
+    }
+
+}
+
 
 body.has-toc.toc-on {
     .typography {

@@ -1,21 +1,22 @@
 
-.menu-on {
-    .rotate-360-horizontal-fwd {
-        animation-name: rotate-360-horizontal-fwd;
-        animation-duration: 5s;
-        animation-delay: 2s;
-        animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
-        animation-fill-mode: both;
-        transform: rotate(0);
-        animation-iteration-count: 1;
-    }
+.menu-on .rotate-360-horizontal-fwd:hover,
+.typography h2:hover {
+    animation-name: rotate-360-horizontal-fwd;
+    animation-duration: 1s;
+    animation-delay: 1.3s;
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-fill-mode: both;
+    transform: rotate(0);
+    animation-iteration-count: infinite;
+}
 
-    @keyframes rotate-360-horizontal-fwd {
-      70% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+
+@keyframes rotate-360-horizontal-fwd {
+  25% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
 }

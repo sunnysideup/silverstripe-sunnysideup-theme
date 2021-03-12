@@ -13,9 +13,12 @@ const toc = () => {
       const el = headings[i]
       el.id = 'toc-' + (i + 1)
       const span = document.createElement('span')
+      const spanEnd = document.createElement('span')
       // span.addEventListener('click', handleClick.bind(null, el))
-      span.innerHTML = '<i class="open">+</i><i class="closed">–</i><i class="active">⇒</i>'
+      span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
+      spanEnd.innerHTML = '<i class="active">▂</i>'
       el.insertBefore(span, el.firstChild)
+      el.appendChild(spanEnd)
       el.addEventListener(
         'click',
         function (e) {

@@ -42,6 +42,9 @@ body.theme-moon {
         *, a:link, a:visited {
             color: $colour_hypocrite_yellow;
         }
+        h2 {
+            color: $colour_painty_green;
+        }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
                 border-top-color: $colour_hypocrite_yellow;
@@ -100,7 +103,7 @@ body.theme-moon {
         border-color: $colour_hypocrite_yellow!important;
     }
     footer#footer {
-        background-color: $colour_boot_black;
+        background-color: $colour_boot_black_semi;
         img {
             // filter: invert(1);
         }
