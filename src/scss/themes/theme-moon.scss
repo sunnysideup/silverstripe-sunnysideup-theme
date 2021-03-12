@@ -23,18 +23,18 @@ body.theme-moon {
         border-color: $colour_painty_green;
         #closed-icon {
             .cls-1 {
-                fill: $colour_painty_green;
+                fill: $colour_patrick_star_skin_colour;
             }
             .cls-2 {
-                fill: $colour_burned_sunny_side_up;
+                fill: $colour_white;
             }
         }
         #open-icon {
             .cls-1 {
-                fill: $colour_blue_cobalter;
+                fill: $colour_rose_storm;
             }
             .cls-2 {
-                fill: $colour_hypocrite_yellow;
+                fill: $colour_white;
             }
         }
     }
@@ -43,11 +43,11 @@ body.theme-moon {
             color: $colour_hypocrite_yellow;
         }
         h2 {
-            color: $colour_painty_green;
+            color:  $colour_patrick_star_skin_colour;
         }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
-                border-top-color: $colour_hypocrite_yellow;
+                border-top-color: $colour_patrick_star_skin_colour;
             }
         }
         pre {
