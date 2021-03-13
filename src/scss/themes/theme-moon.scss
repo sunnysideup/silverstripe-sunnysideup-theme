@@ -44,6 +44,12 @@ body.theme-moon {
         }
         h2 {
             color:  $colour_patrick_star_skin_colour;
+            span {
+                color:  $colour_patrick_star_skin_colour;
+                i {
+                    color:  $colour_patrick_star_skin_colour;
+                }
+            }
         }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
