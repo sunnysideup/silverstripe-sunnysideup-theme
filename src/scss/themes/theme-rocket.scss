@@ -172,6 +172,17 @@ body.theme-rocket {
             background-color: $colour_darker_grey_catch_22;
         }
     }
+    main#main {
+        blockquote {
+            p {
+                color: $colour_white!important;
+                * {
+                    color: $colour_white!important;
+                }
+
+            }
+        }
+    }
 }
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
