@@ -2,7 +2,7 @@
 body.theme-moon {
     background-color: $colour_law_firm_report_cover;
     * {
-        color: $colour_hypocrite_yellow;
+        color: $colour_burned_sunny_side_up;
     }
     #header {
         #logo {
@@ -40,20 +40,20 @@ body.theme-moon {
     }
     .typography {
         *, a:link, a:visited {
-            color: $colour_hypocrite_yellow;
+            color: $colour_burned_sunny_side_up;
         }
         h2 {
-            color:  $colour_hypocrite_yellow;
+            color:  $colour_burned_sunny_side_up;
             span {
-                color:  $colour_hypocrite_yellow;
+                color:  $colour_burned_sunny_side_up;
                 i {
-                    color:  $colour_hypocrite_yellow;
+                    color:  $colour_burned_sunny_side_up;
                 }
             }
         }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
-                border-top-color: $colour_hypocrite_yellow;
+                border-top-color: $colour_burned_sunny_side_up;
             }
         }
         pre {
@@ -61,7 +61,7 @@ body.theme-moon {
             color: $colour_white;
         }
         th {
-            color: $colour_hypocrite_yellow;
+            color: $colour_burned_sunny_side_up;
         }
         td {
             background-color: $colour_white;
@@ -71,7 +71,7 @@ body.theme-moon {
             }
         }
         hr {
-            border-color: $colour_hypocrite_yellow!important;
+            border-color: $colour_burned_sunny_side_up!important;
         }
         .media, .image-container, blockquote p {
             background-color: $colour_black;
@@ -101,12 +101,12 @@ body.theme-moon {
         }
         .btn-toolbar {
             input {
-                background: $colour_hypocrite_yellow;
+                background: $colour_burned_sunny_side_up;
             }
         }
     }
     #Breadcrumbs {
-        border-color: $colour_hypocrite_yellow!important;
+        border-color: $colour_burned_sunny_side_up!important;
     }
     footer#footer {
         background-color: $colour_boot_black_semi;
@@ -138,7 +138,7 @@ body.theme-moon {
     }
     &.past-header {
         #header {
-            border-color: $colour_hypocrite_yellow;
+            border-color: $colour_burned_sunny_side_up;
             background-color: $colour_burned_sunny_side_up;
             // &:before {
             //     border-top-color:  #000000c4;
@@ -161,6 +161,17 @@ body.theme-moon {
     }
     #BackgroundVideo {
         background-color: $colour_black;
+    }
+    main#main {
+        blockquote {
+            p {
+                color: $colour_hypocrite_yellow;
+                * {
+                    color: $colour_hypocrite_yellow;
+                }
+
+            }
+        }
     }
 }
 
