@@ -73,7 +73,7 @@ body.theme-moon {
         hr {
             border-color: $colour_hypocrite_yellow!important;
         }
-        .media, .image-container {
+        .media, .image-container, blockquote p {
             background-color: $colour_black;
             background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_black, $colour_law_firm_report_cover);
             border-color: $colour_black;
