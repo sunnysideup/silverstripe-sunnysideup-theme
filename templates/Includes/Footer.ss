@@ -13,7 +13,7 @@
 
         <div class="col">
             <p>
-                <a href="$SiteConfig.PhoneNumber.TellLink">$SiteConfig.PhoneNumber</a>
+                <a href="$SiteConfig.PhoneNumber.TelLink">$SiteConfig.PhoneNumber</a>
             </p>
             <p>
                 <a href="mailto:$SiteConfig.Email.HiddenEmailAddress">$SiteConfig.Email.HiddenEmailAddress</a>
