@@ -5,7 +5,7 @@
 <header id="header">
     <a href="/" id="logo"></a>
     <h1>
-        <% if $IsHomePage %><% else %>$Breadcrumbs<% end_if %>
         <a href="#top" class="page-title"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %></a>
+        <% if $Parent %><a href="$Parent.Links">‹ $Parent.Title</a><% end_if %>
     </h1>
 </header>

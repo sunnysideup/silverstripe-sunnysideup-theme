@@ -13,6 +13,7 @@
     </p>
 </blockquote>
 <% end_if %>
+
 <div  id="content-below-quote">
     $Content
     $ElementalArea
