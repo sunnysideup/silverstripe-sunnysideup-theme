@@ -35,9 +35,11 @@ const CollapsibleLists = (function () {
   // node         - the list element
   // doNotRecurse - true if sub-lists should not be made collapsible
   function applyTo (node, doNotRecurse) {
+    let count = 0;
     [].forEach.call(node.getElementsByTagName('li'), li => {
       if (!doNotRecurse || node === li.parentNode) {
         if (li.getElementsByTagName('ul').length > 0) {
+          count++
           //
           li.style.userSelect = 'none'
           li.style.MozUserSelect = 'none'
@@ -45,7 +47,7 @@ const CollapsibleLists = (function () {
           li.style.WebkitUserSelect = 'none'
           const span = document.createElement('span')
           span.addEventListener('click', handleClick.bind(null, li))
-          span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
+          span.innerHTML = '<i class="open icon-' + count + '">+</i><i class="closed">–</i>'
           li.insertBefore(span, li.firstChild)
           if (li.classList.contains('section') || li.classList.contains('current')) {
             // do nothing

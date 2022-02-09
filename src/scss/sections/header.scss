@@ -1,6 +1,7 @@
 #header {
     img {display: none;}
     position: absolute;
+    z-index: 9999;
     top: 0;
     left: 0;
     right: 0;
@@ -36,7 +37,7 @@
         a.bread-crumb {
             display: block;
             padding-top: 0.5rem;
-            font-size: calc(1rem + 2vh);
+            font-size: calc(0.3rem + 2.5vh);
         }
     }
 }
@@ -106,4 +107,12 @@ body.past-header {
             height: 0;
         }
     }
+}
+
+.up-baby-up {
+    transform: rotate(180deg);
+    display: inline-block;
+    margin-right: -0.2em;
+    padding-top: -0.2em;
+    vertical-align: sub;
 }

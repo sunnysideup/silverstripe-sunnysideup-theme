@@ -6,7 +6,7 @@
     <a href="/" id="logo"></a>
     <h1>
         <a href="#top" class="page-title"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %></a>
-        <% if $Parent %><a href="$Parent.Link" class="bread-crumb"><span style="tranform: rotate(90)">↴</span> $Parent.Title</a><% else %>
-        <% if $IsHomePage %><% else %><a href="/" class="bread-crumb"><span style="tranform: rotate(90)">↴</span> Sunny Side Up</a><% end_if %><% end_if %>
+        <% if $Parent %><a href="$Parent.Link" class="bread-crumb"><span class="up-baby-up">↴</span> $Parent.Title</a><% else %>
+        <% if $IsHomePage %><% else %><a href="/#no-menu" class="bread-crumb"><span class="up-baby-up">↴</span> Sunny Side Up</a><% end_if %><% end_if %>
     </h1>
 </header>

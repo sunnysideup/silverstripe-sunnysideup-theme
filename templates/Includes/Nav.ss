@@ -1,5 +1,5 @@
 <div id="nav">
-    <a href="#nav" id="menu-toggle" data-add-class="menu-on" data-toggle="true">
+    <div id="menu-toggle" data-add-class="menu-on" data-toggle="true">
         <svg width="21" height="31" version="1.1" viewBox="0 0 21 31" xmlns="http://www.w3.org/2000/svg" id="closed-icon">
             <defs>
                 <style>.cls-1{fill:#8ca6f9;}.cls-2{fill:#2d57ff;}</style>
@@ -20,18 +20,18 @@
                 <path class="cls-2" d="m18.88 24.39c0.34-0.83 0.73-5.45-1.24-5.38s-3.57 1.49-3.64 2.72 1.64 2 2.16 2 0.8-1 1.43-1.12 1.04 2.39 1.29 1.78z" fill="#2d57ff"/>
             </g>
         </svg>
-    </a>
+    </div>
     <div id="nav-inner">
         <nav class="nav-item">
             <ul class="collapsibleList">
                 <% loop Menu(1) %>
                     <li class="$FirstLast $LinkingMode level1  rotate-360-horizontal-fwd">
-                        <a class="$LinkingMode level1" href="$Link">$MenuTitle</a>
+                    <a class="$LinkingMode level1" href="$Link<% if $IsHomePage %>home/#no-menu<% end_if %>">$MenuTitle</a>
                         <% if Children %>
                         <ul>
                         <% loop Children %><% if ShowInMenus %>
                             <li class="$FirstLast $LinkingMode level1">
-                                <a href="$Link">$MenuTitle</a>
+                            <a href="$Link">$MenuTitle</a>
                                 <% if Children %>
                                 <ul>
                                 <% loop Children %><% if ShowInMenus %>

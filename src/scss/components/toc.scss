@@ -71,9 +71,24 @@ body.has-toc.toc-on {
             > * {
                 display: none;
             }
+            .element, .element > div {
+                display: block;
+            }
+            .element > div > * {
+                display: none;
+            }
+            #SiblingsAndChildren {
+                display: block;
+            }
+            #SiblingsAndChildren > * {
+                display: none;
+            }
+            #SiblingsAndChildren h2, #SiblingsAndChildren h1 {
+                display: block;
+            }
             h1, h2 {
                 width: auto!important;
-                display: block;
+                display: block!important;
                 &:before {
                     border-top-color: transparent!important;
                 }
@@ -93,15 +108,7 @@ body.has-toc.toc-on {
                     }
                 }
             }
-            #SiblingsAndChildren {
-                display: block;
-            }
-            #SiblingsAndChildren > * {
-                display: none;
-            }
-            #SiblingsAndChildren h2, #SiblingsAndChildren h1 {
-                display: block;
-            }
+
         }
     }
 }

@@ -38,3 +38,15 @@ body.mouse-over-logo.no-touch {
         z-index: 99999999999!important;
     }
 }
+
+body.mouse-over-logo {
+    #header {
+        h1 {
+            position: relative;
+            z-index: 9999999999;
+        }
+        .bread-crumb {
+            display: none;
+        }
+    }
+}
