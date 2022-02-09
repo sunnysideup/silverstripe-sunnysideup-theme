@@ -34,7 +34,6 @@
 <body class="theme-sun" id="top" data-bg-image="$RandomImage">
     <% include Header %>
     <% include Nav %>
-
     <main id="main">
         <div class="typography">
             $Layout
@@ -46,22 +45,6 @@
     <%-- <% require themedJavascript('sun/dist/main') %> --%>
 <% end_if %>
 
-<% if $TypeModeForQuote %>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script>
-const string = document.getElementById('my-quote').innerHTML
-new Typewriter(
-  '#my-quote',
-  {
-    strings: [string],
-    autoStart: true,
-    pauseFor: 30 * 1000,
-    cursor: '',
-    loop: true,
-  }
-)
-</script>
-<% end_if %>
 
 </body>
 </html>
