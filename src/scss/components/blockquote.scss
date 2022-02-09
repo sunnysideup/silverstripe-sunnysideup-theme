@@ -10,7 +10,7 @@ main#main {
         p {
             display: block;
             margin: 0;
-            padding: 7vh 0;
+            padding: calc(1rem + 5vh) 0;
             font-size: calc( ( ( 3vh + 4vw) * 0.5) + 20px);
             line-height: 1.2;
             overflow: hidden;
@@ -30,7 +30,7 @@ main#main {
                 text-align: right;
                 font-size: calc(2.2vh + 2.2vw);
                 animation: blink;
-                animation-duration: 0.8s;
+                animation-duration: 0.7s;
                 animation-delay: 2.5s;
                 animation-iteration-count: infinite;
                 text-decoration: none!important;
@@ -48,7 +48,7 @@ main#main {
 @keyframes blink {
     0% {
     }
-    25%, 75% {
+    40%, 60% {
         color: transparent;
     }
     100% {

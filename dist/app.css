@@ -296,14 +296,19 @@ footer#footer .image-holder img {
 #header h1 a.page-title {
   opacity: 1;
 }
+#header h1 a.bread-crumb {
+  display: block;
+  padding-top: 0.5rem;
+  font-size: calc(1rem + 2vh);
+}
 
 body.past-header #header {
-  height: 6rem;
+  height: 7rem;
   z-index: 3;
   background-color: #fff;
   position: fixed;
-  border-bottom: 1px solid #575757;
-  box-shadow: 0px 3px 40px -6px rgba(0, 0, 0, 0.5);
+  border-bottom: 0px solid #575757;
+  box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
 }
 body.past-header #header #logo {
   height: 0 !important;
@@ -325,6 +330,9 @@ body.past-header #header h1 * {
 }
 body.past-header #header h1 .page-title {
   color: #2d57ff;
+}
+body.past-header #header h1 .bread-crumb {
+  display: none !important;
 }
 body.past-header #header svg {
   filter: grayscale(100%);
@@ -1233,7 +1241,7 @@ main#main blockquote {
 main#main blockquote p {
   display: block;
   margin: 0;
-  padding: 7vh 0;
+  padding: calc(1rem + 5vh) 0;
   font-size: calc( ( ( 3vh + 4vw) * 0.5) + 20px);
   line-height: 1.2;
   overflow: hidden;
@@ -1252,8 +1260,8 @@ main#main blockquote p .blinker {
   font-size: calc(2.2vh + 2.2vw);
   -webkit-animation: blink;
           animation: blink;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
   -webkit-animation-iteration-count: infinite;
@@ -1267,13 +1275,13 @@ main#main blockquote p .Typewriter__wrapper * {
 }
 
 @-webkit-keyframes blink {
-  25%, 75% {
+  40%, 60% {
     color: transparent;
   }
 }
 
 @keyframes blink {
-  25%, 75% {
+  40%, 60% {
     color: transparent;
   }
 }
