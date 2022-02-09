@@ -142,8 +142,8 @@
         padding: 2rem 0;
         background-color: $colour_white;
         margin: 2rem auto!important;
-        border-top: 1px dashed $colour_modern_iron;
-        border-bottom: 1px dashed $colour_modern_iron;
+        border-top: 1px solid $colour_modern_iron_half;
+        border-bottom: 1px solid $colour_modern_iron_half;
         background: linear-gradient(to left, $colour_light_grey_aotrom, $colour_white, $colour_light_grey_aotrom);
         box-sizing: border-box;
         width: 100%;

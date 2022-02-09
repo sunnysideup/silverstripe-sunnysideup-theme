@@ -5,16 +5,18 @@
 <blockquote class="main-quote">
     <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %>">
         <% if $IsHomePage %>
-        We are here to make your website
-        <a href="#" data-add-class="theme-sun" data-remove-class="theme-moon, theme-rocket" class="set-theme current">shine</a>
-        &ndash; even in
-        <a href="#" data-add-class="theme-moon" data-remove-class="theme-sun, theme-rocket" class="set-theme">dark mode</a><% else %>$Quote<% end_if %>
+            We make your website <a href="#" data-add-class="theme-sun" data-remove-class="theme-moon, theme-rocket" class="set-theme current">shine</a>
+        <% else %>
+            $Quote
+        <% end_if %>
         <a href="#content-below-quote" class="blinker">▂</a>
     </p>
 </blockquote>
 <% end_if %>
+
 <div  id="content-below-quote">
     $Content
+    $ElementalArea
     $Form
 
     <% include SiblingsAndChildren %>
