@@ -14,7 +14,7 @@ const toc = () => {
       count = (i + 1)
       const el = headings[i]
       el.id = 'toc-' + count
-      el.classList.add('icon-' + count)
+      el.classList.add('countable-icons icon-' + count)
       const span = document.createElement('span')
       const spanEnd = document.createElement('span')
       // span.addEventListener('click', handleClick.bind(null, el))

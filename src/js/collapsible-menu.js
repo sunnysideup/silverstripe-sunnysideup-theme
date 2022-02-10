@@ -49,7 +49,7 @@ const CollapsibleLists = (function () {
           span.addEventListener('click', handleClick.bind(null, li))
           span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
           li.insertBefore(span, li.firstChild)
-          li.classList.add('icon-' + count)
+          li.classList.add('countable-icons icon-' + count)
           if (li.classList.contains('section') || li.classList.contains('current')) {
             // do nothing
             toggle(li)
