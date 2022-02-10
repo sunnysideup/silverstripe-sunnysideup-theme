@@ -47,8 +47,9 @@ const CollapsibleLists = (function () {
           li.style.WebkitUserSelect = 'none'
           const span = document.createElement('span')
           span.addEventListener('click', handleClick.bind(null, li))
-          span.innerHTML = '<i class="open icon-' + count + '">+</i><i class="closed">–</i>'
+          span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
           li.insertBefore(span, li.firstChild)
+          li.classList.add('icon-' + count)
           if (li.classList.contains('section') || li.classList.contains('current')) {
             // do nothing
             toggle(li)

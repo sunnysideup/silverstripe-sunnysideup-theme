@@ -9,9 +9,12 @@ const toc = () => {
   if (headings.length > 3) {
     body.classList.add('has-toc')
     body.classList.add('toc-off')
+    let count = 0
     for (let i = 0; i < headings.length; i++) {
+      count = (i + 1)
       const el = headings[i]
-      el.id = 'toc-' + (i + 1)
+      el.id = 'toc-' + count
+      el.classList.add('icon-' + count)
       const span = document.createElement('span')
       const spanEnd = document.createElement('span')
       // span.addEventListener('click', handleClick.bind(null, el))
