@@ -7,10 +7,10 @@ const bodyClass = {
   init: function () {
     bodyClass.bodyObject = document.querySelector('body')
     bodyClass.addOrToggleBodyClass('#menu-toggle', false)
-    console.log(bodyClass.isHomePage())
-    console.log(bodyClass.hasFragment())
+    // console.log(bodyClass.isHomePage())
+    // console.log(bodyClass.hasFragment())
     if (bodyClass.isHomePage() === true && bodyClass.hasFragment() === false) {
-      console.log('opening menu')
+      // console.log('opening menu')
       document.querySelector('#menu-toggle').click()
     }
     bodyClass.addOrToggleBodyClass('.theme-selector', true)

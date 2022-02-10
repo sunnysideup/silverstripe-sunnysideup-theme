@@ -15,12 +15,11 @@ var bodyClass = {
   bodyObject: null,
   init: function init() {
     bodyClass.bodyObject = document.querySelector('body');
-    bodyClass.addOrToggleBodyClass('#menu-toggle', false);
-    console.log(bodyClass.isHomePage());
-    console.log(bodyClass.hasFragment());
+    bodyClass.addOrToggleBodyClass('#menu-toggle', false); // console.log(bodyClass.isHomePage())
+    // console.log(bodyClass.hasFragment())
 
     if (bodyClass.isHomePage() === true && bodyClass.hasFragment() === false) {
-      console.log('opening menu');
+      // console.log('opening menu')
       document.querySelector('#menu-toggle').click();
     }
 
