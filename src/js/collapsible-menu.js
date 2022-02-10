@@ -38,25 +38,26 @@ const CollapsibleLists = (function () {
     let count = 0;
     [].forEach.call(node.getElementsByTagName('li'), li => {
       if (!doNotRecurse || node === li.parentNode) {
+        count++
+        li.classList.add('countable-icons')
+        li.classList.add('icon-' + count)
+
+        li.style.userSelect = 'none'
+        li.style.MozUserSelect = 'none'
+        li.style.msUserSelect = 'none'
+        li.style.WebkitUserSelect = 'none'
+
+        const span = document.createElement('span')
         if (li.getElementsByTagName('ul').length > 0) {
-          count++
-          //
-          li.style.userSelect = 'none'
-          li.style.MozUserSelect = 'none'
-          li.style.msUserSelect = 'none'
-          li.style.WebkitUserSelect = 'none'
-          const span = document.createElement('span')
           span.addEventListener('click', handleClick.bind(null, li))
           span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
-          li.insertBefore(span, li.firstChild)
-          li.classList.add('countable-icons')
-          li.classList.add('icon-' + count)
           if (li.classList.contains('section') || li.classList.contains('current')) {
             // do nothing
             toggle(li)
           }
           toggle(li)
         }
+        li.insertBefore(span, li.firstChild)
       }
     })
   }
