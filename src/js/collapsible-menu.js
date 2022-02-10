@@ -56,6 +56,8 @@ const CollapsibleLists = (function () {
             toggle(li)
           }
           toggle(li)
+        } else {
+          span.innerHTML = '&nbsp;'
         }
         li.insertBefore(span, li.firstChild)
       }
