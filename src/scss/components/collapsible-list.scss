@@ -21,13 +21,14 @@
 
     span {
         position: absolute;
-        left: -3rem;
+        left: -6rem;
         top: 0;
-        width: 3rem;
+        width: 5rem;
         display: block;
         cursor: pointer;
         i {
             display: block;
+            text-align: center;
         }
     }
 }
