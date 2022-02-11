@@ -38,28 +38,23 @@ const CollapsibleLists = (function () {
     let count = 0;
     [].forEach.call(node.getElementsByTagName('li'), li => {
       if (!doNotRecurse || node === li.parentNode) {
-        count++
-        li.classList.add('countable-icons')
-        li.classList.add('icon-' + count)
-
         li.style.userSelect = 'none'
         li.style.MozUserSelect = 'none'
         li.style.msUserSelect = 'none'
         li.style.WebkitUserSelect = 'none'
-
-        const span = document.createElement('span')
-        if (li.getElementsByTagName('ul').length > 0) {
+        const ul = li.getElementsByTagName('ul')
+        if (ul.length > 0) {
+          const span = document.createElement('span')
+          span.classList.add('open-close')
           span.addEventListener('click', handleClick.bind(null, li))
-          span.innerHTML = '<i class="open">+</i><i class="closed">–</i>'
+          span.innerHTML = '<i class="open">...</i><i class="closed">↰</i>'
+          // we need to toggle all of them, some twice
           if (li.classList.contains('section') || li.classList.contains('current')) {
-            // do nothing
             toggle(li)
           }
           toggle(li)
-        } else {
-          span.innerHTML = '&nbsp;'
+          li.insertBefore(span, ul[0])
         }
-        li.insertBefore(span, li.firstChild)
       }
     })
   }

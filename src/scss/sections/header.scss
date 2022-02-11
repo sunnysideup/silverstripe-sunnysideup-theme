@@ -21,6 +21,9 @@
         line-height: 1;
         position: relative;
         color: $colour_blue_cobalter;
+        * {
+            color: $colour_blue_cobalter;
+        }
         position: absolute;
         text-align: right;
         z-index: 3;

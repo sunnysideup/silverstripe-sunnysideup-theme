@@ -1,34 +1,47 @@
 
 
 .collapsibleList {
+    span.open-close i {
+        cursor: pointer;
+        display: inline-block;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+        // color: #fff;
+    }
+    i.open {
+        // vertical-align: sub;
+    }
+    i.closed {
+        margin-left: -0.2em;
+        // transform: rotate(180deg);
+        // opacity: 1!important;
+        vertical-align: sub;
+        // transform: rotate(270deg);
+    }
     li {
         position: relative;
         &.collapsibleListClosed {
-            > span {
+            > span.open-close {
+                i.closed {
+                    display: inline-block;
+                }
                 i.closed {
                     display: none;
                 }
             }
         }
         &.collapsibleListOpen {
-            > span {
+            > span.open-close {
                 i.open {
                     display: none;
+                }
+                i.closed {
+                    display: inline-block;
                 }
             }
         }
     }
 
-    span {
-        position: absolute;
-        left: -6rem;
-        top: 0;
-        width: 5rem;
-        display: block;
-        cursor: pointer;
-        i {
-            display: block;
-            text-align: center;
-        }
-    }
 }

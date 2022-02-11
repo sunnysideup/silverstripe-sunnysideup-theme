@@ -1,4 +1,6 @@
-
+span.icon i {
+    color: transparent!important;
+}
 body.has-toc {
     .typography {
         #content-below-quote {
@@ -109,6 +111,7 @@ body.has-toc.toc-on {
                     }
                 }
             }
+
 
         }
     }

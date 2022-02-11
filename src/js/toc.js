@@ -6,7 +6,7 @@ const toc = () => {
   const headings = document.querySelectorAll('#content-below-quote h1, #content-below-quote h2')
   // get the body element
   // apply class to container div
-  if (headings.length > 3) {
+  if (headings.length > 1) {
     body.classList.add('has-toc')
     body.classList.add('toc-off')
     let count = 0
@@ -17,7 +17,8 @@ const toc = () => {
       el.classList.add('countable-icons')
       el.classList.add('icon-' + count)
       const span = document.createElement('span')
-      span.classList.add('open-close-holder')
+      span.classList.add('open-close')
+      span.classList.add('icon')
       const spanEnd = document.createElement('span')
       spanEnd.classList.add('active-holder')
       // span.addEventListener('click', handleClick.bind(null, el))
