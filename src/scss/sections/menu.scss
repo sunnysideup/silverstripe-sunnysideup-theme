@@ -79,6 +79,7 @@ body.past-header {
 
 body.menu-on {
     #header h1 {display: none;}
+    #header .bread-crumb {display: none;}
     #nav {
         background-color: $colour_sunny_side_up_yellow;
         opacity: 1;
