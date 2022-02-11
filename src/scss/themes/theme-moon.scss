@@ -25,7 +25,7 @@ body.theme-moon {
         * {
             color: $colour_sunny_side_up_green;
         }
-        background-color: $colour_black;
+        background-color: $colour_purple_spirituality_in_the_sun;
         border-color: $colour_painty_green;
         #closed-icon {
             .cls-1 {
@@ -80,10 +80,9 @@ body.theme-moon {
             border-color: $colour_burned_sunny_side_up!important;
         }
         .media, .image-container, blockquote p {
-            background-color: $colour_black;
-            background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_black, $colour_law_firm_report_cover);
-            border-color: $colour_black;
-
+            background-color: $colour_dark_charcoal;
+            // background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_dark_charcoal, $colour_law_firm_report_cover);
+            background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_painty_green, $colour_law_firm_report_cover);
         }
         // .last-updated {
         //     color: $colour_white!important;
