@@ -23,7 +23,7 @@
         <div class="col">
             <% if $Menu(1) %>
                 <ul>
-                    <% loop Menu(1) %><li class="$FirstLast $LinkingMode"><a href="$Link">$MenuTitle</a></li><% end_loop %>
+                <% loop Menu(1) %><li class="$FirstLast $LinkingMode"><a href="$Link#no-menu">$MenuTitle</a></li><% end_loop %>
                 </ul>
             <% end_if %>
             <% if SearchForm %>
