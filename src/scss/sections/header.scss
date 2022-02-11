@@ -20,9 +20,9 @@
         text-transform: uppercase;
         line-height: 1;
         position: relative;
-        color: $colour_blue_cobalter;
+        color: $colour_blue_cobalter_highlights;
         * {
-            color: $colour_blue_cobalter;
+            color: $colour_blue_cobalter_highlights;
         }
         position: absolute;
         text-align: right;
@@ -79,7 +79,7 @@ body.past-header {
                 color: $colour_yep_thats_grey;
             }
             .page-title {
-                color: $colour_blue_cobalter;
+                color: $colour_blue_cobalter_highlights;
             }
             display: block;
             font-size: 3rem;

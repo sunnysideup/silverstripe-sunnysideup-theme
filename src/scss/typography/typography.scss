@@ -177,7 +177,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         border-collapse: collapse;
-        border: 1px dashed $colour_blue_cobalter;
+        border: 1px dashed $colour_blue_cobalter_highlights;
         table-layout: fixed;
         tbody>tr>*:nth-last-child(2)~*{ width:50%!important;}
         tbody>tr>*:nth-last-child(3)~*{ width:33.3%!important;}
@@ -189,7 +189,7 @@
         }
         th, td {
             padding: 0.7rem;
-            border: 1px dashed $colour_blue_cobalter;
+            border: 1px dashed $colour_blue_cobalter_highlights;
             width: auto!important;
             ul, li, p {
                 margin: 0;
@@ -206,7 +206,7 @@
             }
         }
         th {
-            background-color: $colour_blue_cobalter;
+            background-color: $colour_blue_cobalter_highlights;
             color: $colour_white;
             border: 1px dashed $colour_white!important;
         }
@@ -262,8 +262,7 @@
     .last-updated {
         font-weight: 200;
         color: $colour_yep_thats_grey;
-        font-size: 1.3rem;
+        font-style: italic;
         margin-top: 3rem!important;
-        font-family: $base_font_headers;
     }
 }

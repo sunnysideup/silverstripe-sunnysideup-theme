@@ -10,22 +10,23 @@
     z-index: 25;
     margin-left: -10rem;
     margin-bottom: -10rem;
-    background-color: $colour_white;
+    background-color: $colour_sunny_side_up_yellow;
     border-radius: 50%;
-    border: 1px solid $colour_blue_cobalter;
+    box-shadow: 0px 3px 20px -6px rgb(0 0 0 / 50%);
     a {
         text-decoration: none;
     }
     * {
         font-family: $base_font_headers;
         font-weight: 500;
-        color: $colour_blue_cobalter;
+        color: $colour_blue_cobalter_highlights;
     }
     i {
         font-style: normal;
     }
 
     #menu-toggle {
+        transform: rotate(320deg);
         height: 5rem;
         width: 5rem;
         line-height: 5rem; //required to center;
@@ -64,7 +65,7 @@
         transition: 0.5s transform;
     }
     .icon {
-        left: -7.7rem;
+        left: -7rem;
         top: 0;
     }
 }
@@ -72,30 +73,13 @@
 
 body.past-header {
     #nav {
-        background-color: transparent;
-        border: 0px solid $colour_blue_cobalter;
-        bottom: auto;
-        top: 0;
-        margin: 0;
-        left: 6vw;
-        width: 2rem;
-        height: 2rem;
 
-        #menu-toggle {
-            line-height: 6rem;
-            left: 0;
-            top: 0;
-            right: auto;
-            svg {
-                height: 4rem;
-            }
-        }
     }
 }
 
 body.menu-on {
+    #header h1 {display: none;}
     #nav {
-        border: 0px solid $colour_blue_cobalter;
         background-color: $colour_sunny_side_up_yellow;
         opacity: 1;
         height: 100vh;
@@ -109,9 +93,6 @@ body.menu-on {
             bottom: 2rem;
             left: 2rem;
             top: auto;
-            svg {
-                height: calc(3.7rem * 0.7);
-            }
         }
 
         #nav-inner {
@@ -149,7 +130,7 @@ body.menu-on {
                     a {
                         border-bottom: 3px solid transparent;
                         &:hover {
-                            border-bottom: 3px solid $colour_blue_cobalter;
+                            border-bottom: 3px solid $colour_blue_cobalter_highlights;
                         }
                     }
                     ul {
@@ -167,7 +148,7 @@ body.menu-on {
                 }
                 li.current {
                     > a {
-                        border-bottom: 3px solid $colour_blue_cobalter;
+                        border-bottom: 3px solid $colour_blue_cobalter_highlights;
                     }
                 }
                 li.section {
@@ -190,12 +171,7 @@ body.menu-on {
 }
 
 body.past-header.menu-on {
-    #nav {
-        #menu-toggle {
-            top: 2rem;
-            bottom: auto;
-        }
-    }
+
 }
 body.no-touch {
     #nav {
@@ -214,6 +190,9 @@ body.no-touch {
 
 @media only screen and (min-height: 750px) {
     body.menu-on {
+        #header h1 {
+            display: block;
+        }
         #nav {
             #nav-inner {
                 ul {

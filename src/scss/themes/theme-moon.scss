@@ -9,10 +9,13 @@ body.theme-moon {
             background-image: url(./images/logo-small-inverted.svg);
         }
         span {
-            color: $colour_burned_sunny_side_up;
+            color: $colour_sunny_side_up_green;
         }
         h1 {
-            color: $colour_burned_sunny_side_up;
+            color: $colour_sunny_side_up_green;
+        }
+        * {
+            color: $colour_sunny_side_up_green;
         }
     }
     a[data-add-class="theme-moon"] {

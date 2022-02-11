@@ -41,7 +41,7 @@
                 text-transform: uppercase;
                 font-weight: 500;
                 font-family: $base_font_headers;
-                color: $colour_blue_cobalter!important;
+                color: $colour_blue_cobalter_highlights!important;
             }
         }
 
@@ -119,10 +119,10 @@
             }
             pre {
                 white-space: pre-wrap;
-                color: $colour_blue_cobalter;
+                color: $colour_black_rock_n_roll;
             }
             a {
-                text-decoration-color: $colour_blue_cobalter!important;
+                text-decoration-color: $colour_blue_cobalter_highlights!important;
                 &:after{
                     content: " (" attr(href) ") ";
                     font-size: 10px;
