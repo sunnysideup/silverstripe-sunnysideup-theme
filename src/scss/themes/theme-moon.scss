@@ -22,6 +22,9 @@ body.theme-moon {
         text-decoration: none!important;
     }
     #nav {
+        * {
+            color: $colour_sunny_side_up_green;
+        }
         background-color: $colour_black;
         border-color: $colour_painty_green;
         #closed-icon {
