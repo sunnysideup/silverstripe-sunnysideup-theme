@@ -1,52 +1,66 @@
-.countable-icons {
+.countable-icons span  {
     background-repeat: no-repeat;
     background-image: url(./../../images/1.svg);
+    background-size: contain;
+    background-position: left;
 }
-.icon-1 {
+.countable-icons span.active-holder {
+    background: none!important;
+}
+.countable-icons span > i {
+    color: transparent!important;
+}
+.countable-icons span.active-holder i{
+    color: inherit!important;
+}
+.icon-1 span {
     background-image: url(./../../images/1.svg);
 }
-.icon-2 {
+.icon-2 span {
     background-image: url(./../../images/2.svg);
 }
-.icon-3 {
+.icon-3 span {
     background-image: url(./../../images/3.svg);
 }
-.icon-5 {
-    background-image: url(./../../images/5.svg);
-}
-.icon-6 {
-    background-image: url(./../../images/5.svg);
-}
-.icon-7 {
-    background-image: url(./../../images/7.svg);
-}
-.icon-8 {
-    background-image: url(./../../images/8.svg);
-}
-.icon-9 {
-    background-image: url(./../../images/9.svg);
-}
-.icon-10 {
-    background-image: url(./../../images/1.svg);
-}
-.icon-11 {
-    background-image: url(./../../images/2.svg);
-}
-.icon-12 {
-    background-image: url(./../../images/3.svg);
-}
-.icon-13 {
+.icon-4 span {
     background-image: url(./../../images/4.svg);
 }
-.icon-14 {
+.icon-5 span {
     background-image: url(./../../images/5.svg);
 }
-.icon-15 {
+.icon-6 span {
     background-image: url(./../../images/6.svg);
 }
-.icon-16 {
+.icon-7 span  {
     background-image: url(./../../images/7.svg);
 }
-.icon-17 {
+.icon-8 span  {
+    background-image: url(./../../images/8.svg);
+}
+.icon-9 span  {
+    background-image: url(./../../images/9.svg);
+}
+.icon-10 span  {
+    background-image: url(./../../images/1.svg);
+}
+.icon-11 span  {
+    background-image: url(./../../images/2.svg);
+}
+.icon-12 span  {
+    background-image: url(./../../images/3.svg);
+}
+.icon-13 span  {
+    background-image: url(./../../images/4.svg);
+}
+.icon-14 span  {
+    background-image: url(./../../images/5.svg);
+}
+.icon-15 span  {
+    background-image: url(./../../images/6.svg);
+}
+.icon-16 span  {
+    background-image: url(./../../images/7.svg);
+}
+.icon-17 span  {
     background-image: url(./../../images/8.svg);
 }

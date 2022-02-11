@@ -3,12 +3,13 @@ body.has-toc {
     .typography {
         #content-below-quote {
             h1, h2 {
-                padding-left: 2.17rem;
+                padding-left: 5rem;
                 cursor: pointer;
                 > span:first-child {
                     display: inline-block;
-                    width: 2.17rem;
-                    margin-left: -2.17rem;
+                    float: left;
+                    width: 4.5rem;
+                    margin-left: -5rem;
                     i {
                         color: $colour_yep_thats_grey_semi;
                     }
@@ -27,7 +28,7 @@ body.has-toc {
                         display: none;
                     }
                     i.closed {
-                        display: inline-block;
+                        display: block;
                     }
                     i.active {
                         display: none;
