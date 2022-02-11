@@ -168,7 +168,7 @@
             h1, h2 {
                 clear: left;
                 float: left;
-                width: 21vw;
+                width: calc(21vw - 5rem);
                 padding-top: 0;
                 margin-top: 0;
                 margin-top: -1px;
