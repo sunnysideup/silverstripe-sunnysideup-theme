@@ -118,13 +118,16 @@
             top: calc(12vw / 1.6);
         }
     }
-    .past-header #Breadcrumbs  {
-        display: inline;
+
+
+    footer#footer {
+        padding: 4rem 6vw;
     }
-    body.past-header {
-        #nav {
-        }
+    .row {
+        grid-template-columns: 1fr 1fr;
     }
+}
+@media only screen and (min-width: 900px) {
     main {
         .typography {
             p {
@@ -168,12 +171,6 @@
                 }
             }
         }
-    }
-    footer#footer {
-        padding: 4rem 6vw;
-    }
-    .row {
-        grid-template-columns: 1fr 1fr;
     }
 }
 @media only screen and (min-width: 1050px) {
