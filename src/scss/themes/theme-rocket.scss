@@ -1,8 +1,5 @@
 body.theme-rocket {
-    background-color: $colour_on_the_fence_green;
-    * {
-        color: $colour_white;
-    }
+    background-color: #555;
     #header {
         * {
             color: $colour_blue_cobalter;
@@ -14,34 +11,34 @@ body.theme-rocket {
         text-decoration: none!important;
     }
     #nav {
-        border-right: 1px solid #fff;
-        #closed-icon {
-            .cls-1 {
-                fill: $colour_purple_spirituality_in_the_sun;
-            }
-            .cls-2 {
-                fill: $colour_sunny_side_up_yellow;
-            }
-        }
-        #open-icon {
-            .cls-1 {
-                fill: $colour_blue_cobalter;
-            }
-            .cls-2 {
-                fill: $colour_sunny_side_up_yellow;
-            }
-        }
-        * {
-            color: $colour_sunny_side_up_yellow!important;
-        }
+        background-color: $colour_sunny_side_up_yellow;
     }
     #main {
         overflow: initial;
         blockquote.main-quote {
-            padding-bottom: 60vh;
+            padding-bottom: 20vh;
             padding-top: 20vh;
+            p {
+                background-color: transparent;
+                background: transparent;
+                border-color: transparent;
+                filter: drop-shadow(0 0 6px $colour_black);
+                font-size: calc(((2vh + 3vw) * 0.6) + 12px);
+            }
         }
-
+        #content-below-quote {
+            background-color: $colour_light_grey_aotrom;
+            padding: 44px 20px;
+            border-radius: 10px;
+            margin-bottom: 20vh;
+            min-height: 60vh;
+            box-shadow:0px 0px 7px #fff;
+        }
+        #SiblingsAndChildren h2, h1, h2 {
+            &:before {
+                border-top-color: $colour_blue_cobalter;
+            }
+        }
         // background-color: #00000037;
     }
     #BackgroundImage {
@@ -53,42 +50,36 @@ body.theme-rocket {
         bottom: 0;
         right: 0;
     }
+
     .typography {
-        *, a:link, a:visited {
-            color: $colour_white;
-        }
-        h1, h2, h3, h4, h5, h6, address, p, li {
-            filter: drop-shadow(0 0 12px $colour_black);
-        }
-        #SiblingsAndChildren h2, h1, h2 {
-            &:before {
-                border-top-color: transparent;
-            }
-        }
-        pre {
-            background-color: $colour_navy;
-            color: $colour_white;
-        }
-        th {
-            color: $colour_white;
-        }
-        hr {
-            border-color: $colour_white!important;
-        }
-        // .last-updated {
-        //     color: $colour_hypocrite_yellow!important;
+        // *, a:link, a:visited {
+        //     color: $colour_white;
         // }
-        pre {
-            background-color: $colour_navy;
-        }
-        .media, .image-container, blockquote p {
-            background-color: transparent;
-            background: transparent;
-            border-color: transparent;
-        }
-        #BackgroundVideo {
-            background: transparent;
-        }
+        //
+        // pre {
+        //     background-color: $colour_navy;
+        //     color: $colour_white;
+        // }
+        // th {
+        //     color: $colour_white;
+        // }
+        // hr {
+        //     border-color: $colour_white!important;
+        // }
+        // // .last-updated {
+        // //     color: $colour_hypocrite_yellow!important;
+        // // }
+        // pre {
+        //     background-color: $colour_navy;
+        // }
+        // .media, .image-container{
+        //     background-color: transparent;
+        //     background: transparent;
+        //     border-color: transparent;
+        // }
+        // #BackgroundVideo {
+        //     background: transparent;
+        // }
     }
 
     form {
@@ -143,10 +134,6 @@ body.theme-rocket {
                 -webkit-text-stroke-width: 0px;
             }
         }
-        #nav {
-            border: none;
-            box-shadow: none;
-        }
     }
     &.no-touch {
         #footer {
@@ -167,11 +154,6 @@ body.theme-rocket {
             }
         }
     }
-    &.menu-on {
-        #nav {
-            background-color: $colour_darker_grey_catch_22;
-        }
-    }
     main#main {
         blockquote {
             p {
@@ -187,7 +169,12 @@ body.theme-rocket {
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
         #nav {
-            background-color: transparent;
+            background-color: $colour_sunny_side_up_yellow_ten_percent;
+        }
+        &.menu-on {
+            #nav {
+                background-color: $colour_sunny_side_up_yellow;
+            }
         }
     }
 }

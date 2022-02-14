@@ -48,8 +48,12 @@ body.theme-moon {
         *, a:link, a:visited {
             color: $colour_burned_sunny_side_up;
         }
+        h1, h2 {
+            text-transform: uppercase;
+            color: $colour_blue_cobalter;
+        }
         h2 {
-            color:  $colour_burned_sunny_side_up;
+            color:  $colour_burned_sunny_side_up!important;
             span {
                 color:  $colour_burned_sunny_side_up;
                 i {

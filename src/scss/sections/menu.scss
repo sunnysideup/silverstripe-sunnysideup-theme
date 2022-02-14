@@ -23,6 +23,12 @@
     }
     i {
         font-style: normal;
+        &.open {
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.891412 0C0.0951229 0 -0.303022 0.973242 0.272076 1.54834L5.93458 7.21084C6.28848 7.56475 6.86358 7.56475 7.21749 7.21084L12.88 1.54834C13.4551 0.973242 13.0569 0 12.2606 0H0.891412Z' fill='%232D57FF'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 10% 60%;
+            width: 1em;
+        }
     }
 
     #menu-toggle {
@@ -67,13 +73,6 @@
     .icon {
         left: -7rem;
         top: 0;
-    }
-}
-
-
-body.past-header {
-    #nav {
-
     }
 }
 

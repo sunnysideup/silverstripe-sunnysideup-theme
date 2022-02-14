@@ -35,7 +35,6 @@ const CollapsibleLists = (function () {
   // node         - the list element
   // doNotRecurse - true if sub-lists should not be made collapsible
   function applyTo (node, doNotRecurse) {
-    let count = 0;
     [].forEach.call(node.getElementsByTagName('li'), li => {
       if (!doNotRecurse || node === li.parentNode) {
         li.style.userSelect = 'none'
@@ -47,7 +46,7 @@ const CollapsibleLists = (function () {
           const span = document.createElement('span')
           span.classList.add('open-close')
           span.addEventListener('click', handleClick.bind(null, li))
-          span.innerHTML = '<i class="open">...</i><i class="closed">↰</i>'
+          span.innerHTML = '<i class="open">&nbsp;</i><i class="closed">↰</i>'
           // we need to toggle all of them, some twice
           if (li.classList.contains('section') || li.classList.contains('current')) {
             toggle(li)

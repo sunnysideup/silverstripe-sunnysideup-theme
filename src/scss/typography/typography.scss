@@ -25,6 +25,7 @@
     }
     h1, h2 {
         text-transform: uppercase;
+        color: $colour_blue_cobalter;
         &:before {
             position: absolute;
             height: 2rem;
