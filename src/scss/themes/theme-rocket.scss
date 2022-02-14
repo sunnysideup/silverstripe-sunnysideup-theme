@@ -4,7 +4,7 @@ body.theme-rocket {
         * {
             color: $colour_blue_cobalter;
             -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: $colour_white;
+            -webkit-text-stroke-color: #ffffff55;
         }
     }
     a[data-add-class="theme-rocket"] {
@@ -28,11 +28,13 @@ body.theme-rocket {
         }
         #content-below-quote {
             background-color: $colour_light_grey_aotrom;
-            padding: 44px 20px;
-            border-radius: 10px;
-            margin-bottom: 20vh;
+            padding: 20px 20px;
+            // border-radius: 10px;
+            margin-bottom: 40vh;
             min-height: 60vh;
-            box-shadow:0px 0px 7px #fff;
+            box-shadow: 0px 3px 20px -6px rgb(0 0 0 / 50%);
+            border-radius: 5px;
+            // box-shadow:0px 0px 7px #fff;
         }
         #SiblingsAndChildren h2, h1, h2 {
             &:before {
@@ -52,6 +54,9 @@ body.theme-rocket {
     }
 
     .typography {
+        h1, h2 {
+            color: $colour_blue_cobalter;
+        }
         // *, a:link, a:visited {
         //     color: $colour_white;
         // }
