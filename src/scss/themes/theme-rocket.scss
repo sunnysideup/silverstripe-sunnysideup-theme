@@ -26,7 +26,7 @@ body.theme-rocket {
         }
         #content-below-quote {
             background-color: $colour_light_grey_aotrom;
-            background: $colour_grey_white_grey;
+            background: $colour_grey_white_grey_fancy;
             padding: 40px 30px;
             // border-radius: 10px;
             margin-bottom: 40vh;
@@ -186,6 +186,11 @@ body.theme-rocket {
 body.theme-rocket.title-colour-yellow {
     #header * {
         color:  $colour_sunny_side_up_yellow!important;
+    }
+    &.menu-on {
+        #header * {
+            color:  $colour_blue_cobalter!important;
+        }
     }
 }
 body.theme-rocket.title-colour-blue {

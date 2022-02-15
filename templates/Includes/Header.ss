@@ -3,7 +3,7 @@
     <h1><% if $IsHomePage %>$SiteConfig.Title<% else %>$SiteConfig.Title - $Title<% end_if %></h1>
 </header>
 <header id="header">
-    <a href="/" id="logo"></a>
+<a href="/#no-menu" id="logo"></a>
     <h1>
         <a href="#top" class="page-title"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %></a>
         <% if $Parent %><a href="$Parent.Link" class="bread-crumb"><span class="up-baby-up">↴</span> $Parent.Title</a><% else %>

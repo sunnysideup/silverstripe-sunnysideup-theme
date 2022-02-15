@@ -186,9 +186,9 @@ const bodyClass = {
     const shadow = bodyClass.bodyObject.getAttribute('data-shadow-over-logo')
     let shadowColour = ''
     if (shadow === 'dark') {
-      shadowColour = 'linear-gradient(258deg, #00000017 30%, transparent 40%), '
+      shadowColour = 'linear-gradient(258deg, #00000030 30%, transparent 60%), '
     } else if (shadow === 'light') {
-      shadowColour = 'linear-gradient(258deg, #FFFFFF17 30%, transparent 40%), '
+      shadowColour = 'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
     }
     div.style.backgroundImage = shadowColour + 'url(' + bodyClass.bodyObject.getAttribute('data-bg-image') + ')'
     div.id = 'BackgroundImage'
