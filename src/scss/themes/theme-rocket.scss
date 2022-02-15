@@ -24,7 +24,7 @@ body.theme-rocket {
         #content-below-quote {
             background-color: $colour_light_grey_aotrom;
             background: $colour_grey_white_grey;
-            padding: 40px 30px;
+            padding: 20px 30px;
             // border-radius: 10px;
             margin-bottom: 40vh;
             min-height: 60vh;
@@ -169,12 +169,9 @@ body.theme-rocket {
 }
 @media only screen and (min-width: 900px) {
     body.theme-rocket {
-        #nav {
-            background-color: $colour_white_ten_percent;
-        }
-        &.menu-on {
-            #nav {
-                background-color: $colour_sunny_side_up_yellow;
+        #main {
+            #content-below-quote {
+                padding: 40px 30px;
             }
         }
     }
