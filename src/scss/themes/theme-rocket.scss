@@ -3,21 +3,19 @@ body.theme-rocket {
     #header {
         * {
             color: $colour_blue_cobalter;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #ffffff55;
         }
     }
     a[data-add-class="theme-rocket"] {
         text-decoration: none!important;
     }
     #nav {
-        background-color: $colour_sunny_side_up_yellow;
+        background-color: $colour_white_ten_percent;
     }
     #main {
         overflow: initial;
         blockquote.main-quote {
+            padding-top: 10vh;
             padding-bottom: 20vh;
-            padding-top: 20vh;
             p {
                 background-color: transparent;
                 background: transparent;
@@ -28,7 +26,8 @@ body.theme-rocket {
         }
         #content-below-quote {
             background-color: $colour_light_grey_aotrom;
-            padding: 20px 20px;
+            background: $colour_grey_white_grey;
+            padding: 40px 30px;
             // border-radius: 10px;
             margin-bottom: 40vh;
             min-height: 60vh;
@@ -174,12 +173,23 @@ body.theme-rocket {
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
         #nav {
-            background-color: $colour_sunny_side_up_yellow_ten_percent;
+            background-color: $colour_white_ten_percent;
         }
         &.menu-on {
             #nav {
                 background-color: $colour_sunny_side_up_yellow;
             }
         }
+    }
+}
+
+body.theme-rocket.title-colour-yellow {
+    #header * {
+        color:  $colour_sunny_side_up_yellow!important;
+    }
+}
+body.theme-rocket.title-colour-blue {
+    #header * {
+        color:  $colour_blue_cobalter!important;
     }
 }

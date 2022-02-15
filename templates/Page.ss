@@ -8,7 +8,12 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="theme-sun" id="top" data-bg-image="$RandomImage">
+<body
+    class="theme-<% if $DefaultTheme %>$DefaultTheme<% else %>sun<% end_if %> title-colour-$TitleColour"
+    id="top"
+    data-bg-image="$RandomImage"
+    data-shadow-over-logo="$ShadowOverLogo"
+>
     <% include Header %>
     <% include Nav %>
 
@@ -31,7 +36,12 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="theme-sun" id="top" data-bg-image="$RandomImage">
+<body
+    class="theme-<% if $DefaultTheme %>$DefaultTheme<% else %>sun<% end_if %> title-colour-$TitleColour"
+    id="top"
+    data-bg-image="$RandomImage"
+    data-shadow-over-logo="$ShadowOverLogo"
+>
     <% include Header %>
     <% include Nav %>
     <main id="main">

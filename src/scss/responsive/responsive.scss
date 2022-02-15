@@ -209,12 +209,7 @@
             top: calc(9vw / 1.6);
         }
     }
-    main {
-        // padding-top: calc(9vw * 1.5);
-        padding: calc(12vw + 7vh) 0 4rem 0;
-        margin-right: 6vw;
-        margin-left: 24vw;
-    }
+
     #nav {
         border: none;
         border-radius: 0;
@@ -251,6 +246,12 @@
             }
         }
     }
+    main {
+        // padding-top: calc(9vw * 1.5);
+        padding: calc(12vw + 7vh) 0 4rem 0;
+        margin-right: 5vw;
+        margin-left: calc(19vw + 5vw);
+    }
     footer#footer {
         padding: 4rem 0;
         padding-right: 6vw;
@@ -270,14 +271,8 @@
             border-radius: 0;
             margin-left: 0;
             margin-bottom: 0;
-            height: 100vh;
             margin-left: 0;
             left: 0;
-        }
-    }
-    body.past-header {
-        #nav {
-            width: 18vw;
         }
     }
     body.menu-on.past-header {
@@ -287,37 +282,21 @@
     }
 
 
-    body.past-header {
-        #header {
-            // left: 24vw;
-        }
-    }
-    // body.footer-visible {
-    //     #header {
-    //         left: 100%;
-    //         &:before {
-    //             height: 0!important;
-    //         }
-    //     }
-    // }
-
 }
 @media only screen and (min-width: 1350px) {
     body, body.past-header {
         #header {
             #logo {
-                right: 9vw;
+                right: 5vw;
             }
             h1 {
-                right: calc( 9vw + (9vw / 4.6));
+                right: calc( 5vw + (5vw / 1.5));
             }
         }
     }
     #nav {
         #nav-inner {
             left: 40% !important;
-            nav {
-            }
         }
     }
     footer#footer {
@@ -326,25 +305,4 @@
     .row {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    #main {
-        margin-right: 9vw;
-    }
-    //
-    // #theme-selectors {
-    //     position: fixed;
-    //     top: calc(9vw / 2.3);
-    //     opacity: 0.17;
-    //     left: 24vw;
-    //     background-color: $colour_blue_cobalter;
-    //     padding-top: 1rem!important;
-    //     padding-left: 1.5rem!important;
-    //     border-radius: 23px;
-    //     line-height: 1;
-    //     &:hover {
-    //         opacity: 1;
-    //     }
-    // }
-    // .past-header #theme-selectors {
-    //     opacity: 0.37;
-    // }
 }

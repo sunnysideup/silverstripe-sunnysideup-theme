@@ -1,7 +1,7 @@
 $colour-white: #fff;
+$colour_white_ten_percent: #ffffff22;
 $colour_black: #000;
 $colour_black_lighter: #111;
-$colour_transparent: transparent;
 
 
 $colour_sunny_side_up_green: #00ab06;
@@ -65,3 +65,7 @@ $colour_on_the_fence_green_transparent: #81ce86;
 $colour_organic_egg_yolk: #e4b105;
 $colour_center_shake_blue: #0032b9;
 $colour_black_rock_n_roll: #191919;
+
+
+$colour_transparent: transparent;
+$colour_grey_white_grey: linear-gradient(270deg, $colour_light_grey_aotrom, $colour_white, $colour_light_grey_aotrom);

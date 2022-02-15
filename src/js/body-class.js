@@ -183,7 +183,14 @@ const bodyClass = {
 
   addRocketMode: function () {
     const div = document.createElement('div')
-    div.style.backgroundImage = 'url(' + bodyClass.bodyObject.getAttribute('data-bg-image') + ')'
+    const shadow = bodyClass.bodyObject.getAttribute('data-shadow-over-logo')
+    let shadowColour = ''
+    if (shadow === 'dark') {
+      shadowColour = 'linear-gradient(258deg, #00000017 30%, transparent 40%), '
+    } else if (shadow === 'light') {
+      shadowColour = 'linear-gradient(258deg, #FFFFFF17 30%, transparent 40%), '
+    }
+    div.style.backgroundImage = shadowColour + 'url(' + bodyClass.bodyObject.getAttribute('data-bg-image') + ')'
     div.id = 'BackgroundImage'
     const temp = bodyClass.bodyObject.firstChild
     bodyClass.bodyObject.insertBefore(div, temp)
