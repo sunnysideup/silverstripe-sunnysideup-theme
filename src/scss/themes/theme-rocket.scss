@@ -167,6 +167,18 @@ body.theme-rocket {
         }
     }
 }
+@media only screen and (min-width: 900px) {
+    body.theme-rocket {
+        #nav {
+            background-color: $colour_white_ten_percent;
+        }
+        &.menu-on {
+            #nav {
+                background-color: $colour_sunny_side_up_yellow;
+            }
+        }
+    }
+}
 @media only screen and (min-width: 1050px) {
     body.theme-rocket {
         #nav {
