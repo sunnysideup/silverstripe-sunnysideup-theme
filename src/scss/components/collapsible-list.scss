@@ -1,6 +1,14 @@
 
 
 .collapsibleList {
+    * {
+        transition-property:
+            display,
+            opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        transition-delay: 0.1s;
+    }
     span.open-close i {
         cursor: pointer;
         display: inline-block;
