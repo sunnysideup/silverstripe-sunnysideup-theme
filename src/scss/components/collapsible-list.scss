@@ -1,14 +1,25 @@
+li > ul.collapsibleList,
+li > ul.collapsibleList * {
+    transition-property: height, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+li.collapsibleListClosed > ul.collapsibleList,
+li.collapsibleListClosed > ul.collapsibleList * {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.collapsibleListOpen > ul.collapsibleList,
+.collapsibleListOpen > ul.collapsibleList * {
+    height: auto;
+    opacity: 100;
+}
 
 
 .collapsibleList {
-    * {
-        transition-property:
-            display,
-            opacity;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-        transition-delay: 0.1s;
-    }
     span.open-close i {
         cursor: pointer;
         display: inline-block;
