@@ -51,7 +51,7 @@ const bodyClass = {
     window.addEventListener(
       'beforeunload',
       function () {
-        bodyClass.bodyObject.classList.add('body-unloaded')
+        // bodyClass.bodyObject.classList.add('body-unloaded')
       }
     )
   },
