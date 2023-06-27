@@ -1,3 +1,25 @@
 body.theme-portfolio {
     background-color: $colour_sunny_side_up_yellow;
+
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    &.unscrolled-view {
+
+    }
+
+    &.scrolled-view {
+        main {
+            background-color: white;
+            border-top-left-radius: 25vw;
+        }
+
+        #header {
+            display: none;
+        }
+    }
 }
