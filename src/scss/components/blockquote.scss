@@ -11,13 +11,13 @@ main#main {
             display: block;
             margin: 0;
             padding: calc(1rem + 3vh + 1vw) 0;
-            font-size: calc( ( ( 2vh + 3vw) * 0.5) + 12px);
+            font-size: calc(((1vh + 2vw) * 0.5) + 12px);
             line-height: 1.2;
             overflow: hidden;
             letter-spacing: 0.1em;
             font-weight: 200;
             font-style: italic;
-            text-align: center!important;
+            text-align: center !important;
             color: $colour_yep_thats_grey;
             * {
                 color: $colour_yep_thats_grey;
@@ -33,7 +33,7 @@ main#main {
                 animation-duration: 0.7s;
                 animation-delay: 2.5s;
                 animation-iteration-count: infinite;
-                text-decoration: none!important;
+                text-decoration: none !important;
                 font-style: normal;
             }
             .Typewriter__wrapper,
@@ -44,14 +44,13 @@ main#main {
     }
 }
 
-
 @keyframes blink {
     0% {
     }
-    40%, 60% {
+    40%,
+    60% {
         color: transparent;
     }
     100% {
     }
-
 }

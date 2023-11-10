@@ -6,7 +6,7 @@ body.theme-rocket {
         }
     }
     a[data-add-class="theme-rocket"] {
-        text-decoration: none!important;
+        text-decoration: none !important;
     }
     #main {
         overflow: initial;
@@ -18,7 +18,7 @@ body.theme-rocket {
                 background: transparent;
                 border-color: transparent;
                 filter: drop-shadow(0 0 6px $colour_black);
-                font-size: calc(((2vh + 3vw) * 0.6) + 12px);
+                font-size: calc(((1vh + 2vw)) + 12px);
             }
         }
         #content-below-quote {
@@ -32,7 +32,9 @@ body.theme-rocket {
             border-radius: 5px;
             // box-shadow:0px 0px 7px #fff;
         }
-        #SiblingsAndChildren h2, h1, h2 {
+        #SiblingsAndChildren h2,
+        h1,
+        h2 {
             &:before {
                 border-top-color: $colour_blue_cobalter;
             }
@@ -50,7 +52,8 @@ body.theme-rocket {
     }
 
     .typography {
-        h1, h2 {
+        h1,
+        h2 {
             color: $colour_blue_cobalter;
         }
         // *, a:link, a:visited {
@@ -85,18 +88,17 @@ body.theme-rocket {
 
     form {
         * {
-            color: $colour_law_firm_report_cover!important;
+            color: $colour_law_firm_report_cover !important;
         }
         .middleColumn {
             input,
             textarea,
-            select
-            {
-                border-bottom-color: $colour_law_firm_report_cover!important;
+            select {
+                border-bottom-color: $colour_law_firm_report_cover !important;
             }
         }
         span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover!important;
+            border-bottom-color: $colour_law_firm_report_cover !important;
         }
         .btn-toolbar {
             input {
@@ -105,7 +107,7 @@ body.theme-rocket {
         }
     }
     #Breadcrumbs {
-        border-color: $colour_white!important;
+        border-color: $colour_white !important;
     }
     #footer {
         background-color: $colour_purple_spirituality_in_the_sun;
@@ -129,7 +131,7 @@ body.theme-rocket {
     &.past-header {
         #header {
             border-bottom: 1px solid #fff;
-            background-color: hsla(0,0%,100%,0.7);
+            background-color: hsla(0, 0%, 100%, 0.7);
             * {
                 color: $colour_black;
                 -webkit-text-stroke-width: 0px;
@@ -142,7 +144,6 @@ body.theme-rocket {
             &:hover {
                 opacity: 1;
             }
-
         }
         &.past-header {
             #header {
@@ -151,18 +152,16 @@ body.theme-rocket {
                 }
             }
             #content-below-quote {
-
             }
         }
     }
     main#main {
         blockquote {
             p {
-                color: $colour_white!important;
+                color: $colour_white !important;
                 * {
-                    color: $colour_white!important;
+                    color: $colour_white !important;
                 }
-
             }
         }
     }
@@ -191,16 +190,16 @@ body.theme-rocket {
 
 body.theme-rocket.title-colour-yellow {
     #header * {
-        color:  $colour_sunny_side_up_yellow!important;
+        color: $colour_sunny_side_up_yellow !important;
     }
     &.menu-on {
         #header * {
-            color:  $colour_blue_cobalter!important;
+            color: $colour_blue_cobalter !important;
         }
     }
 }
 body.theme-rocket.title-colour-blue {
     #header * {
-        color:  $colour_blue_cobalter!important;
+        color: $colour_blue_cobalter !important;
     }
 }

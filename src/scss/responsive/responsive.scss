@@ -26,7 +26,6 @@
             display: block;
         }
     }
-
 }
 @media only screen and (min-width: 450px) {
     #header {
@@ -37,7 +36,7 @@
         }
         h1 {
             font-size: calc(18vw / 3);
-            right: calc( 6vw + (18vw / 4.6));
+            right: calc(6vw + (18vw / 4.6));
             top: calc(18vw / 1.6);
         }
     }
@@ -67,13 +66,13 @@
         padding-top: calc(17vw + 12vh);
         blockquote {
             p {
-                text-align: right!important;
+                text-align: right !important;
             }
         }
         .typography {
             .image-container {
                 img {
-                    max-width: 92%!important;
+                    max-width: 92% !important;
                 }
             }
         }
@@ -104,7 +103,6 @@
     }
 }
 
-
 @media only screen and (min-width: 750px) {
     #header {
         #logo {
@@ -114,11 +112,10 @@
         }
         h1 {
             font-size: calc(12vw / 3);
-            right: calc( 6vw + (12vw / 4.6));
+            right: calc(6vw + (12vw / 4.6));
             top: calc(12vw / 1.6);
         }
     }
-
 
     footer#footer {
         padding: 4rem 6vw;
@@ -134,7 +131,8 @@
                 // text-align: justify;
             }
 
-            h1, h2 {
+            h1,
+            h2 {
                 clear: left;
                 float: left;
                 width: calc(21vw - 5rem);
@@ -161,21 +159,20 @@
                 margin-top: 0;
             }
             .image-container {
-                padding-left: 0!important;
-                padding-right: 0!important;
-                margin-left: -24vw!important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: -24vw !important;
                 width: calc(100% + 24vw);
                 img {
                     margin-left: 24vw;
-                    max-width: 61%!important;
+                    max-width: 61% !important;
                 }
             }
         }
     }
 }
 @media only screen and (min-width: 1050px) {
-
-    body.past-header{
+    body.past-header {
         #header {
             opacity: 0;
             display: none;
@@ -195,7 +192,7 @@
     }
     body.past-header.just-scrolled.toc-on {
         #header {
-            display: none!important;
+            display: none !important;
         }
     }
     #header {
@@ -227,15 +224,15 @@
         #menu-toggle {
             transform: rotate(0);
             text-align: center;
-            top: calc(50% - (0.5 * (5vw + 7vh) / 2))!important;
-            left: 0!important;
+            top: calc(50% - (0.5 * (5vw + 7vh) / 2)) !important;
+            left: 0 !important;
             width: 18vw;
             svg {
-                height: 5rem!important;
+                height: 5rem !important;
             }
         }
         #nav-inner {
-            left: 40%!important;
+            left: 40% !important;
             scrollbar-width: none;
             -ms-overflow-style: none;
             &::-webkit-scrollbar {
@@ -249,8 +246,8 @@
     main {
         // padding-top: calc(9vw * 1.5);
         padding: calc(12vw + 7vh) 0 4rem 0;
-        margin-right: 5vw;
-        margin-left: calc(19vw + 5vw);
+        margin-right: 7vw;
+        margin-left: calc(19vw + 7vw);
     }
     footer#footer {
         padding: 4rem 0;
@@ -280,17 +277,16 @@
             width: 100vw;
         }
     }
-
-
 }
 @media only screen and (min-width: 1350px) {
-    body, body.past-header {
+    body,
+    body.past-header {
         #header {
             #logo {
                 right: 5vw;
             }
             h1 {
-                right: calc( 5vw + (5vw / 1.5));
+                right: calc(5vw + (5vw / 1.5));
             }
         }
     }
