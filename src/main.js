@@ -1,4 +1,3 @@
-
 // // non-themed app
 // import 'site/app/client/javascript/MyJavascriptFile';
 //

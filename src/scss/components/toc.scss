@@ -1,10 +1,11 @@
 span.icon i {
-    color: transparent!important;
+    color: transparent !important;
 }
 body.has-toc {
     .typography {
         #content-below-quote {
-            h1, h2 {
+            h1,
+            h2 {
                 padding-left: 5rem;
                 cursor: pointer;
                 > span:first-child {
@@ -38,8 +39,7 @@ body.has-toc {
                         animation-duration: 0.8s;
                         animation-delay: 0s;
                         animation-iteration-count: infinite;
-                        font-size: 2rem!important;
-
+                        font-size: 2rem !important;
                     }
                 }
                 &.toc-active {
@@ -55,18 +55,16 @@ body.has-toc {
     }
 }
 
-
 @keyframes blinktoc {
     0% {
     }
-    25%, 75% {
+    25%,
+    75% {
         color: transparent;
     }
     100% {
     }
-
 }
-
 
 body.has-toc.toc-on {
     .typography {
@@ -74,7 +72,8 @@ body.has-toc.toc-on {
             > * {
                 display: none;
             }
-            .element, .element > div {
+            .element,
+            .element > div {
                 display: block;
             }
             .element > div > * {
@@ -86,14 +85,19 @@ body.has-toc.toc-on {
             #SiblingsAndChildren > * {
                 display: none;
             }
-            #SiblingsAndChildren h2, #SiblingsAndChildren h1 {
+            #SiblingsAndChildren h2,
+            #SiblingsAndChildren h1 {
                 display: block;
-            }
-            h1, h2 {
-                width: auto!important;
-                display: block!important;
                 &:before {
-                    border-top-color: transparent!important;
+                    border-top-color: #ccc !important;
+                }
+            }
+            h1,
+            h2 {
+                width: auto !important;
+                display: block !important;
+                &:before {
+                    border-top-color: transparent;
                 }
                 i.closed {
                     display: none;
@@ -111,8 +115,20 @@ body.has-toc.toc-on {
                     }
                 }
             }
-
-
         }
     }
+}
+
+.bottom-space {
+    margin-bottom: 6rem !important;
+}
+
+#SiblingsAndChildren {
+    margin-top: 12rem !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid #aaa;
+}
+
+.toc-on #SiblingsAndChildren {
+    border-top: 1px solid transparent;
 }

@@ -1,6 +1,6 @@
 @media only screen and (min-width: 0px) {
     html {
-        font-size: calc(8px + 0.13vw) !important;
+        font-size: calc(8px + 0.1vw) !important;
     }
     #header {
         #logo {
@@ -294,6 +294,11 @@
         #nav-inner {
             left: 40% !important;
         }
+    }
+    main {
+        // padding-top: calc(9vw * 1.5);
+        margin-right: 9vw;
+        margin-left: calc(19vw + 9vw);
     }
     footer#footer {
         padding-left: 24vw;
