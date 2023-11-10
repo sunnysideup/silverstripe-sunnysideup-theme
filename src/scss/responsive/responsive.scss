@@ -245,7 +245,7 @@
     }
     main {
         // padding-top: calc(9vw * 1.5);
-        padding: calc(12vw + 7vh) 0 4rem 0;
+        padding: calc(12vw + 7vh) 0 0rem 0;
         margin-right: 7vw;
         margin-left: calc(19vw + 7vw);
     }
@@ -296,9 +296,9 @@
         }
     }
     main {
-        // padding-top: calc(9vw * 1.5);
-        margin-right: 9vw;
-        margin-left: calc(19vw + 9vw);
+        padding: calc(12vw + 12vh) 0 0rem 0;
+        margin-right: 11vw;
+        margin-left: calc(19vw + 11vw);
     }
     footer#footer {
         padding-left: 24vw;
