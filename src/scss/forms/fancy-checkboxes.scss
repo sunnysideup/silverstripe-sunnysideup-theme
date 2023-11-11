@@ -1,21 +1,21 @@
 .field.checkbox {
-    font-size: 2!important;
+    font-size: 2 !important;
     * {
-        font-size: 2!important;
+        font-size: 2 !important;
     }
     input {
         display: inline-block;
-        float: inherit!important;
+        float: inherit !important;
         position: absolute;
-        &+label {
+        & + label {
             border: none;
             display: inline-block;
             position: relative;
             -webkit-appearance: none;
             padding-left: 4.5rem;
-            line-height: 1.7!important;
+            line-height: 1 !important;
             &:after {
-                content: '×';
+                content: "×";
                 background-color: $colour_light_grey_aotrom;
                 color: brown;
                 width: 4rem;
@@ -27,14 +27,14 @@
                 left: 0px;
             }
         }
-        &:focus+label:after {
+        &:focus + label:after {
             background-color: $colour_burngreen !important;
         }
         &:checked {
-            &+label {
+            & + label {
                 &:after {
                     color: $colour_black;
-                    content: '✔';
+                    content: "✔";
                     opacity: 1;
                 }
             }
@@ -42,7 +42,7 @@
     }
     &:hover {
         input {
-            &+label {
+            & + label {
                 &:after {
                     opacity: 1;
                     // content: '✔';
@@ -52,32 +52,31 @@
     }
 }
 
-
 .optionset {
-    font-size: 2!important;
+    font-size: 2 !important;
     * {
-        font-size: 2!important;
+        font-size: 2 !important;
     }
 
     li {
         padding: 0px !important;
         margin: 0px !important;
-        margin-bottom: 1rem!important;
+        margin-bottom: 1rem !important;
         width: 100%;
         label {
             display: inline-block;
         }
         input {
             display: inline-block;
-            float: inherit!important;
+            float: inherit !important;
             position: absolute;
-            &+label {
+            & + label {
                 position: relative;
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
-                line-height: 1.7!important;
+                line-height: 1.7 !important;
                 &:after {
-                    content: '×';
+                    content: "×";
                     position: absolute;
                     background-color: $colour_light_grey_aotrom;
                     color: brown;
@@ -89,31 +88,31 @@
                     left: 0px;
                 }
             }
-            &:focus+label:after {
+            &:focus + label:after {
                 background-color: $colour_burngreen !important;
             }
             &:checked {
-                &+label {
+                & + label {
                     &:after {
                         color: $colour_black;
-                        content: '✔';
+                        content: "✔";
                         opacity: 1;
                         background-color: $colour_sunny_side_up_yellow;
                     }
                 }
             }
         }
-        input[type='radio'] {
+        input[type="radio"] {
             display: inline-block;
-            float: inherit!important;
+            float: inherit !important;
             position: absolute;
-            &+label {
+            & + label {
                 position: relative;
                 -webkit-appearance: none;
                 padding-left: 4.5rem;
-                line-height: 1.7!important;
+                line-height: 1.7 !important;
                 &:after {
-                    content: '×';
+                    content: "×";
                     position: absolute;
                     color: brown;
                     width: 4rem;
@@ -125,14 +124,14 @@
                     border-radius: 10px;
                 }
             }
-            &:focus+label:after {
+            &:focus + label:after {
                 background-color: $colour_burngreen !important;
             }
             &:checked {
-                &+label {
+                & + label {
                     &:after {
                         color: $colour_black;
-                        content: '✔';
+                        content: "✔";
                         opacity: 1;
                     }
                 }
@@ -140,7 +139,7 @@
         }
         &:hover {
             input {
-                &+label {
+                & + label {
                     &:after {
                         opacity: 1;
                     }

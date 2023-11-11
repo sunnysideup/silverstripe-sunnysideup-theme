@@ -7,29 +7,41 @@ $background_color_6: transparent;
 
 .typography {
     form {
-        width: auto!important;
+        width: auto !important;
         * {
             font-size: 2rem;
         }
         margin-top: 2rem;
         margin-bottom: 4rem;
         fieldset,
-        .userform-fields
-        {
-            border: 1px dashed $colour_modern_iron!important;
+        .userform-fields {
+            border: 1px dashed $colour_modern_iron !important;
             border-top-right-radius: 1rem;
             padding: 3vw;
             background-color: $colour_white;
             margin: 2rem 0;
-            h1, h2, h3, h4, h5, h6 {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 font-size: 2rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 &:before {
-                    border: none!important;
+                    border: none !important;
                 }
             }
-            h1, h2, h3, h4, h5, h6, p, ul, ol {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            ul,
+            ol {
                 padding-top: 1rem;
                 padding-bottom: 0em;
                 margin: 0;
@@ -44,15 +56,14 @@ $background_color_6: transparent;
             label {
                 font-size: 2rem;
                 // font-style: italic;
-                color: $colour_yep_thats_grey_revers!important;
+                color: $colour_yep_thats_grey_revers !important;
             }
             .middleColumn {
                 display: block;
                 text-align: left;
                 input,
                 textarea,
-                select
-                {
+                select {
                     background-color: $colour_light_grey_aotrom;
                     width: calc(100% - 3rem);
                     border: none;
@@ -61,16 +72,16 @@ $background_color_6: transparent;
                     padding: 1.5rem;
                     font-weight: 600;
                     -webkit-transition: all 0.5s ease 0s;
-                    border-bottom: 3px solid $colour_modern_iron;
+                    border-bottom: 3px dashed $colour_blue_cobalter_half;
                     color: $colour_black_lighter;
                     &:focus {
                         border-bottom: 3px solid $colour_burngreen !important;
                         outline: none !important;
-                        background-color: $colour_burngreen ;
+                        background-color: $colour_burngreen;
                     }
                     border-top-right-radius: 1rem;
                     &.no-value {
-                        border-bottom-color: $colour_blue_cobalter!important;
+                        border-bottom-color: $colour_blue_cobalter !important;
                     }
                     &.no-value:focus {
                         border-bottom: 3px solid $colour_sunny_side_up_yellow !important;
@@ -80,7 +91,7 @@ $background_color_6: transparent;
                 select {
                     width: 100%;
                 }
-                &+label.right {
+                & + label.right {
                     display: block;
                     text-align: left;
                     font-style: italic;
@@ -100,7 +111,8 @@ $background_color_6: transparent;
                     padding-top: 0px;
                     padding-bottom: 0.5rem;
                 }
-                .radio, .checkbox  {
+                .radio,
+                .checkbox {
                     border: 0;
                     &:hover {
                         border: 0;
@@ -155,7 +167,8 @@ $background_color_6: transparent;
             input.date {
                 max-width: 27rem;
             }
-            .optionset, .checkboxset {
+            .optionset,
+            .checkboxset {
                 label.left {
                     border: 0;
                 }
@@ -175,7 +188,6 @@ $background_color_6: transparent;
                     float: left;
                     margin-top: 13px;
                     margin-left: 13px;
-
                 }
             }
             .confirmedpassword {
@@ -223,16 +235,16 @@ $background_color_6: transparent;
             }
         }
         p {
-            margin-top: 1.7rem!important;
-            margin-left: 0!important;
-            font-size: 2rem!important;
+            margin-top: 1.7rem !important;
+            margin-left: 0 !important;
+            font-size: 2rem !important;
         }
         p.ForgotPassword {
             display: block;
             text-align: left;
         }
         .message {
-            font-size: 2rem!important;
+            font-size: 2rem !important;
             line-height: 1;
             margin-bottom: 0.5rem;
             font-weight: 600;
@@ -248,7 +260,7 @@ $background_color_6: transparent;
             }
         }
         > p.message {
-            margin-bottom: -3.5rem!important;
+            margin-bottom: -3.5rem !important;
             width: calc(50% - 2rem);
             z-index: 9;
             position: relative;

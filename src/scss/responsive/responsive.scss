@@ -20,6 +20,10 @@
         padding-top: calc(17vw + 15vh);
         padding-left: 6vw;
         padding-right: 6vw;
+        .typography h1:before,
+        .typography h2:before {
+            display: none;
+        }
     }
     footer#footer {
         #theme-selectors {
@@ -61,7 +65,7 @@
         }
     }
     main {
-        padding: 4rem 6vw;
+        padding: 4rem 6vw 2rem;
         // padding-top: calc(18vw * 1.4);
         padding-top: calc(17vw + 12vh);
         blockquote {
@@ -123,6 +127,11 @@
     .row {
         grid-template-columns: 1fr 1fr;
     }
+    #nav {
+        .icon {
+            left: -6rem;
+        }
+    }
 }
 @media only screen and (min-width: 900px) {
     main {
@@ -130,7 +139,10 @@
             p {
                 // text-align: justify;
             }
-
+            h1:before,
+            h2:before {
+                display: block;
+            }
             h1,
             h2 {
                 clear: left;
@@ -139,10 +151,10 @@
                 padding-top: 0;
                 margin-top: 0;
                 margin-top: -1px;
+                border-bottom: none;
             }
-            h1 {
-            }
-            h2 {
+            h2 + p {
+                padding-top: 0.5rem;
             }
             p,
             ul,
@@ -204,10 +216,14 @@
         h1 {
             font-size: calc(9vw / 3);
             top: calc(9vw / 1.6);
+            a.bread-crumb {
+                font-size: 2.5rem;
+            }
         }
     }
 
     #nav {
+        opacity: 1 !important;
         border: none;
         border-radius: 0;
         margin-left: 0;
@@ -296,7 +312,7 @@
         }
     }
     main {
-        padding: calc(12vw + 12vh) 0 0rem 0;
+        padding: calc(12vw + 12vh) 0 2rem 0;
         margin-right: 11vw;
         margin-left: calc(19vw + 11vw);
     }

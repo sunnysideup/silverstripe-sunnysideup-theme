@@ -4,14 +4,13 @@ main#main {
         margin: 0;
         margin-top: -7vh;
         margin-bottom: 0;
-        margin-right: 1.5vh;
         padding-top: 0;
-        padding-bottom: calc(1vh + 1vw);
+        padding-bottom: calc(3vh + 3vw);
         p {
             display: block;
             margin: 0;
             padding: calc(1rem + 3vh + 1vw) 0;
-            font-size: calc(((1vh + 2vw) * 0.5) + 12px);
+            font-size: calc(((1vh + 2vw) * 0.5) + 2em);
             line-height: 1.2;
             overflow: hidden;
             letter-spacing: 0.1em;
