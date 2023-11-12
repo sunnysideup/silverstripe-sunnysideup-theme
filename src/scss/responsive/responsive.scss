@@ -176,8 +176,9 @@
                 margin-left: -24vw !important;
                 width: calc(100% + 24vw);
                 img {
-                    margin-left: 24vw;
-                    max-width: 61% !important;
+                    margin: 0;
+                    max-width: calc(100% - 2px) !important;
+                    width: calc(100% - 2px) !important;
                 }
             }
         }
