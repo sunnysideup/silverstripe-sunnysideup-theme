@@ -176,10 +176,29 @@
                 margin-left: -24vw !important;
                 width: calc(100% + 24vw);
                 img {
-                    margin: 0;
+                    margin-left: 24vw;
+                    max-width: calc(64vw - 2px) !important;
+                }
+            }
+            .image-container.full {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: -24vw !important;
+                width: calc(100% + 24vw);
+                img {
+                    margin: 0 !important;
                     max-width: calc(100% - 2px) !important;
                     width: calc(100% - 2px) !important;
                 }
+            }
+        }
+    }
+    #SiblingsAndChildren {
+        margin-top: 12rem !important;
+        padding-top: 2rem !important;
+        h2 {
+            &:before {
+                border-top: 3px solid $colour_blue_cobalter;
             }
         }
     }
@@ -234,6 +253,7 @@
         position: fixed;
         left: 0;
         top: 0;
+        right: auto;
         bottom: 0;
         width: 18vw;
         height: auto;
@@ -265,6 +285,13 @@
         padding: calc(12vw + 7vh) 0 0rem 0;
         margin-right: 7vw;
         margin-left: calc(19vw + 7vw);
+        .typography {
+            .image-container {
+                img {
+                    max-width: calc(43vw - 2px) !important;
+                }
+            }
+        }
     }
     footer#footer {
         padding: 4rem 0;
@@ -275,6 +302,12 @@
     body.menu-on {
         #nav {
             z-index: 999;
+        }
+    }
+    body.menu-on {
+        #nav {
+            right: auto;
+            left: 0;
         }
     }
     body.past-header,
@@ -316,6 +349,13 @@
         padding: calc(12vw + 12vh) 0 2rem 0;
         margin-right: 11vw;
         margin-left: calc(19vw + 11vw);
+        .typography {
+            .image-container {
+                img {
+                    max-width: calc(35vw - 2px) !important;
+                }
+            }
+        }
     }
     footer#footer {
         padding-left: 24vw;

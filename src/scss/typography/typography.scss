@@ -38,21 +38,11 @@
             width: 100%;
             left: 0;
             right: 0;
-            border-top: 1px solid $colour_outer_space_love;
+            border-top: 3px solid $colour_blue_cobalter;
             display: block;
             content: " ";
             margin-top: -2rem;
             opacity: 0.2;
-        }
-    }
-    #SiblingsAndChildren {
-        margin-top: 2rem;
-        h1,
-        h2 {
-            text-transform: uppercase;
-            &:before {
-                border-top: 1px solid $colour_outer_space_love;
-            }
         }
     }
     h1,
