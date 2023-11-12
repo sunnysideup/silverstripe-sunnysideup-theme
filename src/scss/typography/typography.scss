@@ -60,7 +60,8 @@
         margin-top: 1.5em;
         text-transform: uppercase;
         color: $colour_blue_cobalter;
-        border-bottom: 1px solid $colour_blue_cobalter_half;
+        border-bottom: 3px solid $colour_blue_cobalter_half;
+        padding-bottom: 0.5rem;
         * {
             color: $colour_blue_cobalter;
         }

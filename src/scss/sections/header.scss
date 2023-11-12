@@ -49,7 +49,7 @@
 }
 body.past-header {
     #header {
-        height: 7rem;
+        height: 5rem;
         z-index: 3;
         background-color: #fff;
         position: fixed;
@@ -79,17 +79,17 @@ body.past-header {
             margin-top: 0.67em;
             margin-left: 0vw;
             color: $colour_yep_thats_grey;
+            display: block;
+            font-size: 2.5rem;
+            right: 6vw;
+            opacity: 1;
+            top: 0px;
             * {
                 color: $colour_yep_thats_grey;
             }
             .page-title {
                 color: $colour_blue_cobalter_highlights;
             }
-            display: block;
-            font-size: 3rem;
-            right: 6vw;
-            opacity: 1;
-            top: 0px;
             .bread-crumb {
                 display: none !important;
             }
