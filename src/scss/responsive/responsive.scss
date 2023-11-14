@@ -153,7 +153,9 @@
                 margin-top: -1px;
                 border-bottom: none;
             }
-            h2 + p {
+            h2 + p,
+            h2 + ul,
+            h2 + ol {
                 padding-top: 0.5rem;
             }
             p,

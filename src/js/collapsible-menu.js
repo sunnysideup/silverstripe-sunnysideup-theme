@@ -12,94 +12,118 @@ http://creativecommons.org/publicdomain/zero/1.0/legalcode
 */
 
 const CollapsibleLists = (function () {
-  // Makes all lists with the class 'collapsibleList' collapsible. The
-  // parameter is:
-  //
-  // doNotRecurse - true if sub-lists should not be made collapsible
-  function apply (doNotRecurse) {
-    [].forEach.call(document.getElementsByTagName('ul'), node => {
-      if (node.classList.contains('collapsibleList')) {
-        applyTo(node, true)
+    // Makes all lists with the class 'collapsibleList' collapsible. The
+    // parameter is:
+    //
+    // doNotRecurse - true if sub-lists should not be made collapsible
+    function apply (doNotRecurse) {
+        ;[].forEach.call(document.getElementsByTagName('ul'), node => {
+            if (node.classList.contains('collapsibleList')) {
+                applyTo(node, true)
 
-        if (!doNotRecurse) {
-          [].forEach.call(node.getElementsByTagName('ul'), subnode => {
-            subnode.classList.add('collapsibleList')
-          })
+                if (!doNotRecurse) {
+                    ;[].forEach.call(
+                        node.getElementsByTagName('ul'),
+                        subnode => {
+                            subnode.classList.add('collapsibleList')
+                        }
+                    )
+                }
+                hasOpenSubList(node)
+            }
+        })
+    }
+
+    function hasOpenSubList (el) {
+        console.log(el)
+        const list = el.closest('.collapsibleList')
+        if (list) {
+            console.log(list)
+            if (list.querySelectorAll('.collapsibleListOpen').length) {
+                console.log(list)
+                list.classList.add('collapsibleListHasOpen')
+            } else {
+                list.classList.remove('collapsibleListHasOpen')
+                console.log('ERROR')
+            }
         }
-      }
-    })
-  }
+    }
 
-  // Makes the specified list collapsible. The parameters are:
-  //
-  // node         - the list element
-  // doNotRecurse - true if sub-lists should not be made collapsible
-  function applyTo (node, doNotRecurse) {
-    [].forEach.call(node.getElementsByTagName('li'), li => {
-      if (!doNotRecurse || node === li.parentNode) {
-        li.style.userSelect = 'none'
-        li.style.MozUserSelect = 'none'
-        li.style.msUserSelect = 'none'
-        li.style.WebkitUserSelect = 'none'
-        const ul = li.getElementsByTagName('ul')
-        if (ul.length > 0) {
-          const span = document.createElement('span')
-          span.classList.add('open-close')
-          span.addEventListener('click', handleClick.bind(null, li))
-          span.innerHTML = '<i class="open">&nbsp;</i><i class="closed">↰</i>'
-          // we need to toggle all of them, some twice
-          if (li.classList.contains('section') || li.classList.contains('current')) {
-            toggle(li)
-          }
-          toggle(li)
-          li.insertBefore(span, ul[0])
+    // Makes the specified list collapsible. The parameters are:
+    //
+    // node         - the list element
+    // doNotRecurse - true if sub-lists should not be made collapsible
+    function applyTo (node, doNotRecurse) {
+        ;[].forEach.call(node.getElementsByTagName('li'), li => {
+            if (!doNotRecurse || node === li.parentNode) {
+                li.style.userSelect = 'none'
+                li.style.MozUserSelect = 'none'
+                li.style.msUserSelect = 'none'
+                li.style.WebkitUserSelect = 'none'
+                const ul = li.getElementsByTagName('ul')
+                if (ul.length > 0) {
+                    const span = document.createElement('span')
+                    span.classList.add('open-close')
+                    span.addEventListener('click', handleClick.bind(null, li))
+                    span.innerHTML =
+                        '<i class="open">&nbsp;</i><i class="closed">↰</i>'
+                    // we need to toggle all of them, some twice
+                    if (
+                        li.classList.contains('section') ||
+                        li.classList.contains('current')
+                    ) {
+                        toggle(li)
+                    }
+                    toggle(li)
+                    li.insertBefore(span, ul[0])
+                }
+            }
+        })
+    }
+
+    // Handles a click. The parameter is:
+    //
+    // node - the node for which clicks are being handled
+    function handleClick (node, e) {
+        let li = e.target
+        while (li.nodeName !== 'LI') {
+            li = li.parentNode
         }
-      }
-    })
-  }
 
-  // Handles a click. The parameter is:
-  //
-  // node - the node for which clicks are being handled
-  function handleClick (node, e) {
-    let li = e.target
-    while (li.nodeName !== 'LI') {
-      li = li.parentNode
+        if (li === node) {
+            toggle(node)
+        }
     }
 
-    if (li === node) {
-      toggle(node)
+    // Opens or closes the unordered list elements directly within the
+    // specified node. The parameter is:
+    //
+    // node - the node containing the unordered list elements
+    function toggle (node) {
+        const open = node.classList.contains('collapsibleListClosed')
+        const uls = node.getElementsByTagName('ul')
+
+        ;[].forEach.call(uls, ul => {
+            let li = ul
+            while (li.nodeName !== 'LI') {
+                li = li.parentNode
+            }
+
+            if (li === node) {
+                ul.style.display = open ? 'block' : 'none'
+            }
+        })
+
+        node.classList.remove('collapsibleListOpen')
+        node.classList.remove('collapsibleListClosed')
+
+        if (uls.length > 0) {
+            node.classList.add('collapsibleList' + (open ? 'Open' : 'Closed'))
+        }
+        hasOpenSubList(node)
     }
-  }
 
-  // Opens or closes the unordered list elements directly within the
-  // specified node. The parameter is:
-  //
-  // node - the node containing the unordered list elements
-  function toggle (node) {
-    const open = node.classList.contains('collapsibleListClosed')
-    const uls = node.getElementsByTagName('ul');
-
-    [].forEach.call(uls, ul => {
-      let li = ul
-      while (li.nodeName !== 'LI') {
-        li = li.parentNode
-      }
-
-      if (li === node) {
-        ul.style.display = (open ? 'block' : 'none')
-      }
-    })
-
-    node.classList.remove('collapsibleListOpen')
-    node.classList.remove('collapsibleListClosed')
-
-    if (uls.length > 0) {
-      node.classList.add('collapsibleList' + (open ? 'Open' : 'Closed'))
-    }
-  }
-
-  return { apply, applyTo }
+    return { apply, applyTo }
 })()
 
 CollapsibleLists.apply()

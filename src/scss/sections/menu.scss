@@ -176,6 +176,14 @@ body.menu-on {
             z-index: 999;
         }
     }
+    .collapsibleListHasOpen {
+        > li {
+            display: none;
+        }
+        > li.collapsibleListOpen {
+            display: block;
+        }
+    }
 }
 
 body.past-header.menu-on {
