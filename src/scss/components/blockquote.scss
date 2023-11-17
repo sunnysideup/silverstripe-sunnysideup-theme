@@ -4,13 +4,17 @@ main#main {
         margin: 0;
         margin-top: 0vh;
         margin-bottom: 17vh;
-        padding-top: 0;
-        padding-bottom: calc(3vh + 3vw);
+        padding-top: 10vh;
+        padding-bottom: 20vh;
         p {
             display: block;
             margin: 0;
+            background-color: transparent;
+            background: transparent;
+            border-color: transparent;
+            filter: drop-shadow(0 0 6px $colour_black);
+            font-size: calc(((0.6vh + 1vw)) + 18px);
             padding: calc(1rem + 3vh + 1vw) 0;
-            font-size: calc(((1vh + 2vw) * 0.5) + 2em);
             line-height: 1.2;
             overflow: hidden;
             letter-spacing: 0.1em;

@@ -9,10 +9,11 @@
 </head>
 
 <body
-    class="theme-<% if $DefaultTheme %>$DefaultTheme<% else %>sun<% end_if %> title-colour-$TitleColour"
+    class="theme-rocket title-colour-$TitleColour"
     id="top"
     data-bg-image="$RandomImage"
     data-shadow-over-logo="$ShadowOverLogo"
+    data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
 >
     <% include Header %>
     <% include Nav %>
@@ -37,10 +38,11 @@
 </head>
 
 <body
-    class="theme-<% if $DefaultTheme %>$DefaultTheme<% else %>sun<% end_if %> title-colour-$TitleColour"
+    class="theme-rocket title-colour-$TitleColour"
     id="top"
     data-bg-image="$RandomImage"
     data-shadow-over-logo="$ShadowOverLogo"
+    data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
 >
     <% include Header %>
     <% include Nav %>

@@ -1,5 +1,8 @@
 body.theme-rocket {
     background-color: #555;
+}
+body.theme-rocket,
+body.theme-rocket * {
     #header {
         * {
             color: $colour_blue_cobalter;
@@ -9,29 +12,18 @@ body.theme-rocket {
         text-decoration: none !important;
     }
     #main {
-        overflow: initial;
-        blockquote.main-quote {
-            padding-top: 10vh;
-            padding-bottom: 20vh;
-            p {
-                background-color: transparent;
-                background: transparent;
-                border-color: transparent;
-                filter: drop-shadow(0 0 6px $colour_black);
-                font-size: calc(((1vh + 2vw)) + 12px);
-            }
-        }
         #content-below-quote {
-            background-color: $colour_light_grey_aotrom;
-            background: $colour_grey_white_grey;
-            padding: 20px 30px;
-            // border-radius: 10px;
-            margin-bottom: 70vh;
-            min-height: 60vh;
-            box-shadow: 0px 3px 20px -6px rgb(0 0 0 / 50%);
-            border-radius: 5px;
-            border: 15px solid $colour_sunny_side_up_yellow;
-            // box-shadow:0px 0px 7px #fff;
+            // background-color: $colour_light_grey_aotrom;
+            // background: $colour_grey_white_grey;
+            // padding: 20px 30px;
+            // // border-radius: 10px;
+            // margin-bottom: 70vh;
+            // min-height: 60vh;
+            // box-shadow: 0px 3px 20px -6px rgb(0 0 0 / 50%);
+            // border-radius: 5px;
+            // border: 15px solid $colour_sunny_side_up_yellow;
+            // // box-shadow:0px 0px 7px #fff;
+            opacity: 0;
         }
         #SiblingsAndChildren h2,
         h1,
@@ -166,9 +158,9 @@ body.theme-rocket {
     main#main {
         blockquote {
             p {
-                color: $colour_white !important;
+                color: $colour_white;
                 * {
-                    color: $colour_white !important;
+                    color: $colour_white;
                 }
             }
         }
@@ -185,9 +177,9 @@ body.theme-rocket {
 @media only screen and (min-width: 900px) {
     body.theme-rocket {
         #main {
-            #content-below-quote {
-                padding: 40px 30px;
-            }
+            // #content-below-quote {
+            //     padding: 40px 30px;
+            // }
         }
     }
 }
