@@ -183,22 +183,17 @@
             .image-container {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
-                margin-left: -24vw !important;
-                width: calc(100% + 24vw);
                 img {
-                    margin-left: 24vw;
+                    display: block;
+                    margin: 0 auto;
                     max-width: calc(64vw - 2px) !important;
                 }
             }
             .image-container.full {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
-                margin-left: -24vw !important;
-                width: calc(100% + 24vw);
                 img {
-                    margin: 0 !important;
                     max-width: calc(100% - 2px) !important;
-                    width: calc(100% - 2px) !important;
                 }
             }
         }

@@ -26,6 +26,11 @@ main {
     position: relative;
     z-index: 2;
     min-height: 60vh;
+    #content-below-quote {
+        .element {
+            margin-top: 6rem;
+        }
+    }
 }
 footer#footer {
     padding: 2rem;
