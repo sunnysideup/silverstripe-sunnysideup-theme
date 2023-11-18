@@ -8,13 +8,13 @@ const bodyClass = {
         bodyClass.addOrToggleBodyClass('#menu-toggle', false)
         // console.log(bodyClass.isHomePage())
         // console.log(bodyClass.hasFragment())
-        if (
-            bodyClass.isHomePage() === true &&
-            bodyClass.hasFragment() === false
-        ) {
-            // console.log('opening menu')
-            document.querySelector('#menu-toggle').click()
-        }
+        // if (
+        //     bodyClass.isHomePage() === true &&
+        //     bodyClass.hasFragment() === false
+        // ) {
+        //     // console.log('opening menu')
+        //     document.querySelector('#menu-toggle').click()
+        // }
         // if you click on theme-selector, you select the theme
         bodyClass.addOrToggleBodyClass('.theme-selector', true)
         // if you click on set-them, you select the theme
@@ -53,28 +53,27 @@ const bodyClass = {
 
     retrieveCookieOrHash: function () {
         let hash = bodyClass.getHashFromURL()
-        let classes = ''
+        let preferredTheme = ''
         if (hash === 'reset') {
-            myCookie.eraseCookie('bodyClassClasses')
-            hash = ''
+            myCookie.eraseCookie('preferredTheme')
             // console.log(reset);
-        } else if (this.runClickForElement(hash)) {
-            // do nothing
+        } else if (hash) {
+            this.runClickForElement(hash)
         } else {
-            classes = myCookie.getCookie('bodyClassClasses')
-            classes = String(classes)
-            if (classes.length > 0) {
-                const classArray = classes.split(' ')
-                for (let i = 0; i < classArray.length; i++) {
-                    this.runClickForElement(classArray[i])
-                }
-            } else if (
-                window.matchMedia &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches
-            ) {
-                this.runClickForElement('theme-moon')
+            preferredTheme = myCookie.getCookie('preferredTheme')
+            if (preferredTheme) {
+                bodyClass.bodyObject.setAttribute('data-theme', preferredTheme)
+            } else if (bodyClass.userPrefersDarkTheme()) {
+                bodyClass.bodyObject.setAttribute('data-theme', 'theme-moon')
             }
         }
+    },
+
+    userPrefersDarkTheme: function () {
+        return (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+        )
     },
 
     runClickForElement: function (hash) {
@@ -90,50 +89,49 @@ const bodyClass = {
         return false
     },
 
-    addOrToggleBodyClass: function (objSelector, keep) {
-        document.querySelectorAll(objSelector).forEach(function ($eachObject) {
-            $eachObject.addEventListener('click', function (event) {
-                bodyClass.actionBodyClassChange($eachObject, event, keep)
-                return false
+    addOrToggleBodyClass: function (objSelector, isTheme) {
+        document
+            .querySelectorAll(objSelector)
+            .forEach(function (oneEachObject) {
+                oneEachObject.addEventListener('click', function (event) {
+                    bodyClass.actionBodyClassChange(
+                        oneEachObject,
+                        event,
+                        isTheme
+                    )
+                    return false
+                })
             })
-        })
     },
 
-    actionBodyClassChange: function ($eachObject, event, keep) {
+    actionBodyClassChange: function (oneEachObject, event, isTheme, scrollTo) {
         event.preventDefault()
 
-        bodyClass.removeBodyClassesBasedOnAttribute($eachObject)
+        bodyClass.removeBodyClassesBasedOnAttribute(oneEachObject)
 
         let toggleClass = ''
         let id = ''
-        if ($eachObject.hasAttribute('data-add-class')) {
-            toggleClass = $eachObject.getAttribute('data-add-class')
+        if (oneEachObject.hasAttribute('data-add-class')) {
+            toggleClass = oneEachObject.getAttribute('data-add-class')
         } else {
-            toggleClass = $eachObject.getAttribute('id')
+            toggleClass = oneEachObject.getAttribute('id')
             id = toggleClass
         }
-        if ($eachObject.hasAttribute('data-toggle')) {
+        if (oneEachObject.hasAttribute('data-toggle-rather-than-add')) {
             bodyClass.bodyObject.classList.toggle(toggleClass)
         } else {
             bodyClass.bodyObject.classList.add(toggleClass)
         }
-        if (toggleClass === 'theme-rocket') {
-            // window.alert('Welcome to our experimental fly-around-the-world rocket(🚀) theme. ')
+
+        if (isTheme) {
+            myCookie.setCookie('preferredTheme', toggleClass, 14)
+            bodyClass.bodyObject.setAttribute('data-theme', toggleClass)
         }
-
-        if (keep) {
-            myCookie.setCookie(
-                'bodyClassClasses',
-                bodyClass.bodyObject.className,
-                14
-            )
-
-            if (id) {
-                let hash = bodyClass.getHashFromString(id)
-                if (hash.length) {
-                    hash = hash.replace('#', '')
-                    window.location.hash = '#' + hash
-                }
+        if (id && scrollTo) {
+            let hash = bodyClass.getHashFromString(id)
+            if (hash.length) {
+                hash = hash.replace('#', '')
+                window.location.hash = '#' + hash
             }
         }
     },

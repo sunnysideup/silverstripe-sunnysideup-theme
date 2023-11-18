@@ -35,16 +35,12 @@ const CollapsibleLists = (function () {
     }
 
     function hasOpenSubList (el) {
-        console.log(el)
         const list = el.closest('.collapsibleList')
         if (list) {
-            console.log(list)
             if (list.querySelectorAll('.collapsibleListOpen').length) {
-                console.log(list)
                 list.classList.add('collapsibleListHasOpen')
             } else {
                 list.classList.remove('collapsibleListHasOpen')
-                console.log('ERROR')
             }
         }
     }

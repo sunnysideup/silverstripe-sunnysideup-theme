@@ -10,7 +10,7 @@
 import './js/cookie'
 import './js/body-class'
 import './js/collapsible-menu'
-import './js/hide-menu-bar'
+import './js/scroll-manager'
 import './js/footer-is-visible'
 import './js/form'
 import './js/mouse-over-logo'

@@ -1,4 +1,6 @@
 const scrollManager = {
+    microSecondsBeforeJustScrollledRemoved: 5000,
+
     minScrollForAction: 2,
 
     minScrollDown: 100,
@@ -21,41 +23,69 @@ const scrollManager = {
         scrollManager.bodyObject = document.querySelector('body')
         this.scrollListener()
         this.scrollUpOrDown()
-        this.lastScroll = window.scrollY
+        this.lastScroll = this.currentScroll()
         window.setTimeout(function () {
             window.scrollTo(
-                window.pageXOffset,
-                window.scrollY - this.minScrollForAction - 1
+                window.scrollX,
+                this.currentScroll() - this.minScrollForAction - 1
             )
         }, 50)
+        this.footerHeight = document.querySelector('footer')
+        this.normalTransitionDuration =
+            scrollManager.bodyObject.style.transitionDuration
+    },
+
+    footerHeight: 0,
+
+    normalTransitionDuration: 0,
+
+    themeTransitionDuration: '1.5s',
+
+    newScroll: 0,
+
+    getTheme: function () {
+        return new String(scrollManager.bodyObject.getAttribute('data-theme'))
+    },
+
+    currentScroll: function () {
+        return parseInt(window.scrollY || document.documentElement.scrollTop)
     },
 
     scrollListener: function () {
-        let isTopTheme = null
+        let isRocketTheme = null
         window.addEventListener('scroll', function () {
             window.clearTimeout(scrollManager.timeOutFx)
             window.clearTimeout(scrollManager.justScrolledFx)
-            const theme = scrollManager.bodyObject.getAttribute('data-theme')
-            if (window.scrollY < 20) {
-                if (isTopTheme !== true) {
+            const theme = getTheme()
+            this.newScroll = this.currentScroll()
+            const windowHeight = window.innerHeight
+            const totalHeight = document.documentElement.scrollHeight
+
+            // Check if current scroll position is at the bottom minus the footer's height
+            const bottomTest =
+                scrollPosition + windowHeight >= totalHeight - footerHeight
+            const topTest = scrollPosition < 20
+            if (topTest || bottomTest) {
+                if (isRocketTheme !== true) {
+                    scrollManager.bodyObject.style.transitionDuration =
+                        this.themeTransitionDuration
                     scrollManager.bodyObject.classList.remove('past-header')
-                    scrollManager.bodyObject.style.transitionDuration = '0.7s'
                     scrollManager.bodyObject.classList.remove(theme)
                     scrollManager.bodyObject.classList.add('theme-rocket')
-                    scrollManager.bodyObject.style.transitionSpeed = '0.3s'
-                    isTopTheme = true
+                    scrollManager.bodyObject.style.transitionSpeed =
+                        this.normalTransitionDuration
+                    isRocketTheme = true
                 }
             } else {
-                if (isTopTheme !== false) {
+                if (isRocketTheme !== false) {
+                    scrollManager.bodyObject.style.transitionDuration =
+                        this.themeTransitionDuration
                     scrollManager.bodyObject.classList.add('past-header')
-                    const oldTransitionSpeed =
-                        scrollManager.bodyObject.style.transitionDuration
-                    scrollManager.bodyObject.style.transitionDuration = '1s'
                     scrollManager.bodyObject.classList.add(theme)
                     scrollManager.bodyObject.classList.remove('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
-                        oldTransitionSpeed
-                    isTopTheme = false
+                        this.normalTransitionDuration
+                    isRocketTheme = false
                 }
             }
             scrollManager.didScroll = true
@@ -69,7 +99,7 @@ const scrollManager = {
             if (scrollManager.didScroll) {
                 // reset so that we know each call is a real call.
                 scrollManager.didScroll = false
-                const newScroll = window.scrollY
+                scrollManager.newScroll = window.scrollY
                 // console.log('last scroll: ' + scrollManager.lastScroll)
                 // console.log('new scroll: ' + newScroll)
                 if (
@@ -105,13 +135,13 @@ const scrollManager = {
                         scrollManager.bodyObject.classList.remove(
                             'just-scrolled'
                         )
-                    }, 3000)
+                    }, scrollManager.microSecondsBeforeJustScrollledRemoved)
                 } else {
                     // console.log('do nothing')
                 }
                 scrollManager.lastScroll = newScroll
             }
-        }, 200)
+        }, 100)
     }
 }
 
