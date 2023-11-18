@@ -3,7 +3,18 @@ const scrollManager = {
 
     minScrollForAction: 2,
 
-    minScrollDown: 100,
+    minScrollDownToBeProperScroll: 100,
+
+    normalTransitionDuration: 0,
+
+    themeTransitionDuration: '1.5s',
+
+    // calculated variables
+    footerHeight: 0,
+
+    newScroll: 0,
+
+    minimumScrollForThemeSwitch: 20,
 
     lastScroll: 0,
 
@@ -21,27 +32,22 @@ const scrollManager = {
 
     init: function () {
         scrollManager.bodyObject = document.querySelector('body')
-        this.scrollListener()
-        this.scrollUpOrDown()
-        this.lastScroll = this.currentScroll()
+        scrollManager.scrollListener()
+        scrollManager.scrollUpOrDown()
+        scrollManager.lastScroll = scrollManager.currentScroll()
         window.setTimeout(function () {
             window.scrollTo(
                 window.scrollX,
-                this.currentScroll() - this.minScrollForAction - 1
+                scrollManager.currentScroll() -
+                    scrollManager.minScrollForAction -
+                    1
             )
         }, 50)
-        this.footerHeight = document.querySelector('footer')
-        this.normalTransitionDuration =
+        scrollManager.footerHeight =
+            document.querySelector('footer').offsetHeight / 2
+        scrollManager.normalTransitionDuration =
             scrollManager.bodyObject.style.transitionDuration
     },
-
-    footerHeight: 0,
-
-    normalTransitionDuration: 0,
-
-    themeTransitionDuration: '1.5s',
-
-    newScroll: 0,
 
     getTheme: function () {
         return new String(scrollManager.bodyObject.getAttribute('data-theme'))
@@ -56,35 +62,45 @@ const scrollManager = {
         window.addEventListener('scroll', function () {
             window.clearTimeout(scrollManager.timeOutFx)
             window.clearTimeout(scrollManager.justScrolledFx)
-            const theme = getTheme()
-            this.newScroll = this.currentScroll()
+            const theme = scrollManager.getTheme()
+            scrollManager.newScroll = scrollManager.currentScroll()
             const windowHeight = window.innerHeight
             const totalHeight = document.documentElement.scrollHeight
 
             // Check if current scroll position is at the bottom minus the footer's height
             const bottomTest =
-                scrollPosition + windowHeight >= totalHeight - footerHeight
-            const topTest = scrollPosition < 20
+                scrollManager.newScroll + windowHeight >=
+                totalHeight - scrollManager.footerHeight
+            console.log(
+                bottomTest,
+                scrollManager.newScroll,
+                windowHeight,
+                totalHeight,
+                scrollManager.footerHeight
+            )
+            const topTest =
+                scrollManager.newScroll <
+                scrollManager.minimumScrollForThemeSwitch
             if (topTest || bottomTest) {
                 if (isRocketTheme !== true) {
                     scrollManager.bodyObject.style.transitionDuration =
-                        this.themeTransitionDuration
+                        scrollManager.themeTransitionDuration
                     scrollManager.bodyObject.classList.remove('past-header')
                     scrollManager.bodyObject.classList.remove(theme)
                     scrollManager.bodyObject.classList.add('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
-                        this.normalTransitionDuration
+                        scrollManager.normalTransitionDuration
                     isRocketTheme = true
                 }
             } else {
                 if (isRocketTheme !== false) {
                     scrollManager.bodyObject.style.transitionDuration =
-                        this.themeTransitionDuration
+                        scrollManager.themeTransitionDuration
                     scrollManager.bodyObject.classList.add('past-header')
                     scrollManager.bodyObject.classList.add(theme)
                     scrollManager.bodyObject.classList.remove('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
-                        this.normalTransitionDuration
+                        scrollManager.normalTransitionDuration
                     isRocketTheme = false
                 }
             }
@@ -103,15 +119,17 @@ const scrollManager = {
                 // console.log('last scroll: ' + scrollManager.lastScroll)
                 // console.log('new scroll: ' + newScroll)
                 if (
-                    Math.abs(scrollManager.lastScroll - newScroll) <=
-                    scrollManager.minScrollForAction
+                    Math.abs(
+                        scrollManager.lastScroll - scrollManager.newScroll
+                    ) <= scrollManager.minScrollForAction
                 ) {
                     // console.log('too little')
                     return
                 }
                 if (
                     newScroll >
-                    scrollManager.lastScroll + scrollManager.minScrollDown
+                    scrollManager.lastScroll +
+                        scrollManager.minScrollDownToBeProperScroll
                 ) {
                     // console.log('down')
                     // Scroll Down
@@ -131,11 +149,14 @@ const scrollManager = {
                         scrollManager.scrolledDownClass
                     )
                     scrollManager.bodyObject.classList.add('just-scrolled')
-                    this.justScrolledFx = window.setTimeout(function () {
-                        scrollManager.bodyObject.classList.remove(
-                            'just-scrolled'
-                        )
-                    }, scrollManager.microSecondsBeforeJustScrollledRemoved)
+                    scrollManager.justScrolledFx = window.setTimeout(
+                        function () {
+                            scrollManager.bodyObject.classList.remove(
+                                'just-scrolled'
+                            )
+                        },
+                        scrollManager.microSecondsBeforeJustScrollledRemoved
+                    )
                 } else {
                     // console.log('do nothing')
                 }
