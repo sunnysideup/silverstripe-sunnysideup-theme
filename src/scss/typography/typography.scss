@@ -90,7 +90,7 @@
             ul,
             ol {
                 padding-top: 1.7rem;
-                margin-left: 0;
+                margin-left: 0 !important;
                 padding-left: 2.3rem;
                 padding-bottom: 0;
                 li {
@@ -196,11 +196,9 @@
             padding: 0.7rem;
             border: 1px dashed $colour_blue_cobalter_highlights;
             width: auto !important;
-            ul,
-            li,
-            p {
-                margin: 0;
-                padding: 0;
+            * {
+                margin: 0 !important;
+                padding: 0 !important;
             }
             li {
                 list-style: none;
