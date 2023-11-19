@@ -71,13 +71,6 @@ const scrollManager = {
             const bottomTest =
                 scrollManager.newScroll + windowHeight >=
                 totalHeight - scrollManager.footerHeight
-            console.log(
-                bottomTest,
-                scrollManager.newScroll,
-                windowHeight,
-                totalHeight,
-                scrollManager.footerHeight
-            )
             const topTest =
                 scrollManager.newScroll <
                 scrollManager.minimumScrollForThemeSwitch
@@ -127,7 +120,7 @@ const scrollManager = {
                     return
                 }
                 if (
-                    newScroll >
+                    scrollManager.newScroll >
                     scrollManager.lastScroll +
                         scrollManager.minScrollDownToBeProperScroll
                 ) {
@@ -139,7 +132,7 @@ const scrollManager = {
                     scrollManager.bodyObject.classList.add(
                         scrollManager.scrolledDownClass
                     )
-                } else if (newScroll < scrollManager.lastScroll) {
+                } else if (scrollManager.newScroll < scrollManager.lastScroll) {
                     // console.log('up')
                     // Scroll Up
                     scrollManager.bodyObject.classList.add(
