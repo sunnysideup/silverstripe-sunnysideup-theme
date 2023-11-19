@@ -10,7 +10,6 @@ const scrollManager = {
     themeTransitionDuration: '1.5s',
 
     // calculated variables
-    footerHeight: 0,
 
     newScroll: 0,
 
@@ -69,16 +68,21 @@ const scrollManager = {
 
             // Check if current scroll position is at the bottom minus the footer's height
             const bottomTest =
-                scrollManager.newScroll + windowHeight >=
-                totalHeight - scrollManager.footerHeight
+                scrollManager.bodyObject.classList.contains('footer-visible')
+            // scrollManager.newScroll + windowHeight >=
+            // totalHeight - scrollManager.footerHeight
             const topTest =
                 scrollManager.newScroll <
                 scrollManager.minimumScrollForThemeSwitch
+            if (topTest) {
+                scrollManager.bodyObject.classList.remove('past-header')
+            } else {
+                scrollManager.bodyObject.classList.add('past-header')
+            }
             if (topTest || bottomTest) {
                 if (isRocketTheme !== true) {
                     scrollManager.bodyObject.style.transitionDuration =
                         scrollManager.themeTransitionDuration
-                    scrollManager.bodyObject.classList.remove('past-header')
                     scrollManager.bodyObject.classList.remove(theme)
                     scrollManager.bodyObject.classList.add('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
@@ -89,7 +93,6 @@ const scrollManager = {
                 if (isRocketTheme !== false) {
                     scrollManager.bodyObject.style.transitionDuration =
                         scrollManager.themeTransitionDuration
-                    scrollManager.bodyObject.classList.add('past-header')
                     scrollManager.bodyObject.classList.add(theme)
                     scrollManager.bodyObject.classList.remove('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
@@ -153,7 +156,7 @@ const scrollManager = {
                 } else {
                     // console.log('do nothing')
                 }
-                scrollManager.lastScroll = newScroll
+                scrollManager.lastScroll = scrollManager.newScroll
             }
         }, 100)
     }

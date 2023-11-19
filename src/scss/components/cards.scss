@@ -1,0 +1,15 @@
+.card-holder {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+}
+
+.card {
+    /* Styles for your cards */
+    h3:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

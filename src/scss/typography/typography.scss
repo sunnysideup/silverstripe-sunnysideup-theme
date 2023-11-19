@@ -131,14 +131,15 @@
     }
     .captionImage {
         width: auto !important;
-        p.caption {
-            font-style: italic;
-            font-size: 1.3rem;
-            width: 100%;
-            text-align: left;
-            margin-left: 0;
-            margin-top: 0rem;
-        }
+    }
+    p.caption {
+        font-style: italic;
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+        margin-top: -2rem;
+        text-align: center;
     }
 
     .media,

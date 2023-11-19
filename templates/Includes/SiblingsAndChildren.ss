@@ -1,5 +1,5 @@
 <% if $MenuChildren || $Siblings %>
-<div id="SiblingsAndChildren">
+<div id="SiblingsAndChildren" class="cb">
 <% if $MenuChildren %>
     <h2>More Information</h2>
     <% if MenuChildren.count = 1 %>
