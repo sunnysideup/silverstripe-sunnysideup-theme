@@ -1,58 +1,52 @@
-@import 'scss/animations/page-transitions';
-@import 'scss/animations/rotate';
-
+@import "scss/animations/page-transitions";
+@import "scss/animations/heartbeat";
 
 /* variables */
-@import 'scss/_definitions/colours';
-@import 'scss/_definitions/fonts';
-
+@import "scss/_definitions/colours";
+@import "scss/_definitions/fonts";
 
 /// basics
-@import 'scss/basics/basictags';
-@import 'scss/basics/grid';
-@import 'scss/basics/layout';
+@import "scss/basics/basictags";
+@import "scss/basics/grid";
+@import "scss/basics/layout";
 
 //sections
-@import 'scss/sections/footer';
-@import 'scss/sections/header';
-@import 'scss/sections/menu';
-
+@import "scss/sections/footer";
+@import "scss/sections/header";
+@import "scss/sections/menu";
 
 //typography
-@import 'scss/typography/typography';
-@import 'scss/forms/forms';
-@import 'scss/forms/fancy-checkboxes';
-
+@import "scss/typography/typography";
+@import "scss/forms/forms";
+@import "scss/forms/fancy-checkboxes";
 
 //components
-@import 'scss/components/icons';
-@import 'scss/components/background-video';
-@import 'scss/components/blockquote';
-@import 'scss/components/breadcrumbs';
-@import 'scss/components/logos';
-@import 'scss/components/theme-selector';
-@import 'scss/components/collapsible-list';
-@import 'scss/components/toc';
-
+@import "scss/components/icons";
+@import "scss/components/background-video";
+@import "scss/components/blockquote";
+@import "scss/components/breadcrumbs";
+@import "scss/components/logos";
+@import "scss/components/theme-selector";
+@import "scss/components/collapsible-list";
+@import "scss/components/toc";
 
 //responsive
-@import 'scss/responsive/responsive';
+@import "scss/responsive/responsive";
 
 //themes!
-@import 'scss/themes/theme-sun';
-@import 'scss/themes/theme-rocket';
-@import 'scss/themes/theme-moon';
+@import "scss/themes/theme-sun";
+@import "scss/themes/theme-rocket";
+@import "scss/themes/theme-moon";
 
 // @import '~site/googlemap/css/googleMap.css'';
 
-
 //specials - animations should be last!
 
-@import 'scss/animations/transitions';
-@import 'scss/animations/mouse-over-logo';
-@import 'scss/animations/blinker';
+@import "scss/animations/transitions";
+@import "scss/animations/mouse-over-logo";
+@import "scss/animations/blinker";
 
-@import 'scss/print/print';
+@import "scss/print/print";
 
 //
 // @import 'animations/page-transitions';
@@ -104,7 +98,7 @@
 // //specials - animations should be last!
 //
 // @import 'animations/transitions';
-// @import 'animations/rotate';
+// @import 'animations/heartbeat';
 // @import 'animations/mouse-over-logo';
 //
 // @import 'print/print';
