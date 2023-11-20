@@ -14,6 +14,7 @@ main#main {
             border-color: transparent;
             font-size: calc(((1vh + 1.6vw)) + 16px);
             filter: drop-shadow(0 0 6px $colour_sunny_side_up_yellow);
+            // background: linear-gradient(270deg, #00000000, #fff, #00000000);
             padding: calc(1rem + 3vh + 1vw) 0;
             line-height: 1.2;
             overflow: hidden;
