@@ -1,7 +1,7 @@
 <% if $MenuChildren || $Siblings %>
 <div id="SiblingsAndChildren" class="cb">
 <% if $MenuChildren %>
-    <h2>More Information</h2>
+    <h2>More ...</h2>
     <% if MenuChildren.count = 1 %>
         <p>
             Please also visit our <% loop MenuChildren %><a href="$Link">$Title</a><% end_loop %> page.
@@ -30,4 +30,9 @@
 <% end_if %>
 
 </div>
+<% end_if %>
+<% if $PhotoCredit %>
+<h3>Intro Photo Credit</h3>
+<p>$PhotoCredit. All rights reserved.
+</p>
 <% end_if %>

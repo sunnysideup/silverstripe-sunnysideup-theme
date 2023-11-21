@@ -9,11 +9,11 @@
 // import './js/partials/SomeOtherJavascriptFile';
 import './js/cookie'
 import './js/body-class'
+import './js/toc'
 import './js/collapsible-menu'
 import './js/scroll-manager'
 import './js/footer-is-visible'
 import './js/form'
 import './js/mouse-over-logo'
 import './js/images'
-import './js/toc'
 import './js/heartbeat'

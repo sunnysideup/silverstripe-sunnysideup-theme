@@ -21,17 +21,7 @@ const bodyClass = {
         bodyClass.addOrToggleBodyClass('.set-theme', true)
         bodyClass.retrieveCookieOrHash()
         // expose scrolled behaviour
-        window.setTimeout(function () {
-            window.scrollTo(window.scrollX, window.scrollY + 2)
-            window.scrollTo(window.scrollX, window.scrollY - 2)
-            const hash = bodyClass.getHashFromURL()
-            if (hash && document.getElementById(hash)) {
-                document.querySelector('#' + hash).scrollIntoView({
-                    behavior: 'smooth', // smooth scroll
-                    block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
-                })
-            }
-        }, 300)
+        this.scrollStart()
         this.addBasicBodyClassListeners()
     },
 
@@ -102,6 +92,20 @@ const bodyClass = {
                     return false
                 })
             })
+    },
+
+    scrollStart: function () {
+        window.setTimeout(function () {
+            window.scrollTo(window.scrollX, window.scrollY + 2)
+            window.scrollTo(window.scrollX, window.scrollY - 2)
+            const hash = bodyClass.getHashFromURL()
+            if (hash && document.getElementById(hash)) {
+                document.querySelector('#' + hash).scrollIntoView({
+                    behavior: 'smooth', // smooth scroll
+                    block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                })
+            }
+        }, 300)
     },
 
     actionBodyClassChange: function (oneEachObject, event, isTheme, scrollTo) {
@@ -199,6 +203,7 @@ const bodyClass = {
     isHomePage: function () {
         return window.location.pathname === '/'
     },
+
     hasFragment: function () {
         return window.location.hash !== ''
     }

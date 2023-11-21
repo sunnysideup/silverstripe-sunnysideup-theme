@@ -1,1 +1,45 @@
 //** see blockquite **/
+@keyframes colorChange {
+    0% {
+        color: $colour_blue_cobalter;
+    }
+    89% {
+        color: $colour_blue_cobalter;
+    }
+    90% {
+        color: $colour_sunny_side_up_yellow;
+    }
+    91% {
+        color: $colour_blue_cobalter;
+    }
+    92% {
+        color: $colour_sunny_side_up_yellow;
+    }
+    93% {
+        color: $colour_blue_cobalter;
+    }
+    94% {
+        color: $colour_sunny_side_up_yellow;
+    }
+    95% {
+        color: $colour_blue_cobalter;
+    }
+    96% {
+        color: $colour_sunny_side_up_yellow;
+    }
+    97% {
+        color: $colour_blue_cobalter;
+    }
+    98% {
+        color: $colour_sunny_side_up_yellow;
+    }
+    99% {
+        color: $colour_blue_cobalter;
+    }
+}
+
+#content-below-quote h2 {
+    animation-name: colorChange;
+    animation-duration: 10s; /* Adjust time as needed */
+    animation-iteration-count: infinite; /* Runs only once */
+}

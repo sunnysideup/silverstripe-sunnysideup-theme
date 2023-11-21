@@ -1,8 +1,5 @@
 body.theme-rocket {
     background-color: #555;
-}
-
-body.theme-rocket {
     #header {
         * {
             color: $colour_sunny_side_up_yellow;
@@ -112,6 +109,9 @@ body.theme-rocket {
                 }
             }
         }
+    }
+    .last-updated {
+        opacity: 0;
     }
 }
 

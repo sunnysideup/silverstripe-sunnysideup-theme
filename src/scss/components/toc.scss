@@ -73,6 +73,7 @@ body.has-toc {
 body.has-toc.toc-on {
     .typography {
         #content-below-quote {
+            margin-bottom: 75vh;
             > * {
                 display: none;
             }
