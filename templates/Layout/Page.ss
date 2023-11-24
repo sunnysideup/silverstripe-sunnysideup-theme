@@ -5,8 +5,7 @@
     <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %>">
         <% if $IsHomePage %>
             Kia Ora —<br />
-            We are here to make your website
-            <a href="#content-below-quote" class="blinker italic">shine</a>
+            We are here to make you <a href="#content-below-quote" class="blinker italic">shine</a> online.
         <% else %>
             <% if $Quote %>
             $Quote

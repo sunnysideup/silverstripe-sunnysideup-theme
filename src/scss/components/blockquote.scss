@@ -1,18 +1,17 @@
 main#main {
     blockquote.main-quote {
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-50%);
         padding: 0;
         margin: 0;
-        margin-top: 0vh;
-        margin-bottom: 17vh;
-        padding-top: 0vh;
-        padding-bottom: 20vh;
         p {
             display: block;
             margin: 0;
             background-color: transparent;
             background: transparent;
             border-color: transparent;
-            font-size: calc(((1vh + 1.6vw)) + 16px);
+            font-size: calc(((1vh + 1vw)) + 24px);
             filter: drop-shadow(0 0 6px $colour_sunny_side_up_yellow);
             // background: linear-gradient(270deg, #00000000, #fff, #00000000);
             padding: calc(1rem + 3vh + 1vw) 0;

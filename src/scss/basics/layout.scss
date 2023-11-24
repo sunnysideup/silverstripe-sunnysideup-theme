@@ -20,12 +20,12 @@ body {
     right: 0;
     opacity: 0.1;
 }
-main {
+main#main {
     overflow-x: hidden;
-    padding: 2rem;
     position: relative;
     z-index: 2;
-    min-height: 60vh;
+    padding-top: 100vh;
+    padding-bottom: 2rem;
     #content-below-quote {
         .element {
             margin-top: 6rem;

@@ -1,5 +1,5 @@
 //to do!
-body main {
+body main#main {
     animation-duration: 0.3s; /* the duration of the animation */
     animation-timing-function: ease-out; /* how the animation will behave */
     animation-delay: 0s; /* how long to delay the animation from starting */
@@ -9,7 +9,7 @@ body main {
     opacity: 0;
     @keyframes loadTransition {
         0% {
-            opacity: 0
+            opacity: 0;
         }
         100% {
             opacity: 1;
@@ -17,7 +17,7 @@ body main {
     }
 }
 
-body.body-unloaded main {
+body.body-unloaded main#main {
     animation-duration: 0.3s; /* the duration of the animation */
     animation-timing-function: ease-out; /* how the animation will behave */
     animation-delay: 0s; /* how long to delay the animation from starting */
