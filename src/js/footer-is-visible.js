@@ -6,8 +6,8 @@ const footerIsVisible = {
         // configure the intersection observer instance
         var intersectionObserverOptions = {
             root: null,
-            rootMargin: '150px',
-            threshold: 1.0
+            rootMargin: '100%',
+            threshold: 1
         }
 
         function onIntersection (entries) {

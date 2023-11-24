@@ -65,7 +65,14 @@ const scrollManager = {
             scrollManager.newScroll = scrollManager.currentScroll()
             const windowHeight = window.innerHeight
             const totalHeight = document.documentElement.scrollHeight
-
+            const quoteBlock = document.querySelector('.main-quote')
+            if (quoteBlock) {
+                let additionalMargin = Math.min(
+                    window.scrollY,
+                    (25 * window.innerHeight) / 100
+                )
+                quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
+            }
             // Check if current scroll position is at the bottom minus the footer's height
             const bottomTest =
                 scrollManager.bodyObject.classList.contains('footer-visible')
