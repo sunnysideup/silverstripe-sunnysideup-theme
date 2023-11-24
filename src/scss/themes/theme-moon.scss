@@ -1,6 +1,5 @@
-
 body.theme-moon {
-    background-color: $colour_law_firm_report_cover;
+    background-color: #200233;
     * {
         color: $colour_burned_sunny_side_up;
     }
@@ -19,13 +18,13 @@ body.theme-moon {
         }
     }
     a[data-add-class="theme-moon"] {
-        text-decoration: none!important;
+        text-decoration: none !important;
     }
     #nav {
         * {
             color: $colour_sunny_side_up_green;
         }
-        background-color: $colour_purple_spirituality_in_the_sun!important;
+        background-color: $colour_purple_spirituality_in_the_sun !important;
         border-color: $colour_purple_spirituality_in_the_sun;
         #closed-icon {
             .cls-1 {
@@ -45,23 +44,28 @@ body.theme-moon {
         }
     }
     .typography {
-        *, a:link, a:visited {
+        *,
+        a:link,
+        a:visited {
             color: $colour_burned_sunny_side_up;
         }
-        h1, h2 {
+        h1,
+        h2 {
             text-transform: uppercase;
             color: $colour_blue_cobalter;
         }
         h2 {
-            color:  $colour_burned_sunny_side_up!important;
+            color: $colour_burned_sunny_side_up !important;
             span {
-                color:  $colour_burned_sunny_side_up;
+                color: $colour_burned_sunny_side_up;
                 i {
-                    color:  $colour_burned_sunny_side_up;
+                    color: $colour_burned_sunny_side_up;
                 }
             }
         }
-        #SiblingsAndChildren h2, h1, h2 {
+        #SiblingsAndChildren h2,
+        h1,
+        h2 {
             &:before {
                 border-top-color: $colour_burned_sunny_side_up;
             }
@@ -77,13 +81,15 @@ body.theme-moon {
             background-color: $colour_white;
             color: $colour_darker_grey_catch_22;
             * {
-                color: $colour_darker_grey_catch_22!important;
+                color: $colour_darker_grey_catch_22 !important;
             }
         }
         hr {
-            border-color: $colour_burned_sunny_side_up!important;
+            border-color: $colour_burned_sunny_side_up !important;
         }
-        .media, .image-container, blockquote p {
+        .media,
+        .image-container,
+        blockquote p {
             background-color: transparent;
             // background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_dark_charcoal, $colour_law_firm_report_cover);
             background: transparent;
@@ -93,18 +99,17 @@ body.theme-moon {
 
     form {
         * {
-            color: $colour_law_firm_report_cover!important;
+            color: $colour_law_firm_report_cover !important;
         }
         .middleColumn {
             input,
             textarea,
-            select
-            {
-                border-bottom-color: $colour_law_firm_report_cover!important;
+            select {
+                border-bottom-color: $colour_law_firm_report_cover !important;
             }
         }
         span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover!important;
+            border-bottom-color: $colour_law_firm_report_cover !important;
         }
         .btn-toolbar {
             input {
@@ -113,7 +118,7 @@ body.theme-moon {
         }
     }
     #Breadcrumbs {
-        border-color: $colour_burned_sunny_side_up!important;
+        border-color: $colour_burned_sunny_side_up !important;
     }
     footer#footer {
         background-color: $colour_boot_black_semi;
@@ -126,8 +131,9 @@ body.theme-moon {
         p {
             color: $colour_white;
         }
-        li.current a, a:hover {
-            color: $colour_ekos_green!important;
+        li.current a,
+        a:hover {
+            color: $colour_ekos_green !important;
         }
         #theme-selectors {
             svg {
@@ -172,11 +178,10 @@ body.theme-moon {
     main#main {
         blockquote {
             p {
-                color: $colour_overcast_sunny_side_up!important;
+                color: $colour_overcast_sunny_side_up !important;
                 * {
-                    color: $colour_overcast_sunny_side_up!important;
+                    color: $colour_overcast_sunny_side_up !important;
                 }
-
             }
         }
     }
