@@ -412,28 +412,25 @@
                     height: 3rem;
                 }
             }
-            i.closed {
-                font-size: 3rem;
-            }
             #nav-inner {
                 ul.collapsibleList {
                     .icon {
                         left: -2.5rem;
                         font-size: 1.5rem;
                         width: 2.5rem;
-                        top: 1rem;
                     }
                     > li {
-                        margin-bottom: 2vh;
-                        margin-top: 2vh;
-                        a {
-                            font-size: 1.5rem;
+                        margin-bottom: 4vh;
+                        margin-top: 4vh;
+                        font-size: 1.5rem !important;
+                        a,
+                        * {
+                            font-size: 1.5rem !important;
                         }
                         ul {
                             li {
-                                a {
-                                    font-size: 1.5rem;
-                                }
+                                margin-bottom: 2vh;
+                                margin-top: 2vh;
                             }
                         }
                     }

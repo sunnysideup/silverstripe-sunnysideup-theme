@@ -62,7 +62,7 @@ const CollapsibleLists = (function () {
                     span.classList.add('open-close')
                     span.addEventListener('click', handleClick.bind(null, li))
                     span.innerHTML =
-                        '<i class="open">&nbsp;</i><i class="closed">↰</i>'
+                        '<i class="open">↘</i><i class="closed">↖</i>'
                     // we need to toggle all of them, some twice
                     if (
                         li.classList.contains('section') ||
