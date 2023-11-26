@@ -9,7 +9,7 @@
         <% else %>
             <% if $Quote %>
             $Quote
-            <a href="#content-below-quote" class="blinker smaller">▂</a>
+            <a href="#content-below-quote" class="blinker smaller">↯</a>
             <% end_if %>
         <% end_if %>
     </p>

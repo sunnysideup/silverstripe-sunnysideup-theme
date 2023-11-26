@@ -29,12 +29,13 @@
         background-position: center;
         background-size: 60%;
         width: 1.5em;
+        transform-origin: center;
         &.open {
+            background-position: center 70%;
         }
         &.closed {
             transform: scaleY(-1);
-            background-position: center 60%;
-            transform-origin: center;
+            background-position: center 70%;
         }
     }
 

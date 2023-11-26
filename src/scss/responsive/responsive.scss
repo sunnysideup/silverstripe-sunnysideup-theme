@@ -198,11 +198,6 @@
     #SiblingsAndChildren {
         margin-top: 12rem !important;
         padding-top: 2rem !important;
-        h2 {
-            &:before {
-                border-top: 3px solid $colour_blue_cobalter;
-            }
-        }
     }
 }
 @media only screen and (min-width: 1050px) {
