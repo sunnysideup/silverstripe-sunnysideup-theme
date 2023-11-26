@@ -118,13 +118,14 @@
         font-family: $base_font_condensed;
     }
     .image-container {
+        border: none !important;
         img {
             display: block;
             max-width: calc(100% - 2px) !important;
             width: auto !important;
             height: auto !important;
             margin: 0 auto;
-            border: 1px solid $colour_yep_thats_grey;
+            border: 3px dashed $colour_blue_cobalter;
         }
     }
     .captionImage {

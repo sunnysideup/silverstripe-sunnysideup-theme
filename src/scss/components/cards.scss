@@ -1,9 +1,12 @@
 .card-holder {
-    padding-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
     grid-column-gap: 4rem;
     grid-row-gap: 1rem;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px dashed $colour_blue_cobalter;
 }
 
 .card {
