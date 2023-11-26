@@ -76,6 +76,9 @@ body.theme-moon {
             background: transparent;
             border-color: transparent;
         }
+        img {
+            border-color: $colour_burned_sunny_side_up;
+        }
     }
 
     form {

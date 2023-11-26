@@ -125,7 +125,9 @@
             width: auto !important;
             height: auto !important;
             margin: 0 auto;
-            border: 3px dashed $colour_blue_cobalter;
+            border: 1px dashed $colour_blue_cobalter;
+            border-radius: 2rem;
+            border-bottom-right-radius: 0;
         }
     }
     .captionImage {
@@ -137,8 +139,9 @@
         width: 100%;
         text-align: left;
         margin-left: 0;
-        margin-top: -2rem;
+        margin-top: -3rem;
         text-align: center;
+        line-height: 1.2;
     }
 
     .media,
