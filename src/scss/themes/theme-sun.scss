@@ -1,8 +1,13 @@
-body.theme-sun {
-    a[data-add-class="theme-sun"] {
-        text-decoration: none!important;
+body[data-theme="theme-sun"] {
+    #footer #theme-selectors #theme-sun {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
+        }
     }
-    #theme-sun {
+}
+
+body[data-theme="theme-moon"] {
+    #footer #theme-selectors #theme-moon {
         svg {
             fill: $colour_sunny_side_up_yellow;
         }

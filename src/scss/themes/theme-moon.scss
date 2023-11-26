@@ -21,27 +21,8 @@ body.theme-moon {
         text-decoration: none !important;
     }
     #nav {
-        * {
-            color: $colour_sunny_side_up_green;
-        }
         background-color: $colour_purple_spirituality_in_the_sun !important;
         border-color: $colour_purple_spirituality_in_the_sun;
-        #closed-icon {
-            .cls-1 {
-                fill: $colour_patrick_star_skin_colour;
-            }
-            .cls-2 {
-                fill: $colour_white;
-            }
-        }
-        #open-icon {
-            .cls-1 {
-                fill: $colour_rose_storm;
-            }
-            .cls-2 {
-                fill: $colour_white;
-            }
-        }
     }
     .typography {
         *,
@@ -167,11 +148,6 @@ body.theme-moon {
             background-color: transparent;
         }
     }
-    &.menu-on {
-        #nav {
-            background-color: $colour_outer_space_love;
-        }
-    }
     #BackgroundVideo {
         background-color: $colour_black;
     }
@@ -181,6 +157,33 @@ body.theme-moon {
                 color: $colour_overcast_sunny_side_up !important;
                 * {
                     color: $colour_overcast_sunny_side_up !important;
+                }
+            }
+        }
+    }
+}
+
+body[data-theme="theme-moon"] {
+    &.menu-on {
+        #nav {
+            background-color: $colour_purple_spirituality_in_the_sun;
+            * {
+                color: $colour_sunny_side_up_green;
+            }
+            #closed-icon {
+                .cls-1 {
+                    fill: $colour_patrick_star_skin_colour;
+                }
+                .cls-2 {
+                    fill: $colour_white;
+                }
+            }
+            #open-icon {
+                .cls-1 {
+                    fill: $colour_rose_storm;
+                }
+                .cls-2 {
+                    fill: $colour_white;
                 }
             }
         }

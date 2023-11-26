@@ -18,7 +18,6 @@ const bodyClass = {
         // if you click on theme-selector, you select the theme
         bodyClass.addOrToggleBodyClass('.theme-selector', true)
         // if you click on set-them, you select the theme
-        bodyClass.addOrToggleBodyClass('.set-theme', true)
         bodyClass.retrieveCookieOrHash()
         // expose scrolled behaviour
         this.scrollStart()
@@ -49,7 +48,8 @@ const bodyClass = {
             // console.log(reset);
         } else if (hash) {
             this.runClickForElement(hash)
-        } else {
+        }
+        if (hash !== 'theme-moon' && hash !== 'theme-sun') {
             preferredTheme = myCookie.getCookie('preferredTheme')
             if (preferredTheme) {
                 bodyClass.bodyObject.setAttribute('data-theme', preferredTheme)

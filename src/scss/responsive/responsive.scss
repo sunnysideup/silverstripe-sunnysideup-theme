@@ -97,14 +97,6 @@
     .row {
         grid-template-columns: 1fr 1fr;
     }
-    body.past-header.menu-on {
-        #nav {
-            #menu-toggle {
-                left: 6vw;
-                // bottom: calc(18vw / 1.6);
-            }
-        }
-    }
 }
 
 @media only screen and (min-width: 750px) {
