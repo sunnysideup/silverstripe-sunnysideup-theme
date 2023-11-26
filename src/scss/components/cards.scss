@@ -1,13 +1,13 @@
 .card-holder {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
-    grid-column-gap: 4rem;
+    grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     background: #fff;
     padding: 3rem;
     border-radius: 2rem;
     border-top-left-radius: 0;
     border: 1px dashed $colour_blue_cobalter;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 
 .card {

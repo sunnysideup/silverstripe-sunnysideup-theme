@@ -99,6 +99,12 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .card-holder {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
 @media only screen and (min-width: 750px) {
     #header {
         #logo {
@@ -123,6 +129,9 @@
         .icon {
             left: -6rem;
         }
+    }
+    .card-holder {
+        grid-column-gap: 4rem;
     }
     // main#main {
     //     // blockquote.main-quote {
@@ -187,6 +196,7 @@
             }
         }
     }
+
     #SiblingsAndChildren {
         margin-top: 12rem !important;
         padding-top: 2rem !important;
@@ -359,6 +369,8 @@
     .row {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+@media only screen and (min-width: 1650px) {
 }
 
 @media only screen and (max-height: 400px) {
