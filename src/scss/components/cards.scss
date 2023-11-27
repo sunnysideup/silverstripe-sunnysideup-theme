@@ -10,6 +10,7 @@
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 .sunnysideup__app__elements__workexample {
+    position: relative;
     .content-element__content {
         h3 {
             color: $colour_outer_space_love !important;
@@ -23,9 +24,25 @@
         }
     }
     .work-example-images {
+        position: relative;
+        .dotted-line {
+            position: absolute;
+            width: 50px;
+            border-left: 1px dashed $colour_outer_space_love;
+            bottom: 9rem;
+            top: 0;
+            margin-top: -2rem;
+            left: 30%;
+            z-index: -1;
+        }
         img {
             border-color: $colour_outer_space_love;
         }
+        p.caption {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        padding-bottom: 4rem;
     }
 }
 .card {

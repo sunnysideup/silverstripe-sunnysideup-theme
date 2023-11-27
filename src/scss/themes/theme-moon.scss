@@ -101,14 +101,23 @@ body.theme-moon {
             }
         }
     }
-    .card-holder {
-        background: #000;
-        color: #fff;
-        * {
-            color: #fff;
+    .sunnysideup__app__elements__workexample {
+        .content-element__content {
+            h3 {
+                color: $colour_burned_sunny_side_up !important;
+            }
+            .dotted-line {
+                border-color: $colour_burned_sunny_side_up;
+            }
+            .card-holder {
+                background: #000;
+                color: #fff;
+                * {
+                    color: #fff;
+                }
+                border-color: $colour_burned_sunny_side_up;
+            }
         }
-
-        border: 1px dashed $colour_burned_sunny_side_up;
     }
     #Breadcrumbs {
         border-color: $colour_burned_sunny_side_up !important;
