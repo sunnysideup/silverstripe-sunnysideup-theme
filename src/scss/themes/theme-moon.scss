@@ -117,6 +117,15 @@ body.theme-moon {
                 }
                 border-color: $colour_burned_sunny_side_up;
             }
+            .work-example-images {
+                p.caption {
+                    a {
+                        background-color: #000 !important;
+                        border-color: $colour_burned_sunny_side_up;
+                        color: #fff !important;
+                    }
+                }
+            }
         }
     }
     #Breadcrumbs {
