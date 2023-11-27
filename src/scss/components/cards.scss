@@ -9,11 +9,12 @@
     border: 1px dashed $colour_blue_cobalter;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
-
-.card {
+.sunnysideup__app__elements__workexample {
     h2 {
         color: $colour_outer_space_love !important;
     }
+}
+.card {
     /* Styles for your cards */
     h4:first-child {
         margin-top: 0;
