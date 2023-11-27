@@ -14,9 +14,8 @@
         h2 {
             color: $colour_outer_space_love !important;
             text-transform: none;
-            padding-left: 3rem !important;
+            padding-left: calc(3rem + 1px) !important;
             padding-bottom: 0 !important;
-            margin: 0 !important;
             margin-bottom: 1rem !important;
             .open-close {
                 display: none !important;
