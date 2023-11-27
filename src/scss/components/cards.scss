@@ -13,13 +13,14 @@
     .content-element__content {
         h2 {
             color: $colour_outer_space_love !important;
+            text-transform: none;
+            padding-left: 0 !important;
+            padding-bottom: 0 !important;
+            margin: 0 !important;
+            margin-bottom: 1rem !important;
             .open-close {
                 display: none !important;
             }
-            text-transform: none;
-            padding: 0;
-            margin: 0;
-            margin-bottom: 1rem;
         }
     }
     .work-example-images {
