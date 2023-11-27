@@ -38,9 +38,26 @@
         img {
             border-color: $colour_outer_space_love;
         }
-        p.caption {
-            margin-bottom: 0;
-            padding-bottom: 0;
+        @media screen and (min-width: 1150px) {
+            p.caption {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                transform: rotate(90deg);
+                transform-origin: 90%;
+                text-align: left;
+                line-height: 0;
+                text-indent: 50%;
+                text-decoration: none;
+                width: 100%;
+                a {
+                    text-decoration: none !important;
+                    background-color: $colour_burned_sunny_side_up !important;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    color: $colour_outer_space_love !important;
+                    font-style: normal;
+                }
+            }
         }
         padding-bottom: 4rem;
     }
