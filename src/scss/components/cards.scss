@@ -2,7 +2,7 @@
     display: grid;
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
-    background: #fff;
+    background: #ffffff55;
     padding: 3rem;
     border-radius: 2rem;
     border-top-left-radius: 0;
@@ -11,6 +11,9 @@
 }
 
 .card {
+    h2 {
+        color: $colour_outer_space_love !important;
+    }
     /* Styles for your cards */
     h4:first-child {
         margin-top: 0;
