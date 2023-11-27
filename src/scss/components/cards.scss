@@ -10,8 +10,17 @@
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 .sunnysideup__app__elements__workexample {
-    h2 {
-        color: $colour_outer_space_love !important;
+    .content-element__content {
+        h2 {
+            color: $colour_outer_space_love !important;
+            .open-close {
+                display: none !important;
+            }
+            text-transform: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
     }
     .work-example-images {
         img {
