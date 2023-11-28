@@ -1,5 +1,4 @@
 .sunnysideup__app__elements__workexample {
-    position: relative;
     .content-element__content {
         h3 {
             color: $colour_outer_space_love !important;
@@ -15,6 +14,9 @@
     .work-example-images {
         padding-bottom: 4rem;
         position: relative;
+        .image-container {
+            padding-bottom: 1rem !important;
+        }
         .dotted-line {
             position: absolute;
             width: 50px;
@@ -29,7 +31,7 @@
             border-color: $colour_outer_space_love;
         }
         p.caption {
-            margin-top: -2rem;
+            margin-top: 0 !important;
             a {
                 text-decoration: none !important;
                 background-color: $colour_burned_sunny_side_up !important;
