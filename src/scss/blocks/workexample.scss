@@ -1,0 +1,65 @@
+.sunnysideup__app__elements__workexample {
+    position: relative;
+    .content-element__content {
+        h3 {
+            color: $colour_outer_space_love !important;
+            text-transform: none;
+            padding-left: calc(3rem + 1px) !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 1rem !important;
+            .open-close {
+                display: none !important;
+            }
+        }
+    }
+    .work-example-images {
+        padding-bottom: 4rem;
+        position: relative;
+        .dotted-line {
+            position: absolute;
+            width: 50px;
+            border-left: 1px dashed $colour_outer_space_love;
+            bottom: 9rem;
+            top: 0;
+            margin-top: -2rem;
+            left: calc(50% + 1px);
+            z-index: -1;
+        }
+        img {
+            border-color: $colour_outer_space_love;
+        }
+        p.caption {
+            margin-top: -2rem;
+            a {
+                text-decoration: none !important;
+                background-color: $colour_burned_sunny_side_up !important;
+                border: 1px dashed $colour_outer_space_love;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                color: $colour_outer_space_love !important;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    .sunnysideup__app__elements__workexample {
+        .work-example-images {
+            .dotted-line {
+                left: 30%;
+            }
+            p.caption {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                transform: rotate(90deg);
+                transform-origin: 85%;
+                text-align: left;
+                line-height: 0;
+                text-indent: 50%;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+    }
+}
