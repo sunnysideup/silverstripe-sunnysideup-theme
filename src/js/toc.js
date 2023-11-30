@@ -50,13 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
                             el.classList.remove('toc-active')
                         }
                         e.target.classList.toggle('toc-active')
-                        window.location.hash = hash
-                        window.setTimeout(function () {
-                            document.querySelector('#' + hash).scrollIntoView({
-                                behavior: 'smooth', // smooth scroll
-                                block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
-                            })
-                        }, 100)
+                        if (e.target.classList.contains('toc-active')) {
+                            window.location.hash = hash
+                            window.setTimeout(function () {
+                                document
+                                    .querySelector('#' + hash)
+                                    .scrollIntoView({
+                                        behavior: 'smooth', // smooth scroll
+                                        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                                    })
+                            }, 100)
+                        } else {
+                            window.setTimeout(function () {
+                                document
+                                    .querySelector('#content-below-quote')
+                                    .scrollIntoView({
+                                        behavior: 'smooth', // smooth scroll
+                                        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                                    })
+                            }, 100)
+                        }
                         return false
                     },
                     false
