@@ -4,7 +4,9 @@ const imagehover = {
     init: function () {
         document.querySelectorAll('.image-container').forEach(el => {
             el.addEventListener('mousemove', e => {
-                clearTimeout(this.resetTimeout)
+                if (this.isTouchDevice()) {
+                    clearTimeout(this.resetTimeout)
+                }
 
                 const { width, height, left, top } =
                     e.target.getBoundingClientRect()
@@ -14,12 +16,25 @@ const imagehover = {
                 e.target.style.setProperty('--mouse-x', (x / width) * 50 - 25)
                 e.target.style.setProperty('--mouse-y', 25 - (y / height) * 50)
 
-                this.resetTimeout = setTimeout(() => {
-                    e.target.style.removeProperty('--mouse-x')
-                    e.target.style.removeProperty('--mouse-y')
-                }, 1000)
+                if (this.isTouchDevice()) {
+                    this.resetTimeout = setTimeout(() => {
+                        e.target.style.removeProperty('--mouse-x')
+                        e.target.style.removeProperty('--mouse-y')
+                    }, 1000)
+                }
             })
         })
+    },
+    isTouchDeviceVar: null,
+
+    isTouchDevice: function () {
+        if (this.isTouchDeviceVar === null) {
+            this.isTouchDeviceVar =
+                'ontouchstart' in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0
+        }
+        return this.isTouchDeviceVar
     }
 }
 
