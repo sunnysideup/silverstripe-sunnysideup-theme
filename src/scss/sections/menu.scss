@@ -189,8 +189,10 @@ body.menu-on {
         > li {
             display: none;
         }
-        > li.collapsibleListOpen {
-            display: block;
+        > li.collapsibleListOpen,
+        > li.section,
+        > li.current {
+            display: list-item;
             > a {
                 border-bottom: 3px solid $colour_blue_cobalter_highlights !important;
             }
