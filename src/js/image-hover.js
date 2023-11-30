@@ -30,6 +30,7 @@ const imagehover = {
     isTouchDevice: function () {
         if (this.isTouchDeviceVar === null) {
             this.isTouchDeviceVar =
+                'ontouchstart' in document.documentElement ||
                 'ontouchstart' in window ||
                 navigator.maxTouchPoints > 0 ||
                 navigator.msMaxTouchPoints > 0
