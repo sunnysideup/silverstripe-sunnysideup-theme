@@ -187,6 +187,24 @@
                     max-width: calc(64vw - 2px) !important;
                 }
             }
+            li {
+                p,
+                h3,
+                h4,
+                h5,
+                h6,
+                form,
+                address,
+                div.captionImage {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+                ul,
+                ol {
+                    margin-left: 2rem;
+                    padding-left: 0rem;
+                }
+            }
             .image-container.full {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
