@@ -67,10 +67,12 @@ const scrollManager = {
             const totalHeight = document.documentElement.scrollHeight
             if (window.innerWidth > 768) {
                 const quoteBlock = document.querySelector('.main-quote')
-                if (!quoteBlock) return
+                if (!quoteBlock) {
+                    return
+                }
                 let additionalMargin = Math.min(
                     window.scrollY,
-                    (35 * window.innerHeight) / 100
+                    (25 * window.innerHeight) / 100
                 )
                 quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
             }
