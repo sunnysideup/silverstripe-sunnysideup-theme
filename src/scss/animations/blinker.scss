@@ -32,7 +32,7 @@
     }
 }
 
-#content-below-quote h2 {
+body.theme-sun #content-below-quote h2 {
     animation-name: colorChange;
     animation-duration: 10s; /* Adjust time as needed */
     animation-iteration-count: infinite; /* Runs only once */
