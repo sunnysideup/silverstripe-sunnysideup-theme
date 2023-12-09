@@ -1,10 +1,10 @@
 //** see blockquite **/
 @keyframes colorChange {
     0% {
-        color: inherit;
+        color: initial;
     }
     92% {
-        color: inherit;
+        color: initial;
     }
     93% {
         color: $colour_blue_cobalter;
@@ -28,7 +28,7 @@
         color: $colour_blue_cobalter;
     }
     100% {
-        color: inherit;
+        color: initial;
     }
 }
 
