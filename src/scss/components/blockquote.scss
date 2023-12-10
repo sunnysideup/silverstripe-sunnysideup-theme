@@ -4,7 +4,7 @@ main#main {
         top: 50vh;
         left: 0;
         right: 0;
-        transform: translateY(-8rem);
+        transform: translateY(-50%);
         padding: 0;
         margin: 0;
         p {
@@ -28,9 +28,9 @@ main#main {
             * {
                 color: $colour_blue_cobalter;
             }
-            &.has-typing-mode {
-                // visibility: hidden;
-            }
+            // &.has-typing-mode {
+            //     // visibility: hidden;
+            // }
             .blinker {
                 display: inline-block;
                 text-align: right;

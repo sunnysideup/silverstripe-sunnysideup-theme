@@ -144,7 +144,7 @@
         // blockquote.main-quote {
         //     padding-top: 7vh;
         // }
-        .cb {
+        .dnadesign__elemental__models__elementcontent {
             h1:before,
             h2:before {
                 display: block;
@@ -376,9 +376,9 @@
     main#main {
         margin-right: 11vw;
         margin-left: calc(19vw + 11vw);
-        // blockquote.main-quote {
-        //     padding-top: 10vh;
-        // }
+        blockquote.main-quote {
+            transform: translateY(-8rem);
+        }
         .typography {
             .image-container {
                 img {

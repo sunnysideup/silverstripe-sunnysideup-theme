@@ -1,5 +1,5 @@
-<% if $MenuChildren || $Siblings %>
-<div id="SiblingsAndChildren" class="cb">
+<% if $MenuChildren || $Siblings || $PhotoCredit %>
+<div id="SiblingsAndChildren" class="dnadesign__elemental__models__elementcontent">
 <% if $MenuChildren %>
     <h2>More ...</h2>
     <% if MenuChildren.count = 1 %>
@@ -29,10 +29,11 @@
     <% end_if %>
 <% end_if %>
 
+    <% if $PhotoCredit %>
+    <h3>Intro Photo Credit</h3>
+    <p>$PhotoCredit. All rights reserved.
+    </p>
+    <% end_if %>
+
 </div>
-<% end_if %>
-<% if $PhotoCredit %>
-<h3>Intro Photo Credit</h3>
-<p>$PhotoCredit. All rights reserved.
-</p>
 <% end_if %>

@@ -6,6 +6,7 @@
     margin-left: 0 !important;
     overflow: visible !important;
     margin-bottom: auto !important;
+    orientation: portrait;
     // padding-bottom: 4rem!important;
 }
 @page:first {
@@ -16,7 +17,7 @@
     html {
         overflow: visible !important;
         margin-bottom: auto !important;
-        font-size: 10px !important;
+        font-size: 5px !important;
         background-color: #fff;
         *,
         *:before {
@@ -39,7 +40,7 @@
             h1 {
                 text-align: center;
                 clear: right;
-                font-size: 3rem;
+                font-size: 5rem;
                 text-transform: uppercase;
                 font-weight: 500;
                 font-family: $base_font_headers;
@@ -47,7 +48,6 @@
                 padding-bottom: 2rem;
             }
         }
-
         #SiblingsAndChildren,
         blockquote,
         #nav,
@@ -59,7 +59,7 @@
         span .open,
         span .closed,
         form,
-        .last-updated {
+        .edit-me-button {
             display: none !important;
         }
         main#main {
@@ -85,10 +85,10 @@
                 padding-bottom: 2rem;
             }
             h1 {
-                font-size: 30px;
+                font-size: 5rem;
             }
             h2 {
-                font-size: 25px;
+                font-size: 2.5rem;
             }
             h1,
             h2 {
@@ -98,7 +98,7 @@
                 margin-bottom: 1rem !important;
             }
             h3 {
-                font-size: 20px;
+                font-size: 2rem;
             }
             h1,
             h2,
@@ -117,7 +117,7 @@
             p,
             li,
             address {
-                font-size: 20px;
+                font-size: 2rem;
             }
             ul,
             ol,
@@ -151,6 +151,13 @@
                     font-size: 10px;
                     word-break: break-all;
                 }
+            }
+            .last-updated {
+                margin-top: 5rem !important;
+                display: block !important;
+                opacity: 1 !important;
+                color: #000 !important;
+                text-align: left !important;
             }
         }
     }

@@ -110,9 +110,6 @@ body.theme-rocket {
             }
         }
     }
-    .last-updated {
-        opacity: 0;
-    }
 }
 
 @media only screen and (min-width: 1050px) {
@@ -142,5 +139,14 @@ body.theme-rocket.title-colour-yellow {
 body.theme-rocket.title-colour-blue {
     #header * {
         color: $colour_blue_cobalter !important;
+    }
+}
+body.theme-rocket.no-rocket-show {
+    #main {
+        padding-top: calc(50vh - 8rem);
+    }
+    #BackgroundImage,
+    blockquote.main-quote {
+        display: none;
     }
 }
