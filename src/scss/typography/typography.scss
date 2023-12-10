@@ -47,7 +47,8 @@
     h1,
     h2 {
         margin-top: 1.5em;
-        font-variant-caps: small-caps;
+        // font-variant-caps: small-caps;
+        text-transform: uppercase;
         color: $colour_blue_cobalter;
         padding-bottom: 0.5rem;
         * {
