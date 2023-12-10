@@ -9,7 +9,7 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour"
+    class="theme-rocket title-colour-$TitleColour <% if $RocketShow %><% else %>no-rocket-show<% end_if %>"
     id="top"
     data-bg-image="$RandomImage"
     data-shadow-over-logo="$ShadowOverLogo"
@@ -38,7 +38,7 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
+    class="theme-rocket title-colour-$TitleColour <% if $RocketShow %><% else %>no-rocket-show<% end_if %>"
     id="top"
     data-bg-image="$RandomImage"
     data-shadow-over-logo="$ShadowOverLogo"
