@@ -9,7 +9,11 @@
 </head>
 
 <body
+<<<<<<< HEAD
     class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
+=======
+    class="theme-rocket title-colour-$TitleColour <% if $RocketShow %><% else %>no-rocket-show<% end_if %>"
+>>>>>>> b14c66f283bc502f1d49d377a9d0532b4ba61287
     id="top"
     <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
     <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
@@ -39,7 +43,7 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
+    class="theme-rocket title-colour-$TitleColour <% if $RocketShow %><% else %>no-rocket-show<% end_if %>"
     id="top"
     <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
     <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
