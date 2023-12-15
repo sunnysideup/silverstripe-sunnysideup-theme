@@ -63,16 +63,17 @@ const scrollManager = {
             window.clearTimeout(scrollManager.justScrolledFx)
             const theme = scrollManager.getTheme()
             scrollManager.newScroll = scrollManager.currentScroll()
-            const windowHeight = window.innerHeight
-            const totalHeight = document.documentElement.scrollHeight
+            // const windowHeight = window.innerHeight
+            // const totalHeight = document.documentElement.scrollHeight
             if (window.innerWidth > 768) {
                 const quoteBlock = document.querySelector('.main-quote')
+                const quoteHeight = quoteBlock.offsetHeight
                 if (!quoteBlock) {
                     return
                 }
                 let additionalMargin = Math.min(
                     window.scrollY,
-                    (35 * window.innerHeight) / 100
+                    (50 * window.innerHeight) / 100 - quoteHeight
                 )
                 quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
             }
