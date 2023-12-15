@@ -6,15 +6,7 @@ const bodyClass = {
     init: function () {
         bodyClass.bodyObject = document.querySelector('body')
         bodyClass.addOrToggleBodyClass('#menu-toggle', false)
-        // console.log(bodyClass.isHomePage())
-        // console.log(bodyClass.hasFragment())
-        // if (
-        //     bodyClass.isHomePage() === true &&
-        //     bodyClass.hasFragment() === false
-        // ) {
-        //     // console.log('opening menu')
-        //     document.querySelector('#menu-toggle').click()
-        // }
+
         // if you click on theme-selector, you select the theme
         bodyClass.addOrToggleBodyClass('.theme-selector', true)
         // if you click on set-them, you select the theme
@@ -22,6 +14,15 @@ const bodyClass = {
         // expose scrolled behaviour
         this.scrollStart()
         this.addBasicBodyClassListeners()
+    },
+
+    showMenuAsDefault: function () {
+        if (
+            bodyClass.isHomePage() === true &&
+            bodyClass.hasFragment() === false
+        ) {
+            document.querySelector('#menu-toggle').click()
+        }
     },
 
     addBasicBodyClassListeners: function () {
@@ -178,26 +179,43 @@ const bodyClass = {
     },
 
     addRocketMode: function () {
-        const div = document.createElement('div')
-        const shadow = bodyClass.bodyObject.getAttribute(
-            'data-shadow-over-logo'
-        )
-        let shadowColour = ''
-        if (shadow === 'dark') {
-            shadowColour =
-                'linear-gradient(258deg, #00000030 30%, transparent 60%), '
-        } else if (shadow === 'light') {
-            shadowColour =
-                'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
+        if (bodyClass.hasRocketShow() === true) {
+            const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
+            console.log(videoId)
+            if (videoId) {
+                const div = document.createElement('div')
+                div.id = 'BackgroundImage'
+                div.innerHTML =
+                    '<iframe src="https://player.vimeo.com/video/' +
+                    videoId +
+                    '?autoplay=1&loop=1&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
+                const temp = bodyClass.bodyObject.firstChild
+                bodyClass.bodyObject.insertBefore(div, temp)
+            } else {
+                const image = bodyClass.bodyObject.getAttribute('data-bg-image')
+                if (image) {
+                    const div = document.createElement('div')
+                    const shadow = bodyClass.bodyObject.getAttribute(
+                        'data-shadow-over-logo'
+                    )
+                    let shadowColour = ''
+                    if (shadow === 'dark') {
+                        shadowColour =
+                            'linear-gradient(258deg, #00000030 30%, transparent 60%), '
+                    } else if (shadow === 'light') {
+                        shadowColour =
+                            'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
+                    }
+                    div.style.backgroundImage =
+                        shadowColour + 'url(' + image + ')'
+                    div.id = 'BackgroundImage'
+                    const temp = bodyClass.bodyObject.firstChild
+                    bodyClass.bodyObject.insertBefore(div, temp)
+                }
+            }
+        } else {
+            console.log('no rocket show')
         }
-        div.style.backgroundImage =
-            shadowColour +
-            'url(' +
-            bodyClass.bodyObject.getAttribute('data-bg-image') +
-            ')'
-        div.id = 'BackgroundImage'
-        const temp = bodyClass.bodyObject.firstChild
-        bodyClass.bodyObject.insertBefore(div, temp)
     },
 
     isHomePage: function () {
@@ -206,6 +224,12 @@ const bodyClass = {
 
     hasFragment: function () {
         return window.location.hash !== ''
+    },
+
+    hasRocketShow: function () {
+        return bodyClass.bodyObject.classList.contains('no-rocket-show')
+            ? false
+            : true
     }
 }
 

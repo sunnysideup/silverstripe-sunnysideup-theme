@@ -1,4 +1,4 @@
-//** see blockquite **/
+// //** see blockquote **/
 @keyframes colorChange {
     0% {
         color: $colour_blue_cobalter;
@@ -35,5 +35,5 @@
 body.theme-sun #content-below-quote h2 {
     animation-name: colorChange;
     animation-duration: 10s; /* Adjust time as needed */
-    animation-iteration-count: infinite; /* Runs only once */
+    animation-iteration-count: 1; /* Runs only once */
 }

@@ -22,8 +22,6 @@
 
     <% include SiblingsAndChildren %>
 
-    <% include Video %>
-
     <% if $LastEdited %>
         <p class="last-updated">
         { This page was last updated {$LastEdited.Ago}. <% if $SiteConfig.CopyrightNotice %>Copyright $SiteConfig.CopyrightNotice<% end_if %> }

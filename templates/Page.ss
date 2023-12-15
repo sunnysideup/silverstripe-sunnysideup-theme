@@ -9,9 +9,10 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour"
+    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
     id="top"
-    data-bg-image="$RandomImage"
+    <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
+    <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
     data-shadow-over-logo="$ShadowOverLogo"
     data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
 >
@@ -40,7 +41,8 @@
 <body
     class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
     id="top"
-    data-bg-image="$RandomImage"
+    <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
+    <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
     data-shadow-over-logo="$ShadowOverLogo"
     data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
 >

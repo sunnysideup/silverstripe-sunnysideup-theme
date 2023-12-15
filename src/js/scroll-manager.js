@@ -72,7 +72,7 @@ const scrollManager = {
                 }
                 let additionalMargin = Math.min(
                     window.scrollY,
-                    (25 * window.innerHeight) / 100
+                    (35 * window.innerHeight) / 100
                 )
                 quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
             }
