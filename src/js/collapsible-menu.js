@@ -87,6 +87,14 @@ const CollapsibleLists = (function () {
         }
 
         if (li === node) {
+            const collapsibleNodes = Array.from(
+                li.querySelectorAll('.collapsibleListOpen')
+            ).reverse()
+            collapsibleNodes.forEach(innerNode => {
+                // Your code here
+                // 'node' refers to each element with the class 'collapsibleListOpen'
+                toggle(innerNode)
+            })
             toggle(node)
         }
     }

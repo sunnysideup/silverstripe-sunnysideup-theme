@@ -181,7 +181,7 @@ const bodyClass = {
     addRocketMode: function () {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
-            console.log(videoId)
+            // console.log(videoId)
             if (videoId) {
                 const div = document.createElement('div')
                 div.id = 'BackgroundImage'
@@ -214,7 +214,7 @@ const bodyClass = {
                 }
             }
         } else {
-            console.log('no rocket show')
+            // console.log('no rocket show')
         }
     },
 

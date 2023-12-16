@@ -141,12 +141,3 @@ body.theme-rocket.title-colour-blue {
         color: $colour_blue_cobalter !important;
     }
 }
-body.theme-rocket.no-rocket-show {
-    #main {
-        padding-top: calc(50vh - 8rem);
-    }
-    #BackgroundImage,
-    blockquote.main-quote {
-        display: none;
-    }
-}

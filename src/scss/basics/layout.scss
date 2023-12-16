@@ -43,6 +43,18 @@ main#main {
         }
     }
 }
+body.no-rocket-show.no-quote {
+    #main {
+        padding-top: calc(50vh - 8rem);
+    }
+    #BackgroundImage {
+        display: none;
+    }
+    .main-quote {
+        display: none;
+    }
+}
+
 footer#footer {
     padding: 2rem;
 }

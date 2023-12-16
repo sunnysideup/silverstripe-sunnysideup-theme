@@ -9,7 +9,7 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
+    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %> <% if $HasQuote %>has-quote<% else %>no-quote<% end_if %>"
     id="top"
     <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
     <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
@@ -39,7 +39,7 @@
 </head>
 
 <body
-    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %>"
+    class="theme-rocket title-colour-$TitleColour <% if $NoRocketShow %>no-rocket-show<% end_if %> <% if $Quote %>has-quote<% else %>no-quote<% end_if %>"
     id="top"
     <% if $RandomImage %>data-bg-image="$RandomImage"<% end_if %>
     <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
