@@ -1,5 +1,8 @@
 body.theme-rocket {
     background-color: #555;
+    &.has-video {
+        background-color: #000;
+    }
     #header {
         * {
             color: $colour_sunny_side_up_yellow;
