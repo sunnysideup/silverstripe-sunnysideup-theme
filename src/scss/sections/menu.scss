@@ -154,9 +154,15 @@ body.menu-on {
                             font-size: calc(1rem + 1vh);
                             margin-bottom: 1vh;
                             margin-top: 1vh;
+                            i {
+                                background-size: 70%;
+                            }
                             ul {
                                 li {
                                     font-size: calc(1rem + 1vh);
+                                    i {
+                                        background-size: 80%;
+                                    }
                                 }
                             }
                         }
