@@ -109,6 +109,9 @@ body.has-toc.toc-on {
                 &:before {
                     border-top-color: transparent;
                 }
+                &.open-close.icon {
+                    margin-top: -4px;
+                }
                 i.closed {
                     display: none;
                 }
