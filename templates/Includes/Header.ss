@@ -1,5 +1,5 @@
 <header id="print" style="display: none;">
-    <img src="resources/themes/sun/dist/images/logo-small.svg" alt="Sunny Side Up Logo" />
+    <img src="_resources/themes/sun/dist/images/logo-small.svg" alt="Sunny Side Up Logo" />
     <h1><% if $IsHomePage %>$SiteConfig.Title<% else %>$SiteConfig.Title - $Title<% end_if %></h1>
 </header>
 <header id="header">
