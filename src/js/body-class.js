@@ -188,7 +188,7 @@ const bodyClass = {
                 div.innerHTML =
                     '<iframe src="https://player.vimeo.com/video/' +
                     videoId +
-                    '?autoplay=1&loop=1&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
+                    '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
                 const temp = bodyClass.bodyObject.firstChild
                 bodyClass.bodyObject.insertBefore(div, temp)
             } else {
