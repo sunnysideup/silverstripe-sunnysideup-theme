@@ -73,6 +73,10 @@ body.has-toc {
 body.has-toc.toc-on {
     .typography {
         #content-below-quote {
+            .element {
+                padding: 0;
+                margin-top: 3rem !important;
+            }
             margin-bottom: 75vh;
             > * {
                 display: none;
@@ -92,6 +96,7 @@ body.has-toc.toc-on {
             }
             #SiblingsAndChildren h2,
             #SiblingsAndChildren h1 {
+                margin: 0 !important;
                 display: block;
                 &:before {
                     border-top-color: #ccc !important;
@@ -103,6 +108,9 @@ body.has-toc.toc-on {
                 display: block !important;
                 &:before {
                     border-top-color: transparent;
+                }
+                &.open-close.icon {
+                    margin-top: -4px;
                 }
                 i.closed {
                     display: none;
