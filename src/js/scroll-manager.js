@@ -67,8 +67,8 @@ const scrollManager = {
             // const totalHeight = document.documentElement.scrollHeight
             const quoteBlock = document.querySelector('.main-quote')
             const quoteHeight = quoteBlock.offsetHeight
-            console.log(quoteHeight)
-            console.log(quoteBlock.height)
+            // console.log(quoteHeight)
+            // console.log(quoteBlock.height)
             if (!quoteBlock) {
                 return
             }

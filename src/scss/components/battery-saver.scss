@@ -1,0 +1,32 @@
+#battery-saver-div {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    color: #555;
+
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 2rem;
+    svg {
+        width: 10rem;
+        height: auto;
+    }
+    p {
+        margin-top: 0;
+        padding-bottom: 3vh;
+        max-width: 770px;
+    }
+}

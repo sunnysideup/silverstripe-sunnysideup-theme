@@ -1,8 +1,3 @@
-<html lang="$ContentLocale">
-<head>
-    $ExtendedMetaTags
-    <% include WebpackCSSLinks %>
-</head>
 <body
     class="
         theme-rocket title-colour-$TitleColour
@@ -16,12 +11,3 @@
     data-shadow-over-logo="$ShadowOverLogo"
     data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
 >
-<% include Header %>
-<% include Nav %>
-<main id="main">
-    <div class="typography">
-        $Layout
-    </div>
-</main>
-<% include Footer %>
-<% include WebpackJSLinks %>
