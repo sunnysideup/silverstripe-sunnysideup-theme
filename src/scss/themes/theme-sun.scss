@@ -13,3 +13,14 @@ body[data-theme="theme-moon"] {
         }
     }
 }
+
+body.theme-sun {
+    blockquote {
+        p {
+            .blinker.smaller {
+                display: none !important;
+                animation: none !important;
+            }
+        }
+    }
+}

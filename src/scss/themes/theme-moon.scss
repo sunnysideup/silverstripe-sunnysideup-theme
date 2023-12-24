@@ -1,4 +1,12 @@
 body.theme-moon {
+    blockquote {
+        p {
+            .blinker.smaller {
+                display: none;
+            }
+        }
+    }
+
     background-color: #200233;
     * {
         color: $colour_burned_sunny_side_up;

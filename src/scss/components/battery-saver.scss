@@ -6,9 +6,8 @@
     top: 0;
     left: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
 
-    color: $colour_sunny_side_up_yellow;
     background-color: black;
 
     text-align: center;
@@ -21,10 +20,12 @@
 
     font-size: 2rem;
     svg {
+        fill: $colour_sunny_side_up_yellow !important;
         width: 10rem;
         height: auto;
     }
     p {
+        color: $colour_sunny_side_up_yellow !important;
         margin-top: 0;
         padding-bottom: 3vh;
         max-width: 770px;
