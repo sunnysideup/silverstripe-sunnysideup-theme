@@ -1,7 +1,7 @@
 <% if $MenuChildren || $Siblings || $PhotoCredit %>
 <div id="SiblingsAndChildren" class="dnadesign__elemental__models__elementcontent">
 <% if $MenuChildren %>
-    <h2>More ...</h2>
+    <h2>Delve Deeper</h2>
     <% if MenuChildren.count = 1 %>
         <p>
             Please also visit our <% loop MenuChildren %><a href="$Link">$Title</a><% end_loop %> page.

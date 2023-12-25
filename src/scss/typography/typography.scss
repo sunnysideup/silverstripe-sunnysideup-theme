@@ -31,7 +31,6 @@
         }
     }
     h2 {
-        font-family: $base_font;
         letter-spacing: -1px;
     }
     h1,
@@ -39,7 +38,7 @@
         &:before {
             position: absolute;
             height: 2rem;
-            width: 100%;
+            width: auto;
             left: 0;
             right: 0;
             display: block;

@@ -16,6 +16,9 @@
         position: relative;
         .image-container {
             padding-bottom: 1rem !important;
+            img.not-first {
+                margin-top: -3rem !important;
+            }
         }
         .dotted-line {
             position: absolute;

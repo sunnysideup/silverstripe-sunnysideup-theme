@@ -98,9 +98,6 @@ body.has-toc.toc-on {
             #SiblingsAndChildren h1 {
                 margin: 0 !important;
                 display: block;
-                &:before {
-                    border-top-color: #ccc !important;
-                }
             }
             h1,
             h2 {

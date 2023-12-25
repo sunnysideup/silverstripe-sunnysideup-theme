@@ -31,12 +31,11 @@ body.theme-rocket {
             * {
                 color: #fff;
             }
-        }
-        #SiblingsAndChildren h2,
-        h1,
-        h2 {
-            &:before {
-                border-top-color: transparent;
+            h1,
+            h2 {
+                &:before {
+                    border-top-color: transparent;
+                }
             }
         }
         .image-container {

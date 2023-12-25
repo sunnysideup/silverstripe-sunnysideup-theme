@@ -2,7 +2,7 @@
     img {
         display: none;
     }
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
@@ -55,20 +55,7 @@ body.past-header {
         position: fixed;
         border-bottom: 0px solid $colour_yep_thats_grey;
         box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
-        // &:before {
-        //     content: '';
-        //     line-height: 0;
-        //     font-size: 0;
-        //     width: 0;
-        //     height: 0;
-        //     border-top: calc( 2 * (1.7rem + 2rem)) solid $colour_burngreen;
-        //     border-bottom: 0px solid transparent;
-        //     border-left: calc( 1 * (1.7rem + 2rem)) solid transparent;
-        //     border-right: 0px solid transparent;
-        //     position: absolute;
-        //     top: calc( -1 * (1.7rem + 2rem));
-        //     left: calc( -1 * (1.7rem + 2rem));
-        // }
+        opacity: 0;
         #logo {
             height: 0 !important;
             width: 0 !important;
@@ -99,7 +86,11 @@ body.past-header {
         }
     }
 }
-
+body.past-header.just-scrolled.scrolled-up {
+    #header {
+        opacity: 1;
+    }
+}
 // body.footer-visible {
 //     #header,
 //     #header * {

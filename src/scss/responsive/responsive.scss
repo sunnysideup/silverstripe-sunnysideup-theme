@@ -148,6 +148,7 @@
             h1:before,
             h2:before {
                 display: block;
+                border-top: 3px dashed $colour_blue_cobalter;
             }
             h1,
             h2 {
@@ -236,7 +237,7 @@
             display: none;
         }
     }
-    body.past-header.just-scrolled {
+    body.past-header.scrolled-up.just-scrolled {
         #header {
             opacity: 1;
             display: block;
@@ -380,7 +381,7 @@
         margin-right: 11vw;
         margin-left: calc(19vw + 11vw);
         blockquote.main-quote {
-            transform: translateY(-8rem);
+            transform: translateY(-8.5rem);
         }
         .typography {
             .image-container {
