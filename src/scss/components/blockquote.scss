@@ -73,3 +73,17 @@ main#main {
         color: transparent; /* or any other color for change */
     }
 }
+
+body.footer-visible {
+    main#main {
+        blockquote.main-quote {
+            p {
+                .blinker {
+                    &.smaller {
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
+    }
+}
