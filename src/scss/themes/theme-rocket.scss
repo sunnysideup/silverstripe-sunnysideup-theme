@@ -13,9 +13,11 @@ body.theme-rocket {
     }
     #main {
         blockquote {
+            position: fixed;
+            margin-top: 0 !important;
             p {
                 font-family: $base_font_headers;
-                font-weight: 700;
+                font-weight: 600;
                 letter-spacing: 0.13rem;
                 filter: drop-shadow(0 0 6px #000);
                 background: none;
@@ -125,6 +127,11 @@ body.theme-rocket {
         &.menu-on {
             #nav {
                 background-color: $colour_sunny_side_up_yellow;
+            }
+        }
+        main#main {
+            blockquote.main-quote {
+                padding-left: 18vw;
             }
         }
     }

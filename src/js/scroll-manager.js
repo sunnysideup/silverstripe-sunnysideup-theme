@@ -30,7 +30,9 @@ const scrollManager = {
     scrolledDownClass: 'scrolled-down',
 
     quoteBlock: null,
-    theme: '',
+
+    footerBlock: null,
+
     theme: '',
 
     init: function () {
@@ -39,7 +41,10 @@ const scrollManager = {
         scrollManager.bodyObject.classList.add('just-scrolled', 'scrolled-up')
         scrollManager.normalTransitionDuration =
             scrollManager.bodyObject.style.transitionDuration
+
         scrollManager.quoteBlock = document.querySelector('.main-quote')
+        scrollManager.footerBlock = document.getElementById('footer')
+
         scrollManager.theme = new String(
             scrollManager.bodyObject.getAttribute('data-theme')
         )
@@ -55,8 +60,6 @@ const scrollManager = {
 
     reinit: function () {
         scrollManager.lastScroll = scrollManager.currentScroll()
-        scrollManager.footerHeight =
-            document.querySelector('footer').offsetHeight / 2
 
         scrollManager.contentTop =
             document
@@ -97,7 +100,12 @@ const scrollManager = {
                 : true
             if (topTest || bottomTest) {
                 // we are in the top or bottom, only run if it is false!
-                if (isRocketTheme === false) {
+                if (
+                    isRocketTheme === false ||
+                    scrollManager.bodyObject.classList.contains(
+                        'theme-rocket'
+                    ) === false
+                ) {
                     scrollManager.bodyObject.style.transitionDuration =
                         scrollManager.themeTransitionDuration
                     scrollManager.bodyObject.classList.remove(
@@ -108,7 +116,22 @@ const scrollManager = {
                         scrollManager.normalTransitionDuration
                     isRocketTheme = true
                 }
+                if (bottomTest) {
+                    const quoteBounds =
+                        scrollManager.quoteBlock.getBoundingClientRect()
+                    const footerBounds =
+                        scrollManager.footerBlock.getBoundingClientRect()
+
+                    if (quoteBounds.bottom > footerBounds.top) {
+                        scrollManager.quoteBlock.style.opacity = 0
+                    } else {
+                        scrollManager.quoteBlock.style.opacity = 1
+                    }
+                } else {
+                    scrollManager.quoteBlock.style.opacity = 1
+                }
             } else {
+                scrollManager.quoteBlock.style.opacity = 1
                 // we are in the middle, must set to false now...
                 if (isRocketTheme !== false) {
                     scrollManager.bodyObject.style.transitionDuration =
@@ -117,8 +140,8 @@ const scrollManager = {
                     scrollManager.bodyObject.classList.remove('theme-rocket')
                     scrollManager.bodyObject.style.transitionSpeed =
                         scrollManager.normalTransitionDuration
-                    isRocketTheme = false
                 }
+                isRocketTheme = false
             }
 
             scrollManager.didScroll = true
@@ -214,7 +237,6 @@ const scrollManager = {
     },
 
     setFooterVisible: function (visible) {
-        console.log('setFooterVisible')
         if (visible) {
             scrollManager.bodyObject.classList.add('footer-visible')
         } else {
