@@ -131,7 +131,18 @@ body.theme-rocket {
         }
         main#main {
             blockquote.main-quote {
-                padding-left: 18vw;
+                margin-right: 7vw;
+                margin-left: calc(19vw + 7vw);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1350px) {
+    body.theme-rocket {
+        main#main {
+            blockquote.main-quote {
+                margin-right: 11vw;
+                margin-left: calc(19vw + 11vw);
             }
         }
     }

@@ -68,11 +68,6 @@
         padding-left: 6vw;
         padding-right: 6vw;
         // padding-top: calc(18vw * 1.4);
-        blockquote {
-            p {
-                text-align: right !important;
-            }
-        }
         .typography {
             .image-container {
                 img {
@@ -133,17 +128,9 @@
     .card-holder {
         grid-column-gap: 4rem;
     }
-    // main#main {
-    //     // blockquote.main-quote {
-    //     //     padding-top: 5vh;
-    //     // }
-    // }
 }
 @media only screen and (min-width: 900px) {
     main#main {
-        // blockquote.main-quote {
-        //     padding-top: 7vh;
-        // }
         .dnadesign__elemental__models__elementcontent {
             h1:before,
             h2:before {
@@ -308,11 +295,19 @@
         }
     }
     main#main {
+        margin-right: 7vw;
+        margin-left: calc(19vw + 7vw);
         // padding-top: calc(9vw * 1.5);
         padding-left: 0;
         padding-right: 0;
-        margin-right: 7vw;
-        margin-left: calc(19vw + 7vw);
+        blockquote.main-quote {
+            transform: none;
+            p {
+                transform: translateY(-0.9em);
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+        }
         .typography {
             .image-container {
                 img {
@@ -376,9 +371,6 @@
     main#main {
         margin-right: 11vw;
         margin-left: calc(19vw + 11vw);
-        blockquote.main-quote {
-            transform: translateY(-8.5rem);
-        }
         .typography {
             .image-container {
                 img {
