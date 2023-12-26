@@ -61,14 +61,11 @@ const scrollManager = {
     reinit: function () {
         scrollManager.lastScroll = scrollManager.currentScroll()
 
-        scrollManager.contentTop =
-            document
-                .getElementById('content-below-quote')
-                .getBoundingClientRect().top -
-            document.documentElement.getBoundingClientRect().top
+        scrollManager.contentTop = document
+            .getElementById('content-below-quote')
+            .getBoundingClientRect().top
         scrollManager.quoteTop =
-            scrollManager.quoteBlock.getBoundingClientRect().top -
-            document.documentElement.getBoundingClientRect().top
+            scrollManager.quoteBlock.getBoundingClientRect().top
     },
 
     currentScroll: function () {
@@ -100,12 +97,7 @@ const scrollManager = {
                 : true
             if (topTest || bottomTest) {
                 // we are in the top or bottom, only run if it is false!
-                if (
-                    isRocketTheme === false ||
-                    scrollManager.bodyObject.classList.contains(
-                        'theme-rocket'
-                    ) === false
-                ) {
+                if (isRocketTheme === false) {
                     scrollManager.bodyObject.style.transitionDuration =
                         scrollManager.themeTransitionDuration
                     scrollManager.bodyObject.classList.remove(
@@ -155,6 +147,7 @@ const scrollManager = {
                 // reset so that we know each call is a real call.
                 scrollManager.didScroll = false
                 scrollManager.newScroll = scrollManager.currentScroll()
+
                 const enoughScroll =
                     Math.abs(
                         scrollManager.lastScroll - scrollManager.newScroll
@@ -196,11 +189,9 @@ const scrollManager = {
         scrollManager.quoteHeight = scrollManager.quoteBlock.offsetHeight
         const maxScroll =
             scrollManager.contentTop -
-            (scrollManager.quoteHeight + scrollManager.quoteTop) -
-            50
-
+            (scrollManager.quoteHeight + scrollManager.quoteTop)
         if (scrollManager.quoteBlock && window.innerHeight > 400) {
-            if (scrollManager.newScroll < maxScroll) {
+            if (scrollManager.newScroll < maxScroll || maxScroll < 0) {
                 const additionalMargin = scrollManager.newScroll
                 scrollManager.quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
                 scrollManager.bodyObject.classList.remove('past-header')
@@ -209,8 +200,7 @@ const scrollManager = {
                 scrollManager.bodyObject.classList.add('past-header')
             }
         } else {
-            scrollManager.quoteBlock.style.marginTop = '0px'
-            if (scrollManager.newScroll > 0) {
+            if (scrollManager.newScroll > 100) {
                 scrollManager.bodyObject.classList.add('past-header')
             } else {
                 scrollManager.bodyObject.classList.remove('past-header')

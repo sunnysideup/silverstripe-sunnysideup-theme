@@ -164,3 +164,12 @@ body.theme-rocket.title-colour-blue {
         color: $colour_blue_cobalter !important;
     }
 }
+
+@media only screen and (max-width: 1050px) {
+    body.theme-rocket.footer-visible {
+        main#main blockquote.main-quote {
+            top: 10vh;
+            transform: translateY(0%);
+        }
+    }
+}
