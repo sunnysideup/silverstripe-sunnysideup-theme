@@ -28,7 +28,6 @@ const bodyClass = {
     addBasicBodyClassListeners: function () {
         document.addEventListener('DOMContentLoaded', function (event) {
             bodyClass.bodyObject.classList.add('body-loaded')
-            bodyClass.bodyObject.classList.remove('body-unloaded')
             if ('ontouchstart' in document.documentElement) {
                 bodyClass.bodyObject.classList.add('touch')
             } else {
@@ -36,8 +35,9 @@ const bodyClass = {
             }
             bodyClass.addRocketMode()
         })
+        bodyClass.bodyObject.classList.remove('body-unloaded')
         window.addEventListener('beforeunload', function () {
-            // bodyClass.bodyObject.classList.add('body-unloaded')
+            bodyClass.bodyObject.classList.add('body-unloaded')
         })
     },
 
@@ -181,37 +181,40 @@ const bodyClass = {
     addRocketMode: function () {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
+            const image = bodyClass.bodyObject.getAttribute('data-bg-image')
             // console.log(videoId)
-            if (videoId) {
+            if (videoId || image) {
                 const div = document.createElement('div')
                 div.id = 'BackgroundImage'
-                div.innerHTML =
-                    '<iframe src="https://player.vimeo.com/video/' +
-                    videoId +
-                    '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
-                const temp = bodyClass.bodyObject.firstChild
-                bodyClass.bodyObject.insertBefore(div, temp)
-            } else {
-                const image = bodyClass.bodyObject.getAttribute('data-bg-image')
-                if (image) {
-                    const div = document.createElement('div')
-                    const shadow = bodyClass.bodyObject.getAttribute(
-                        'data-shadow-over-logo'
-                    )
-                    let shadowColour = ''
-                    if (shadow === 'dark') {
-                        shadowColour =
-                            'linear-gradient(258deg, #00000030 30%, transparent 60%), '
-                    } else if (shadow === 'light') {
-                        shadowColour =
-                            'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
-                    }
-                    div.style.backgroundImage =
-                        shadowColour + 'url(' + image + ')'
-                    div.id = 'BackgroundImage'
+                const shadow = bodyClass.bodyObject.getAttribute(
+                    'data-shadow-over-logo'
+                )
+                let shadowColour = ''
+                if (shadow === 'dark') {
+                    shadowColour =
+                        'linear-gradient(258deg, #00000030 30%, transparent 60%), '
+                } else if (shadow === 'light') {
+                    shadowColour =
+                        'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
+                }
+                if (videoId) {
+                    div.innerHTML =
+                        '<iframe src="https://player.vimeo.com/video/' +
+                        videoId +
+                        '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
                     const temp = bodyClass.bodyObject.firstChild
                     bodyClass.bodyObject.insertBefore(div, temp)
+                    if (shadowColour) {
+                        document.getElementById(
+                            'BackgroundImage'
+                        ).style.background = shadowColour
+                    }
+                } else {
+                    div.style.backgroundImage =
+                        shadowColour + 'url(' + image + ')'
                 }
+                const temp = bodyClass.bodyObject.firstChild
+                bodyClass.bodyObject.insertBefore(div, temp)
             }
         } else {
             // console.log('no rocket show')

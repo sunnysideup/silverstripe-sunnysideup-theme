@@ -114,7 +114,7 @@ const scrollManager = {
                     const footerBounds =
                         scrollManager.footerBlock.getBoundingClientRect()
 
-                    if (quoteBounds.bottom > footerBounds.top) {
+                    if (quoteBounds.bottom + 50 > footerBounds.top) {
                         scrollManager.quoteBlock.style.opacity = 0
                     } else {
                         scrollManager.quoteBlock.style.opacity = 1
@@ -186,20 +186,28 @@ const scrollManager = {
     },
 
     quoteParalaxAndPastHeader: function () {
-        scrollManager.quoteHeight = scrollManager.quoteBlock.offsetHeight
-        const maxScroll =
-            scrollManager.contentTop -
-            (scrollManager.quoteHeight + scrollManager.quoteTop)
         if (scrollManager.quoteBlock && window.innerHeight > 400) {
-            if (scrollManager.newScroll < maxScroll || maxScroll < 0) {
+            scrollManager.quoteHeight = scrollManager.quoteBlock.offsetHeight
+            const maxScroll =
+                scrollManager.contentTop -
+                (scrollManager.quoteHeight + scrollManager.quoteTop)
+            if (maxScroll < 0) {
+                this.reinit()
+                const maxScroll =
+                    scrollManager.contentTop -
+                    (scrollManager.quoteHeight + scrollManager.quoteTop)
+            }
+            if (scrollManager.newScroll < maxScroll) {
                 const additionalMargin = scrollManager.newScroll
                 scrollManager.quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
                 scrollManager.bodyObject.classList.remove('past-header')
             } else {
-                scrollManager.quoteBlock.style.marginTop = `${maxScroll}px` // Use backticks here
+                const additionalMargin = Math.max(maxScroll, 0)
+                scrollManager.quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
                 scrollManager.bodyObject.classList.add('past-header')
             }
         } else {
+            scrollManager.quoteBlock.style.marginTop = 0
             if (scrollManager.newScroll > 100) {
                 scrollManager.bodyObject.classList.add('past-header')
             } else {

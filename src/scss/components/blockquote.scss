@@ -8,6 +8,8 @@ main#main {
         padding: 0;
         margin: 0;
         p {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
             padding-left: 2rem;
             padding-right: 2rem;
             display: block;
@@ -23,7 +25,7 @@ main#main {
             overflow: hidden;
             font-weight: 200;
             font-style: italic;
-            text-align: center !important;
+            text-align: left;
             color: $colour_blue_cobalter;
             * {
                 color: $colour_blue_cobalter;
