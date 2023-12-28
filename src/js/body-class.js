@@ -203,10 +203,10 @@ export const bodyClass = {
                 let shadowColour = ''
                 if (shadow === 'dark') {
                     shadowColour =
-                        'linear-gradient(258deg, #00000030 30%, transparent 60%)'
+                        'linear-gradient(210deg, #00000077 12%, transparent 88%)'
                 } else if (shadow === 'light') {
                     shadowColour =
-                        'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%)'
+                        'linear-gradient(210deg, #FFFFFF77 12%, transparent 88%)'
                 }
                 if (videoId) {
                     if (shadowColour) {
