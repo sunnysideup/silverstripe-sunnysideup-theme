@@ -194,6 +194,7 @@ export const bodyClass = {
             const image = bodyClass.bodyObject.getAttribute('data-bg-image')
             // console.log(videoId)
             if (videoId || image) {
+                let style = ''
                 const div = document.createElement('div')
                 div.id = 'BackgroundImage'
                 const shadow = bodyClass.bodyObject.getAttribute(
@@ -208,26 +209,23 @@ export const bodyClass = {
                         'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%)'
                 }
                 if (videoId) {
-                    shadowColour = 'background: ' + shadowColour
+                    if (shadowColour) {
+                        style = 'background: ' + shadowColour
+                    }
                     div.innerHTML =
                         '<iframe src="https://player.vimeo.com/video/' +
                         videoId +
                         '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
-                        shadowColour +
+                        style +
                         '"></iframe>'
                     const temp = bodyClass.bodyObject.firstChild
                     bodyClass.bodyObject.insertBefore(div, temp)
-                    if (shadowColour) {
-                        document.getElementById(
-                            'BackgroundImage'
-                        ).style.background = shadowColour
-                    }
                 } else {
-                    const style = 'url(' + image + ')'
+                    style = 'url(' + image + ')'
+                    console.log(style)
                     if (shadowColour) {
                         style = shadowColour = ',' + style
                     }
-                    console.log(shadowColour + ', url(' + image + ')')
                     div.style.backgroundImage = style
                 }
                 const temp = bodyClass.bodyObject.firstChild
