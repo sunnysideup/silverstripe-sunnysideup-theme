@@ -222,9 +222,8 @@ export const bodyClass = {
                     bodyClass.bodyObject.insertBefore(div, temp)
                 } else {
                     style = 'url(' + image + ')'
-                    console.log(style)
                     if (shadowColour) {
-                        style = shadowColour = ',' + style
+                        style = shadowColour + ',' + style
                     }
                     div.style.backgroundImage = style
                 }
