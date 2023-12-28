@@ -1,3 +1,5 @@
+import { bodyClass } from './body-class'
+
 const scrollManager = {
     microSecondsBeforeJustScrollledRemoved: 2000,
 
@@ -37,17 +39,15 @@ const scrollManager = {
 
     init: function () {
         // get const vars
-        scrollManager.bodyObject = document.querySelector('body')
-        scrollManager.bodyObject.classList.add('just-scrolled', 'scrolled-up')
+        scrollManager
+            .getBodyObject()
+            .classList.add('just-scrolled', 'scrolled-up')
         scrollManager.normalTransitionDuration =
-            scrollManager.bodyObject.style.transitionDuration
+            scrollManager.getBodyObject().style.transitionDuration
 
         scrollManager.quoteBlock = document.querySelector('.main-quote')
         scrollManager.footerBlock = document.getElementById('footer')
 
-        scrollManager.theme = new String(
-            scrollManager.bodyObject.getAttribute('data-theme')
-        )
         // get less constant vars
         scrollManager.reinit()
 
@@ -56,6 +56,14 @@ const scrollManager = {
 
         // on resize, do it again.
         window.addEventListener('resize', scrollManager.reinit())
+    },
+
+    getBodyObject: function () {
+        return bodyClass.getBodyObject()
+    },
+
+    getTheme: function () {
+        return bodyClass.getTheme()
     },
 
     reinit: function () {
@@ -88,26 +96,28 @@ const scrollManager = {
 
             scrollManager.quoteParalaxAndPastHeader()
 
-            const bottomTest =
-                scrollManager.bodyObject.classList.contains('footer-visible')
-            const topTest = scrollManager.bodyObject.classList.contains(
-                'past-header'
-            )
+            const bottomTest = scrollManager
+                .getBodyObject()
+                .classList.contains('footer-visible')
+            const topTest = scrollManager
+                .getBodyObject()
+                .classList.contains('past-header')
                 ? false
                 : true
+            scrollManager.quoteBlock.style.opacity = 1
             if (topTest || bottomTest) {
                 // we are in the top or bottom, only run if it is false!
-                if (isRocketTheme === false) {
-                    scrollManager.bodyObject.style.transitionDuration =
+                if (isRocketTheme !== true) {
+                    scrollManager.getBodyObject().style.transitionDuration =
                         scrollManager.themeTransitionDuration
-                    scrollManager.bodyObject.classList.remove(
-                        scrollManager.theme
-                    )
-                    scrollManager.bodyObject.classList.add('theme-rocket')
-                    scrollManager.bodyObject.style.transitionSpeed =
+                    scrollManager
+                        .getBodyObject()
+                        .classList.remove(scrollManager.getTheme())
+                    scrollManager.getBodyObject().classList.add('theme-rocket')
+                    scrollManager.getBodyObject().style.transitionSpeed =
                         scrollManager.normalTransitionDuration
-                    isRocketTheme = true
                 }
+                isRocketTheme = true
                 if (bottomTest) {
                     const quoteBounds =
                         scrollManager.quoteBlock.getBoundingClientRect()
@@ -116,21 +126,20 @@ const scrollManager = {
 
                     if (quoteBounds.bottom + 50 > footerBounds.top) {
                         scrollManager.quoteBlock.style.opacity = 0
-                    } else {
-                        scrollManager.quoteBlock.style.opacity = 1
                     }
-                } else {
-                    scrollManager.quoteBlock.style.opacity = 1
                 }
             } else {
-                scrollManager.quoteBlock.style.opacity = 1
                 // we are in the middle, must set to false now...
                 if (isRocketTheme !== false) {
-                    scrollManager.bodyObject.style.transitionDuration =
+                    scrollManager.getBodyObject().style.transitionDuration =
                         scrollManager.themeTransitionDuration
-                    scrollManager.bodyObject.classList.add(scrollManager.theme)
-                    scrollManager.bodyObject.classList.remove('theme-rocket')
-                    scrollManager.bodyObject.style.transitionSpeed =
+                    scrollManager
+                        .getBodyObject()
+                        .classList.add(scrollManager.getTheme())
+                    scrollManager
+                        .getBodyObject()
+                        .classList.remove('theme-rocket')
+                    scrollManager.getBodyObject().style.transitionSpeed =
                         scrollManager.normalTransitionDuration
                 }
                 isRocketTheme = false
@@ -153,31 +162,31 @@ const scrollManager = {
                         scrollManager.lastScroll - scrollManager.newScroll
                     ) >= scrollManager.minScrollForAction
                 if (enoughScroll) {
-                    scrollManager.bodyObject.classList.add('just-scrolled')
+                    scrollManager.getBodyObject().classList.add('just-scrolled')
                     scrollManager.justScrolledFx = window.setTimeout(
                         function () {
-                            scrollManager.bodyObject.classList.remove(
-                                'just-scrolled'
-                            )
+                            scrollManager
+                                .getBodyObject()
+                                .classList.remove('just-scrolled')
                         },
                         scrollManager.microSecondsBeforeJustScrollledRemoved
                     )
                     const scrolledDown =
                         scrollManager.newScroll > scrollManager.lastScroll
                     if (scrolledDown) {
-                        scrollManager.bodyObject.classList.remove(
-                            scrollManager.scrolledUpClass
-                        )
-                        scrollManager.bodyObject.classList.add(
-                            scrollManager.scrolledDownClass
-                        )
+                        scrollManager
+                            .getBodyObject()
+                            .classList.remove(scrollManager.scrolledUpClass)
+                        scrollManager
+                            .getBodyObject()
+                            .classList.add(scrollManager.scrolledDownClass)
                     } else {
-                        scrollManager.bodyObject.classList.add(
-                            scrollManager.scrolledUpClass
-                        )
-                        scrollManager.bodyObject.classList.remove(
-                            scrollManager.scrolledDownClass
-                        )
+                        scrollManager
+                            .getBodyObject()
+                            .classList.add(scrollManager.scrolledUpClass)
+                        scrollManager
+                            .getBodyObject()
+                            .classList.remove(scrollManager.scrolledDownClass)
                     }
                 }
                 scrollManager.lastScroll = scrollManager.newScroll
@@ -200,18 +209,18 @@ const scrollManager = {
             if (scrollManager.newScroll < maxScroll) {
                 const additionalMargin = scrollManager.newScroll
                 scrollManager.quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
-                scrollManager.bodyObject.classList.remove('past-header')
+                scrollManager.getBodyObject().classList.remove('past-header')
             } else {
                 const additionalMargin = Math.max(maxScroll, 0)
                 scrollManager.quoteBlock.style.marginTop = `${additionalMargin}px` // Use backticks here
-                scrollManager.bodyObject.classList.add('past-header')
+                scrollManager.getBodyObject().classList.add('past-header')
             }
         } else {
             scrollManager.quoteBlock.style.marginTop = 0
             if (scrollManager.newScroll > 100) {
-                scrollManager.bodyObject.classList.add('past-header')
+                scrollManager.getBodyObject().classList.add('past-header')
             } else {
-                scrollManager.bodyObject.classList.remove('past-header')
+                scrollManager.getBodyObject().classList.remove('past-header')
             }
         }
     },
@@ -236,9 +245,9 @@ const scrollManager = {
 
     setFooterVisible: function (visible) {
         if (visible) {
-            scrollManager.bodyObject.classList.add('footer-visible')
+            scrollManager.getBodyObject().classList.add('footer-visible')
         } else {
-            scrollManager.bodyObject.classList.remove('footer-visible')
+            scrollManager.getBodyObject().classList.remove('footer-visible')
         }
     }
 }

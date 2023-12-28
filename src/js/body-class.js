@@ -1,7 +1,9 @@
 import { myCookie } from './cookie.js'
 
-const bodyClass = {
+export const bodyClass = {
     bodyObject: null,
+
+    theme: '',
 
     init: function () {
         bodyClass.bodyObject = document.querySelector('body')
@@ -9,11 +11,20 @@ const bodyClass = {
 
         // if you click on theme-selector, you select the theme
         bodyClass.addOrToggleBodyClass('.theme-selector', true)
-        // if you click on set-them, you select the theme
-        bodyClass.retrieveCookieOrHash()
+        this.theme =
+            // if you click on set-them, you select the theme
+            bodyClass.retrieveCookieOrHash()
         // expose scrolled behaviour
         this.scrollStart()
         this.addBasicBodyClassListeners()
+    },
+
+    getBodyObject: function () {
+        return bodyClass.bodyObject
+    },
+
+    getTheme: function () {
+        return new String(bodyClass.bodyObject.getAttribute('data-theme'))
     },
 
     showMenuAsDefault: function () {
@@ -33,7 +44,7 @@ const bodyClass = {
             } else {
                 bodyClass.bodyObject.classList.add('no-touch')
             }
-            bodyClass.addRocketMode()
+            bodyClass.addRocketModeVideoOrImage()
         })
         bodyClass.bodyObject.classList.remove('body-unloaded')
         window.addEventListener('beforeunload', function () {
@@ -97,8 +108,6 @@ const bodyClass = {
 
     scrollStart: function () {
         window.setTimeout(function () {
-            window.scrollTo(window.scrollX, window.scrollY + 2)
-            window.scrollTo(window.scrollX, window.scrollY - 2)
             const hash = bodyClass.getHashFromURL()
             if (hash && document.getElementById(hash)) {
                 document.querySelector('#' + hash).scrollIntoView({
@@ -131,6 +140,7 @@ const bodyClass = {
         if (isTheme) {
             myCookie.setCookie('preferredTheme', toggleClass, 14)
             bodyClass.bodyObject.setAttribute('data-theme', toggleClass)
+            bodyClass.theme = toggleClass
         }
         if (id && scrollTo) {
             let hash = bodyClass.getHashFromString(id)
@@ -141,9 +151,9 @@ const bodyClass = {
         }
     },
 
-    removeBodyClassesBasedOnAttribute: function ($object) {
-        if ($object.hasAttribute('data-remove-class')) {
-            const string = $object.getAttribute('data-remove-class')
+    removeBodyClassesBasedOnAttribute: function (object) {
+        if (object.hasAttribute('data-remove-class')) {
+            const string = object.getAttribute('data-remove-class')
             const classes = bodyClass.getClassesFromList(string)
             for (let i = 0, len = classes.length; i < len; i++) {
                 const value = classes[i]
@@ -171,14 +181,14 @@ const bodyClass = {
 
     getHashFromString: function (string) {
         string = String(string)
-        return bodyClass.retrieveHasSignFromString(string)
+        return bodyClass.removeHashFromString(string)
     },
 
-    retrieveHasSignFromString: function (string) {
+    removeHashFromString: function (string) {
         return string.replace('#', '')
     },
 
-    addRocketMode: function () {
+    addRocketModeVideoOrImage: function () {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
             const image = bodyClass.bodyObject.getAttribute('data-bg-image')
@@ -192,16 +202,19 @@ const bodyClass = {
                 let shadowColour = ''
                 if (shadow === 'dark') {
                     shadowColour =
-                        'linear-gradient(258deg, #00000030 30%, transparent 60%), '
+                        'linear-gradient(258deg, #00000030 30%, transparent 60%)'
                 } else if (shadow === 'light') {
                     shadowColour =
-                        'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%), '
+                        'linear-gradient(258deg, #FFFFFF30 30%, transparent 60%)'
                 }
                 if (videoId) {
+                    shadowColour = 'background: ' + shadowColour
                     div.innerHTML =
                         '<iframe src="https://player.vimeo.com/video/' +
                         videoId +
-                        '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
+                        '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
+                        shadowColour +
+                        '"></iframe>'
                     const temp = bodyClass.bodyObject.firstChild
                     bodyClass.bodyObject.insertBefore(div, temp)
                     if (shadowColour) {
@@ -210,8 +223,12 @@ const bodyClass = {
                         ).style.background = shadowColour
                     }
                 } else {
-                    div.style.backgroundImage =
-                        shadowColour + 'url(' + image + ')'
+                    const style = 'url(' + image + ')'
+                    if (shadowColour) {
+                        style = shadowColour = ',' + style
+                    }
+                    console.log(shadowColour + ', url(' + image + ')')
+                    div.style.backgroundImage = style
                 }
                 const temp = bodyClass.bodyObject.firstChild
                 bodyClass.bodyObject.insertBefore(div, temp)
