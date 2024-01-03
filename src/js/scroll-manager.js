@@ -118,16 +118,6 @@ const scrollManager = {
                         scrollManager.normalTransitionDuration
                 }
                 isRocketTheme = true
-                if (bottomTest) {
-                    const quoteBounds =
-                        scrollManager.quoteBlock.getBoundingClientRect()
-                    const footerBounds =
-                        scrollManager.footerBlock.getBoundingClientRect()
-
-                    if (quoteBounds.bottom + 50 > footerBounds.top) {
-                        scrollManager.quoteBlock.style.opacity = 0
-                    }
-                }
             } else {
                 // we are in the middle, must set to false now...
                 if (isRocketTheme !== false) {

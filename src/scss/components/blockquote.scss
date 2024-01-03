@@ -79,13 +79,14 @@ main#main {
 body.footer-visible {
     main#main {
         blockquote.main-quote {
-            p {
-                .blinker {
-                    &.smaller {
-                        rotate: 180deg;
-                    }
-                }
-            }
+            display: none !important;
+            // p {
+            //     .blinker {
+            //         &.smaller {
+            //             rotate: 180deg;
+            //         }
+            //     }
+            // }
         }
     }
 }

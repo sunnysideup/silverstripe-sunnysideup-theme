@@ -215,7 +215,7 @@ export const bodyClass = {
                     div.innerHTML =
                         '<iframe src="https://player.vimeo.com/video/' +
                         videoId +
-                        '?autoplay=1&&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
+                        '?autoplay=1&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
                         style +
                         '"></iframe>'
                     const temp = bodyClass.bodyObject.firstChild
