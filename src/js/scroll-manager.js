@@ -3,9 +3,9 @@ import { bodyClass } from './body-class'
 const scrollManager = {
     microSecondsBeforeJustScrollledRemoved: 2000,
 
-    minScrollForAction: 2,
+    minimumScrollForReleasingQuote: 400,
 
-    minScrollDownToBeProperScroll: 100,
+    minScrollForAction: 2,
 
     normalTransitionDuration: 0,
 
@@ -14,8 +14,6 @@ const scrollManager = {
     // calculated variables
 
     newScroll: 0,
-
-    minimumScrollForThemeSwitch: 20,
 
     lastScroll: 0,
 
@@ -96,6 +94,12 @@ const scrollManager = {
 
             scrollManager.quoteParalaxAndPastHeader()
 
+            const hasRocketThemeTest = scrollManager
+                .getBodyObject()
+                .classList.contains('no-rocket-show')
+                ? false
+                : true
+
             const bottomTest = scrollManager
                 .getBodyObject()
                 .classList.contains('footer-visible')
@@ -105,34 +109,40 @@ const scrollManager = {
                 ? false
                 : true
             scrollManager.quoteBlock.style.opacity = 1
-            if (topTest || bottomTest) {
-                // we are in the top or bottom, only run if it is false!
-                if (isRocketTheme !== true) {
-                    scrollManager.getBodyObject().style.transitionDuration =
-                        scrollManager.themeTransitionDuration
-                    scrollManager
-                        .getBodyObject()
-                        .classList.remove(scrollManager.getTheme())
-                    scrollManager.getBodyObject().classList.add('theme-rocket')
-                    scrollManager.getBodyObject().style.transitionSpeed =
-                        scrollManager.normalTransitionDuration
+            if (hasRocketThemeTest) {
+                if (topTest || bottomTest) {
+                    // we are in the top or bottom, only run if it is false!
+                    if (isRocketTheme !== true) {
+                        scrollManager.getBodyObject().style.transitionDuration =
+                            scrollManager.themeTransitionDuration
+                        scrollManager
+                            .getBodyObject()
+                            .classList.remove(scrollManager.getTheme())
+                        scrollManager
+                            .getBodyObject()
+                            .classList.add('theme-rocket')
+                        scrollManager.getBodyObject().style.transitionSpeed =
+                            scrollManager.normalTransitionDuration
+                    }
+                    isRocketTheme = true
+                } else {
+                    // we are in the middle, must set to false now...
+                    if (isRocketTheme !== false) {
+                        scrollManager.getBodyObject().style.transitionDuration =
+                            scrollManager.themeTransitionDuration
+                        scrollManager
+                            .getBodyObject()
+                            .classList.add(scrollManager.getTheme())
+                        scrollManager
+                            .getBodyObject()
+                            .classList.remove('theme-rocket')
+                        scrollManager.getBodyObject().style.transitionSpeed =
+                            scrollManager.normalTransitionDuration
+                    }
+                    isRocketTheme = false
                 }
-                isRocketTheme = true
             } else {
-                // we are in the middle, must set to false now...
-                if (isRocketTheme !== false) {
-                    scrollManager.getBodyObject().style.transitionDuration =
-                        scrollManager.themeTransitionDuration
-                    scrollManager
-                        .getBodyObject()
-                        .classList.add(scrollManager.getTheme())
-                    scrollManager
-                        .getBodyObject()
-                        .classList.remove('theme-rocket')
-                    scrollManager.getBodyObject().style.transitionSpeed =
-                        scrollManager.normalTransitionDuration
-                }
-                isRocketTheme = false
+                console.log('no rocket theme!')
             }
 
             scrollManager.didScroll = true
@@ -185,11 +195,18 @@ const scrollManager = {
     },
 
     quoteParalaxAndPastHeader: function () {
-        if (scrollManager.quoteBlock && window.innerHeight > 400) {
+        if (
+            scrollManager.quoteBlock &&
+            window.innerHeight > scrollManager.minimumScrollForReleasingQuote
+        ) {
             scrollManager.quoteHeight = scrollManager.quoteBlock.offsetHeight
-            const maxScroll =
-                scrollManager.contentTop -
-                (scrollManager.quoteHeight + scrollManager.quoteTop)
+            const reducer = scrollManager.quoteHeight + scrollManager.quoteTop
+            let maxScroll = 0
+            if (reducer > 0) {
+                maxScroll = scrollManager.contentTop - reducer
+            } else {
+                maxScroll = scrollManager.contentTop / 2
+            }
             if (maxScroll < 0) {
                 this.reinit()
                 const maxScroll =

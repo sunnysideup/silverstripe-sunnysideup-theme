@@ -23,5 +23,6 @@ const userAction = debounce(function () {
 
 document.addEventListener('click', userAction, false)
 document.addEventListener('scroll', userAction, false)
+document.addEventListener('popstate', userAction, false)
 
 userAction()

@@ -90,3 +90,11 @@ body.footer-visible {
         }
     }
 }
+
+body.no-rocket-show.past-header {
+    main#main {
+        blockquote.main-quote {
+            opacity: 0 !important;
+        }
+    }
+}

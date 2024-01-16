@@ -47,8 +47,11 @@ export const bodyClass = {
             bodyClass.addRocketModeVideoOrImage()
         })
         bodyClass.bodyObject.classList.remove('body-unloaded')
-        window.addEventListener('beforeunload', function () {
-            bodyClass.bodyObject.classList.add('body-unloaded')
+        // window.addEventListener('beforeunload', function () {
+        //     bodyClass.bodyObject.classList.add('body-unloaded')
+        // })
+        window.addEventListener('popstate', function () {
+            bodyClass.bodyObject.classList.remove('popstate')
         })
     },
 
