@@ -16,9 +16,6 @@ body.theme-rocket {
             position: fixed;
             margin-top: 0 !important;
             p {
-                font-family: $base_font_headers;
-                font-weight: 600;
-                letter-spacing: 0.13rem;
                 filter: drop-shadow(0 0 6px #000);
                 background: none;
                 color: $colour_white;
