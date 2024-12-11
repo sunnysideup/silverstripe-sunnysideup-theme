@@ -67,7 +67,26 @@
         font-size: 2.5rem;
         line-height: 1.3;
     }
-    p + ul,
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    h4 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    h5 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    h6 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+        font-weight: 200;
+        font-family: $base_font_condensed;
+    }
+p + ul,
     p + ol,
     p + p,
     ul + p,
@@ -106,26 +125,7 @@
                 }
             }
         }
-    }
-    h3 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-    h4 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h5 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h6 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        font-style: italic;
-        font-weight: 200;
-        font-family: $base_font_condensed;
-    }
+    }    
     .image-container {
         border: none !important;
         img {
