@@ -1,0 +1,7 @@
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/login-forms/client/dist/js/bundle.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/mfa/client/dist/js/injector.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/admin/client/dist/js/i18n.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/totp-authenticator/client/lang/en.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/totp-authenticator/client/dist/js/bundle.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/mfa/client/lang/en.js'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/mfa/client/dist/js/bundle.js'
