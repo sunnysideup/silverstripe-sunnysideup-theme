@@ -1,6 +1,7 @@
 {
   "dist/app.js": "./app.js",
   "dist/main.css": "./main.css",
+  "dist/editor.css": "./editor.css",
   "dist/runtime.js": "./runtime.js",
   "dist/images/SSU_Logo_horizontal_.png": "./images/SSU_Logo_horizontal_.aa9ab930.png",
   "dist/images/2.svg": "./images/2.f126efff.svg",
