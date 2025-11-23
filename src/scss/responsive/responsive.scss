@@ -144,7 +144,7 @@
                 width: calc(21vw - 5rem);
                 padding-top: 0.6rem;
                 margin-top: 0;
-                margin-top: -1px;
+                margin-top: 7px;
                 border-bottom: none;
                 .icon {
                     margin-top: 0px;
@@ -308,6 +308,8 @@
                 padding-top: 0 !important;
                 text-align: left;
                 padding-bottom: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
             }
         }
         .typography {

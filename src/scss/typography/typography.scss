@@ -57,7 +57,7 @@
         * {
             color: $colour_blue_cobalter;
         }
-        border-bottom: 4px dashed $colour_blue_cobalter_half;
+        border-bottom: 3px dashed $colour_blue_cobalter_half_non_transparent;
     }
     h1 {
         line-height: 1.29;
@@ -86,7 +86,7 @@
         font-weight: 200;
         font-family: $base_font_condensed;
     }
-p + ul,
+    p + ul,
     p + ol,
     p + p,
     ul + p,
@@ -125,7 +125,7 @@ p + ul,
                 }
             }
         }
-    }    
+    }
     .image-container {
         border: none !important;
         img {
@@ -134,7 +134,7 @@ p + ul,
             width: auto !important;
             height: auto !important;
             margin: 0 auto;
-            border: 1px dashed $colour_blue_cobalter;
+            border: 3px dashed $colour_blue_cobalter_half_non_transparent;
             border-radius: 2rem;
             border-bottom-right-radius: 0;
         }
@@ -240,7 +240,7 @@ p + ul,
     }
     hr {
         height: 0;
-        border-top: 1px dashed $colour_blue_cobalter_half;
+        border-top: 3px dashed $colour_blue_cobalter_half_non_transparent;
         border-bottom: none;
     }
     pre {

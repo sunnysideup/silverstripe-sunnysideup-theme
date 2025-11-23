@@ -23,7 +23,7 @@
         .dotted-line {
             position: absolute;
             width: 50px;
-            border-left: 1px dashed $colour_outer_space_love;
+            border-left: 3px dashed $colour_blue_cobalter_half_non_transparent;
             bottom: 9rem;
             top: 0;
             margin-top: -2rem;
@@ -31,7 +31,6 @@
             z-index: -1;
         }
         img {
-            border-color: $colour_outer_space_love;
             box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
         }
         p.caption {

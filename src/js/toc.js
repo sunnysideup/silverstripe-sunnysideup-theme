@@ -56,17 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
                                 document
                                     .querySelector('#' + hash)
                                     .scrollIntoView({
-                                        behavior: 'smooth', // smooth scroll
-                                        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                                        behavior: 'smooth',
+                                        block: 'start'
                                     })
                             }, 100)
                         } else {
                             window.setTimeout(function () {
                                 document
-                                    .querySelector('#my-quote')
+                                    .querySelector('#toc-1')
                                     .scrollIntoView({
-                                        behavior: 'smooth', // smooth scroll
-                                        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+                                        behavior: 'smooth',
+                                        block: 'start'
                                     })
                             }, 100)
                         }
