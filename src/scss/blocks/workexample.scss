@@ -23,7 +23,7 @@
         .dotted-line {
             position: absolute;
             width: 50px;
-            border-left: 3px dashed $colour_blue_cobalter_half_non_transparent;
+            border-left: 3px dashed $colour_modern_iron;
             bottom: 9rem;
             top: 0;
             margin-top: -2rem;
@@ -32,6 +32,7 @@
         }
         img {
             box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
+            max-width: calc(92%) !important;
         }
         p.caption {
             margin-top: 0 !important;
@@ -58,7 +59,7 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
                 transform: rotate(90deg);
-                transform-origin: 85%;
+                transform-origin: 100%;
                 text-align: left;
                 line-height: 0;
                 text-indent: 50%;

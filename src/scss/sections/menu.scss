@@ -195,13 +195,14 @@ body.menu-on {
         > li {
             display: none;
         }
-        > li.collapsibleListOpen,
-        > li.section,
-        > li.current {
+        > li.collapsibleListOpen {
             display: list-item;
-            > a {
-                border-bottom: 3px solid $colour_blue_cobalter_highlights !important;
-            }
+        }
+    }
+    li.section,
+    li.current {
+        > a {
+            border-bottom: 3px solid $colour_blue_cobalter_highlights !important;
         }
     }
 }
