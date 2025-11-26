@@ -280,13 +280,14 @@
 
     .last-updated {
         font-weight: 200;
-        color: $colour_yep_thats_grey;
+        color: #000 !important;
         font-style: italic;
-        margin-top: 80vh !important;
         font-size: 1.5rem;
-        padding-bottom: 0 !important;
-        margin-bottom: 0;
-        margin-left: 0;
         text-align: center;
+        background-color: $colour_sunny_side_up_yellow;
+        width: fit-content;
+        padding: 0.5rem 1rem !important;
+        margin: 80vh auto 0 auto !important;
+        border-radius: 2rem;
     }
 }
