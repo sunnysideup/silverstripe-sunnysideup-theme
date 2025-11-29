@@ -67,11 +67,9 @@ $background_color_6: transparent;
                     background-color: $colour_light_grey_aotrom;
                     width: calc(100% - 3rem);
                     border: none;
-                    transition: all 0.5s ease 0s;
                     margin-top: 0px;
                     padding: 1.5rem;
                     font-weight: 600;
-                    -webkit-transition: all 0.5s ease 0s;
                     border-bottom: 3px dashed $colour_modern_iron;
                     color: $colour_black_lighter;
                     &:focus {

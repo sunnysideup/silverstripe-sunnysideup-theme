@@ -8,7 +8,7 @@
         <nav class="nav-item">
             <ul class="collapsibleList">
                 <% loop Menu(1) %>
-                    <li class="$FirstLast $LinkingMode level1  rotate-360-horizontal-fwd countable-icons icon-$Pos">
+                    <li class="$FirstLast $LinkingMode level1 countable-icons icon-$Pos collapsibleListNotOpen">
                         <span class="icon">&nbsp;</span>
                         <a class="$LinkingMode level1" href="$Link<% if $IsHomePage %>home/#no-menu<% end_if %>">$MenuTitle</a>
                         <% if Children %>

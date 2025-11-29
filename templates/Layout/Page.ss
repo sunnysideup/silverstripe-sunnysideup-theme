@@ -2,7 +2,7 @@
 
 
 <blockquote class="main-quote">
-    <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %>">
+    <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %> fade-on-no-rocket ">
         <% if $Quote %>
             $Quote
             <a href="#content-below-quote" class="blinker smaller">↯</a>
@@ -22,7 +22,7 @@
 
     <% include SiblingsAndChildren %>
 
-    <% if $LastEdited %>
+    <%-- <% if $LastEdited %>
         <p class="last-updated">
         {
             This page was last updated {$LastEdited.Ago}.
@@ -31,5 +31,5 @@
             <% if $IntroPhotoCredit %>&copy; Photo: {$IntroPhotoCredit}<% end_if %>
         }
         </p>
-    <% end_if %>
+    <% end_if %> --%>
 </div>

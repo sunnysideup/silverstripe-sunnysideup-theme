@@ -32,7 +32,6 @@
         }
         img {
             box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
-            max-width: calc(92%) !important;
         }
         p.caption {
             margin-top: 0 !important;
@@ -51,21 +50,5 @@
 
 @media only screen and (min-width: 1150px) {
     .sunnysideup__app__elements__workexample {
-        .work-example-images {
-            .dotted-line {
-                left: 30%;
-            }
-            p.caption {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                transform: rotate(90deg);
-                transform-origin: 100%;
-                text-align: left;
-                line-height: 0;
-                text-indent: 50%;
-                text-decoration: none;
-                width: 100%;
-            }
-        }
     }
 }

@@ -230,6 +230,7 @@ export const bodyClass = {
                     }
                     div.style.backgroundImage = style
                 }
+                div.classList.add('fade-on-no-rocket')
                 const temp = bodyClass.bodyObject.firstChild
                 bodyClass.bodyObject.insertBefore(div, temp)
             }

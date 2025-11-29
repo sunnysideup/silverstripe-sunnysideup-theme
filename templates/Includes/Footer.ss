@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" class="fade-on-no-rocket">
     <div class="row">
         <div class="col">
             <address>

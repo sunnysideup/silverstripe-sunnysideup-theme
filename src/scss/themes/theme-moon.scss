@@ -199,7 +199,24 @@ body.theme-moon {
 
 body[data-theme="theme-moon"] {
     &.menu-on {
+        #header {
+            * {
+                color: $colour_sunny_side_up_yellow !important;
+            }
+        }
         #nav {
+            #nav-inner {
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                border-bottom: 3px solid $colour_sunny_side_up_green !important;
+                            }
+                        }
+                    }
+                }
+            }
+
             background-color: $colour_purple_spirituality_in_the_sun;
             * {
                 color: $colour_sunny_side_up_green;

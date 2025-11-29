@@ -1,6 +1,8 @@
 import { bodyClass } from './body-class'
 
 const scrollManager = {
+    screenHeight: window.innerHeight,
+
     microSecondsBeforeJustScrollledRemoved: 2000,
 
     minimumScrollForReleasingQuote: 400,
@@ -72,6 +74,7 @@ const scrollManager = {
             .getBoundingClientRect().top
         scrollManager.quoteTop =
             scrollManager.quoteBlock.getBoundingClientRect().top
+        scrollManager.screenHeight = window.innerHeight
     },
 
     currentScroll: function () {
@@ -108,6 +111,13 @@ const scrollManager = {
                 .classList.contains('past-header')
                 ? false
                 : true
+            if (topTest) {
+                scrollManager.fadeInOrOutOnTop()
+            } else if (bottomTest) {
+                scrollManager.fadeInOrOutOnBottom()
+            } else {
+                scrollManager.removeFadeEffects()
+            }
             scrollManager.quoteBlock.style.opacity = 1
             if (hasRocketThemeTest) {
                 if (topTest || bottomTest) {
@@ -256,6 +266,64 @@ const scrollManager = {
         } else {
             scrollManager.getBodyObject().classList.remove('footer-visible')
         }
+    },
+    fadeInOrOutOnTop: function () {
+        const currentScroll = scrollManager.currentScroll()
+        const vh = scrollManager.screenHeight
+
+        // fade zone: only a part of 1vh
+        const fadeDistance = vh * 1 // <— change to whatever you want
+
+        // ratio based on fadeDistance
+        const ratio = Math.min(currentScroll / fadeDistance, 1)
+
+        const opacityFadeOnNotRocket = 1 - ratio
+        const opacityFadeOnRocket = ratio
+
+        document.querySelectorAll('.fade-on-no-rocket').forEach(el => {
+            el.style.opacity = opacityFadeOnNotRocket
+        })
+        document.querySelectorAll('.fade-on-rocket').forEach(el => {
+            el.style.opacity = opacityFadeOnRocket
+        })
+    },
+
+    fadeInOrOutOnBottom: function () {
+        const docHeight = document.documentElement.scrollHeight
+        const currentScroll = scrollManager.currentScroll()
+        const vh = scrollManager.screenHeight
+
+        // fade zone: only a part of 1vh
+        const fadeDistance = vh * 0.33 // <— change to whatever you want
+
+        // distance from bottom
+        const distanceToBottom = docHeight - (currentScroll + vh)
+
+        // distanceToBottom: fadeDistance → 0  maps to 0 → 1
+        let ratio = 1 - distanceToBottom / fadeDistance
+
+        // clamp 0–1
+        if (ratio < 0) ratio = 0
+        if (ratio > 1) ratio = 1
+
+        const opacityNoRocket = ratio
+        const opacityRocket = 1 - ratio
+
+        document.querySelectorAll('.fade-on-no-rocket').forEach(el => {
+            el.style.opacity = opacityNoRocket
+        })
+
+        document.querySelectorAll('.fade-on-rocket').forEach(el => {
+            el.style.opacity = opacityRocket
+        })
+    },
+    removeFadeEffects: function () {
+        document.querySelectorAll('.fade-on-no-rocket').forEach(el => {
+            el.style.opacity = 0
+        })
+        document.querySelectorAll('.fade-on-rocket').forEach(el => {
+            el.style.opacity = 1
+        })
     }
 }
 
