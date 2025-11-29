@@ -33,6 +33,13 @@
         .typography h2:before {
             display: none;
         }
+        .typography {
+            .image-container {
+                img {
+                    max-width: 92%;
+                }
+            }
+        }
     }
     footer#footer {
         #theme-selectors {
