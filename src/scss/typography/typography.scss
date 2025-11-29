@@ -136,6 +136,7 @@
             border: 3px dashed $colour_modern_iron;
             border-radius: 2rem;
             border-bottom-right-radius: 0;
+            max-width: 100% !important;
         }
     }
     .captionImage {
