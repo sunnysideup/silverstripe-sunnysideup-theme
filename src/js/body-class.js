@@ -104,6 +104,12 @@ export const bodyClass = {
                         event,
                         isTheme
                     )
+                    if (objSelector === '#menu-toggle') {
+                        // close menu when toggling
+                        window.setTimeout(function () {
+                            bodyClass.bodyObject.classList.toggle('show-logo')
+                        }, 300)
+                    }
                     return false
                 })
             })
@@ -195,6 +201,10 @@ export const bodyClass = {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
             const image = bodyClass.bodyObject.getAttribute('data-bg-image')
+            const imageX =
+                bodyClass.bodyObject.getAttribute('data-bg-image-x') ?? '50%'
+            const imageY =
+                bodyClass.bodyObject.getAttribute('data-bg-image-y') ?? '50%'
             // console.log(videoId)
             if (videoId || image) {
                 let style = ''
@@ -229,6 +239,7 @@ export const bodyClass = {
                         style = shadowColour + ',' + style
                     }
                     div.style.backgroundImage = style
+                    div.style.backgroundPosition = imageX + ' ' + imageY
                 }
                 div.classList.add('fade-on-no-rocket')
                 const temp = bodyClass.bodyObject.firstChild

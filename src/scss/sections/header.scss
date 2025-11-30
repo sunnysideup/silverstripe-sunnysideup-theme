@@ -47,7 +47,7 @@
         }
     }
 }
-body.past-header {
+body.past-header:not(.menu-on) {
     #header {
         height: 5rem;
         z-index: 3;
