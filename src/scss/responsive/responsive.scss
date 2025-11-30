@@ -42,6 +42,7 @@
         }
     }
     footer#footer {
+        margin-top: 130vw;
         #theme-selectors {
             display: block;
         }
@@ -417,6 +418,7 @@
     }
     footer#footer {
         padding-left: 24vw;
+        margin-top: 70vw;
     }
     .row {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -429,7 +431,7 @@
     main#main {
         padding-top: 200vh;
         blockquote.main-quote {
-            padding-top: 130vh;
+            padding-top: 60vh;
             p {
                 font-size: calc(3vw + 3vh);
             }
