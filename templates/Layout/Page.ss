@@ -5,11 +5,11 @@
     <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %> fade-on-no-rocket ">
         <% if $Quote %>
             $Quote
-            <a href="#content-below-quote" class="blinker smaller">↯</a>
+            <a href="#content-below-quote" class="shiner smaller">↯</a>
         <% else %>
             <% if $IsHomePage %>
                 Kia Ora —<br />
-                We are here to make you <a href="#content-below-quote" class="blinker italic">shine</a> online.
+                We are here to make you <a href="#content-below-quote" class="shiner italic">shine</a> online.
             <% end_if %>
         <% end_if %>
     </p>

@@ -11,5 +11,6 @@
     <% if $RandomImageY %>data-bg-image-y="$RandomImageY.Nice"<% end_if %>
     <% if $VimeoVideoID %>data-video-id="$VimeoVideoID"<% end_if %>
     data-shadow-over-logo="$ShadowOverLogo"
-    data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% end_if %>"
+    <%-- data-theme="<% if $DefaultTheme %>theme-$DefaultTheme<% else %>theme-sun<% end_if %>" --%>
+    data-theme="theme-sun"
 >

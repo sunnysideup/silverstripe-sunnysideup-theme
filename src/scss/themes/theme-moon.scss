@@ -1,7 +1,7 @@
 body.theme-moon {
     blockquote {
         p {
-            .blinker.smaller {
+            .shiner.smaller {
                 display: none;
             }
         }
@@ -29,8 +29,8 @@ body.theme-moon {
         text-decoration: none !important;
     }
     #nav {
-        background-color: $colour_purple_spirituality_in_the_sun !important;
-        border-color: $colour_purple_spirituality_in_the_sun;
+        background-color: $colou_sunny_side_up_green_darker !important;
+        border-color: $colou_sunny_side_up_green_darker !important;
     }
     .typography {
         *,
@@ -85,6 +85,11 @@ body.theme-moon {
         }
         img {
             border-color: $colour_burned_sunny_side_up;
+        }
+        li {
+            &::marker {
+                color: $colour_burned_sunny_side_up;
+            }
         }
     }
 
@@ -212,6 +217,9 @@ body[data-theme="theme-moon"] {
                             &:hover {
                                 border-bottom: 3px solid $colour_sunny_side_up_green !important;
                             }
+                        }
+                        &.current > a {
+                            border-bottom: 3px solid $colour_sunny_side_up_green !important;
                         }
                     }
                 }

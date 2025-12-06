@@ -1,781 +1,974 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap);
 @charset "UTF-8";
+
 body main {
-  animation-duration: 0.3s;
-  /* the duration of the animation */
-  animation-timing-function: ease-out;
-  /* how the animation will behave */
-  animation-delay: 0s;
-  /* how long to delay the animation from starting */
-  animation-iteration-count: 1;
-  /* how many times the animation will play */
-  animation-name: loadTransition;
-  /* the name of the animation we defined above */
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes loadTransition {
-  0% {
+    animation-duration: 0.3s;
+    /* the duration of the animation */
+    animation-timing-function: ease-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: loadTransition;
+    /* the name of the animation we defined above */
+    animation-fill-mode: forwards;
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+}
+
+@keyframes loadTransition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 body.body-unloaded main {
-  animation-duration: 0.3s;
-  /* the duration of the animation */
-  animation-timing-function: ease-out;
-  /* how the animation will behave */
-  animation-delay: 0s;
-  /* how long to delay the animation from starting */
-  animation-iteration-count: 1;
-  /* how many times the animation will play */
-  animation-name: unloadTransition;
-  /* the name of the animation we defined above */
-  animation-fill-mode: forwards;
-  opacity: 1;
-}
-@keyframes unloadTransition {
-  0% {
+    animation-duration: 0.3s;
+    /* the duration of the animation */
+    animation-timing-function: ease-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: unloadTransition;
+    /* the name of the animation we defined above */
+    animation-fill-mode: forwards;
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+}
+
+@keyframes unloadTransition {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 img:hover {
-  animation-name: rotate-360-horizontal-fwd;
-  animation-duration: 1s;
-  animation-delay: 1.5s;
-  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
+    animation-name: rotate-360-horizontal-fwd;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 }
 
 @keyframes rotate-360-horizontal-fwd {
-  25% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    25% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 /* variables */
 /* theme moon */
 /* theme planet */
 /* theme rocket */
 /* theme star */
 * {
-  color: #333;
-  scroll-behavior: smooth;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
 a {
-  color: #333;
+    color: #333;
 }
+
 a:link {
-  color: #333;
+    color: #333;
 }
+
 a:visited {
-  color: #333;
+    color: #333;
 }
 
 main *[id] {
-  scroll-margin-top: 10rem;
+    scroll-margin-top: 10rem;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
 }
 
 .center-align-row {
-  text-align: center;
+    text-align: center;
 }
+
 .center-align-row * {
-  text-align: center;
+    text-align: center;
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  background-color: #e6e6e6;
-  font-family: "Titillium Web", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: "Titillium Web", sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #e6e6e6;
-  font-family: "Titillium Web", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: "Titillium Web", sans-serif;
 }
 
 #BackgroundImage {
-  display: none;
+    display: none;
 }
 
 main {
-  overflow-x: hidden;
-  padding: 2rem;
-  position: relative;
-  z-index: 2;
-  min-height: 80vh;
+    overflow-x: hidden;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;
 }
 
 footer#footer {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 footer#footer {
-  background-color: #575757CC;
-  padding-top: 6vh;
-  padding-right: 6vw;
-  padding-bottom: 6vh;
-  position: relative;
-  z-index: 35;
+    background-color: #575757CC;
+    padding-top: 6vh;
+    padding-right: 6vw;
+    padding-bottom: 6vh;
+    position: relative;
+    z-index: 35;
 }
+
 footer#footer div.col {
-  padding-bottom: 2vh;
-  text-align: center;
+    padding-bottom: 2vh;
+    text-align: center;
 }
+
 footer#footer p {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  color: #fff;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    padding-bottom: 1rem;
+    color: #fff;
 }
+
 footer#footer address {
-  padding: 0;
-  padding: 0;
-  margin: 0;
-  margin: 0;
-  clear: both;
-  clear: both;
-  padding-bottom: 1rem;
-  padding-bottom: 1rem;
+    padding: 0;
+    padding: 0;
+    margin: 0;
+    margin: 0;
+    clear: both;
+    clear: both;
+    padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
+
 footer#footer ul {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    padding-bottom: 1rem;
+    list-style: none;
 }
+
 footer#footer li {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    padding-bottom: 1rem;
+    list-style: none;
 }
+
 footer#footer #theme-selectors {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  display: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    padding-bottom: 1rem;
+    display: none;
 }
+
 footer#footer * {
-  font-size: 2rem;
-  color: #fff;
+    font-size: 2rem;
+    color: #fff;
 }
+
 footer#footer a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
+
 footer#footer a:link {
-  color: #fff;
+    color: #fff;
 }
+
 footer#footer a:visited {
-  color: #fff;
+    color: #fff;
 }
+
 footer#footer a:hover {
-  color: #f7cd55;
+    color: #f7cd55;
 }
+
 footer#footer li.current a {
-  color: #f7cd55;
-  font-weight: 600;
+    color: #f7cd55;
+    font-weight: 600;
 }
+
 footer#footer li.section a {
-  font-weight: 600;
+    font-weight: 600;
 }
+
 footer#footer .image-holder {
-  display: block;
+    display: block;
 }
+
 footer#footer .image-holder img {
-  max-width: 100%;
-  width: 200px;
-  display: inline-block;
-  margin: 0;
+    max-width: 100%;
+    width: 200px;
+    display: inline-block;
+    margin: 0;
 }
 
 #header {
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  right: 0;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
 #header img {
-  display: none;
+    display: none;
 }
+
 #header #logo {
-  display: block;
-  background-image: url(images/logo-small.svg);
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  right: 6vw;
-  z-index: 3;
+    display: block;
+    background-image: url(images/logo-small.svg);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 6vw;
+    z-index: 3;
 }
+
 #header h1 {
-  font-weight: 500;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  line-height: 1;
-  position: relative;
-  color: #2d57ff;
-  position: absolute;
-  text-align: right;
-  z-index: 3;
-  margin-left: 17vw;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    color: #2d57ff;
+    position: absolute;
+    text-align: right;
+    z-index: 3;
+    margin-left: 17vw;
 }
+
 #header h1 * {
-  color: #2d57ff;
+    color: #2d57ff;
 }
+
 #header h1 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-#header h1 a, #header h1 span {
-  opacity: 0.7;
+
+#header h1 a,
+#header h1 span {
+    opacity: 0.7;
 }
+
 #header h1 a.page-title {
-  opacity: 1;
+    opacity: 1;
 }
+
 #header h1 a.bread-crumb {
-  display: block;
-  padding-top: 0.5rem;
-  font-size: calc(0.3rem + 2.5vh);
+    display: block;
+    padding-top: 0.5rem;
+    font-size: calc(0.3rem + 2.5vh);
 }
 
 body.past-header #header {
-  height: 7rem;
-  z-index: 3;
-  background-color: #fff;
-  position: fixed;
-  border-bottom: 0px solid #575757;
-  box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    height: 7rem;
+    z-index: 3;
+    background-color: #fff;
+    position: fixed;
+    border-bottom: 0px solid #575757;
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
 }
+
 body.past-header #header #logo {
-  height: 0 !important;
-  width: 0 !important;
-  margin-top: 0;
-  z-index: 0;
+    height: 0 !important;
+    width: 0 !important;
+    margin-top: 0;
+    z-index: 0;
 }
+
 body.past-header #header h1 {
-  margin-top: 0.67em;
-  color: #575757;
-  display: block;
-  font-size: 3rem;
-  right: 6vw;
-  opacity: 1;
-  top: 0px;
+    margin-top: 0.67em;
+    color: #575757;
+    display: block;
+    font-size: 3rem;
+    right: 6vw;
+    opacity: 1;
+    top: 0px;
 }
+
 body.past-header #header h1 * {
-  color: #575757;
+    color: #575757;
 }
+
 body.past-header #header h1 .page-title {
-  color: #2d57ff;
+    color: #2d57ff;
 }
+
 body.past-header #header h1 .bread-crumb {
-  display: none !important;
+    display: none !important;
 }
+
 body.past-header #header svg {
-  filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 @media only screen and (max-width: 1049px) {
-  body.footer-visible #nav {
-    height: 0;
-  }
+    body.footer-visible #nav {
+        height: 0;
+    }
 }
+
 .up-baby-up {
-  transform: rotate(180deg);
-  display: inline-block;
-  margin-right: -0.2em;
-  padding-top: -0.2em;
-  vertical-align: sub;
+    transform: rotate(180deg);
+    display: inline-block;
+    margin-right: -0.2em;
+    padding-top: -0.2em;
+    vertical-align: sub;
 }
 
 /**
  * see responsive.css for media queries
  */
 #nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 20rem;
-  width: 20rem;
-  z-index: 25;
-  margin-left: -10rem;
-  margin-bottom: -10rem;
-  background-color: #f7cd55;
-  border-radius: 50%;
-  box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20rem;
+    width: 20rem;
+    z-index: 25;
+    margin-left: -10rem;
+    margin-bottom: -10rem;
+    background-color: #f7cd55;
+    border-radius: 50%;
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
 }
+
 #nav a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 #nav * {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  color: #2d57ff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    color: #2d57ff;
 }
+
 #nav i {
-  font-style: normal;
+    font-style: normal;
 }
+
 #nav i.open {
-  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.891412 0C0.0951229 0 -0.303022 0.973242 0.272076 1.54834L5.93458 7.21084C6.28848 7.56475 6.86358 7.56475 7.21749 7.21084L12.88 1.54834C13.4551 0.973242 13.0569 0 12.2606 0H0.891412Z' fill='%232D57FF'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: 10% 60%;
-  width: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.891412 0C0.0951229 0 -0.303022 0.973242 0.272076 1.54834L5.93458 7.21084C6.28848 7.56475 6.86358 7.56475 7.21749 7.21084L12.88 1.54834C13.4551 0.973242 13.0569 0 12.2606 0H0.891412Z' fill='%232D57FF'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 10% 60%;
+    width: 1em;
 }
+
 #nav #menu-toggle {
-  transform: rotate(320deg);
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  position: absolute;
-  right: 3.5rem;
-  top: 3.5rem;
-  z-index: 9;
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  text-decoration: none;
-  outline: 0;
-  cursor: pointer;
+    transform: rotate(320deg);
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    position: absolute;
+    right: 3.5rem;
+    top: 3.5rem;
+    z-index: 9;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
 }
+
 #nav #menu-toggle svg {
-  height: 5rem;
-  width: auto;
-  vertical-align: middle;
+    height: 5rem;
+    width: auto;
+    vertical-align: middle;
 }
+
 #nav #nav-inner {
-  width: 0;
-  height: 0;
-  position: absolute;
-  opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
 }
+
 #nav #nav-inner nav {
-  display: none;
+    display: none;
 }
+
 #nav .menu-button {
-  display: inline-block;
-  opacity: 1;
-  color: #fff;
-  font-size: 5rem;
-  transform: rotateY(180deg);
-  transition: 0.5s transform;
+    display: inline-block;
+    opacity: 1;
+    color: #fff;
+    font-size: 5rem;
+    transform: rotateY(180deg);
+    transition: 0.5s transform;
 }
+
 #nav .icon {
-  left: -7rem;
-  top: 0;
+    left: -7rem;
+    top: 0;
 }
 
 body.menu-on #header h1 {
-  display: none;
+    display: none;
 }
+
 body.menu-on #header .bread-crumb {
-  display: none;
+    display: none;
 }
+
 body.menu-on #nav {
-  background-color: #f7cd55;
-  opacity: 1;
-  height: 100vh;
-  width: 100vw;
-  border-radius: 0;
-  margin-left: 0;
-  margin-bottom: 0;
-  left: 0;
+    background-color: #f7cd55;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    left: 0;
 }
+
 body.menu-on #nav #menu-toggle {
-  opacity: 1;
-  bottom: 2rem;
-  left: 2rem;
-  top: auto;
+    opacity: 1;
+    bottom: 2rem;
+    left: 2rem;
+    top: auto;
 }
+
 body.menu-on #nav #nav-inner {
-  opacity: 1 !important;
-  height: auto !important;
-  width: auto !important;
-  left: 10%;
-  top: 50%;
-  transform: translate(0, -50%);
-  vertical-align: middle;
-  margin: 0;
-  padding: 0 0 0 9rem;
-  overflow: hidden;
+    opacity: 1 !important;
+    height: auto !important;
+    width: auto !important;
+    left: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    vertical-align: middle;
+    margin: 0;
+    padding: 0 0 0 9rem;
+    overflow: hidden;
 }
+
 body.menu-on #nav #nav-inner nav {
-  display: block;
+    display: block;
 }
+
 body.menu-on #nav #nav-inner ul {
-  padding-left: 0;
-  margin-left: 0;
-  list-style: none;
-  text-transform: uppercase;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+    text-transform: uppercase;
 }
+
 body.menu-on #nav #nav-inner ul li {
-  padding-left: 0;
-  margin-left: 0;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-  font-size: calc(2rem + 1vh);
-  list-style: none;
-  text-transform: uppercase;
-  padding-top: 0;
-  padding-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    font-size: calc(2rem + 1vh);
+    list-style: none;
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-bottom: 0;
 }
+
 body.menu-on #nav #nav-inner ul li a {
-  border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 }
+
 body.menu-on #nav #nav-inner ul li a:hover {
-  border-bottom: 3px solid #2d57ff;
+    border-bottom: 3px solid #2d57ff;
 }
+
 body.menu-on #nav #nav-inner ul li ul li {
-  font-size: calc(1rem + 1vh);
-  margin-bottom: 1vh;
-  margin-top: 1vh;
+    font-size: calc(1rem + 1vh);
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
+
 body.menu-on #nav #nav-inner ul li ul li ul li {
-  font-size: calc(1rem + 1vh);
+    font-size: calc(1rem + 1vh);
 }
-body.menu-on #nav #nav-inner ul li.current > a {
-  border-bottom: 3px solid #2d57ff;
+
+body.menu-on #nav #nav-inner ul li.current>a {
+    border-bottom: 3px solid #2d57ff;
 }
+
 body.menu-on #nav .menu-button {
-  transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
+
 @media only screen and (max-width: 1049px) {
-  body.menu-on #nav {
-    z-index: 999;
-  }
+    body.menu-on #nav {
+        z-index: 999;
+    }
 }
 
 body.no-touch #nav #menu-toggle svg {
-  opacity: 0.9;
+    opacity: 0.9;
 }
+
 body.no-touch #nav #menu-toggle:hover svg {
-  opacity: 1;
+    opacity: 1;
 }
 
 @media only screen and (min-height: 750px) {
-  body.menu-on #header h1 {
-    display: block;
-  }
-  body.menu-on #nav #nav-inner ul li {
-    font-size: calc(2rem + 2vh);
-  }
-  body.menu-on #nav #nav-inner ul li ul li {
-    font-size: calc(1rem + 2vh);
-  }
+    body.menu-on #header h1 {
+        display: block;
+    }
+
+    body.menu-on #nav #nav-inner ul li {
+        font-size: calc(2rem + 2vh);
+    }
+
+    body.menu-on #nav #nav-inner ul li ul li {
+        font-size: calc(1rem + 2vh);
+    }
 }
-.typography p, .typography ul, .typography ol, .typography address {
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 4rem;
-  margin-bottom: 0;
-  line-height: 1.5;
-  font-size: 2rem;
+
+.typography p,
+.typography ul,
+.typography ol,
+.typography address {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 2rem;
 }
-.typography p:last-child, .typography ul:last-child, .typography ol:last-child, .typography address:last-child {
-  padding-bottom: 2rem;
+
+.typography p:last-child,
+.typography ul:last-child,
+.typography ol:last-child,
+.typography address:last-child {
+    padding-bottom: 2rem;
 }
-.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.typography h1 strong, .typography h2 strong, .typography h3 strong, .typography h4 strong, .typography h5 strong, .typography h6 strong {
-  font-weight: 500;
-}
-.typography h1:before, .typography h2:before {
-  position: absolute;
-  height: 2rem;
-  width: 100%;
-  left: 0;
-  right: 0;
-  border-top: 1px solid #333;
-  display: block;
-  content: " ";
-  margin-top: -2rem;
-  opacity: 0.2;
-}
-.typography h1:first-child:before, .typography h2:first-child:before {
-  border-top-color: transparent !important;
-}
-.typography #SiblingsAndChildren {
-  margin-top: 2rem;
-}
-.typography #SiblingsAndChildren h1, .typography #SiblingsAndChildren h2 {
-  text-transform: uppercase;
-}
-.typography #SiblingsAndChildren h1:before, .typography #SiblingsAndChildren h2:before {
-  border-top: 1px solid #333;
-}
-.typography h1, .typography h2 {
-  margin-top: 1.5em;
-  text-transform: uppercase;
-  color: #2d57ff;
-}
-.typography h1 *, .typography h2 * {
-  color: #2d57ff;
-}
-.typography h1 {
-  line-height: 1.29;
-  font-size: 4rem;
-}
-.typography h2 {
-  font-size: 3rem;
-  line-height: 1.3;
-}
-.typography p + ul,
-.typography p + ol,
-.typography p + p,
-.typography ul + p,
-.typography ol + p {
-  margin-top: -1.7rem !important;
-}
-.typography p + ul,
-.typography p + ol {
-  margin-top: -2.5rem !important;
-}
-.typography ul, .typography ol {
-  font-size: 2rem;
-  margin-top: 0px;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-.typography ul li, .typography ol li {
-  line-height: 1.5;
-  margin-left: 2.2rem;
-  margin-bottom: 1rem;
-  padding-left: 0;
-}
-.typography ul li ul, .typography ul li ol, .typography ol li ul, .typography ol li ol {
-  padding-top: 1.7rem;
-  margin-left: 0;
-  padding-left: 2.3rem;
-  padding-bottom: 0;
-}
-.typography ul li ul li, .typography ul li ol li, .typography ol li ul li, .typography ol li ol li {
-  margin-left: 0rem;
-  padding-left: 0;
-}
-.typography h3 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.typography h4 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.typography h5 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
 .typography h6 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-style: italic;
-  font-weight: 200;
-  font-family: "Titillium Web", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
 }
+
+.typography h1 strong,
+.typography h2 strong,
+.typography h3 strong,
+.typography h4 strong,
+.typography h5 strong,
+.typography h6 strong {
+    font-weight: 500;
+}
+
+.typography h1:before,
+.typography h2:before {
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #333;
+    display: block;
+    content: " ";
+    margin-top: -2rem;
+    opacity: 0.2;
+}
+
+.typography h1:first-child:before,
+.typography h2:first-child:before {
+    border-top-color: transparent !important;
+}
+
+.typography #SiblingsAndChildren {
+    margin-top: 2rem;
+}
+
+.typography #SiblingsAndChildren h1,
+.typography #SiblingsAndChildren h2 {
+    text-transform: uppercase;
+}
+
+.typography #SiblingsAndChildren h1:before,
+.typography #SiblingsAndChildren h2:before {
+    border-top: 1px solid #333;
+}
+
+.typography h1,
+.typography h2 {
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    color: #2d57ff;
+}
+
+.typography h1 *,
+.typography h2 * {
+    color: #2d57ff;
+}
+
+.typography h1 {
+    line-height: 1.29;
+    font-size: 4rem;
+}
+
+.typography h2 {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.typography p+ul,
+.typography p+ol,
+.typography p+p,
+.typography ul+p,
+.typography ol+p {
+    margin-top: -1.7rem !important;
+}
+
+.typography p+ul,
+.typography p+ol {
+    margin-top: -2.5rem !important;
+}
+
+.typography ul,
+.typography ol {
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.typography ul li,
+.typography ol li {
+    line-height: 1.5;
+    margin-left: 2.2rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.typography ul li ul,
+.typography ul li ol,
+.typography ol li ul,
+.typography ol li ol {
+    padding-top: 1.7rem;
+    margin-left: 0;
+    padding-left: 2.3rem;
+    padding-bottom: 0;
+}
+
+.typography ul li ul li,
+.typography ul li ol li,
+.typography ol li ul li,
+.typography ol li ol li {
+    margin-left: 0rem;
+    padding-left: 0;
+}
+
+.typography h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.typography h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.typography h5 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.typography h6 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-weight: 200;
+    font-family: "Titillium Web", sans-serif;
+}
+
 .typography .image-container img {
-  display: block;
-  max-width: calc(100% - 2px) !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 auto;
-  border: 1px solid #575757;
+    display: block;
+    max-width: calc(100% - 2px) !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto;
+    border: 1px solid #575757;
 }
+
 .typography .captionImage {
-  width: auto !important;
+    width: auto !important;
 }
+
 .typography .captionImage p.caption {
-  font-style: italic;
-  font-size: 1.3rem;
-  width: 100%;
-  text-align: left;
-  margin-left: 0;
-  margin-top: 0rem;
+    font-style: italic;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0rem;
 }
-.typography .media, .typography .image-container, .typography blockquote p {
-  display: block;
-  padding: 2rem 0;
-  margin: 2rem auto !important;
-  border-top: 1px solid #a7a7a777;
-  border-bottom: 1px solid #a7a7a777;
-  background: linear-gradient(270deg, #e6e6e6, #fff, #e6e6e6);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
+
+.typography .media,
+.typography .image-container,
+.typography blockquote p {
+    display: block;
+    padding: 2rem 0;
+    margin: 2rem auto !important;
+    border-top: 1px solid #a7a7a777;
+    border-bottom: 1px solid #a7a7a777;
+    background: linear-gradient(270deg, #e6e6e6, #fff, #e6e6e6);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
 }
-.typography .media iframe, .typography .image-container iframe, .typography blockquote p iframe {
-  margin: 0 auto;
-  display: block;
-  max-width: 100% !important;
+
+.typography .media iframe,
+.typography .image-container iframe,
+.typography blockquote p iframe {
+    margin: 0 auto;
+    display: block;
+    max-width: 100% !important;
 }
+
 .typography .media:after,
 .typography iframe:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
+
 .typography table {
-  width: 100% !important;
-  height: auto !important;
-  clear: both;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-collapse: collapse;
-  border: 1px dashed #2d57ff;
-  table-layout: fixed;
+    width: 100% !important;
+    height: auto !important;
+    clear: both;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+    border: 1px dashed #2d57ff;
+    table-layout: fixed;
 }
-.typography table tbody > tr > *:nth-last-child(2) ~ * {
-  width: 50% !important;
+
+.typography table tbody>tr>*:nth-last-child(2)~* {
+    width: 50% !important;
 }
-.typography table tbody > tr > *:nth-last-child(3) ~ * {
-  width: 33.3% !important;
+
+.typography table tbody>tr>*:nth-last-child(3)~* {
+    width: 33.3% !important;
 }
-.typography table tbody > tr > *:nth-last-child(4) ~ * {
-  width: 25% !important;
+
+.typography table tbody>tr>*:nth-last-child(4)~* {
+    width: 25% !important;
 }
-.typography table tbody > tr > *:nth-last-child(5) ~ * {
-  width: 20% !important;
+
+.typography table tbody>tr>*:nth-last-child(5)~* {
+    width: 20% !important;
 }
+
 .typography table * {
-  font-size: 1.3rem;
-  line-height: 1.3;
+    font-size: 1.3rem;
+    line-height: 1.3;
 }
-.typography table th, .typography table td {
-  padding: 0.7rem;
-  border: 1px dashed #2d57ff;
-  width: auto !important;
-}
-.typography table th ul, .typography table th li, .typography table th p, .typography table td ul, .typography table td li, .typography table td p {
-  margin: 0;
-  padding: 0;
-}
-.typography table th li, .typography table td li {
-  list-style: none;
-}
-.typography table th li:before, .typography table td li:before {
-  content: "- ";
-}
-.typography table th li, .typography table th p, .typography table td li, .typography table td p {
-  padding-bottom: 1.3rem;
-}
-.typography table th {
-  background-color: #2d57ff;
-  color: #fff;
-  border: 1px dashed #fff !important;
-}
-.typography table th[scope=col] {
-  vertical-align: bottom;
-}
-.typography table th[scope=row] {
-  text-align: left;
-}
+
+.typography table th,
 .typography table td {
-  vertical-align: top;
+    padding: 0.7rem;
+    border: 1px dashed #2d57ff;
+    width: auto !important;
 }
+
+.typography table th ul,
+.typography table th li,
+.typography table th p,
+.typography table td ul,
+.typography table td li,
+.typography table td p {
+    margin: 0;
+    padding: 0;
+}
+
+.typography table th li,
+.typography table td li {
+    list-style: none;
+}
+
+.typography table th li:before,
+.typography table td li:before {
+    content: "- ";
+}
+
+.typography table th li,
+.typography table th p,
+.typography table td li,
+.typography table td p {
+    padding-bottom: 1.3rem;
+}
+
+.typography table th {
+    background-color: #2d57ff;
+    color: #fff;
+    border: 1px dashed #fff !important;
+}
+
+.typography table th[scope=col] {
+    vertical-align: bottom;
+}
+
+.typography table th[scope=row] {
+    text-align: left;
+}
+
+.typography table td {
+    vertical-align: top;
+}
+
 .typography hr {
-  height: 0;
-  border-top: 1px dashed #2d57ff55;
-  border-bottom: none;
+    height: 0;
+    border-top: 1px dashed #2d57ff55;
+    border-bottom: none;
 }
+
 .typography pre {
-  width: 100%;
-  overflow-x: auto;
-  font-size: 10px;
-  font-family: monospace;
-  background-color: #222;
-  padding: 1rem 10px;
-  border-top-right-radius: 1rem;
-  color: #f7cd55;
+    width: 100%;
+    overflow-x: auto;
+    font-size: 10px;
+    font-family: monospace;
+    background-color: #222;
+    padding: 1rem 10px;
+    border-top-right-radius: 1rem;
+    color: #f7cd55;
 }
-.typography strong, .typography b {
-  font-weight: 600;
+
+.typography strong,
+.typography b {
+    font-weight: 600;
 }
-.typography i, .typography em, .typography blockquote, .typography blockquote p {
-  font-weight: 200;
-  font-style: italic;
-  font-family: "Titillium Web", sans-serif;
-}
+
+.typography i,
+.typography em,
+.typography blockquote,
 .typography blockquote p {
-  text-align: right;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "Titillium Web", sans-serif;
 }
+
+.typography blockquote p {
+    text-align: right;
+}
+
 .typography a {
-  transition: 0.3s;
+    transition: 0.3s;
 }
+
 .typography a:hover {
-  filter: drop-shadow(0 0 12px #f7cd55);
+    filter: drop-shadow(0 0 12px #f7cd55);
 }
+
 .typography a:active {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: inherit;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: inherit;
 }
+
 .typography .last-updated {
-  font-weight: 200;
-  color: #575757;
-  font-style: italic;
-  margin-top: 3rem !important;
+    font-weight: 200;
+    color: #575757;
+    font-style: italic;
+    margin-top: 3rem !important;
 }
 
 .typography form {
-  width: auto !important;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+    width: auto !important;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
+
 .typography form * {
-  font-size: 2rem;
+    font-size: 2rem;
 }
+
 .typography form fieldset,
 .typography form .userform-fields {
-  border: 1px dashed #A7A7A7 !important;
-  border-top-right-radius: 1rem;
-  padding: 3vw;
-  background-color: #fff;
-  margin: 2rem 0;
+    border: 1px dashed #A7A7A7 !important;
+    border-top-right-radius: 1rem;
+    padding: 3vw;
+    background-color: #fff;
+    margin: 2rem 0;
 }
-.typography form fieldset h1, .typography form fieldset h2, .typography form fieldset h3, .typography form fieldset h4, .typography form fieldset h5, .typography form fieldset h6,
+
+.typography form fieldset h1,
+.typography form fieldset h2,
+.typography form fieldset h3,
+.typography form fieldset h4,
+.typography form fieldset h5,
+.typography form fieldset h6,
 .typography form .userform-fields h1,
 .typography form .userform-fields h2,
 .typography form .userform-fields h3,
 .typography form .userform-fields h4,
 .typography form .userform-fields h5,
 .typography form .userform-fields h6 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.typography form fieldset h1:before, .typography form fieldset h2:before, .typography form fieldset h3:before, .typography form fieldset h4:before, .typography form fieldset h5:before, .typography form fieldset h6:before,
+
+.typography form fieldset h1:before,
+.typography form fieldset h2:before,
+.typography form fieldset h3:before,
+.typography form fieldset h4:before,
+.typography form fieldset h5:before,
+.typography form fieldset h6:before,
 .typography form .userform-fields h1:before,
 .typography form .userform-fields h2:before,
 .typography form .userform-fields h3:before,
 .typography form .userform-fields h4:before,
 .typography form .userform-fields h5:before,
 .typography form .userform-fields h6:before {
-  border: none !important;
+    border: none !important;
 }
-.typography form fieldset h1, .typography form fieldset h2, .typography form fieldset h3, .typography form fieldset h4, .typography form fieldset h5, .typography form fieldset h6, .typography form fieldset p, .typography form fieldset ul, .typography form fieldset ol,
+
+.typography form fieldset h1,
+.typography form fieldset h2,
+.typography form fieldset h3,
+.typography form fieldset h4,
+.typography form fieldset h5,
+.typography form fieldset h6,
+.typography form fieldset p,
+.typography form fieldset ul,
+.typography form fieldset ol,
 .typography form .userform-fields h1,
 .typography form .userform-fields h2,
 .typography form .userform-fields h3,
@@ -785,160 +978,188 @@ body.no-touch #nav #menu-toggle:hover svg {
 .typography form .userform-fields p,
 .typography form .userform-fields ul,
 .typography form .userform-fields ol {
-  padding-top: 1rem;
-  padding-bottom: 0em;
-  margin: 0;
-  float: none;
-  line-height: 1.2;
+    padding-top: 1rem;
+    padding-bottom: 0em;
+    margin: 0;
+    float: none;
+    line-height: 1.2;
 }
+
 .typography form fieldset .field,
 .typography form .userform-fields .field {
-  padding-top: 3rem;
-  width: 100%;
-  padding-bottom: 0.8rem;
+    padding-top: 3rem;
+    width: 100%;
+    padding-bottom: 0.8rem;
 }
+
 .typography form fieldset label,
 .typography form .userform-fields label {
-  font-size: 2rem;
-  color: #959595 !important;
+    font-size: 2rem;
+    color: #959595 !important;
 }
+
 .typography form fieldset .middleColumn,
 .typography form .userform-fields .middleColumn {
-  display: block;
-  text-align: left;
+    display: block;
+    text-align: left;
 }
+
 .typography form fieldset .middleColumn input,
 .typography form fieldset .middleColumn textarea,
 .typography form fieldset .middleColumn select,
 .typography form .userform-fields .middleColumn input,
 .typography form .userform-fields .middleColumn textarea,
 .typography form .userform-fields .middleColumn select {
-  background-color: #e6e6e6;
-  width: calc(100% - 3rem);
-  border: none;
-  transition: all 0.5s ease 0s;
-  margin-top: 0px;
-  padding: 1.5rem;
-  font-weight: 600;
-  -webkit-transition: all 0.5s ease 0s;
-  border-bottom: 3px solid #A7A7A7;
-  color: #111;
-  border-top-right-radius: 1rem;
+    background-color: #e6e6e6;
+    width: calc(100% - 3rem);
+    border: none;
+    transition: all 0.5s ease 0s;
+    margin-top: 0px;
+    padding: 1.5rem;
+    font-weight: 600;
+    -webkit-transition: all 0.5s ease 0s;
+    border-bottom: 3px solid #A7A7A7;
+    color: #111;
+    border-top-right-radius: 1rem;
 }
+
 .typography form fieldset .middleColumn input:focus,
 .typography form fieldset .middleColumn textarea:focus,
 .typography form fieldset .middleColumn select:focus,
 .typography form .userform-fields .middleColumn input:focus,
 .typography form .userform-fields .middleColumn textarea:focus,
 .typography form .userform-fields .middleColumn select:focus {
-  border-bottom: 3px solid #a6bd7f !important;
-  outline: none !important;
-  background-color: #a6bd7f;
+    border-bottom: 3px solid #a6bd7f !important;
+    outline: none !important;
+    background-color: #a6bd7f;
 }
+
 .typography form fieldset .middleColumn input.no-value,
 .typography form fieldset .middleColumn textarea.no-value,
 .typography form fieldset .middleColumn select.no-value,
 .typography form .userform-fields .middleColumn input.no-value,
 .typography form .userform-fields .middleColumn textarea.no-value,
 .typography form .userform-fields .middleColumn select.no-value {
-  border-bottom-color: #2d57ff !important;
+    border-bottom-color: #2d57ff !important;
 }
+
 .typography form fieldset .middleColumn input.no-value:focus,
 .typography form fieldset .middleColumn textarea.no-value:focus,
 .typography form fieldset .middleColumn select.no-value:focus,
 .typography form .userform-fields .middleColumn input.no-value:focus,
 .typography form .userform-fields .middleColumn textarea.no-value:focus,
 .typography form .userform-fields .middleColumn select.no-value:focus {
-  border-bottom: 3px solid #f7cd55 !important;
+    border-bottom: 3px solid #f7cd55 !important;
 }
+
 .typography form fieldset .middleColumn select,
 .typography form .userform-fields .middleColumn select {
-  width: 100%;
+    width: 100%;
 }
-.typography form fieldset .middleColumn + label.right,
-.typography form .userform-fields .middleColumn + label.right {
-  display: block;
-  text-align: left;
-  font-style: italic;
+
+.typography form fieldset .middleColumn+label.right,
+.typography form .userform-fields .middleColumn+label.right {
+    display: block;
+    text-align: left;
+    font-style: italic;
 }
+
 .typography form fieldset .middleColumn ul,
 .typography form .userform-fields .middleColumn ul {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  margin-top: 0px;
-  padding-top: 0px;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 0px;
+    padding-top: 0px;
 }
+
 .typography form fieldset .middleColumn li,
 .typography form .userform-fields .middleColumn li {
-  list-style: none !important;
-  margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 0.5rem;
+    list-style: none !important;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0.5rem;
 }
+
 .typography form fieldset .middleColumn li:nth-child(odd),
 .typography form .userform-fields .middleColumn li:nth-child(odd) {
-  margin-right: 3rem !important;
+    margin-right: 3rem !important;
 }
-.typography form fieldset .middleColumn .radio, .typography form fieldset .middleColumn .checkbox,
+
+.typography form fieldset .middleColumn .radio,
+.typography form fieldset .middleColumn .checkbox,
 .typography form .userform-fields .middleColumn .radio,
 .typography form .userform-fields .middleColumn .checkbox {
-  border: 0;
+    border: 0;
 }
-.typography form fieldset .middleColumn .radio:hover, .typography form fieldset .middleColumn .checkbox:hover,
+
+.typography form fieldset .middleColumn .radio:hover,
+.typography form fieldset .middleColumn .checkbox:hover,
 .typography form .userform-fields .middleColumn .radio:hover,
 .typography form .userform-fields .middleColumn .checkbox:hover {
-  border: 0;
+    border: 0;
 }
-.typography form fieldset .middleColumn .radio:focus, .typography form fieldset .middleColumn .checkbox:focus,
+
+.typography form fieldset .middleColumn .radio:focus,
+.typography form fieldset .middleColumn .checkbox:focus,
 .typography form .userform-fields .middleColumn .radio:focus,
 .typography form .userform-fields .middleColumn .checkbox:focus {
-  border: 0;
+    border: 0;
 }
+
 .typography form fieldset p.checkbox,
 .typography form .userform-fields p.checkbox {
-  display: block;
-  text-align: left;
+    display: block;
+    text-align: left;
 }
+
 .typography form fieldset .fieldgroup .middleColumn,
 .typography form .userform-fields .fieldgroup .middleColumn {
-  margin-left: 0px;
+    margin-left: 0px;
 }
+
 .typography form fieldset label,
 .typography form .userform-fields label {
-  padding-bottom: 0.2rem;
-  display: block;
+    padding-bottom: 0.2rem;
+    display: block;
 }
+
 .typography form fieldset label.FormHeading,
 .typography form .userform-fields label.FormHeading {
-  display: block;
-  color: #0028c9;
-  font-weight: 600;
-  margin-bottom: 1rem;
+    display: block;
+    color: #0028c9;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
+
 .typography form fieldset span.message,
 .typography form .userform-fields span.message {
-  margin-top: 0;
-  font-weight: 900px;
+    margin-top: 0;
+    font-weight: 900px;
 }
+
 .typography form fieldset span.bad,
 .typography form .userform-fields span.bad {
-  background-color: red;
-  color: #fff;
+    background-color: red;
+    color: #fff;
 }
+
 .typography form fieldset span.required,
 .typography form .userform-fields span.required {
-  background-color: red;
-  color: #fff;
+    background-color: red;
+    color: #fff;
 }
+
 .typography form fieldset span.good,
 .typography form .userform-fields span.good {
-  background-color: green;
-  color: #fff;
+    background-color: green;
+    color: #fff;
 }
-.typography form fieldset .field + span.message,
-.typography form .userform-fields .field + span.message {
-  margin-top: -0.8rem;
+
+.typography form fieldset .field+span.message,
+.typography form .userform-fields .field+span.message {
+    margin-top: -0.8rem;
 }
+
 .typography form fieldset input.password,
 .typography form fieldset input.numeric,
 .typography form fieldset input.currency,
@@ -947,1335 +1168,1607 @@ body.no-touch #nav #menu-toggle:hover svg {
 .typography form .userform-fields input.numeric,
 .typography form .userform-fields input.currency,
 .typography form .userform-fields input.date {
-  max-width: 27rem;
+    max-width: 27rem;
 }
-.typography form fieldset .optionset label.left, .typography form fieldset .checkboxset label.left,
+
+.typography form fieldset .optionset label.left,
+.typography form fieldset .checkboxset label.left,
 .typography form .userform-fields .optionset label.left,
 .typography form .userform-fields .checkboxset label.left {
-  border: 0;
+    border: 0;
 }
+
 .typography form fieldset .radio,
 .typography form .userform-fields .radio {
-  width: auto !important;
+    width: auto !important;
 }
+
 .typography form fieldset .checkbox,
 .typography form .userform-fields .checkbox {
-  width: auto !important;
+    width: auto !important;
 }
+
 .typography form fieldset .checkbox label.right,
 .typography form .userform-fields .checkbox label.right {
-  display: block;
-  margin-left: 0px;
-  text-align: left;
-  line-height: 1;
+    display: block;
+    margin-left: 0px;
+    text-align: left;
+    line-height: 1;
 }
+
 .typography form fieldset .checkbox input,
 .typography form .userform-fields .checkbox input {
-  float: left;
-  margin-top: 13px;
-  margin-left: 13px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 13px;
 }
+
 .typography form fieldset .confirmedpassword .middleColumn,
 .typography form .userform-fields .confirmedpassword .middleColumn {
-  margin-left: 0px;
+    margin-left: 0px;
 }
+
 .typography form fieldset .confirmedpassword .middleColumn a,
 .typography form .userform-fields .confirmedpassword .middleColumn a {
-  display: block;
+    display: block;
 }
+
 .typography form fieldset span.readonly,
 .typography form .userform-fields span.readonly {
-  padding: 0.7rem;
-  margin-top: 0px;
-  color: #000;
-  font-weight: 600;
-  border-bottom: 3px solid #0028c9 !important;
-  display: block;
-  background-color: #e6e6e6;
-  border-top-right-radius: 1rem;
-  font-size: 2rem;
+    padding: 0.7rem;
+    margin-top: 0px;
+    color: #000;
+    font-weight: 600;
+    border-bottom: 3px solid #0028c9 !important;
+    display: block;
+    background-color: #e6e6e6;
+    border-top-right-radius: 1rem;
+    font-size: 2rem;
 }
+
 .typography form .btn-toolbar {
-  display: block;
-  text-align: left;
+    display: block;
+    text-align: left;
 }
+
 .typography form .btn-toolbar input {
-  padding: 1.3rem 1.7rem;
-  background: #2d57ff;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem;
-  border: 1px dashed #A7A7A7;
-  text-decoration: none !important;
-  width: auto;
-  text-align: center;
-  font-weight: 600;
-  color: #fff;
+    padding: 1.3rem 1.7rem;
+    background: #2d57ff;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border: 1px dashed #A7A7A7;
+    text-decoration: none !important;
+    width: auto;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
 }
+
 .typography form .btn-toolbar input:hover {
-  margin-top: -1px;
-  margin-bottom: 1px;
+    margin-top: -1px;
+    margin-bottom: 1px;
 }
+
 .typography form .btn-toolbar input:active {
-  color: #000;
-  background: #f7cd55;
+    color: #000;
+    background: #f7cd55;
 }
+
 .typography form p {
-  margin-top: 1.7rem !important;
-  margin-left: 0 !important;
-  font-size: 2rem !important;
+    margin-top: 1.7rem !important;
+    margin-left: 0 !important;
+    font-size: 2rem !important;
 }
+
 .typography form p.ForgotPassword {
-  display: block;
-  text-align: left;
+    display: block;
+    text-align: left;
 }
+
 .typography form .message {
-  font-size: 2rem !important;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  background-color: #f7cd55;
-  display: block;
-  padding: 1rem;
-  text-align: center;
-  color: #111;
+    font-size: 2rem !important;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    background-color: #f7cd55;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: #111;
 }
+
 .typography form .message a {
-  display: inline-block;
-  color: #fff;
-  padding: 0 3px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 3px;
 }
-.typography form > p.message {
-  margin-bottom: -3.5rem !important;
-  width: calc(50% - 2rem);
-  z-index: 9;
-  position: relative;
-  left: 50%;
+
+.typography form>p.message {
+    margin-bottom: -3.5rem !important;
+    width: calc(50% - 2rem);
+    z-index: 9;
+    position: relative;
+    left: 50%;
 }
 
 .field.checkbox {
-  font-size: 2 !important;
+    font-size: 2 !important;
 }
+
 .field.checkbox * {
-  font-size: 2 !important;
+    font-size: 2 !important;
 }
+
 .field.checkbox input {
-  display: inline-block;
-  float: inherit !important;
-  position: absolute;
+    display: inline-block;
+    float: inherit !important;
+    position: absolute;
 }
-.field.checkbox input + label {
-  border: none;
-  display: inline-block;
-  position: relative;
-  -webkit-appearance: none;
-  padding-left: 4.5rem;
-  line-height: 1.7 !important;
+
+.field.checkbox input+label {
+    border: none;
+    display: inline-block;
+    position: relative;
+    -webkit-appearance: none;
+    padding-left: 4.5rem;
+    line-height: 1.7 !important;
 }
-.field.checkbox input + label:after {
-  content: "×";
-  background-color: #e6e6e6;
-  color: brown;
-  width: 4rem;
-  height: 4rem;
-  line-height: 2;
-  text-align: center;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+
+.field.checkbox input+label:after {
+    content: "×";
+    background-color: #e6e6e6;
+    color: brown;
+    width: 4rem;
+    height: 4rem;
+    line-height: 2;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
-.field.checkbox input:focus + label:after {
-  background-color: #a6bd7f !important;
+
+.field.checkbox input:focus+label:after {
+    background-color: #a6bd7f !important;
 }
-.field.checkbox input:checked + label:after {
-  color: #000;
-  content: "✔";
-  opacity: 1;
+
+.field.checkbox input:checked+label:after {
+    color: #000;
+    content: "✔";
+    opacity: 1;
 }
-.field.checkbox:hover input + label:after {
-  opacity: 1;
+
+.field.checkbox:hover input+label:after {
+    opacity: 1;
 }
 
 .optionset {
-  font-size: 2 !important;
+    font-size: 2 !important;
 }
+
 .optionset * {
-  font-size: 2 !important;
+    font-size: 2 !important;
 }
+
 .optionset li {
-  padding: 0px !important;
-  margin: 0px !important;
-  margin-bottom: 1rem !important;
-  width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-bottom: 1rem !important;
+    width: 100%;
 }
+
 .optionset li label {
-  display: inline-block;
+    display: inline-block;
 }
+
 .optionset li input {
-  display: inline-block;
-  float: inherit !important;
-  position: absolute;
+    display: inline-block;
+    float: inherit !important;
+    position: absolute;
 }
-.optionset li input + label {
-  position: relative;
-  -webkit-appearance: none;
-  padding-left: 4.5rem;
-  line-height: 1.7 !important;
+
+.optionset li input+label {
+    position: relative;
+    -webkit-appearance: none;
+    padding-left: 4.5rem;
+    line-height: 1.7 !important;
 }
-.optionset li input + label:after {
-  content: "×";
-  position: absolute;
-  background-color: #e6e6e6;
-  color: brown;
-  width: 4rem;
-  height: 4rem;
-  line-height: 2;
-  text-align: center;
-  top: 0px;
-  left: 0px;
+
+.optionset li input+label:after {
+    content: "×";
+    position: absolute;
+    background-color: #e6e6e6;
+    color: brown;
+    width: 4rem;
+    height: 4rem;
+    line-height: 2;
+    text-align: center;
+    top: 0px;
+    left: 0px;
 }
-.optionset li input:focus + label:after {
-  background-color: #a6bd7f !important;
+
+.optionset li input:focus+label:after {
+    background-color: #a6bd7f !important;
 }
-.optionset li input:checked + label:after {
-  color: #000;
-  content: "✔";
-  opacity: 1;
-  background-color: #f7cd55;
+
+.optionset li input:checked+label:after {
+    color: #000;
+    content: "✔";
+    opacity: 1;
+    background-color: #f7cd55;
 }
+
 .optionset li input[type=radio] {
-  display: inline-block;
-  float: inherit !important;
-  position: absolute;
+    display: inline-block;
+    float: inherit !important;
+    position: absolute;
 }
-.optionset li input[type=radio] + label {
-  position: relative;
-  -webkit-appearance: none;
-  padding-left: 4.5rem;
-  line-height: 1.7 !important;
+
+.optionset li input[type=radio]+label {
+    position: relative;
+    -webkit-appearance: none;
+    padding-left: 4.5rem;
+    line-height: 1.7 !important;
 }
-.optionset li input[type=radio] + label:after {
-  content: "×";
-  position: absolute;
-  color: brown;
-  width: 4rem;
-  height: 4rem;
-  line-height: 2;
-  text-align: center;
-  top: 0px;
-  left: 0px;
-  border-radius: 10px;
+
+.optionset li input[type=radio]+label:after {
+    content: "×";
+    position: absolute;
+    color: brown;
+    width: 4rem;
+    height: 4rem;
+    line-height: 2;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
 }
-.optionset li input[type=radio]:focus + label:after {
-  background-color: #a6bd7f !important;
+
+.optionset li input[type=radio]:focus+label:after {
+    background-color: #a6bd7f !important;
 }
-.optionset li input[type=radio]:checked + label:after {
-  color: #000;
-  content: "✔";
-  opacity: 1;
+
+.optionset li input[type=radio]:checked+label:after {
+    color: #000;
+    content: "✔";
+    opacity: 1;
 }
-.optionset li:hover input + label:after {
-  opacity: 1;
+
+.optionset li:hover input+label:after {
+    opacity: 1;
 }
 
 .countable-icons span.icon {
-  background-repeat: no-repeat;
-  background-image: url(images/1.svg);
-  background-size: contain;
-  background-position: left;
-  position: absolute;
-  width: 5rem;
-  display: block;
+    background-repeat: no-repeat;
+    background-image: url(images/1.svg);
+    background-size: contain;
+    background-position: left;
+    position: absolute;
+    width: 5rem;
+    display: block;
 }
 
 .icon-1 span.icon {
-  background-image: url(images/1.svg);
+    background-image: url(images/1.svg);
 }
 
 .icon-2 span.icon {
-  background-image: url(images/2.svg);
+    background-image: url(images/2.svg);
 }
 
 .icon-3 span.icon {
-  background-image: url(images/3.svg);
+    background-image: url(images/3.svg);
 }
 
 .icon-4 span.icon {
-  background-image: url(images/4.svg);
+    background-image: url(images/4.svg);
 }
 
 .icon-5 span.icon {
-  background-image: url(images/5.svg);
+    background-image: url(images/5.svg);
 }
 
 .icon-6 span.icon {
-  background-image: url(images/6.svg);
+    background-image: url(images/6.svg);
 }
 
 .icon-7 span.icon {
-  background-image: url(images/7.svg);
+    background-image: url(images/7.svg);
 }
 
 .icon-8 span.icon {
-  background-image: url(images/8.svg);
+    background-image: url(images/8.svg);
 }
 
 .icon-9 span.icon {
-  background-image: url(images/9.svg);
+    background-image: url(images/9.svg);
 }
 
 .icon-10 span.icon {
-  background-image: url(images/1.svg);
+    background-image: url(images/1.svg);
 }
 
 .icon-11 span.icon {
-  background-image: url(images/2.svg);
+    background-image: url(images/2.svg);
 }
 
 .icon-12 span.icon {
-  background-image: url(images/3.svg);
+    background-image: url(images/3.svg);
 }
 
 .icon-13 span.icon {
-  background-image: url(images/4.svg);
+    background-image: url(images/4.svg);
 }
 
 .icon-14 span.icon {
-  background-image: url(images/5.svg);
+    background-image: url(images/5.svg);
 }
 
 .icon-15 span.icon {
-  background-image: url(images/6.svg);
+    background-image: url(images/6.svg);
 }
 
 .icon-16 span.icon {
-  background-image: url(images/7.svg);
+    background-image: url(images/7.svg);
 }
 
 .icon-17 span.icon {
-  background-image: url(images/8.svg);
+    background-image: url(images/8.svg);
 }
 
 #BackgroundVideo {
-  width: auto !important;
-  background-color: #fff;
+    width: auto !important;
+    background-color: #fff;
 }
+
 #BackgroundVideo iframe {
-  width: 100%;
-  min-height: 70vh;
+    width: 100%;
+    min-height: 70vh;
 }
 
 main#main blockquote {
-  padding: 0;
-  margin: 0;
-  margin-top: -7vh;
-  margin-bottom: 0;
-  margin-right: 1.5vh;
-  padding-top: 0;
-  padding-bottom: calc(1vh + 1vw);
+    padding: 0;
+    margin: 0;
+    margin-top: -7vh;
+    margin-bottom: 0;
+    margin-right: 1.5vh;
+    padding-top: 0;
+    padding-bottom: calc(1vh + 1vw);
 }
+
 main#main blockquote p {
-  display: block;
-  margin: 0;
-  padding: calc(1rem + 3vh + 1vw) 0;
-  font-size: calc((2vh + 3vw) * 0.5 + 12px);
-  line-height: 1.2;
-  overflow: hidden;
-  letter-spacing: 0.1em;
-  font-weight: 200;
-  font-style: italic;
-  text-align: center !important;
-  color: #575757;
+    display: block;
+    margin: 0;
+    padding: calc(1rem + 3vh + 1vw) 0;
+    font-size: calc((2vh + 3vw) * 0.5 + 12px);
+    line-height: 1.2;
+    overflow: hidden;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center !important;
+    color: #575757;
 }
+
 main#main blockquote p * {
-  color: #575757;
+    color: #575757;
 }
-main#main blockquote p .blinker {
-  display: inline-block;
-  text-align: right;
-  font-size: calc(1.2vh + 1.2vw);
-  animation: blink;
-  animation-duration: 0.7s;
-  animation-delay: 2.5s;
-  animation-iteration-count: infinite;
-  text-decoration: none !important;
-  font-style: normal;
+
+main#main blockquote p .shiner {
+    display: inline-block;
+    text-align: right;
+    font-size: calc(1.2vh + 1.2vw);
+    animation: blink;
+    animation-duration: 0.7s;
+    animation-delay: 2.5s;
+    animation-iteration-count: infinite;
+    text-decoration: none !important;
+    font-style: normal;
 }
+
 main#main blockquote p .Typewriter__wrapper,
 main#main blockquote p .Typewriter__wrapper * {
-  visibility: visible;
+    visibility: visible;
 }
 
 @keyframes blink {
-  40%, 60% {
-    color: transparent;
-  }
+
+    40%,
+    60% {
+        color: transparent;
+    }
 }
+
 #Breadcrumbs {
-  display: none;
+    display: none;
 }
 
 body.past-header #Breadcrumbs {
-  color: #fff;
+    color: #fff;
 }
+
 body.past-header #Breadcrumbs * {
-  color: #fff;
-  font-weight: normal;
-  text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
 }
 
 footer #theme-selectors a {
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 2rem;
-  opacity: 0.77;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 2rem;
+    opacity: 0.77;
 }
+
 footer #theme-selectors a svg {
-  height: 20px !important;
-  width: 20px !important;
-  fill: #fff;
+    height: 20px !important;
+    width: 20px !important;
+    fill: #fff;
 }
+
 footer #theme-selectors a svg:hover {
-  fill: #f7cd55 !important;
+    fill: #f7cd55 !important;
 }
 
-li > ul.collapsibleList,
-li > ul.collapsibleList * {
-  transition-property: height, opacity;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+li>ul.collapsibleList,
+li>ul.collapsibleList * {
+    transition-property: height, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }
 
-li.collapsibleListClosed > ul.collapsibleList,
-li.collapsibleListClosed > ul.collapsibleList * {
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
+li.collapsibleListClosed>ul.collapsibleList,
+li.collapsibleListClosed>ul.collapsibleList * {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
 }
 
-.collapsibleListOpen > ul.collapsibleList,
-.collapsibleListOpen > ul.collapsibleList * {
-  height: auto;
-  opacity: 100;
+.collapsibleListOpen>ul.collapsibleList,
+.collapsibleListOpen>ul.collapsibleList * {
+    height: auto;
+    opacity: 100;
 }
 
 .collapsibleList span.open-close i {
-  cursor: pointer;
-  display: inline-block;
-  opacity: 0.8;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0.8;
 }
+
 .collapsibleList span.open-close i:hover {
-  opacity: 1;
+    opacity: 1;
 }
+
 .collapsibleList i.closed {
-  margin-left: -0.2em;
-  vertical-align: sub;
+    margin-left: -0.2em;
+    vertical-align: sub;
 }
+
 .collapsibleList li {
-  position: relative;
+    position: relative;
 }
-.collapsibleList li.collapsibleListClosed > span.open-close i.closed {
-  display: inline-block;
+
+.collapsibleList li.collapsibleListClosed>span.open-close i.closed {
+    display: inline-block;
 }
-.collapsibleList li.collapsibleListClosed > span.open-close i.closed {
-  display: none;
+
+.collapsibleList li.collapsibleListClosed>span.open-close i.closed {
+    display: none;
 }
-.collapsibleList li.collapsibleListOpen > span.open-close i.open {
-  display: none;
+
+.collapsibleList li.collapsibleListOpen>span.open-close i.open {
+    display: none;
 }
-.collapsibleList li.collapsibleListOpen > span.open-close i.closed {
-  display: inline-block;
+
+.collapsibleList li.collapsibleListOpen>span.open-close i.closed {
+    display: inline-block;
 }
 
 span.icon i {
-  color: transparent !important;
+    color: transparent !important;
 }
 
-body.has-toc .typography #content-below-quote h1, body.has-toc .typography #content-below-quote h2 {
-  padding-left: 5rem;
-  cursor: pointer;
+body.has-toc .typography #content-below-quote h1,
+body.has-toc .typography #content-below-quote h2 {
+    padding-left: 5rem;
+    cursor: pointer;
 }
-body.has-toc .typography #content-below-quote h1 > span:first-child, body.has-toc .typography #content-below-quote h2 > span:first-child {
-  display: inline-block;
-  float: left;
-  width: 4.5rem;
-  margin-left: -5rem;
+
+body.has-toc .typography #content-below-quote h1>span:first-child,
+body.has-toc .typography #content-below-quote h2>span:first-child {
+    display: inline-block;
+    float: left;
+    width: 4.5rem;
+    margin-left: -5rem;
 }
-body.has-toc .typography #content-below-quote h1 > span:first-child i, body.has-toc .typography #content-below-quote h2 > span:first-child i {
-  color: #575757CC;
+
+body.has-toc .typography #content-below-quote h1>span:first-child i,
+body.has-toc .typography #content-below-quote h2>span:first-child i {
+    color: #575757CC;
 }
-body.has-toc .typography #content-below-quote h1 > span:last-child, body.has-toc .typography #content-below-quote h2 > span:last-child {
-  display: inline-block;
-  padding-left: 1rem;
+
+body.has-toc .typography #content-below-quote h1>span:last-child,
+body.has-toc .typography #content-below-quote h2>span:last-child {
+    display: inline-block;
+    padding-left: 1rem;
 }
-body.has-toc .typography #content-below-quote h1 span i, body.has-toc .typography #content-below-quote h2 span i {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 200;
+
+body.has-toc .typography #content-below-quote h1 span i,
+body.has-toc .typography #content-below-quote h2 span i {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 200;
 }
-body.has-toc .typography #content-below-quote h1 span i.open, body.has-toc .typography #content-below-quote h2 span i.open {
-  display: none;
+
+body.has-toc .typography #content-below-quote h1 span i.open,
+body.has-toc .typography #content-below-quote h2 span i.open {
+    display: none;
 }
-body.has-toc .typography #content-below-quote h1 span i.closed, body.has-toc .typography #content-below-quote h2 span i.closed {
-  display: block;
+
+body.has-toc .typography #content-below-quote h1 span i.closed,
+body.has-toc .typography #content-below-quote h2 span i.closed {
+    display: block;
 }
-body.has-toc .typography #content-below-quote h1 span i.active, body.has-toc .typography #content-below-quote h2 span i.active {
-  display: none;
-  animation: blinktoc;
-  animation-duration: 0.8s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  font-size: 2rem !important;
+
+body.has-toc .typography #content-below-quote h1 span i.active,
+body.has-toc .typography #content-below-quote h2 span i.active {
+    display: none;
+    animation: blinktoc;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    font-size: 2rem !important;
 }
-body.has-toc .typography #content-below-quote h1.toc-active i.active, body.has-toc .typography #content-below-quote h2.toc-active i.active {
-  display: inline-block;
+
+body.has-toc .typography #content-below-quote h1.toc-active i.active,
+body.has-toc .typography #content-below-quote h2.toc-active i.active {
+    display: inline-block;
 }
-body.has-toc .typography #content-below-quote h1.toc-active i.open, body.has-toc .typography #content-below-quote h2.toc-active i.open {
-  display: none;
+
+body.has-toc .typography #content-below-quote h1.toc-active i.open,
+body.has-toc .typography #content-below-quote h2.toc-active i.open {
+    display: none;
 }
 
 @keyframes blinktoc {
-  25%, 75% {
-    color: transparent;
-  }
+
+    25%,
+    75% {
+        color: transparent;
+    }
 }
-body.has-toc.toc-on .typography #content-below-quote > * {
-  display: none;
+
+body.has-toc.toc-on .typography #content-below-quote>* {
+    display: none;
 }
-body.has-toc.toc-on .typography #content-below-quote .element, body.has-toc.toc-on .typography #content-below-quote .element > div {
-  display: block;
+
+body.has-toc.toc-on .typography #content-below-quote .element,
+body.has-toc.toc-on .typography #content-below-quote .element>div {
+    display: block;
 }
-body.has-toc.toc-on .typography #content-below-quote .element > div > * {
-  display: none;
+
+body.has-toc.toc-on .typography #content-below-quote .element>div>* {
+    display: none;
 }
+
 body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren {
-  display: block;
+    display: block;
 }
-body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren > * {
-  display: none;
+
+body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren>* {
+    display: none;
 }
-body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren h2, body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren h1 {
-  display: block;
+
+body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren h2,
+body.has-toc.toc-on .typography #content-below-quote #SiblingsAndChildren h1 {
+    display: block;
 }
-body.has-toc.toc-on .typography #content-below-quote h1, body.has-toc.toc-on .typography #content-below-quote h2 {
-  width: auto !important;
-  display: block !important;
+
+body.has-toc.toc-on .typography #content-below-quote h1,
+body.has-toc.toc-on .typography #content-below-quote h2 {
+    width: auto !important;
+    display: block !important;
 }
-body.has-toc.toc-on .typography #content-below-quote h1:before, body.has-toc.toc-on .typography #content-below-quote h2:before {
-  border-top-color: transparent !important;
+
+body.has-toc.toc-on .typography #content-below-quote h1:before,
+body.has-toc.toc-on .typography #content-below-quote h2:before {
+    border-top-color: transparent !important;
 }
-body.has-toc.toc-on .typography #content-below-quote h1 i.closed, body.has-toc.toc-on .typography #content-below-quote h2 i.closed {
-  display: none;
+
+body.has-toc.toc-on .typography #content-below-quote h1 i.closed,
+body.has-toc.toc-on .typography #content-below-quote h2 i.closed {
+    display: none;
 }
-body.has-toc.toc-on .typography #content-below-quote h1 i.open, body.has-toc.toc-on .typography #content-below-quote h2 i.open {
-  display: inline-block;
+
+body.has-toc.toc-on .typography #content-below-quote h1 i.open,
+body.has-toc.toc-on .typography #content-below-quote h2 i.open {
+    display: inline-block;
 }
-body.has-toc.toc-on .typography #content-below-quote h1.toc-active i.open, body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.open {
-  display: inline-block;
+
+body.has-toc.toc-on .typography #content-below-quote h1.toc-active i.open,
+body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.open {
+    display: inline-block;
 }
+
 body.has-toc.toc-on .typography #content-below-quote h1.toc-active i.closed,
-body.has-toc.toc-on .typography #content-below-quote h1.toc-active i.active, body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.closed,
+body.has-toc.toc-on .typography #content-below-quote h1.toc-active i.active,
+body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.closed,
 body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
-  display: none;
+    display: none;
 }
 
 @media only screen and (min-width: 0px) {
-  html {
-    font-size: calc(8px + 0.13vw) !important;
-  }
+    html {
+        font-size: calc(8px + 0.13vw) !important;
+    }
 
-  #header #logo {
-    width: 24vw;
-    height: 24vw;
-    margin-top: -3.9999984vw;
-  }
-  #header h1 {
-    margin-top: 0;
-    font-size: 8vw;
-    right: 10.4347826087vw;
-    top: 15vw;
-  }
+    #header #logo {
+        width: 24vw;
+        height: 24vw;
+        margin-top: -3.9999984vw;
+    }
 
-  main {
-    padding-top: calc(17vw + 15vh);
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
+    #header h1 {
+        margin-top: 0;
+        font-size: 8vw;
+        right: 10.4347826087vw;
+        top: 15vw;
+    }
 
-  footer#footer #theme-selectors {
-    display: block;
-  }
+    main {
+        padding-top: calc(17vw + 15vh);
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    footer#footer #theme-selectors {
+        display: block;
+    }
 }
+
 @media only screen and (min-width: 450px) {
-  #header #logo {
-    width: 18vw;
-    height: 18vw;
-    margin-top: -2.9999988vw;
-  }
-  #header h1 {
-    font-size: 6vw;
-    right: 9.9130434783vw;
-    top: 11.25vw;
-  }
+    #header #logo {
+        width: 18vw;
+        height: 18vw;
+        margin-top: -2.9999988vw;
+    }
 
-  #nav #nav-inner {
-    left: 15% !important;
-    margin: 0;
-  }
-  #nav #nav-inner nav > ul li {
-    padding-left: 0;
-    margin-left: 0;
-  }
-  #nav #nav-inner nav > ul li ul {
-    margin-left: 3vw;
-  }
-  #nav #nav-inner nav > ul li ul li {
-    font-size: 1.7rem;
-  }
+    #header h1 {
+        font-size: 6vw;
+        right: 9.9130434783vw;
+        top: 11.25vw;
+    }
 
-  main {
-    padding: 4rem 6vw;
-    padding-top: calc(17vw + 12vh);
-  }
-  main blockquote p {
-    text-align: right !important;
-  }
-  main .typography .image-container img {
-    max-width: 92% !important;
-  }
+    #nav #nav-inner {
+        left: 15% !important;
+        margin: 0;
+    }
 
-  footer#footer {
-    padding: 4rem 6vw;
-  }
-  footer#footer #theme-selectors a {
-    margin-right: 1.5rem;
-    margin-left: 0rem;
-  }
-  footer#footer div.col {
-    text-align: left;
-    padding-top: 0;
-  }
+    #nav #nav-inner nav>ul li {
+        padding-left: 0;
+        margin-left: 0;
+    }
 
-  .row {
-    grid-template-columns: 1fr 1fr;
-  }
+    #nav #nav-inner nav>ul li ul {
+        margin-left: 3vw;
+    }
 
-  body.past-header.menu-on #nav #menu-toggle {
-    left: 6vw;
-  }
+    #nav #nav-inner nav>ul li ul li {
+        font-size: 1.7rem;
+    }
+
+    main {
+        padding: 4rem 6vw;
+        padding-top: calc(17vw + 12vh);
+    }
+
+    main blockquote p {
+        text-align: right !important;
+    }
+
+    main .typography .image-container img {
+        max-width: 92% !important;
+    }
+
+    footer#footer {
+        padding: 4rem 6vw;
+    }
+
+    footer#footer #theme-selectors a {
+        margin-right: 1.5rem;
+        margin-left: 0rem;
+    }
+
+    footer#footer div.col {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    body.past-header.menu-on #nav #menu-toggle {
+        left: 6vw;
+    }
 }
+
 @media only screen and (min-width: 750px) {
-  #header #logo {
-    width: 12vw;
-    height: 12vw;
-    margin-top: -1.9999992vw;
-  }
-  #header h1 {
-    font-size: 4vw;
-    right: 8.6086956522vw;
-    top: 7.5vw;
-  }
+    #header #logo {
+        width: 12vw;
+        height: 12vw;
+        margin-top: -1.9999992vw;
+    }
 
-  footer#footer {
-    padding: 4rem 6vw;
-  }
+    #header h1 {
+        font-size: 4vw;
+        right: 8.6086956522vw;
+        top: 7.5vw;
+    }
 
-  .row {
-    grid-template-columns: 1fr 1fr;
-  }
+    footer#footer {
+        padding: 4rem 6vw;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
 @media only screen and (min-width: 900px) {
-  main .typography h1, main .typography h2 {
-    clear: left;
-    float: left;
-    width: calc(21vw - 5rem);
-    padding-top: 0;
-    margin-top: 0;
-    margin-top: -1px;
-  }
-  main .typography p,
-main .typography ul,
-main .typography ol,
-main .typography h3,
-main .typography h4,
-main .typography h5,
-main .typography h6,
-main .typography form,
-main .typography address,
-main .typography div.captionImage {
-    margin-left: 24vw;
-    padding-top: 0;
-    margin-top: 0;
-  }
-  main .typography .image-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: -24vw !important;
-    width: calc(100% + 24vw);
-  }
-  main .typography .image-container img {
-    margin-left: 24vw;
-    max-width: 61% !important;
-  }
+
+    main .typography h1,
+    main .typography h2 {
+        clear: left;
+        float: left;
+        width: calc(21vw - 5rem);
+        padding-top: 0;
+        margin-top: 0;
+        margin-top: -1px;
+    }
+
+    main .typography p,
+    main .typography ul,
+    main .typography ol,
+    main .typography h3,
+    main .typography h4,
+    main .typography h5,
+    main .typography h6,
+    main .typography form,
+    main .typography address,
+    main .typography div.captionImage {
+        margin-left: 24vw;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    main .typography .image-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: -24vw !important;
+        width: calc(100% + 24vw);
+    }
+
+    main .typography .image-container img {
+        margin-left: 24vw;
+        max-width: 61% !important;
+    }
 }
+
 @media only screen and (min-width: 1050px) {
-  body.past-header #header {
-    opacity: 0;
-    display: none;
-  }
+    body.past-header #header {
+        opacity: 0;
+        display: none;
+    }
 
-  body.past-header.just-scrolled #header {
-    opacity: 1;
-    display: block;
-    animation-duration: 1s;
-    /* the duration of the animation */
-    animation-timing-function: ease-out;
-    /* how the animation will behave */
-    animation-delay: 2s;
-    /* how long to delay the animation from starting */
-    animation-iteration-count: 1;
-    /* how many times the animation will play */
-    animation-name: unloadTransition;
-    /* the name of the animation we defined above */
-    animation-fill-mode: forwards;
-  }
+    body.past-header.just-scrolled #header {
+        opacity: 1;
+        display: block;
+        animation-duration: 1s;
+        /* the duration of the animation */
+        animation-timing-function: ease-out;
+        /* how the animation will behave */
+        animation-delay: 2s;
+        /* how long to delay the animation from starting */
+        animation-iteration-count: 1;
+        /* how many times the animation will play */
+        animation-name: unloadTransition;
+        /* the name of the animation we defined above */
+        animation-fill-mode: forwards;
+    }
 
-  body.past-header.just-scrolled.toc-on #header {
-    display: none !important;
-  }
+    body.past-header.just-scrolled.toc-on #header {
+        display: none !important;
+    }
 
-  #header #logo {
-    width: 9vw;
-    height: 9vw;
-    margin-top: -1.4999994vw;
-  }
-  #header h1 {
-    font-size: 3vw;
-    top: 5.625vw;
-  }
+    #header #logo {
+        width: 9vw;
+        height: 9vw;
+        margin-top: -1.4999994vw;
+    }
 
-  #nav {
-    border: none;
-    border-radius: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    background-color: #f7cd55;
-    opacity: 1;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 18vw;
-    height: auto;
-    z-index: 20;
-  }
-  #nav #menu-toggle {
-    transform: rotate(0);
-    text-align: center;
-    top: calc(50% - 0.5 * (5vw + 7vh) / 2) !important;
-    left: 0 !important;
-    width: 18vw;
-  }
-  #nav #menu-toggle svg {
-    height: 5rem !important;
-  }
-  #nav #nav-inner {
-    left: 40% !important;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  #nav #nav-inner::-webkit-scrollbar {
-    width: 0px;
-  }
-  #nav #nav-inner p {
-    font-size: 1rem;
-  }
+    #header h1 {
+        font-size: 3vw;
+        top: 5.625vw;
+    }
 
-  main {
-    padding: calc(12vw + 7vh) 0 4rem 0;
-    margin-right: 5vw;
-    margin-left: 24vw;
-  }
+    #nav {
+        border: none;
+        border-radius: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        background-color: #f7cd55;
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 18vw;
+        height: auto;
+        z-index: 20;
+    }
 
-  footer#footer {
-    padding: 4rem 0;
-    padding-right: 6vw;
-    padding-left: 48vw;
-  }
+    #nav #menu-toggle {
+        transform: rotate(0);
+        text-align: center;
+        top: calc(50% - 0.5 * (5vw + 7vh) / 2) !important;
+        left: 0 !important;
+        width: 18vw;
+    }
 
-  body.menu-on #nav {
-    z-index: 999;
-  }
+    #nav #menu-toggle svg {
+        height: 5rem !important;
+    }
 
-  body.past-header #nav,
-body.menu-on.past-header #nav {
-    background-color: #f7cd55;
-    border: none;
-    border-radius: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    left: 0;
-  }
+    #nav #nav-inner {
+        left: 40% !important;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 
-  body.menu-on.past-header #nav {
-    width: 100vw;
-  }
+    #nav #nav-inner::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    #nav #nav-inner p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: calc(12vw + 7vh) 0 4rem 0;
+        margin-right: 5vw;
+        margin-left: 24vw;
+    }
+
+    footer#footer {
+        padding: 4rem 0;
+        padding-right: 6vw;
+        padding-left: 48vw;
+    }
+
+    body.menu-on #nav {
+        z-index: 999;
+    }
+
+    body.past-header #nav,
+    body.menu-on.past-header #nav {
+        background-color: #f7cd55;
+        border: none;
+        border-radius: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        left: 0;
+    }
+
+    body.menu-on.past-header #nav {
+        width: 100vw;
+    }
 }
+
 @media only screen and (min-width: 1350px) {
-  body #header #logo, body.past-header #header #logo {
-    right: 5vw;
-  }
-  body #header h1, body.past-header #header h1 {
-    right: 8.3333333333vw;
-  }
 
-  #nav #nav-inner {
-    left: 40% !important;
-  }
+    body #header #logo,
+    body.past-header #header #logo {
+        right: 5vw;
+    }
 
-  footer#footer {
-    padding-left: 24vw;
-  }
+    body #header h1,
+    body.past-header #header h1 {
+        right: 8.3333333333vw;
+    }
 
-  .row {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    #nav #nav-inner {
+        left: 40% !important;
+    }
+
+    footer#footer {
+        padding-left: 24vw;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
+
 body.theme-sun a[data-add-class=theme-sun] {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
+
 body.theme-sun #theme-sun svg {
-  fill: #f7cd55;
+    fill: #f7cd55;
 }
 
 body.theme-rocket {
-  background-color: #555;
+    background-color: #555;
 }
+
 body.theme-rocket #header * {
-  color: #2d57ff;
+    color: #2d57ff;
 }
+
 body.theme-rocket a[data-add-class=theme-rocket] {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
+
 body.theme-rocket #main {
-  overflow: initial;
+    overflow: initial;
 }
+
 body.theme-rocket #main blockquote.main-quote {
-  padding-top: 10vh;
-  padding-bottom: 20vh;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
 }
+
 body.theme-rocket #main blockquote.main-quote p {
-  background-color: transparent;
-  background: transparent;
-  border-color: transparent;
-  filter: drop-shadow(0 0 6px #000);
-  font-size: calc((2vh + 3vw) * 0.6 + 12px);
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    filter: drop-shadow(0 0 6px #000);
+    font-size: calc((2vh + 3vw) * 0.6 + 12px);
 }
+
 body.theme-rocket #main #content-below-quote {
-  background-color: #e6e6e6;
-  background: linear-gradient(270deg, #e6e6e6, #fff, #e6e6e6);
-  padding: 20px 30px;
-  margin-bottom: 40vh;
-  min-height: 60vh;
-  box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+    background-color: #e6e6e6;
+    background: linear-gradient(270deg, #e6e6e6, #fff, #e6e6e6);
+    padding: 20px 30px;
+    margin-bottom: 40vh;
+    min-height: 60vh;
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
-body.theme-rocket #main #SiblingsAndChildren h2:before, body.theme-rocket #main h1:before, body.theme-rocket #main h2:before {
-  border-top-color: #2d57ff;
+
+body.theme-rocket #main #SiblingsAndChildren h2:before,
+body.theme-rocket #main h1:before,
+body.theme-rocket #main h2:before {
+    border-top-color: #2d57ff;
 }
+
 body.theme-rocket #BackgroundImage {
-  display: block;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    display: block;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
-body.theme-rocket .typography h1, body.theme-rocket .typography h2 {
-  color: #2d57ff;
+
+body.theme-rocket .typography h1,
+body.theme-rocket .typography h2 {
+    color: #2d57ff;
 }
+
 body.theme-rocket form * {
-  color: #0d3a59 !important;
+    color: #0d3a59 !important;
 }
+
 body.theme-rocket form .middleColumn input,
 body.theme-rocket form .middleColumn textarea,
 body.theme-rocket form .middleColumn select {
-  border-bottom-color: #0d3a59 !important;
+    border-bottom-color: #0d3a59 !important;
 }
+
 body.theme-rocket form span.readonly {
-  border-bottom-color: #0d3a59 !important;
+    border-bottom-color: #0d3a59 !important;
 }
+
 body.theme-rocket form .btn-toolbar input {
-  background: #f7cd55;
+    background: #f7cd55;
 }
+
 body.theme-rocket #Breadcrumbs {
-  border-color: #fff !important;
+    border-color: #fff !important;
 }
+
 body.theme-rocket #footer {
-  background-color: #3a075a;
+    background-color: #3a075a;
 }
+
 body.theme-rocket #footer * {
-  color: #fff;
+    color: #fff;
 }
+
 body.theme-rocket #footer p {
-  color: #fff;
+    color: #fff;
 }
+
 body.theme-rocket #footer #theme-selectors svg {
-  fill: #fff;
+    fill: #fff;
 }
+
 body.theme-rocket #footer #theme-selectors #theme-rocket svg {
-  fill: #f7cd55;
+    fill: #f7cd55;
 }
+
 body.theme-rocket.past-header #header {
-  border-bottom: 1px solid #fff;
-  background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.7);
 }
+
 body.theme-rocket.past-header #header * {
-  color: #000;
-  -webkit-text-stroke-width: 0px;
+    color: #000;
+    -webkit-text-stroke-width: 0px;
 }
+
 body.theme-rocket.no-touch #footer {
-  opacity: 0.6;
+    opacity: 0.6;
 }
+
 body.theme-rocket.no-touch #footer:hover {
-  opacity: 1;
+    opacity: 1;
 }
+
 body.theme-rocket.no-touch.past-header #header h1 {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 body.theme-rocket main#main blockquote p {
-  color: #fff !important;
+    color: #fff !important;
 }
+
 body.theme-rocket main#main blockquote p * {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 @media only screen and (min-width: 900px) {
-  body.theme-rocket #main #content-below-quote {
-    padding: 40px 30px;
-  }
+    body.theme-rocket #main #content-below-quote {
+        padding: 40px 30px;
+    }
 }
+
 @media only screen and (min-width: 1050px) {
-  body.theme-rocket #nav {
-    background-color: #ffffff22;
-  }
-  body.theme-rocket.menu-on #nav {
-    background-color: #f7cd55;
-  }
+    body.theme-rocket #nav {
+        background-color: #ffffff22;
+    }
+
+    body.theme-rocket.menu-on #nav {
+        background-color: #f7cd55;
+    }
 }
+
 body.theme-rocket.title-colour-yellow #header * {
-  color: #f7cd55 !important;
+    color: #f7cd55 !important;
 }
+
 body.theme-rocket.title-colour-yellow.menu-on #header * {
-  color: #2d57ff !important;
+    color: #2d57ff !important;
 }
 
 body.theme-rocket.title-colour-blue #header * {
-  color: #2d57ff !important;
+    color: #2d57ff !important;
 }
 
 body.theme-moon {
-  background-color: #0d3a59;
+    background-color: #0d3a59;
 }
+
 body.theme-moon * {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon #header #logo {
-  background-image: url(images/logo-small-inverted.svg);
+    background-image: url(images/logo-small-inverted.svg);
 }
+
 body.theme-moon #header span {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon #header h1 {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon #header * {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon a[data-add-class=theme-moon] {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
+
 body.theme-moon #nav {
-  background-color: #3a075a !important;
-  border-color: #3a075a;
+    background-color: #3a075a !important;
+    border-color: #3a075a;
 }
+
 body.theme-moon #nav * {
-  color: #00ab06;
+    color: #00ab06;
 }
+
 body.theme-moon #nav #closed-icon .cls-1 {
-  fill: #FF7B7B;
+    fill: #FF7B7B;
 }
+
 body.theme-moon #nav #closed-icon .cls-2 {
-  fill: #fff;
+    fill: #fff;
 }
+
 body.theme-moon #nav #open-icon .cls-1 {
-  fill: #EF5D5D;
+    fill: #EF5D5D;
 }
+
 body.theme-moon #nav #open-icon .cls-2 {
-  fill: #fff;
+    fill: #fff;
 }
-body.theme-moon .typography *, body.theme-moon .typography a:link, body.theme-moon .typography a:visited {
-  color: #e4b105;
+
+body.theme-moon .typography *,
+body.theme-moon .typography a:link,
+body.theme-moon .typography a:visited {
+    color: #e4b105;
 }
-body.theme-moon .typography h1, body.theme-moon .typography h2 {
-  text-transform: uppercase;
-  color: #2d57ff;
-}
+
+body.theme-moon .typography h1,
 body.theme-moon .typography h2 {
-  color: #e4b105 !important;
+    text-transform: uppercase;
+    color: #2d57ff;
 }
+
+body.theme-moon .typography h2 {
+    color: #e4b105 !important;
+}
+
 body.theme-moon .typography h2 span {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon .typography h2 span i {
-  color: #e4b105;
+    color: #e4b105;
 }
-body.theme-moon .typography #SiblingsAndChildren h2:before, body.theme-moon .typography h1:before, body.theme-moon .typography h2:before {
-  border-top-color: #e4b105;
+
+body.theme-moon .typography #SiblingsAndChildren h2:before,
+body.theme-moon .typography h1:before,
+body.theme-moon .typography h2:before {
+    border-top-color: #e4b105;
 }
+
 body.theme-moon .typography pre {
-  background-color: #2d57ff;
-  color: #fff;
+    background-color: #2d57ff;
+    color: #fff;
 }
+
 body.theme-moon .typography th {
-  color: #e4b105;
+    color: #e4b105;
 }
+
 body.theme-moon .typography td {
-  background-color: #fff;
-  color: #222;
+    background-color: #fff;
+    color: #222;
 }
+
 body.theme-moon .typography td * {
-  color: #222 !important;
+    color: #222 !important;
 }
+
 body.theme-moon .typography hr {
-  border-color: #e4b105 !important;
+    border-color: #e4b105 !important;
 }
-body.theme-moon .typography .media, body.theme-moon .typography .image-container, body.theme-moon .typography blockquote p {
-  background-color: transparent;
-  background: transparent;
-  border-color: transparent;
+
+body.theme-moon .typography .media,
+body.theme-moon .typography .image-container,
+body.theme-moon .typography blockquote p {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
 }
+
 body.theme-moon form * {
-  color: #0d3a59 !important;
+    color: #0d3a59 !important;
 }
+
 body.theme-moon form .middleColumn input,
 body.theme-moon form .middleColumn textarea,
 body.theme-moon form .middleColumn select {
-  border-bottom-color: #0d3a59 !important;
+    border-bottom-color: #0d3a59 !important;
 }
+
 body.theme-moon form span.readonly {
-  border-bottom-color: #0d3a59 !important;
+    border-bottom-color: #0d3a59 !important;
 }
+
 body.theme-moon form .btn-toolbar input {
-  background: #e4b105;
+    background: #e4b105;
 }
+
 body.theme-moon #Breadcrumbs {
-  border-color: #e4b105 !important;
+    border-color: #e4b105 !important;
 }
+
 body.theme-moon footer#footer {
-  background-color: #040403CC;
+    background-color: #040403CC;
 }
+
 body.theme-moon footer#footer * {
-  color: #fff;
+    color: #fff;
 }
+
 body.theme-moon footer#footer p {
-  color: #fff;
+    color: #fff;
 }
-body.theme-moon footer#footer li.current a, body.theme-moon footer#footer a:hover {
-  color: #95c93d !important;
+
+body.theme-moon footer#footer li.current a,
+body.theme-moon footer#footer a:hover {
+    color: #95c93d !important;
 }
+
 body.theme-moon footer#footer #theme-selectors svg {
-  fill: #fff;
+    fill: #fff;
 }
+
 body.theme-moon footer#footer #theme-selectors svg:hover {
-  fill: #95c93d !important;
+    fill: #95c93d !important;
 }
+
 body.theme-moon footer#footer #theme-selectors #theme-moon svg {
-  fill: #95c93d !important;
+    fill: #95c93d !important;
 }
+
 body.theme-moon.past-header #header {
-  border-color: #e4b105;
-  background-color: #e4b105;
+    border-color: #e4b105;
+    background-color: #e4b105;
 }
+
 body.theme-moon.past-header #header * {
-  color: #fff;
+    color: #fff;
 }
+
 body.theme-moon.past-header #header .page-title {
-  color: #fff;
+    color: #fff;
 }
+
 body.theme-moon.past-header #nav {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 body.theme-moon.menu-on #nav {
-  background-color: #333;
+    background-color: #333;
 }
+
 body.theme-moon #BackgroundVideo {
-  background-color: #000;
+    background-color: #000;
 }
+
 body.theme-moon main#main blockquote p {
-  color: #C3BFB3 !important;
+    color: #C3BFB3 !important;
 }
+
 body.theme-moon main#main blockquote p * {
-  color: #C3BFB3 !important;
+    color: #C3BFB3 !important;
 }
 
 @media only screen and (min-width: 1050px) {
-  body.theme-moon #nav,
-body.theme-moon.past-header #nav {
-    background-color: #333;
-  }
+
+    body.theme-moon #nav,
+    body.theme-moon.past-header #nav {
+        background-color: #333;
+    }
 }
+
 .body-loaded * {
-  transition-property: width, min-width, color, background-color, opacity, height, min-height, min-width, max-height, max-width, left, right, top, bottom, color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transition-delay: 0.1s;
+    transition-property: width, min-width, color, background-color, opacity, height, min-height, min-width, max-height, max-width, left, right, top, bottom, color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
 }
 
 body.mouse-over-logo.no-touch #BackgroundImage {
-  animation-duration: 0.3s;
-  /* the duration of the animation */
-  animation-timing-function: ease-out;
-  /* how the animation will behave */
-  animation-delay: 0s;
-  /* how long to delay the animation from starting */
-  animation-iteration-count: 1;
-  /* how many times the animation will play */
-  animation-name: showImage;
-  /* the name of the animation we defined above */
-  animation-fill-mode: forwards;
-  display: block !important;
-  background-size: cover;
-}
-@keyframes showImage {
-  0% {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-  }
-  100% {
+    animation-duration: 0.3s;
+    /* the duration of the animation */
+    animation-timing-function: ease-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: showImage;
+    /* the name of the animation we defined above */
+    animation-fill-mode: forwards;
     display: block !important;
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-  }
+    background-size: cover;
 }
+
+@keyframes showImage {
+    0% {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    100% {
+        display: block !important;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+    }
+}
+
 body.mouse-over-logo.no-touch #logo {
-  z-index: 99999999999 !important;
+    z-index: 99999999999 !important;
 }
 
 body.mouse-over-logo #header h1 {
-  position: relative;
-  z-index: 9999999999;
+    position: relative;
+    z-index: 9999999999;
 }
+
 body.mouse-over-logo #header .bread-crumb {
-  display: none;
+    display: none;
 }
 
 @page {
-  width: 210mm;
-  height: 297mm;
-  margin-top: 20mm !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  overflow: visible !important;
-  margin-bottom: auto !important;
+    width: 210mm;
+    height: 297mm;
+    margin-top: 20mm !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    overflow: visible !important;
+    margin-bottom: auto !important;
 }
+
 @page :first {
-  margin-top: 0mm !important;
+    margin-top: 0mm !important;
 }
+
 @media print {
-  body,
-html {
-    overflow: visible !important;
-    margin-bottom: auto !important;
-    font-size: 10px !important;
-    background-color: #fff;
-  }
-  body *, body *:before,
-html *,
-html *:before {
-    color: #191919 !important;
-  }
-  body header#print,
-html header#print {
-    box-shadow: inset 0 0 0 1000px #e6e6e6;
-    display: block !important;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  body header#print img,
-html header#print img {
-    display: block;
-    width: 100px;
-    margin-right: 5rem;
-    margin-top: -20px;
-    float: right;
-  }
-  body header#print h1,
-html header#print h1 {
-    text-align: center;
-    clear: right;
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: "Oswald", sans-serif;
-    color: #2d57ff !important;
-    padding-bottom: 2rem;
-  }
-  body #SiblingsAndChildren,
-body blockquote,
-body #nav,
-body footer,
-body iframe,
-body embed,
-body #header,
-body #BackgroundVideo,
-body span .open,
-body span .closed,
-body form,
-body .last-updated,
-html #SiblingsAndChildren,
-html blockquote,
-html #nav,
-html footer,
-html iframe,
-html embed,
-html #header,
-html #BackgroundVideo,
-html span .open,
-html span .closed,
-html form,
-html .last-updated {
-    display: none !important;
-  }
-  body #main,
-html #main {
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto !important;
-    overflow: visible !important;
-    padding: 1rem 12rem 0 12rem !important;
-  }
-  body #main *,
-html #main * {
-    overflow: visible !important;
-  }
-  body #main:before,
-html #main:before {
-    display: block;
-    background-image: url(images/SSU_Logo_horizontal_.png) !important;
-    background-position: top left;
-    background-size: contain;
-    height: 100px;
-    width: 100%;
-  }
-  body #main p,
-html #main p {
-    padding-bottom: 2rem;
-  }
-  body #main h1,
-html #main h1 {
-    font-size: 30px;
-  }
-  body #main h2,
-html #main h2 {
-    font-size: 25px;
-  }
-  body #main h1, body #main h2,
-html #main h1,
-html #main h2 {
-    margin-top: 2rem !important;
-    padding-left: 0px !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 1rem !important;
-  }
-  body #main h3,
-html #main h3 {
-    font-size: 20px;
-  }
-  body #main h1, body #main h2, body #main h3, body #main h4, body #main h5, body #main h6,
-html #main h1,
-html #main h2,
-html #main h3,
-html #main h4,
-html #main h5,
-html #main h6 {
-    page-break-before: auto;
-    page-break-inside: avoid;
-    page-break-after: avoid;
-  }
-  body #main h1:before, body #main h1:after, body #main h2:before, body #main h2:after, body #main h3:before, body #main h3:after, body #main h4:before, body #main h4:after, body #main h5:before, body #main h5:after, body #main h6:before, body #main h6:after,
-html #main h1:before,
-html #main h1:after,
-html #main h2:before,
-html #main h2:after,
-html #main h3:before,
-html #main h3:after,
-html #main h4:before,
-html #main h4:after,
-html #main h5:before,
-html #main h5:after,
-html #main h6:before,
-html #main h6:after {
-    display: none;
-  }
-  body #main p, body #main li, body #main address,
-html #main p,
-html #main li,
-html #main address {
-    font-size: 20px;
-  }
-  body #main ul, body #main ol, body #main li, body #main p,
-html #main ul,
-html #main ol,
-html #main li,
-html #main p {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  body #main li, body #main p,
-html #main li,
-html #main p {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-  }
-  body #main table,
-html #main table {
-    page-break-inside: avoid;
-  }
-  body #main table th, body #main table td,
-html #main table th,
-html #main table td {
-    border: 1px solid #191919 !important;
-  }
-  body #main pre,
-html #main pre {
-    white-space: pre-wrap;
-    color: #191919;
-  }
-  body #main a,
-html #main a {
-    -webkit-text-decoration-color: #2d57ff !important;
-            text-decoration-color: #2d57ff !important;
-  }
-  body #main a:after,
-html #main a:after {
-    content: " (" attr(href) ") ";
-    font-size: 10px;
-    word-break: break-all;
-  }
+
+    body,
+    html {
+        overflow: visible !important;
+        margin-bottom: auto !important;
+        font-size: 10px !important;
+        background-color: #fff;
+    }
+
+    body *,
+    body *:before,
+    html *,
+    html *:before {
+        color: #191919 !important;
+    }
+
+    body header#print,
+    html header#print {
+        box-shadow: inset 0 0 0 1000px #e6e6e6;
+        display: block !important;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    body header#print img,
+    html header#print img {
+        display: block;
+        width: 100px;
+        margin-right: 5rem;
+        margin-top: -20px;
+        float: right;
+    }
+
+    body header#print h1,
+    html header#print h1 {
+        text-align: center;
+        clear: right;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: "Oswald", sans-serif;
+        color: #2d57ff !important;
+        padding-bottom: 2rem;
+    }
+
+    body #SiblingsAndChildren,
+    body blockquote,
+    body #nav,
+    body footer,
+    body iframe,
+    body embed,
+    body #header,
+    body #BackgroundVideo,
+    body span .open,
+    body span .closed,
+    body form,
+    body .last-updated,
+    html #SiblingsAndChildren,
+    html blockquote,
+    html #nav,
+    html footer,
+    html iframe,
+    html embed,
+    html #header,
+    html #BackgroundVideo,
+    html span .open,
+    html span .closed,
+    html form,
+    html .last-updated {
+        display: none !important;
+    }
+
+    body #main,
+    html #main {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto !important;
+        overflow: visible !important;
+        padding: 1rem 12rem 0 12rem !important;
+    }
+
+    body #main *,
+    html #main * {
+        overflow: visible !important;
+    }
+
+    body #main:before,
+    html #main:before {
+        display: block;
+        background-image: url(images/SSU_Logo_horizontal_.png) !important;
+        background-position: top left;
+        background-size: contain;
+        height: 100px;
+        width: 100%;
+    }
+
+    body #main p,
+    html #main p {
+        padding-bottom: 2rem;
+    }
+
+    body #main h1,
+    html #main h1 {
+        font-size: 30px;
+    }
+
+    body #main h2,
+    html #main h2 {
+        font-size: 25px;
+    }
+
+    body #main h1,
+    body #main h2,
+    html #main h1,
+    html #main h2 {
+        margin-top: 2rem !important;
+        padding-left: 0px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    body #main h3,
+    html #main h3 {
+        font-size: 20px;
+    }
+
+    body #main h1,
+    body #main h2,
+    body #main h3,
+    body #main h4,
+    body #main h5,
+    body #main h6,
+    html #main h1,
+    html #main h2,
+    html #main h3,
+    html #main h4,
+    html #main h5,
+    html #main h6 {
+        page-break-before: auto;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+
+    body #main h1:before,
+    body #main h1:after,
+    body #main h2:before,
+    body #main h2:after,
+    body #main h3:before,
+    body #main h3:after,
+    body #main h4:before,
+    body #main h4:after,
+    body #main h5:before,
+    body #main h5:after,
+    body #main h6:before,
+    body #main h6:after,
+    html #main h1:before,
+    html #main h1:after,
+    html #main h2:before,
+    html #main h2:after,
+    html #main h3:before,
+    html #main h3:after,
+    html #main h4:before,
+    html #main h4:after,
+    html #main h5:before,
+    html #main h5:after,
+    html #main h6:before,
+    html #main h6:after {
+        display: none;
+    }
+
+    body #main p,
+    body #main li,
+    body #main address,
+    html #main p,
+    html #main li,
+    html #main address {
+        font-size: 20px;
+    }
+
+    body #main ul,
+    body #main ol,
+    body #main li,
+    body #main p,
+    html #main ul,
+    html #main ol,
+    html #main li,
+    html #main p {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    body #main li,
+    body #main p,
+    html #main li,
+    html #main p {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    body #main table,
+    html #main table {
+        page-break-inside: avoid;
+    }
+
+    body #main table th,
+    body #main table td,
+    html #main table th,
+    html #main table td {
+        border: 1px solid #191919 !important;
+    }
+
+    body #main pre,
+    html #main pre {
+        white-space: pre-wrap;
+        color: #191919;
+    }
+
+    body #main a,
+    html #main a {
+        -webkit-text-decoration-color: #2d57ff !important;
+        text-decoration-color: #2d57ff !important;
+    }
+
+    body #main a:after,
+    html #main a:after {
+        content: " (" attr(href) ") ";
+        font-size: 10px;
+        word-break: break-all;
+    }
 }

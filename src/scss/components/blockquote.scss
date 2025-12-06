@@ -34,10 +34,10 @@ main#main {
             // &.has-typing-mode {
             //     // visibility: hidden;
             // }
-            .blinker {
+            .shiner {
                 display: inline-block;
                 text-align: right;
-                animation: blink;
+                animation: shine;
                 animation-duration: 4.2s; /* Full cycle: 2.1s of blinking + 2.1s pause */
                 animation-iteration-count: infinite;
                 text-decoration: none !important;
@@ -57,23 +57,21 @@ main#main {
     }
 }
 
-@keyframes blink {
-    0%,
-    50%,
-    61.1%,
-    72.2%,
-    83.3%,
-    88.85%,
-    94.4% {
-        color: inherit; /* original color */
+@keyframes shine {
+    0% {
+        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
     }
-    /* Prior to 50%, no changes */
-    55.55%,
-    66.65%,
-    77.75%,
-    88.85%,
+    25% {
+        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px $colour_sunny_side_up_yellow);
+    }
+    75% {
+        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
+    }
     100% {
-        color: transparent; /* or any other color for change */
+        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
     }
 }
 

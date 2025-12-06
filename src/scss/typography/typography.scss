@@ -11,7 +11,7 @@
         padding-bottom: 4rem;
         margin-bottom: 0;
         line-height: 1.5;
-        font-size: 2rem;
+        font-size: 2.5rem;
         &:last-child {
             padding-bottom: 2rem;
         }
@@ -71,15 +71,15 @@
         margin-bottom: 0.5rem;
     }
     h4 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
     h5 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
     h6 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 0.5rem;
         font-style: italic;
         font-weight: 200;
@@ -99,7 +99,6 @@
 
     ul,
     ol {
-        font-size: 2rem;
         margin-top: 0px;
         margin-bottom: 0;
         padding-left: 0;
@@ -108,6 +107,9 @@
             margin-left: 2.2rem;
             margin-bottom: 1rem;
             padding-left: 0;
+            &::marker {
+                color: $colour_purple_spirituality_in_the_sun;
+            }
             p {
                 margin: 0 !important;
                 padding: 0 !important;
@@ -267,7 +269,7 @@
         transition: 0.3s;
     }
     a:hover {
-        filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
+        filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow) !important;
         // border-bottom: 3px solid $colour_blue_cobalter;
     }
     a:active {
