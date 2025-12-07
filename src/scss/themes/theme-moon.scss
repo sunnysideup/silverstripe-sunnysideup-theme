@@ -7,7 +7,7 @@ body.theme-moon {
         }
     }
 
-    background-color: #200233;
+    background-color: $colour_sunny_side_up_dark_purple;
     * {
         color: $colour_burned_sunny_side_up;
     }
@@ -203,6 +203,9 @@ body.theme-moon {
 }
 
 body[data-theme="theme-moon"] {
+    body {
+        background-color: transparent;
+    }
     &.menu-on {
         #header {
             * {
