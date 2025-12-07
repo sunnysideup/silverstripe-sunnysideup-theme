@@ -201,11 +201,8 @@ body.theme-moon {
         }
     }
 }
-
 body[data-theme="theme-moon"] {
-    body {
-        background-color: transparent;
-    }
+    background-color: $colour_sunny_side_up_dark_purple !important;
     &.menu-on {
         #header {
             * {
