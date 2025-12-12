@@ -1,7 +1,7 @@
 .sunnysideup__app__elements__workexample {
     .content-element__content {
         h3 {
-            color: $colour_outer_space_love !important;
+            color: $colour_blue_cobalter_highlights !important;
             text-transform: none;
             padding-left: calc(3rem + 1px) !important;
             padding-bottom: 0 !important;
@@ -9,6 +9,15 @@
             .open-close {
                 display: none !important;
             }
+        }
+        p {
+            font-size: 1.8rem !important;
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+        h4 {
+            font-size: 2rem !important;
         }
     }
     .work-example-images {
