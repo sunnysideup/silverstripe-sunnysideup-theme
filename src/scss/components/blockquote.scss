@@ -21,7 +21,7 @@ main#main {
             letter-spacing: -0.5px;
             filter: drop-shadow(0 0 6px $colour_sunny_side_up_yellow);
             // background: linear-gradient(270deg, #00000000, #fff, #00000000);
-            line-height: 1.2;
+            line-height: 1.3;
             overflow: hidden;
             font-weight: 200;
             font-style: italic;
@@ -47,6 +47,12 @@ main#main {
                 }
                 &.smaller {
                     font-size: 70%;
+                }
+                svg {
+                    vertical-align: baseline;
+                    transform: rotate(102deg);
+                    height: 1.2em;
+                    width: 1.2em;
                 }
             }
             .Typewriter__wrapper,

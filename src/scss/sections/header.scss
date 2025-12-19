@@ -112,14 +112,3 @@ body.past-header.just-scrolled.scrolled-up {
     display: inline-block;
     margin-right: -0.2em;
 }
-
-blockquote {
-    p {
-        svg {
-            vertical-align: baseline;
-            transform: rotate(102deg);
-            height: 1.2em;
-            width: 1.2em;
-        }
-    }
-}
