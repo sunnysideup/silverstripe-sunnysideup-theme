@@ -1,12 +1,4 @@
 body.theme-moon {
-    blockquote {
-        p {
-            .shiner.smaller {
-                display: none;
-            }
-        }
-    }
-
     background-color: $colour_sunny_side_up_dark_purple;
     * {
         color: $colour_burned_sunny_side_up;
@@ -29,8 +21,11 @@ body.theme-moon {
         text-decoration: none !important;
     }
     #nav {
-        background-color: $colou_sunny_side_up_green_darker !important;
-        border-color: $colou_sunny_side_up_green_darker !important;
+        background-color: $colour_sunny_side_up_green_darker !important;
+        border-color: $colour_sunny_side_up_green_darker !important;
+        .menu-arrow {
+            stroke: $colour_sunny_side_up_green_darker !important;
+        }
     }
     .typography {
         *,
@@ -258,6 +253,9 @@ body[data-theme="theme-moon"] {
     body.theme-moon.past-header {
         #nav {
             background-color: $colour_outer_space_love;
+        }
+        .menu-arrow {
+            stroke: $colour_outer_space_love !important;
         }
     }
 }

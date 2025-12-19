@@ -286,7 +286,7 @@
         border-radius: 0;
         margin-left: 0;
         margin-bottom: 0;
-        background-color: $colour_sunny_side_up_yellow;
+
         opacity: 1;
         position: fixed;
         left: 0;
@@ -374,6 +374,9 @@
             margin-bottom: 0;
             margin-left: 0;
             left: 0;
+            .menu-arrow {
+                stroke: $colour_sunny_side_up_yellow;
+            }
         }
     }
     body.menu-on.past-header {

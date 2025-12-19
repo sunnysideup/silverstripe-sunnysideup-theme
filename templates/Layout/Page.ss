@@ -5,7 +5,7 @@
     <p id="my-quote" class="<% if $TypeModeForQuote %>has-typing-mode<% else %>no-typing-mode<% end_if %> fade-on-no-rocket ">
         <% if $Quote %>
             $Quote
-            <a href="#content-below-quote" class="shiner smaller">↯</a>
+            <a href="#content-below-quote" class="shiner smaller"><% include Arrow2 %></a>
         <% else %>
             <% if $IsHomePage %>
                 Kia Ora —<br />
