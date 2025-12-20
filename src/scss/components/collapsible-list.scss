@@ -18,15 +18,10 @@ li.collapsibleListClosed > ul.collapsibleList * {
     opacity: 100;
 }
 
-
 .collapsibleList {
     span.open-close i {
         cursor: pointer;
         display: inline-block;
-        opacity: 0.8;
-        &:hover {
-            opacity: 1;
-        }
         // color: #fff;
     }
     i.open {
@@ -62,5 +57,4 @@ li.collapsibleListClosed > ul.collapsibleList * {
             }
         }
     }
-
 }

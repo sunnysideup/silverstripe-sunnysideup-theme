@@ -31,12 +31,19 @@
         background-size: 60%;
         width: 1.5em;
         transform-origin: center;
+        transition: transform 0.3s ease-in-out;
         &.open {
             background-position: center 55%;
+            &:hover {
+                transform: rotate(45deg);
+            }
         }
         &.closed {
             transform: rotate(90deg);
             background-position: 22% center;
+            &:hover {
+                transform: rotate(225deg);
+            }
         }
     }
 
