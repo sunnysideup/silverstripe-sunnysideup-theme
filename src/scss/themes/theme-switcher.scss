@@ -1,7 +1,8 @@
 #BackgroundImage,
 blockquote,
+theme-rocket #main #content-below-quote *,
 footer {
-    transition: opacity 0.1s ease-in-out !important;
+    transition: color 0.1s ease-in-out opacity 0.1s ease-in-out background-size 0.1 ease-in-out !important;
 }
 body.header-0 {
     #BackgroundImage,
@@ -13,7 +14,10 @@ body.header-0 {
     }
 }
 body.header-10 {
-    #BackgroundImage,
+    &.theme-rocket #main #content-below-quote * {
+        color: #eee;
+    }
+    Z #BackgroundImage,
     blockquote {
         opacity: 0.9 !important;
     }
@@ -22,6 +26,9 @@ body.header-10 {
     }
 }
 body.header-20 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #ddd;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.8 !important;
@@ -31,6 +38,9 @@ body.header-20 {
     }
 }
 body.header-30 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #ccc;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.7 !important;
@@ -40,6 +50,9 @@ body.header-30 {
     }
 }
 body.header-40 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #bbb;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.6 !important;
@@ -49,6 +62,9 @@ body.header-40 {
     }
 }
 body.header-50 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #aaa;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.5 !important;
@@ -58,6 +74,9 @@ body.header-50 {
     }
 }
 body.header-60 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #999;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.4 !important;
@@ -67,6 +86,9 @@ body.header-60 {
     }
 }
 body.header-70 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #888;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.3 !important;
@@ -76,6 +98,9 @@ body.header-70 {
     }
 }
 body.header-80 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #777;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.2 !important;
@@ -85,6 +110,9 @@ body.header-80 {
     }
 }
 body.header-90 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #666;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0.1 !important;
@@ -94,6 +122,9 @@ body.header-90 {
     }
 }
 body.header-100 {
+    &.theme-rocket #main #content-below-quote * {
+        color: #555;
+    }
     #BackgroundImage,
     blockquote {
         opacity: 0 !important;

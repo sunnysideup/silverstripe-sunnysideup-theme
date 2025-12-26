@@ -6,8 +6,8 @@ const scrollManager = {
     body: null,
     quote: null,
     footer: null,
-    headerRange: 60, // in vh
-    footerRange: 80, // in vh
+    headerRange: 70, // in vh
+    footerRange: 160, // in vh
     headerPct: 0,
     footerPct: 100,
     justScrolledDuration: 1200, // ms — change freely

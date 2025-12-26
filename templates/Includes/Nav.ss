@@ -14,15 +14,6 @@
                         <% loop Children %><% if ShowInMenus %>
                             <li class="$FirstLast $LinkingMode level1">
                             <a href="$Link">$MenuTitle</a>
-                                <% if Children %>
-                                <ul>
-                                <% loop Children %><% if ShowInMenus %>
-                                    <li class="$FirstLast $LinkingMode level3">
-                                        <a href="$Link">$MenuTitle</a>
-                                    </li>
-                                <% end_if %><% end_loop %>
-                                </ul>
-                                <% end_if %>
                             </li>
                         <% end_if %><% end_loop %>
                         </ul>

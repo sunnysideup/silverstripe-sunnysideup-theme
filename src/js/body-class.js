@@ -37,6 +37,7 @@ export const bodyClass = {
     },
 
     addBasicBodyClassListeners: function () {
+        bodyClass.addRocketModeVideoOrImage()
         document.addEventListener('DOMContentLoaded', function (event) {
             bodyClass.bodyObject.classList.add('body-loaded')
             if ('ontouchstart' in document.documentElement) {
@@ -44,7 +45,6 @@ export const bodyClass = {
             } else {
                 bodyClass.bodyObject.classList.add('no-touch')
             }
-            bodyClass.addRocketModeVideoOrImage()
         })
         bodyClass.bodyObject.classList.remove('body-unloaded')
         // window.addEventListener('beforeunload', function () {
@@ -200,13 +200,13 @@ export const bodyClass = {
     addRocketModeVideoOrImage: function () {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
-            const image = bodyClass.bodyObject.getAttribute('data-bg-image')
+            const imageURL = bodyClass.bodyObject.getAttribute('data-bg-image')
             const imageX =
                 bodyClass.bodyObject.getAttribute('data-bg-image-x') ?? '50%'
             const imageY =
                 bodyClass.bodyObject.getAttribute('data-bg-image-y') ?? '50%'
             // console.log(videoId)
-            if (videoId || image) {
+            if (videoId || imageURL) {
                 let style = ''
                 const div = document.createElement('div')
                 div.id = 'BackgroundImage'
@@ -222,24 +222,39 @@ export const bodyClass = {
                         'linear-gradient(210deg, #FFFFFF77 12%, transparent 88%)'
                 }
                 if (videoId) {
+                    const videoUrl =
+                        'https://player.vimeo.com/video/' +
+                        videoId +
+                        '?autoplay=1&autopause=0&muted=1&background=1'
                     if (shadowColour) {
                         style = 'background: ' + shadowColour
                     }
                     div.innerHTML =
-                        '<iframe src="https://player.vimeo.com/video/' +
-                        videoId +
-                        '?autoplay=1&autopause=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
+                        '<iframe src="' +
+                        videoUrl +
+                        '" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="' +
                         style +
                         '"></iframe>'
                     const temp = bodyClass.bodyObject.firstChild
                     bodyClass.bodyObject.insertBefore(div, temp)
+                    const video = document.createElement('video')
+                    document.body.classList.add('has-bg-image-loaded')
                 } else {
-                    style = 'url(' + image + ')'
+                    style = 'url(' + imageURL + ')'
                     if (shadowColour) {
                         style = shadowColour + ',' + style
                     }
                     div.style.backgroundImage = style
                     div.style.backgroundPosition = imageX + ' ' + imageY
+
+                    const img = new Image()
+                    img.onload = function () {
+                        document.body.classList.add('has-bg-image-loaded')
+                    }
+                    img.onerror = function () {
+                        document.body.classList.add('has-bg-image-loaded') // fail open
+                    }
+                    img.src = imageURL
                 }
                 div.classList.add('fade-on-no-rocket')
                 const temp = bodyClass.bodyObject.firstChild

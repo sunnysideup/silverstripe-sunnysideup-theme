@@ -45,6 +45,8 @@
             padding-bottom: 5rem;
             background-color: white;
             border: 1px solid #aaa;
+            width: calc(100% - 4rem) !important;
+            display: block;
         }
         p.caption {
             margin-top: 0 !important;

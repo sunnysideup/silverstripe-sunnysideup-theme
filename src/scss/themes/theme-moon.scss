@@ -21,22 +21,25 @@ body.theme-moon {
         text-decoration: none !important;
     }
     #nav {
-        background-color: $colour_sunny_side_up_green_darker !important;
-        border-color: $colour_sunny_side_up_green_darker !important;
+        background-color: $colour_anthroposofia !important;
+        border-color: $colour_anthroposofia !important;
         .menu-arrow {
             stroke: $colour_sunny_side_up_green_darker !important;
         }
     }
     .typography {
-        *,
+        * {
+            color: $colour_burned_sunny_side_up;
+        }
         a:link,
         a:visited {
-            color: $colour_burned_sunny_side_up;
+            color: $colour_sunny_side_up_green !important;
         }
         h1,
         h2 {
             text-transform: uppercase;
             color: $colour_blue_cobalter;
+            border-bottom-color: $colour_burned_sunny_side_up !important;
         }
         h2 {
             color: $colour_burned_sunny_side_up !important;
@@ -126,7 +129,12 @@ body.theme-moon {
             .work-example-images {
                 p.caption {
                     a {
-                        border-color: $colour_burned_sunny_side_up;
+                        color: #333 !important;
+                        &:link,
+                        &:visited {
+                            color: #333 !important;
+                            border-color: $colour_burned_sunny_side_up;
+                        }
                     }
                 }
             }

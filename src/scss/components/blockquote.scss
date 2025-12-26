@@ -25,7 +25,6 @@ main#main {
             overflow: hidden;
             font-weight: 200;
             font-style: italic;
-            text-align: left;
             font-family: $base_font_headers;
             color: $colour_blue_cobalter;
             * {
@@ -50,9 +49,13 @@ main#main {
                 }
                 svg {
                     vertical-align: baseline;
-                    transform: rotate(102deg);
+                    transform: rotate(105deg);
                     height: 1.2em;
                     width: 1.2em;
+                    transition: transform 0.1s ease-in-out;
+                    &:hover {
+                        transform: rotate(90deg);
+                    }
                 }
             }
             .Typewriter__wrapper,
@@ -67,13 +70,13 @@ main#main {
     0% {
         filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
     }
-    25% {
+    30% {
         filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
     }
     50% {
         filter: drop-shadow(0 0 20px $colour_sunny_side_up_yellow);
     }
-    75% {
+    70% {
         filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
     }
     100% {

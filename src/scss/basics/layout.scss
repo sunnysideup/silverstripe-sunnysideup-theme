@@ -32,7 +32,6 @@ body {
     }
 }
 main#main {
-    overflow-x: hidden;
     position: relative;
     z-index: 2;
     padding-top: 120vh;
@@ -58,5 +57,4 @@ body.no-rocket-show.no-quote {
 
 footer#footer {
     padding: 2rem;
-    margin-top: 90vh;
 }

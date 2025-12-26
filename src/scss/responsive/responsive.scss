@@ -16,13 +16,16 @@
         }
     }
     blockquote {
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding-left: calc(2rem + 3vw);
+        padding-right: calc(2rem + 3vw);
+        p {
+            text-align: center;
+        }
     }
     main#main {
         // padding-top: calc(24vw * 1.3);
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding-left: calc(2rem + 3vw);
+        padding-right: calc(2rem + 3vw);
         // #content-below-quote {
         //     margin-left: -3vw;
         //     margin-right: -3vw;
@@ -37,12 +40,13 @@
             .image-container {
                 img {
                     max-width: 92%;
+                    width: 100%;
                 }
             }
         }
     }
     footer#footer {
-        margin-top: 130vw;
+        margin-top: 160vh;
         #theme-selectors {
             display: block;
         }
@@ -83,8 +87,6 @@
         }
     }
     main#main {
-        padding-left: 2rem;
-        padding-right: 2rem;
         // #content-below-quote {
         //     margin-left: -6vw;
         //     margin-right: -6vw;
@@ -100,7 +102,11 @@
             }
         }
     }
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
     footer#footer {
+        // margin-top: 180vh;
         padding: 4rem 6vw;
         #theme-selectors {
             a {
@@ -112,9 +118,6 @@
             text-align: left;
             padding-top: 0;
         }
-    }
-    .row {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -138,9 +141,6 @@
         }
     }
 
-    footer#footer {
-        padding: 4rem 6vw;
-    }
     .row {
         grid-template-columns: 1fr 1fr;
     }
@@ -151,6 +151,10 @@
     }
     .card-holder {
         grid-column-gap: 4rem;
+    }
+    footer#footer {
+        padding: 4rem 6vw;
+        // margin-top: 180vh;
     }
 }
 @media only screen and (min-width: 900px) {
@@ -239,6 +243,9 @@
     #SiblingsAndChildren {
         margin-top: 6rem !important;
         padding-top: 2rem !important;
+    }
+    footer#footer {
+        // margin-top: 180vh;
     }
 }
 @media only screen and (min-width: 1050px) {
@@ -355,6 +362,7 @@
         padding: 4rem 0;
         padding-right: 6vw;
         padding-left: calc(24vw + 24vw);
+        margin-top: 180vh;
         // z-index: 30;
     }
     body.menu-on {
@@ -421,7 +429,7 @@
     }
     footer#footer {
         padding-left: 24vw;
-        margin-top: 70vw;
+        margin-top: 200vh;
     }
     .row {
         grid-template-columns: 1fr 1fr 1fr 1fr;

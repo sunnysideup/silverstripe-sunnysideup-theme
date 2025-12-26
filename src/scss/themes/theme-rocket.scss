@@ -1,8 +1,18 @@
-body.theme-rocket {
-    background-color: transparent;
-    &.has-video {
-        background-color: #000;
+body {
+    transition: background-color 0.3s ease;
+    background-color: $colour_yep_thats_grey;
+    &.has-bg-image-loaded {
+        background-color: #55555500;
     }
+}
+body.theme-rocket {
+    &.has-video {
+        background-color: $colour_black;
+    }
+    &.header-0 {
+        background-color: $colour_yep_thats_grey;
+    }
+
     #header {
         * {
             color: $colour_sunny_side_up_yellow;
@@ -18,9 +28,9 @@ body.theme-rocket {
             p {
                 filter: drop-shadow(0 0 6px #000);
                 background: none;
-                color: $colour_white;
+                color: $colour_white !important;
                 * {
-                    color: $colour_white;
+                    color: $colour_white !important;
                 }
             }
         }
@@ -36,6 +46,11 @@ body.theme-rocket {
                 &:before {
                     border-top-color: transparent;
                 }
+            }
+            a,
+            a:link,
+            a:visited {
+                color: #555 !important;
             }
         }
         .image-container {

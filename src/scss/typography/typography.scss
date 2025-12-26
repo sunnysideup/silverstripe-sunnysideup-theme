@@ -56,7 +56,7 @@
         * {
             color: $colour_blue_cobalter;
         }
-        border-bottom: 3px dashed $colour_blue_cobalter_half_non_transparent;
+        border-bottom: 3px dashed $colour_modern_iron;
     }
     h1 {
         line-height: 1.29;
@@ -267,14 +267,16 @@
     }
     a {
         transition: 0.3s;
-    }
-    a:hover {
-        filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow) !important;
-        // border-bottom: 3px solid $colour_blue_cobalter;
-    }
-    a:active {
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: inherit;
+        text-decoration: none;
+        color: $colour_purple_spirituality_in_the_sun !important;
+        &:hover {
+            filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow) !important;
+            // border-bottom: 3px solid $colour_blue_cobalter;
+        }
+        &:active {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: inherit;
+        }
     }
 
     .last-updated {

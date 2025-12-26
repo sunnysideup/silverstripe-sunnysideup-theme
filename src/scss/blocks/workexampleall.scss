@@ -1,0 +1,26 @@
+.sunnysideup__app__elements__workexampleall {
+    .content-element__content {
+        .work-example-images {
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            justify-content: space-between; /* spread columns to fill row */
+            gap: 4rem; /* vertical spacing (and fallback) */
+            .work-example-image {
+                max-width: 200px;
+                min-width: 0;
+                .image-container {
+                    margin: 0 !important;
+                    padding: 0;
+                    img {
+                        display: block !important;
+                        width: 100% !important;
+                        box-sizing: border-box;
+                        border: 1px solid $colour_modern_iron_half;
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+        }
+    }
+}
