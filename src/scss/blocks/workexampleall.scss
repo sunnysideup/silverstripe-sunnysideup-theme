@@ -3,22 +3,24 @@
         .work-example-images {
             padding-top: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             justify-content: space-between; /* spread columns to fill row */
-            gap: 4rem; /* vertical spacing (and fallback) */
+            gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
-                max-width: 300px;
+                max-width: 470px;
                 min-width: 0;
                 .image-container {
                     margin: 0 !important;
-                    padding: 0;
+                    padding: 0 !important;
                     img {
+                        margin: 0 !important;
+                        padding: 0 !important;
                         display: block !important;
                         width: 100% !important;
                         box-sizing: border-box;
                         border: 1px solid $colour_modern_iron_half;
                         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.33);
-                        border-radius: 1.5rem;
+                        border-radius: 1.3rem;
                     }
                 }
             }
