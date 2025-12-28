@@ -15,11 +15,11 @@ body {
     display: block;
     background-size: cover;
     position: fixed;
+    opacity: 0;
     top: 0;
+    right: 0;
     left: 0;
     bottom: 0;
-    right: 0;
-    opacity: 0;
     iframe {
         width: 120vw;
         height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
@@ -43,6 +43,14 @@ main#main {
         }
     }
 }
+footer#footer {
+    padding: 2rem;
+}
+body.has-bg-image-loaded {
+    #BackgroundImage {
+        opacity: 1;
+    }
+}
 body.no-rocket-show.no-quote {
     #main {
         padding-top: calc(50vh - 8rem);
@@ -53,8 +61,4 @@ body.no-rocket-show.no-quote {
     .main-quote {
         display: none;
     }
-}
-
-footer#footer {
-    padding: 2rem;
 }

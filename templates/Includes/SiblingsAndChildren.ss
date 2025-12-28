@@ -1,5 +1,5 @@
 <% if $MenuChildren || $Siblings || $PhotoCredit %>
-<div id="SiblingsAndChildren" class="dnadesign__elemental__models__elementcontent">
+<div id="SiblingsAndChildren" class="element dnadesign__elemental__models__elementcontent">
 <% if $MenuChildren %>
     <h2>Delve Deeper</h2>
     <% if MenuChildren.count = 1 %>

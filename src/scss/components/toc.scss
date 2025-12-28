@@ -96,16 +96,12 @@ body.has-toc.toc-on {
             }
             #SiblingsAndChildren h2,
             #SiblingsAndChildren h1 {
-                margin: 0 !important;
                 display: block;
             }
             h1,
             h2 {
                 width: auto !important;
                 display: block !important;
-                &:before {
-                    border-top-color: transparent;
-                }
                 &.open-close.icon {
                     margin-top: -4px;
                 }
@@ -124,6 +120,14 @@ body.has-toc.toc-on {
                         display: none;
                     }
                 }
+            }
+        }
+    }
+    .element {
+        &:first-of-type {
+            h1:before,
+            h2:before {
+                border-top: 2px dashed transparent !important;
             }
         }
     }

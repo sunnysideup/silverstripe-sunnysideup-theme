@@ -7,6 +7,9 @@
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
+                a {
+                    filter: none;
+                }
                 max-width: 470px;
                 min-width: 0;
                 .image-container {

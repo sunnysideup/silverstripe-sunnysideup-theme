@@ -1,11 +1,13 @@
-#BackgroundImage,
 blockquote,
 theme-rocket #main #content-below-quote *,
 footer {
-    transition: color 0.1s ease-in-out opacity 0.1s ease-in-out background-size 0.1 ease-in-out !important;
+    transition:
+        color 0.1s ease-in-out,
+        opacity 0.1s ease-in-out,
+        background-size 0.1s ease-in-out !important;
 }
 body.header-0 {
-    #BackgroundImage,
+    #BackgroundImage.has-bg-image-loaded,
     blockquote {
         opacity: 1 !important;
     }
@@ -17,7 +19,7 @@ body.header-10 {
     &.theme-rocket #main #content-below-quote * {
         color: #eee;
     }
-    Z #BackgroundImage,
+    #BackgroundImage.has-bg-image-loaded,
     blockquote {
         opacity: 0.9 !important;
     }
@@ -29,7 +31,7 @@ body.header-20 {
     &.theme-rocket #main #content-below-quote * {
         color: #ddd;
     }
-    #BackgroundImage,
+    #BackgroundImage.has-bg-image-loaded,
     blockquote {
         opacity: 0.8 !important;
     }

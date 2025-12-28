@@ -159,11 +159,11 @@
 }
 @media only screen and (min-width: 900px) {
     main#main {
-        .dnadesign__elemental__models__elementcontent {
+        .element {
             h1:before,
             h2:before {
                 display: block;
-                border-top: 2px dashed $colour_blue_cobalter;
+                border-top: 2px dashed $colour_purple_spirituality_in_the_sun;
             }
             h1,
             h2 {
@@ -240,10 +240,10 @@
         }
     }
 
-    #SiblingsAndChildren {
-        margin-top: 6rem !important;
-        padding-top: 2rem !important;
-    }
+    // #SiblingsAndChildren {
+    //     margin-top: 6rem !important;
+    //     padding-top: 2rem !important;
+    // }
     footer#footer {
         // margin-top: 180vh;
     }

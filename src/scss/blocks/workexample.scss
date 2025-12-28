@@ -21,6 +21,9 @@
         }
     }
     .work-example-images {
+        a {
+            filter: none;
+        }
         padding-bottom: 4rem;
         position: relative;
         .image-container {

@@ -108,7 +108,7 @@
             margin-bottom: 1rem;
             padding-left: 0;
             &::marker {
-                color: $colour_purple_spirituality_in_the_sun;
+                // color: $colour_purple_spirituality_in_the_sun;
             }
             p {
                 margin: 0 !important;
@@ -268,9 +268,10 @@
     a {
         transition: 0.3s;
         text-decoration: none;
-        color: $colour_purple_spirituality_in_the_sun !important;
+        color: $colour_purple_spirituality_in_the_sun;
+        filter: drop-shadow(0 0 5px $colour_sunny_side_up_yellow_less);
         &:hover {
-            filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow) !important;
+            filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
             // border-bottom: 3px solid $colour_blue_cobalter;
         }
         &:active {
