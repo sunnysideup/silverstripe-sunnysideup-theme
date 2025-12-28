@@ -183,31 +183,10 @@
             h2 + ol {
                 padding-top: 1rem;
             }
-            p,
-            ul,
-            ol,
-            h3,
-            h4,
-            h5,
-            h6,
-            form,
-            address,
-            div.captionImage {
-                margin-left: 24vw;
-                padding-top: 0;
-                margin-top: 0;
-            }
-            .image-container {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                img {
-                    display: block;
-                    margin: 0 auto;
-                    max-width: calc(64vw - 2px);
-                }
-            }
-            li {
+            &.dnadesign__elemental__models__elementcontent {
                 p,
+                ul,
+                ol,
                 h3,
                 h4,
                 h5,
@@ -215,26 +194,49 @@
                 form,
                 address,
                 div.captionImage {
-                    margin-left: 0;
-                    padding-left: 0;
+                    margin-left: 24vw;
+                    padding-top: 0;
+                    margin-top: 0;
                 }
-                ul,
-                ol {
-                    padding-top: 1.7rem;
-                    margin-left: 0 !important;
-                    padding-left: 2.3rem;
-                    padding-bottom: 0;
-                    li {
-                        margin-left: 0rem;
-                        padding-left: 0;
+                .image-container {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        max-width: calc(64vw - 2px);
                     }
                 }
-            }
-            .image-container.full {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                img {
-                    max-width: calc(100% - 2px) !important;
+                li {
+                    p,
+                    h3,
+                    h4,
+                    h5,
+                    h6,
+                    form,
+                    address,
+                    div.captionImage {
+                        margin-left: 0;
+                        padding-left: 0;
+                    }
+                    ul,
+                    ol {
+                        padding-top: 1.7rem;
+                        margin-left: 0 !important;
+                        padding-left: 2.3rem;
+                        padding-bottom: 0;
+                        li {
+                            margin-left: 0rem;
+                            padding-left: 0;
+                        }
+                    }
+                }
+                .image-container.full {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    img {
+                        max-width: calc(100% - 2px) !important;
+                    }
                 }
             }
         }
