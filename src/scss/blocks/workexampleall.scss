@@ -2,6 +2,7 @@
     .content-element__content {
         .work-example-images {
             padding-top: 2rem;
+            padding-bottom: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             justify-content: space-between; /* spread columns to fill row */
