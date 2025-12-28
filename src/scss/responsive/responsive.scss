@@ -167,9 +167,6 @@
             }
             h1,
             h2 {
-                clear: left;
-                float: left;
-                width: calc(21vw - 5rem);
                 padding-top: 0.6rem;
                 margin-top: 0;
                 margin-top: 4px;
@@ -178,12 +175,44 @@
                     margin-top: 0px;
                 }
             }
-            h2 + p,
-            h2 + ul,
-            h2 + ol {
-                padding-top: 1rem;
+            li {
+                p,
+                h3,
+                h4,
+                h5,
+                h6,
+                form,
+                address,
+                div.captionImage {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+                ul,
+                ol {
+                    padding-top: 1.7rem;
+                    margin-left: 0 !important;
+                    padding-left: 2.3rem;
+                    padding-bottom: 0;
+                    li {
+                        margin-left: 0rem;
+                        padding-left: 0;
+                    }
+                }
+            }
+            .image-container.full {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                img {
+                    max-width: calc(100% - 2px) !important;
+                }
             }
             &.dnadesign__elemental__models__elementcontent {
+                h1,
+                h2 {
+                    clear: left;
+                    float: left;
+                    width: calc(21vw - 5rem);
+                }
                 p,
                 ul,
                 ol,
@@ -198,9 +227,10 @@
                     padding-top: 0;
                     margin-top: 0;
                 }
-                h1 + *,
-                h2 + * {
-                    padding-top: 1.2rem !important;
+                h2 + p,
+                h2 + ul,
+                h2 + ol {
+                    padding-top: 1.2rem;
                 }
                 .image-container {
                     padding-left: 0 !important;
@@ -209,37 +239,6 @@
                         display: block;
                         margin: 0 auto;
                         max-width: calc(64vw - 2px);
-                    }
-                }
-                li {
-                    p,
-                    h3,
-                    h4,
-                    h5,
-                    h6,
-                    form,
-                    address,
-                    div.captionImage {
-                        margin-left: 0;
-                        padding-left: 0;
-                    }
-                    ul,
-                    ol {
-                        padding-top: 1.7rem;
-                        margin-left: 0 !important;
-                        padding-left: 2.3rem;
-                        padding-bottom: 0;
-                        li {
-                            margin-left: 0rem;
-                            padding-left: 0;
-                        }
-                    }
-                }
-                .image-container.full {
-                    padding-left: 0 !important;
-                    padding-right: 0 !important;
-                    img {
-                        max-width: calc(100% - 2px) !important;
                     }
                 }
             }
