@@ -4,15 +4,17 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
+                position: relative;
+                min-width: 100px;
+                max-width: 800px;
+                cursor: pointer;
                 a {
                     filter: none;
                 }
-                max-width: 470px;
-                min-width: 0;
                 .image-container {
                     margin: 0 !important;
                     padding: 0 !important;
@@ -25,6 +27,39 @@
                         border: 1px solid $colour_modern_iron_half;
                         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.33);
                         border-radius: 1.3rem;
+                        max-width: 100% !important;
+                    }
+                }
+                .work-example-image-caption {
+                    position: absolute;
+                    background-color: $colour_rose_storm;
+                    padding: 2rem;
+                    border-radius: 1.3rem;
+                    opacity: 0;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    transition: opacity 0.3s ease-in-out;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    .small-line {
+                        font-size: 13px;
+                        color: #fff !important;
+                        * {
+                            color: #fff !important;
+                        }
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                &:hover,
+                &:active {
+                    .work-example-image-caption {
+                        opacity: 0.97 !important;
                     }
                 }
             }
