@@ -8,9 +8,9 @@ body.has-toc {
             h2 {
                 padding-left: 4rem;
                 cursor: pointer;
+                margin-top: 0;
                 > span:first-child {
                     display: inline-block;
-                    float: left;
                     width: 4.5rem;
                     margin-left: -4rem;
                     i {
@@ -97,6 +97,7 @@ body.has-toc.toc-on {
             #SiblingsAndChildren h2,
             #SiblingsAndChildren h1 {
                 display: block;
+                margin-top: 0;
             }
             h1,
             h2 {

@@ -267,9 +267,9 @@
     }
     a {
         transition: 0.3s;
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: $colour_sunny_side_up_yellow;
         color: $colour_purple_spirituality_in_the_sun;
-        filter: drop-shadow(0 0 5px $colour_sunny_side_up_yellow_less);
         &:hover {
             filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
             // border-bottom: 3px solid $colour_blue_cobalter;
@@ -277,6 +277,10 @@
         &:active {
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: inherit;
+        }
+        &:visited {
+            text-decoration-color: $colour_on_the_fence_green;
+            color: $colour_outer_space_love;
         }
     }
 

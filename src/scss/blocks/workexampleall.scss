@@ -53,6 +53,7 @@
                         margin: 0;
                     }
                     .small-line {
+                        pointer-events: none;
                         font-size: 13px;
                         color: #fff !important;
                         * {
@@ -67,6 +68,9 @@
                     cursor: zoom-out;
                     .work-example-image-caption {
                         opacity: 0.97 !important;
+                    }
+                    .small-line {
+                        pointer-events: auto;
                     }
                 }
             }
