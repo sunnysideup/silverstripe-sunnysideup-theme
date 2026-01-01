@@ -11,7 +11,7 @@
                 position: relative;
                 min-width: 280px;
                 max-width: 520px;
-                cursor: pointer;
+                cursor: zoom-in;
                 a {
                     filter: none;
                 }
@@ -64,6 +64,7 @@
                     }
                 }
                 &.is-active {
+                    cursor: zoom-out;
                     .work-example-image-caption {
                         opacity: 0.97 !important;
                     }
