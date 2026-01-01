@@ -35,6 +35,7 @@ main#main {
             // }
             .shiner {
                 display: inline-block;
+                cursor: help;
                 text-align: right;
                 animation: shine;
                 animation-duration: 4.2s; /* Full cycle: 2.1s of blinking + 2.1s pause */

@@ -4,13 +4,13 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
                 position: relative;
-                min-width: 100px;
-                max-width: 800px;
+                min-width: 280px;
+                max-width: 520px;
                 cursor: pointer;
                 a {
                     filter: none;
@@ -40,7 +40,7 @@
                     right: 0;
                     left: 0;
                     bottom: 0;
-                    transition: opacity 0.3s ease-in-out;
+                    transition: opacity 0.2s;
                     display: flex;
                     flex-direction: column;
                     flex-wrap: nowrap;
@@ -51,7 +51,6 @@
                         color: #fff !important;
                         padding: 0;
                         margin: 0;
-                        padding-bottom: 0.5rem;
                     }
                     .small-line {
                         font-size: 13px;
@@ -64,8 +63,7 @@
                         }
                     }
                 }
-                &:hover,
-                &:active {
+                &.is-active {
                     .work-example-image-caption {
                         opacity: 0.97 !important;
                     }
