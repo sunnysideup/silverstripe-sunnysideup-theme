@@ -10,23 +10,13 @@
                 display: none !important;
             }
         }
-        p {
-            font-size: 1.8rem !important;
-            &:last-child {
-                margin-bottom: 0 !important;
-            }
-        }
-        h4 {
-            font-size: 2rem !important;
-        }
     }
     .work-example-images {
-        clear: both;
+        padding-bottom: 4rem;
+        position: relative;
         a {
             filter: none;
         }
-        padding-bottom: 4rem;
-        position: relative;
         .image-container {
             padding-bottom: 1rem !important;
             img.not-first {

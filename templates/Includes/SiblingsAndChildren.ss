@@ -7,7 +7,7 @@
             Please also visit our <% loop MenuChildren %><a href="$Link">$Title</a><% end_loop %> page.
         </p>
     <% else %>
-        <p>Pages in the <a href="#top">$MenuTitle</a> section of our site:</p>
+        <p>In the <a href="#top">$MenuTitle</a> section of our site you can find out more about:</p>
         <ul>
             <% loop MenuChildren %><li class="$FirstLast $LinkingMode"><a href="$Link">$MenuTitle</a></li><% end_loop %>
         </ul>
@@ -22,7 +22,7 @@
             <a href="$Parent.Link">$Parent.MenuTitle</a> section.
         </p>
     <% else %>
-        <p>Other pages in the <a href="$Parent.Link">$Parent.MenuTitle</a> section:</p>
+        <p>Other topics in the <a href="$Parent.Link">$Parent.MenuTitle</a> section:</p>
         <ul>
             <% loop Siblings %><li class="$FirstLast $LinkingMode"><a href="$Link">$MenuTitle</a></li><% end_loop %>
         </ul>
@@ -30,9 +30,8 @@
 <% end_if %>
 
     <% if $PhotoCredit %>
-    <h3>Intro Photo Credit</h3>
-    <p>$PhotoCredit. All rights reserved.
-    </p>
+        <h2>Intro Photo Credit</h2>
+        <p>$PhotoCredit. All rights reserved.</p>
     <% end_if %>
 
 </div>
