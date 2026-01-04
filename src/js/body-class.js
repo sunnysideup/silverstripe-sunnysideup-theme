@@ -200,11 +200,14 @@ export const bodyClass = {
     addRocketModeVideoOrImage: function () {
         if (bodyClass.hasRocketShow() === true) {
             const videoId = bodyClass.bodyObject.getAttribute('data-video-id')
+            const isLandscape = () =>
+                window.matchMedia('(orientation: landscape)').matches
             const imageURL = bodyClass.bodyObject.getAttribute('data-bg-image')
             const imageX =
                 bodyClass.bodyObject.getAttribute('data-bg-image-x') ?? '50%'
             const imageY =
                 bodyClass.bodyObject.getAttribute('data-bg-image-y') ?? '50%'
+
             // console.log(videoId)
             if (videoId || imageURL) {
                 let style = ''
@@ -221,7 +224,7 @@ export const bodyClass = {
                     shadowColour =
                         'linear-gradient(210deg, #FFFFFF77 12%, transparent 88%)'
                 }
-                if (videoId) {
+                if (videoId && isLandscape()) {
                     const videoUrl =
                         'https://player.vimeo.com/video/' +
                         videoId +
@@ -239,7 +242,7 @@ export const bodyClass = {
                     bodyClass.bodyObject.insertBefore(div, temp)
                     const video = document.createElement('video')
                     document.body.classList.add('has-bg-image-loaded')
-                } else {
+                } else if (imageURL) {
                     style = 'url(' + imageURL + ')'
                     if (shadowColour) {
                         style = shadowColour + ',' + style
