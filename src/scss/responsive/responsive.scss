@@ -206,7 +206,8 @@
                     max-width: calc(100% - 2px) !important;
                 }
             }
-            &.dnadesign__elemental__models__elementcontent {
+            &.dnadesign__elemental__models__elementcontent,
+            &.sunnysideup__app__elements__hostingcalculator {
                 h1,
                 h2 {
                     clear: left;
@@ -220,7 +221,6 @@
                 h4,
                 h5,
                 h6,
-                form,
                 address,
                 div.captionImage {
                     margin-left: 24vw;
