@@ -12,12 +12,12 @@ $background_color_6: transparent;
             font-size: 2rem;
         }
         margin-top: 2rem;
-        margin-bottom: 12rem;
+        margin-bottom: 2rem;
         fieldset,
         .userform-fields {
             border: 1px dashed $colour_modern_iron !important;
             border-top-right-radius: 1rem;
-            padding: 3vw;
+            padding: 3rem 3vw;
             background-color: $colour_white;
             margin: 2rem 0;
             h1,
@@ -49,14 +49,14 @@ $background_color_6: transparent;
                 line-height: 1.2;
             }
             .field {
-                padding-top: 3rem;
+                padding-top: 1rem;
                 width: 100%;
-                padding-bottom: 0.8rem;
+                padding-bottom: 1rem;
             }
             label {
                 font-size: 2rem;
                 // font-style: italic;
-                color: $colour_yep_thats_grey_revers !important;
+                color: $colour_yep_thats_grey !important;
             }
             .middleColumn {
                 display: block;
@@ -209,9 +209,9 @@ $background_color_6: transparent;
             }
         }
         .btn-toolbar {
-            padding: 2rem 3vw;
+            padding: 0;
             display: block;
-            text-align: left;
+            text-align: right;
             input {
                 padding: 1.3rem 1.7rem;
                 background: $colour_blue_cobalter;
