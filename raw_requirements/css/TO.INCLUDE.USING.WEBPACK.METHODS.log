@@ -5,3 +5,8 @@
 @import 'PROJECT_ROOT/_resources/vendor/silverstripe/mfa/client/dist/styles/bundle.css'
 @import 'PROJECT_ROOT/_resources/vendor/sunnysideup/elemental-edit-me-button/client/AddCanEditButton.css'
 @import 'PROJECT_ROOT/_resources/vendor/silverstripe/framework/client/styles/debug.css'
+@import 'PROJECT_ROOT_DIR/_resources/vendor/sunnysideup/elemental-edit-me-button/client/AddCanEditButton.css'
+@import 'PROJECT_ROOT_DIR/_resources/vendor/silverstripe/admin/client/dist/styles/bundle.css'
+@import 'PROJECT_ROOT_DIR/_resources/vendor/silverstripe/login-forms/client/dist/styles/bundle.css'
+@import 'PROJECT_ROOT_DIR/_resources/vendor/silverstripe/login-forms/client/dist/styles/darkmode.css'
+@import 'PROJECT_ROOT_DIR/_resources/vendor/silverstripe/mfa/client/dist/styles/bundle.css'

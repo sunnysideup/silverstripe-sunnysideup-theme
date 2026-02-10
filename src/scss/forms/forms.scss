@@ -73,7 +73,7 @@ $background_color_6: transparent;
                     border-bottom: 2px dashed $colour_modern_iron;
                     color: $colour_black_lighter;
                     &:focus {
-                        border-bottom: 3px solid $colour_burngreen !important;
+                        border-bottom: 3px solid $colour_burngreen;
                         outline: none !important;
                         background-color: $colour_burngreen;
                     }

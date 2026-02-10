@@ -1,75 +1,114 @@
-$colour-white: #fff;
-$colour_white_ten_percent: #ffffff22;
-$colour_black: #000;
-$colour_black_lighter: #111;
-
-$colour_sunny_side_up_green: #00ab06;
-$colour_sunny_side_up_green_darker: #0f3d11;
-$colour_lucky_grey: #777777;
-$colour_blue_cobalter_highlights: #022866; //#2d57ff // #2d57ff // e239cc
-$colour_blue_cobalter: #022866; //#2d57ff // #2d57ff // e239cc
-$colour_blue_cobalter_half: #02286655; //8ca6f9
-$colour_blue_cobalter_half_non_transparent: #b9c7ff; //8ca6f9
-$colour_blue_cobalter_lighter: #8ca6f9;
-$colour_burngreen: #94c93d;
-$colour_light_grey_aotrom: #e6e6e6;
-$colour_light_grey_aotrom_fifty_percent: #e6e6e677;
-$colour_modern_iron: #a7a7a7;
-$colour_modern_iron_half: #a7a7a777;
+// ===============================
+// Main ones
+// ===============================
 $colour_sunny_side_up_yellow: #f7cd55;
-$colour_sunny_side_up_yellow_less: #f7cd55cc;
-$colour_sunny_side_up_yellow_ten_percent: #f7cd5522;
-$colour_hypocrite_yellow: #f7cd55;
+
+// ===============================
+// Greys, black, white, transparent, gradients
+// ===============================
+$colour-white: #fff;
+$colour_black: #000;
+$colour_white_ten_percent: #ffffff22;
+
+$colour_boot_black: #040403;
+$colour_boot_black_semi: #040403cc;
+$colour_black_lighter: #111;
+$colour_almost_black_dreamless_sleep: #111;
+
+$colour_darker_grey_catch_22: #222;
+$colour_outer_space_love: #333;
+$colour_black_rock_n_roll: #191919;
+
+$colour_lucky_grey: #777777;
 $colour_yep_thats_grey: #575757;
 $colour_yep_thats_grey_semi: #575757cc;
 $colour_yep_thats_grey_revers: #959595;
-$colour_overcast_sunny_side_up: #c3bfb3;
-$colour_burngreen: #a6bd7f;
-$colour_vexy: #0028c9;
 
-/* theme moon */
-$colour_orange: orange;
-$colour_climate_negative: #6a36c2;
-$colour_painty_green: #386548;
-$colour_boot_black: #040403;
-$colour_boot_black_semi: #040403cc;
-$colour_blue: blue;
-$colour_pink: pink;
-$colour_red: red;
-$colour_purple: purple;
-$colour_navy: navy;
-$colour_yellow: yellow;
-$colour_anthroposofia: #3a075a;
-$colour_rose_storm: #ef5d5d;
-$colour_ekos_green: #95c93d;
-$colour_patrick_star_skin_colour: #ff7b7b;
-$colour_cable_car_red: #fc4b15;
-
-/* theme planet */
-$colour_burned_sunny_side_up: #e4b105;
-$colour_law_firm_report_cover: #0d3a59;
-$colour_ranch_style_beans_with_onions: #240000;
-$colour_minty_just_add_chocolate: #8dfdfa;
-
-/* theme rocket */
-
-$colour_darker_grey_catch_22: #222;
-$colour_almost_black_dreamless_sleep: #111;
 $colour_light_grey_gravel_fint: #bbb;
 $colour_screaming_grey: #aaa;
-$colour_darker_grey_catch_22: #222;
-$colour_purple_spirituality_in_the_sun: #022866; //#3a075a;
-$colour_outer_space_love: #333; //#210F36;
-$colour_on_the_fence_green: #81ce86;
-$colour_on_the_fence_green_transparent: #81ce86;
-$colour_sunny_side_up_sky: #c6e3ea;
-$colour_sunny_side_up_dark_purple: #200233;
+$colour_modern_iron: #a7a7a7;
+$colour_modern_iron_half: #a7a7a777;
 
-/* theme star */
-$colour_organic_egg_yolk: #e4b105;
-$colour_center_shake_blue: #0032b9;
-$colour_black_rock_n_roll: #191919;
+$colour_light_grey_aotrom: #e6e6e6;
+$colour_light_grey_aotrom_fifty_percent: #e6e6e677;
+
+$colour_overcast_sunny_side_up: #c3bfb3;
 
 $colour_transparent: transparent;
+
 $colour_grey_white_grey: linear-gradient(270deg, $colour_light_grey_aotrom, $colour_white, $colour_light_grey_aotrom);
-// $colour_grey_white_grey_fancy: linear-gradient(90deg, rgba(240,240,240,0.1) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 91%, rgba(240,240,240,0.1) 100%);
+
+// ===============================
+// Yellows
+// ===============================
+$colour_sunny_side_up_yellow_less: #f7cd55cc;
+$colour_sunny_side_up_yellow_ten_percent: #f7cd5522;
+$colour_hypocrite_yellow: #f7cd55;
+
+$colour_yellow: yellow;
+$colour_burned_sunny_side_up: #e4b105;
+$colour_organic_egg_yolk: #e4b105;
+
+// ===============================
+// Greens
+// ===============================
+$colour_sunny_side_up_green: #00ab06;
+$colour_sunny_side_up_green_darker: #0f3d11;
+
+$colour_painty_green: #386548;
+$colour_on_the_fence_green: #81ce86;
+$colour_on_the_fence_green_transparent: #81ce86;
+
+$colour_burngreen: #94c93d;
+$colour_burngreen: #a6bd7f;
+
+$colour_ekos_green: #95c93d;
+$colour_ekos_green: #95c93d;
+
+$colour_green: green;
+
+// ===============================
+// Blues / navies
+// ===============================
+
+$colour_blue_cobalter_highlights: #022866;
+$colour_blue_cobalter: #022866;
+$colour_blue_cobalter_half: #02286655;
+$colour_blue_cobalter_half_non_transparent: #b9c7ff;
+$colour_blue_cobalter_lighter: #8ca6f9;
+
+$colour_vexy: #0028c9;
+$colour_center_shake_blue: #0032b9;
+$colour_law_firm_report_cover: #0d3a59;
+$colour_sunny_side_up_sky: #c6e3ea;
+
+// ===============================
+// Purples
+// ===============================
+$colour_purple: purple;
+
+$colour_climate_negative: #6a36c2;
+$colour_anthroposofia: #3a075a;
+$colour_sunny_side_up_dark_purple: #200233;
+$colour_purple_spirituality_in_the_sun: #022866;
+
+// ===============================
+// Reds / pinks
+// ===============================
+$colour_red: red;
+$colour_pink: pink;
+
+$colour_rose_storm: #ef5d5d;
+$colour_patrick_star_skin_colour: #ff7b7b;
+$colour_cable_car_red: #fc4b15;
+$colour_ranch_style_beans_with_onions: #240000;
+
+// ===============================
+// Oranges
+// ===============================
+$colour_orange: orange;
+
+// ===============================
+// Mint / aqua
+// ===============================
+$colour_minty_just_add_chocolate: #8dfdfa;
