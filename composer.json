@@ -12,7 +12,7 @@
     "sunnysideup/webpack_requirements_backend": "dev-main"
   },
   "require-dev": {
-    "sunnysideup/sswebpack_engine_only": "5.x-dev"
+    "sunnysideup/sswebpack_engine_only": "dev-main"
   },
   "extra": {
     "installer-name": "sun",
