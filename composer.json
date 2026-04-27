@@ -8,8 +8,8 @@
   ],
   "license": "BSD-3-Clause",
   "require": {
-    "silverstripe/framework": "^4.0 || ^5.0",
-    "sunnysideup/webpack_requirements_backend": "5.x-dev"
+    "silverstripe/framework": "^6.0",
+    "sunnysideup/webpack_requirements_backend": "dev-main"
   },
   "require-dev": {
     "sunnysideup/sswebpack_engine_only": "5.x-dev"
