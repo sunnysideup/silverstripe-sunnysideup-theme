@@ -15,7 +15,7 @@
             top: calc(24vw / 1.6);
         }
     }
-    blockquote {
+    blockquote.main-quote {
         padding-left: calc(2rem + 3vw);
         padding-right: calc(2rem + 3vw);
         p {
@@ -163,11 +163,11 @@
             h1:before,
             h2:before {
                 display: block;
-                border-top: 2px dashed $colour_purple_spirituality_in_the_sun;
+                border-top: 4px dotted $colour_modern_iron;
             }
             h1,
             h2 {
-                padding-top: 0.6rem;
+                padding-top: 1.2rem;
                 margin-top: 0;
                 margin-top: 4px;
                 border-bottom: none;
@@ -221,6 +221,7 @@
                 h4,
                 h5,
                 h6,
+                blockquote,
                 address,
                 div.captionImage {
                     margin-left: 24vw;
@@ -237,7 +238,7 @@
                     padding-right: 0 !important;
                     img {
                         display: block;
-                        margin: 0 auto;
+                        margin: 0 0 0 auto;
                         max-width: calc(64vw - 2px);
                     }
                 }

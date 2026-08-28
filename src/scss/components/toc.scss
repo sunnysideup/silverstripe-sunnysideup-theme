@@ -128,7 +128,7 @@ body.has-toc.toc-on {
         &:first-of-type {
             h1:before,
             h2:before {
-                border-top: 2px dashed transparent !important;
+                // border-top: 4px dotted transparent !important;
             }
         }
     }

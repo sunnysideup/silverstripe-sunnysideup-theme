@@ -33,7 +33,7 @@ body.theme-moon {
         }
         a:link,
         a:visited {
-            color: $colour_sunny_side_up_green !important;
+            color: $colour_burned_sunny_side_up !important;
         }
         h1,
         h2 {
@@ -41,7 +41,7 @@ body.theme-moon {
             color: $colour_blue_cobalter;
             border-bottom-color: $colour_burned_sunny_side_up !important;
         }
-        h2 {
+        h2, h3 {
             color: $colour_burned_sunny_side_up !important;
             span {
                 color: $colour_burned_sunny_side_up;
@@ -88,6 +88,9 @@ body.theme-moon {
             &::marker {
                 // color: $colour_burned_sunny_side_up;
             }
+        }
+        #content-below-quote blockquote p {
+            border-left: 1rem dotted $colour_burned_sunny_side_up !important;
         }
     }
 
@@ -194,7 +197,7 @@ body.theme-moon {
         background-color: $colour_black;
     }
     main#main {
-        blockquote {
+        blockquote.main-quote {
             p {
                 color: $colour_overcast_sunny_side_up !important;
                 * {

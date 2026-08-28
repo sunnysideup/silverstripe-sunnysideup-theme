@@ -1,4 +1,4 @@
-blockquote,
+blockquote.main-quote,
 theme-rocket #main #content-below-quote *,
 footer {
     transition:
@@ -8,7 +8,7 @@ footer {
 }
 body.header-0 {
     #BackgroundImage.has-bg-image-loaded,
-    blockquote {
+    blockquote.main-quote {
         opacity: 1 !important;
     }
     #header {
@@ -20,7 +20,7 @@ body.header-10 {
         color: #eee;
     }
     #BackgroundImage.has-bg-image-loaded,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.9 !important;
     }
     #header {
@@ -32,7 +32,7 @@ body.header-20 {
         color: #ddd;
     }
     #BackgroundImage.has-bg-image-loaded,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.8 !important;
     }
     #header {
@@ -44,7 +44,7 @@ body.header-30 {
         color: #ccc;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.7 !important;
     }
     #header {
@@ -56,7 +56,7 @@ body.header-40 {
         color: #bbb;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.6 !important;
     }
     #header {
@@ -68,7 +68,7 @@ body.header-50 {
         color: #aaa;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.5 !important;
     }
     #header {
@@ -80,7 +80,7 @@ body.header-60 {
         color: #999;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.4 !important;
     }
     #header {
@@ -92,7 +92,7 @@ body.header-70 {
         color: #888;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.3 !important;
     }
     #header {
@@ -104,7 +104,7 @@ body.header-80 {
         color: #777;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.2 !important;
     }
     #header {
@@ -116,7 +116,7 @@ body.header-90 {
         color: #666;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0.1 !important;
     }
     #header {
@@ -128,7 +128,7 @@ body.header-100 {
         color: #555;
     }
     #BackgroundImage,
-    blockquote {
+    blockquote.main-quote {
         opacity: 0 !important;
     }
     #header {

@@ -68,8 +68,10 @@ export const bodyClass = {
             preferredTheme = myCookie.getCookie('preferredTheme')
             if (preferredTheme) {
                 bodyClass.bodyObject.setAttribute('data-theme', preferredTheme)
+                bodyClass.bodyObject.classList.add(preferredTheme)
             } else if (bodyClass.userPrefersDarkTheme()) {
                 bodyClass.bodyObject.setAttribute('data-theme', 'theme-moon')
+                bodyClass.bodyObject.classList.add('theme-moon')
             }
         }
     },
