@@ -199,7 +199,7 @@
     a {
         transition: 0.3s;
         text-decoration: underline;
-        text-decoration-color: inherit;
+        text-decoration-color: $colour_modern_iron;
         &:hover {
             filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
             // border-bottom: 3px solid $colour_blue_cobalter;
@@ -209,7 +209,7 @@
             -webkit-text-stroke-color: inherit;
         }
         &:visited {
-            text-decoration-color: inherit;
+            text-decoration-color: $colour_modern_iron_half;
             color: $colour_outer_space_love;
         }
     }
