@@ -15,6 +15,7 @@
 </main>
 <% include Footer %>
 <% include WebpackJSLinks %>
+<% include SchemaOrg %>
 
 <% end_cached %>
 <% else %>
@@ -31,6 +32,7 @@
 </main>
 <% include Footer %>
 <% include WebpackJSLinks %>
+<% include SchemaOrg %>
 
 <% end_if %>
 </body>
