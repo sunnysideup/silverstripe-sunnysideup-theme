@@ -9,6 +9,7 @@
 // import './js/partials/SomeOtherJavascriptFile';
 import './js/cookie'
 import './js/body-class'
+import './js/scroll-to-content-below-quote'
 import './js/toc'
 import './js/collapsible-menu'
 import './js/scroll-manager'
