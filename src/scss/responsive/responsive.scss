@@ -158,6 +158,12 @@
     }
 }
 @media only screen and (min-width: 900px) {
+    #nav {
+        border-right: 4px dotted #ffffff30!important;
+    }
+    body.past-header:not(.footer-visible) #nav {
+        border-right: 4px dotted #ffffff45!important;
+    }
     main#main {
         .element {
             h1:before,
@@ -261,16 +267,17 @@
             display: none;
         }
     }
-    body.past-header.scrolled-up.just-scrolled {
+    body.past-header.scrolled-up.just-scrolled:not(.menu-on):not(.show-logo) {
         #header {
             opacity: 1;
             display: block;
             animation-duration: 1s; /* the duration of the animation */
             animation-timing-function: ease-out; /* how the animation will behave */
-            animation-delay: 2s; /* how long to delay the animation from starting */
+            animation-delay: 7s; /* how long to delay the animation from starting */
             animation-iteration-count: 1; /* how many times the animation will play */
             animation-name: unloadTransition; /* the name of the animation we defined above */
             animation-fill-mode: forwards;
+            border-bottom: 4px dotted  $colour_blue_cobalter_half; //#022866!important;
         }
     }
     body.past-header.just-scrolled.toc-on {
@@ -442,6 +449,19 @@
     }
 }
 @media only screen and (min-width: 1650px) {
+    body {
+        .sunnysideup__app__elements__workexampleall {
+            .content-element__content {
+                .work-example-images {
+                    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+                    .work-example-image {
+                        min-width: 360px;
+                        max-width: 1240px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-height: 400px) {

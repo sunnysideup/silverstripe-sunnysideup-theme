@@ -110,7 +110,7 @@ export const bodyClass = {
                         // close menu when toggling
                         window.setTimeout(function () {
                             bodyClass.bodyObject.classList.toggle('show-logo')
-                        }, 300)
+                        }, 400)
                     }
                     return false
                 })

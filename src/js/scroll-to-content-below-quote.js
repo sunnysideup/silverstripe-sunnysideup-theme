@@ -5,7 +5,7 @@ document.querySelectorAll('.shiner').forEach((el) => {
     const target = document.getElementById('content-below-quote');
     if (!target) return;
 
-    const scrollTo = target.getBoundingClientRect().top + window.scrollY - window.innerHeight / 2;
+    const scrollTo = target.getBoundingClientRect().top + window.scrollY - ((window.innerHeight / 2 - 35));
     window.scrollTo({ top: scrollTo, behavior: 'smooth' });
   });
 });

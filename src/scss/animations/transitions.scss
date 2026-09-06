@@ -15,8 +15,11 @@
         top,
         bottom,
         color,
-        box-shadow ;
-    transition-duration: 0.3s;
+        border-radius,
+        border,
+        box-shadow,
+        margin;
+    transition-duration: 0.37s;
     transition-timing-function: ease-out;
-    transition-delay: 0.1s;
+    transition-delay: 0s;
 }

@@ -13,6 +13,7 @@
     background-color: $colour_sunny_side_up_yellow;
     border-radius: 50%;
     box-shadow: 0px 3px 20px -6px rgb(0 0 0 / 50%);
+    border: 4px dotted #ffffff;
     a {
         text-decoration: none;
     }
@@ -93,18 +94,20 @@
 }
 body.show-logo {
     #header {
-        transition: all 0.3s ease-in-out;
+        transition: all 0 ease-in-out!important;
+        transition: zoom 0.4s ease-in-out;
         display: block !important;
         zoom: 1 !important;
         position: fixed !important;
-        display: block !important;
         opacity: 1 !important;
         z-index: 99999;
+        height: 0 !important;
+        border: none !important;
         h1 {
-            display: none;
+            display: none!important;
         }
         .bread-crumb {
-            display: none;
+            display: none!important;
         }
     }
 }
@@ -121,6 +124,7 @@ body.menu-on {
         left: auto;
         bottom: 0;
         margin-right: 0;
+        border: none!important;
         #menu-toggle {
             opacity: 1;
             bottom: 2rem;

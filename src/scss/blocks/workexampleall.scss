@@ -4,13 +4,11 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 720px), 1fr));
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
                 position: relative;
-                min-width: 280px;
-                max-width: 520px;
                 cursor: zoom-in;
                 a {
                     filter: none;

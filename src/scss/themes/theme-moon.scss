@@ -1,7 +1,7 @@
 body.theme-moon {
     background-color: $colour_sunny_side_up_dark_purple;
     * {
-        color: $colour_burned_sunny_side_up;
+        color: $colour_hypocrite_yellow_lighter;
     }
     #header {
         #logo {
@@ -29,32 +29,32 @@ body.theme-moon {
     }
     .typography {
         * {
-            color: $colour_burned_sunny_side_up;
+            color: $colour_hypocrite_yellow_lighter;
         }
         a:link,
         a:visited {
-            color: $colour_burned_sunny_side_up !important;
-            text-decoration-color: $colour_burned_sunny_side_up !important;
+            color:$colour_hypocrite_yellow_lighter!important;
+            text-decoration-color:$colour_hypocrite_yellow_lighter!important;
         }
         h1,
         h2 {
             text-transform: uppercase;
             color: $colour_blue_cobalter;
-            border-bottom-color: $colour_burned_sunny_side_up !important;
+            border-bottom-color: $colour_burned_sunny_side_up_thirty_percent !important;
         }
         h2, h3 {
-            color: $colour_burned_sunny_side_up !important;
+            color:$colour_hypocrite_yellow_lighter!important;
             span {
-                color: $colour_burned_sunny_side_up;
+                color: $colour_hypocrite_yellow_lighter;
                 i {
-                    color: $colour_burned_sunny_side_up;
+                    color: $colour_hypocrite_yellow_lighter;
                 }
             }
         }
         h1,
         h2 {
             &:before {
-                border-color: $colour_burned_sunny_side_up !important;
+                border-color: $colour_burned_sunny_side_up_thirty_percent !important;
             }
         }
         pre {
@@ -62,7 +62,7 @@ body.theme-moon {
             color: $colour_white;
         }
         th {
-            color: $colour_burned_sunny_side_up;
+            color: $colour_hypocrite_yellow_lighter;
         }
         td {
             background-color: $colour_white;
@@ -72,7 +72,7 @@ body.theme-moon {
             }
         }
         hr {
-            border-color: $colour_burned_sunny_side_up !important;
+            border-color: $colour_burned_sunny_side_up_thirty_percent !important;
         }
         .media,
         .image-container,
@@ -83,7 +83,7 @@ body.theme-moon {
             border-color: transparent;
         }
         img {
-            border-color: $colour_burned_sunny_side_up;
+            border-color: $colour_burned_sunny_side_up_thirty_percent;
         }
         li {
             &::marker {
@@ -91,7 +91,7 @@ body.theme-moon {
             }
         }
         #content-below-quote blockquote p {
-            border-left-color: $colour_burned_sunny_side_up !important;
+            border-left-color: $colour_burned_sunny_side_up_thirty_percent !important;
         }
     }
 
@@ -118,17 +118,17 @@ body.theme-moon {
     .sunnysideup__app__elements__workexample {
         .content-element__content {
             h3 {
-                color: $colour_burned_sunny_side_up !important;
+                color:$colour_hypocrite_yellow_lighter!important;
             }
             .dotted-line {
-                border-color: $colour_burned_sunny_side_up;
+                border-color: $colour_burned_sunny_side_up_thirty_percent;
             }
             .card-holder {
                 color: #fff;
                 * {
                     color: #fff;
                 }
-                border-color: $colour_burned_sunny_side_up;
+                border-color: $colour_burned_sunny_side_up_thirty_percent;
             }
             .work-example-images {
                 p.caption {
@@ -137,7 +137,7 @@ body.theme-moon {
                         &:link,
                         &:visited {
                             color: #333 !important;
-                            border-color: $colour_burned_sunny_side_up;
+                            border-color: $colour_burned_sunny_side_up_thirty_percent;
                         }
                     }
                 }
@@ -145,7 +145,7 @@ body.theme-moon {
         }
     }
     #Breadcrumbs {
-        border-color: $colour_burned_sunny_side_up !important;
+        border-color: $colour_burned_sunny_side_up_thirty_percent !important;
     }
     footer#footer {
         background-color: $colour_boot_black_semi;
@@ -178,7 +178,7 @@ body.theme-moon {
     }
     &.past-header {
         #header {
-            border-color: $colour_burned_sunny_side_up;
+            border-color: #fff !important;
             background-color: $colour_burned_sunny_side_up;
             // &:before {
             //     border-top-color:  #000000c4;
