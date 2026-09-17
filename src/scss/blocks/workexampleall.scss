@@ -5,6 +5,9 @@
             padding-bottom: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(280px, 720px), 1fr));
+            @media only screen and (min-width: 450px) {
+                grid-template-columns: repeat(auto-fit, minmax(min(380px, 720px), 1fr));
+            }
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
@@ -51,16 +54,21 @@
                         padding: 0;
                         margin: 0;
                         padding-bottom: 1rem;
+                        border-bottom: 1px solid #fff;
+                        margin-bottom: 0.5rem;
                     }
                     .small-line {
                         pointer-events: none;
-                        font-size: 15px;
+                        font-size: 13px;
                         color: #fff !important;
                         * {
                             color: #fff !important;
                         }
                         a {
                             text-decoration: underline;
+                        }
+                        @media only screen and (min-width: 450px) {
+                            font-size: 16px;
                         }
                     }
                 }
