@@ -54,16 +54,13 @@
                     }
                     .small-line {
                         pointer-events: none;
-                        font-size: 13px;
+                        font-size: 15px;
                         color: #fff !important;
                         * {
                             color: #fff !important;
                         }
                         a {
                             text-decoration: underline;
-                        }
-                        @media only screen and (min-width: 1050px) {
-                            font-size: 15px;
                         }
                     }
                 }
