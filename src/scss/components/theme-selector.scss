@@ -17,3 +17,18 @@ footer {
         }
     }
 }
+body[data-theme="theme-sun"] {
+    #footer #theme-selectors #theme-sun {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
+        }
+    }
+}
+
+body[data-theme="theme-moon"] {
+    #footer #theme-selectors #theme-moon {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
+        }
+    }
+}

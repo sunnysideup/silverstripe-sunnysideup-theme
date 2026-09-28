@@ -1,9 +1,6 @@
 body {
     transition: background-color 0.3s ease;
     background-color: $colour_yep_thats_grey;
-    &.has-bg-image-loaded {
-        background-color: #55555500;
-    }
 }
 body.theme-rocket {
     &.has-video {

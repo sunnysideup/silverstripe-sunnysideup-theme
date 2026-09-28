@@ -58,12 +58,12 @@
         font-size: 4rem;
     }
     h2 {
-        font-size: 2.3rem;
+        font-size: 3.3rem;
         line-height: 1.3;
         letter-spacing: -1px;
     }
     h3 {
-        font-size: 2.3rem;
+        font-size: 2.7rem;
         margin-bottom: 2rem;
         color: $colour_blue_cobalter;
         * {
@@ -71,7 +71,7 @@
         }
     }
     h4 {
-        font-size: 2.3rem;
+        font-size: 2.3em;
         margin-bottom: 1rem;
     }
     h5 {
@@ -108,7 +108,7 @@
             margin-bottom: 1rem;
             padding-left: 0;
             &::marker {
-                // color: $colour_purple_spirituality_in_the_sun;
+                color: $colour_blue_cobalter;
             }
             p {
                 margin: 0 !important;
@@ -199,17 +199,21 @@
     a {
         transition: 0.3s;
         text-decoration: underline;
-        text-decoration-color: $colour_modern_iron;
+        text-decoration-thickness: 4px;
+        text-decoration-style: solid;
+        // text-decoration-skip-ink: none;
+        text-decoration-color: $colour_blue_cobalter_half!important;
         &:hover {
             filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
             // border-bottom: 3px solid $colour_blue_cobalter;
+            text-decoration-color: $colour_sunny_side_up_yellow!important;
         }
         &:active {
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: inherit;
+            text-decoration-color: $colour_blue_cobalter!important;
         }
         &:visited {
-            text-decoration-color: $colour_modern_iron_half;
             color: $colour_outer_space_love;
         }
     }
@@ -291,6 +295,7 @@
     strong,
     b {
         font-weight: 600;
+        color: $colour_blue_cobalter;
     }
 
     .last-updated {

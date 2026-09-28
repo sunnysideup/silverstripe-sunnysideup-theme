@@ -1,5 +1,6 @@
 body.theme-moon {
-    background-color: $colour_sunny_side_up_dark_purple;
+    background-color: $colour_sunny_side_up_dark_purple !important;
+
     * {
         color: $colour_hypocrite_yellow_lighter;
     }
@@ -33,8 +34,13 @@ body.theme-moon {
         }
         a:link,
         a:visited {
-            color:$colour_hypocrite_yellow_lighter!important;
-            text-decoration-color:$colour_hypocrite_yellow_lighter!important;
+            color:$colour_sunny_side_up_green!important;
+            text-decoration-color:$colour_sunny_side_up_green!important;
+            font-weight: 600;
+            &:hover {
+                color: $colour_burned_sunny_side_up !important;
+                text-decoration-color: $colour_burned_sunny_side_up !important;
+            }
         }
         h1,
         h2 {
@@ -87,7 +93,7 @@ body.theme-moon {
         }
         li {
             &::marker {
-                // color: $colour_burned_sunny_side_up;
+                color:$colour_hypocrite_yellow_lighter;
             }
         }
         #content-below-quote blockquote p {
@@ -208,6 +214,7 @@ body.theme-moon {
         }
     }
 }
+/** importantly this applies top to bottom */
 body[data-theme="theme-moon"] {
     background-color: $colour_sunny_side_up_dark_purple !important;
     &.menu-on {
