@@ -1,0 +1,23 @@
+.arrow-down {
+    rotate: 105deg;
+    transform-origin: center; /* change to e.g. "top center" for a pendulum effect */
+    animation: swing 0.3s ease-in-out infinite alternate;
+    animation-delay: 1s;
+}
+
+@keyframes swing {
+    from {
+        rotate: 105deg;
+    }
+    to {
+        rotate: 75deg;
+    }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    .arrow-down {
+        animation: none;
+        rotate: 90deg;
+    }
+}
