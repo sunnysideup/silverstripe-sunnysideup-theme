@@ -39,6 +39,24 @@ body.body-unloaded main#main {
 }
 
 /* variables */
+<<<<<<< HEAD
+=======
+/**
+ * Example usage:
+ * .asymmetric-card {
+ *   @include sketch-border(6px, 2px, 5px, 1px, #3b82f6);
+ * }
+ * .action-button {
+ *   @include sketch-border(4px, #10b981);
+ * }
+ * .top-bottom-frame {
+ *   @include sketch-border(5px 0 3px 0, #6366f1);
+ * }
+ * .heading-underline {
+ *   @include sketch-border($top: 0, $right: 0, $bottom: 4px, $left: 0, $color: #f59e0b);
+ * }
+ */
+>>>>>>> 7648dec (FIX: cleanup)
 * {
   color: #333;
   scroll-behavior: smooth;
@@ -140,6 +158,7 @@ body.no-rocket-show.no-quote .main-quote {
   display: none;
 }
 
+<<<<<<< HEAD
 body #header * {
   color: transparent;
   transition: color 1.5s ease-in;
@@ -149,6 +168,90 @@ body.splash-completed #header * {
 }
 body.splash-completed.title-colour-blue #header * {
   color: #022866 !important;
+=======
+footer#footer {
+  background-color: rgba(87, 87, 87, 0.8);
+  padding-top: 6vh;
+  padding-right: 6vw;
+  padding-bottom: 6vh;
+  position: relative;
+  z-index: 35;
+}
+footer#footer div.col {
+  padding-bottom: 2vh;
+  text-align: center;
+}
+footer#footer p {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+footer#footer address {
+  padding: 0;
+  padding: 0;
+  margin: 0;
+  margin: 0;
+  clear: both;
+  clear: both;
+  padding-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+footer#footer ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  padding-bottom: 1rem;
+  list-style: none;
+}
+footer#footer li {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  padding-bottom: 1rem;
+  list-style: none;
+}
+footer#footer #theme-selectors {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  padding-bottom: 1rem;
+  display: none;
+}
+footer#footer * {
+  font-size: 2rem;
+  color: #fff;
+}
+footer#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer#footer a:link {
+  color: #fff;
+}
+footer#footer a:visited {
+  color: #fff;
+}
+footer#footer a:hover {
+  color: #f7cd55;
+}
+footer#footer li.current a {
+  color: #f7cd55;
+  font-weight: 600;
+}
+footer#footer li.section a {
+  font-weight: 600;
+}
+footer#footer .image-holder {
+  display: block;
+}
+footer#footer .image-holder img {
+  max-width: 100%;
+  width: 200px;
+  display: inline-block;
+  margin: 0;
+>>>>>>> 7648dec (FIX: cleanup)
 }
 
 #header {
@@ -171,11 +274,16 @@ body.splash-completed.title-colour-blue #header * {
   right: 6vw;
   z-index: 3;
 }
+<<<<<<< HEAD
 #header .logo-header {
+=======
+#header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
   font-weight: 500;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   line-height: 1;
+<<<<<<< HEAD
   position: absolute;
   text-align: right;
   z-index: 3;
@@ -194,6 +302,31 @@ body.splash-completed.title-colour-blue #header * {
   opacity: 1;
 }
 #header .logo-header a.bread-crumb {
+=======
+  position: relative;
+  color: #022866;
+}
+#header h1 * {
+  color: #022866;
+}
+#header h1 {
+  position: absolute;
+  text-align: right;
+  z-index: 3;
+  margin-left: 17vw;
+}
+#header h1 a {
+  text-decoration: none;
+}
+#header h1 a,
+#header h1 span {
+  opacity: 0.7;
+}
+#header h1 a.page-title {
+  opacity: 1;
+}
+#header h1 a.bread-crumb {
+>>>>>>> 7648dec (FIX: cleanup)
   display: block;
   padding-top: 0.5rem;
   font-size: 2rem;
@@ -214,7 +347,11 @@ body.past-header:not(.menu-on) #header #logo {
   margin-top: 0;
   z-index: 0;
 }
+<<<<<<< HEAD
 body.past-header:not(.menu-on) #header .logo-header {
+=======
+body.past-header:not(.menu-on) #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
   margin-top: 0.67em;
   margin-left: 0vw;
   color: #575757;
@@ -224,6 +361,7 @@ body.past-header:not(.menu-on) #header .logo-header {
   opacity: 1;
   top: 0px;
 }
+<<<<<<< HEAD
 body.past-header:not(.menu-on) #header .logo-header * {
   color: #575757;
 }
@@ -231,6 +369,15 @@ body.past-header:not(.menu-on) #header .logo-header .page-title {
   color: #022866;
 }
 body.past-header:not(.menu-on) #header .logo-header .bread-crumb {
+=======
+body.past-header:not(.menu-on) #header h1 * {
+  color: #575757;
+}
+body.past-header:not(.menu-on) #header h1 .page-title {
+  color: #022866;
+}
+body.past-header:not(.menu-on) #header h1 .bread-crumb {
+>>>>>>> 7648dec (FIX: cleanup)
   display: none !important;
 }
 body.past-header:not(.menu-on) #header svg {
@@ -240,12 +387,15 @@ body.past-header:not(.menu-on) #header svg {
 body.past-header.just-scrolled.scrolled-up #header {
   opacity: 1;
 }
+<<<<<<< HEAD
 body.past-header.just-scrolled.scrolled-up {
   color: #022866;
 }
 body.past-header.just-scrolled.scrolled-up * {
   color: #022866;
 }
+=======
+>>>>>>> 7648dec (FIX: cleanup)
 
 @media only screen and (max-width: 1049px) {
   body.footer-visible #nav {
@@ -362,7 +512,11 @@ body.show-logo #header {
   height: 0 !important;
   border: none !important;
 }
+<<<<<<< HEAD
 body.show-logo #header .logo-header {
+=======
+body.show-logo #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
   display: none !important;
 }
 body.show-logo #header .bread-crumb {
@@ -506,6 +660,7 @@ body.past-header.scrolled-up.just-scrolled #nav {
     font-size: calc(1rem + 2vh);
   }
 }
+<<<<<<< HEAD
 footer#footer {
   background-color: rgba(87, 87, 87, 0.8);
   padding-top: 6vh;
@@ -590,6 +745,8 @@ footer#footer .image-holder img {
   margin: 0;
 }
 
+=======
+>>>>>>> 7648dec (FIX: cleanup)
 .typography p,
 .typography ul,
 .typography ol,
@@ -1643,6 +1800,13 @@ main#main blockquote.main-quote p .shiner svg {
   vertical-align: baseline;
   height: 1.2em;
   width: 1.2em;
+<<<<<<< HEAD
+=======
+  transition: transform 0.1s ease-in-out;
+}
+main#main blockquote.main-quote p .shiner svg:hover {
+  transform: rotate(90deg);
+>>>>>>> 7648dec (FIX: cleanup)
 }
 main#main blockquote.main-quote p .Typewriter__wrapper,
 main#main blockquote.main-quote p .Typewriter__wrapper * {
@@ -1881,6 +2045,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   margin-bottom: 6rem !important;
 }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 1050px) {
   .toc-on #SiblingsAndChildren {
     border-top: 1px solid transparent;
@@ -1897,6 +2062,23 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     margin-top: 2rem;
   }
 }
+=======
+.toc-on #SiblingsAndChildren {
+  border-top: 1px solid transparent;
+}
+.toc-on #SiblingsAndChildren h2:after {
+  display: block;
+  width: 100%;
+  content: " ";
+  border-bottom: 4px dotted #a7a7a7;
+  position: absolute;
+  clear: both;
+  left: 0;
+  right: 0;
+  margin-top: 2rem;
+}
+
+>>>>>>> 7648dec (FIX: cleanup)
 .card-holder {
   display: grid;
   gap: 3rem;
@@ -1959,7 +2141,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 24vw;
     margin-top: -3.9999984vw;
   }
+<<<<<<< HEAD
   #header div.logo-header {
+=======
+  #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
     margin-top: 0;
     font-size: 8vw;
     right: 10.4347826087vw;
@@ -1970,7 +2156,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     padding-right: calc(2rem + 3vw);
   }
   blockquote.main-quote p {
+<<<<<<< HEAD
     text-align: left;
+=======
+    text-align: center;
+>>>>>>> 7648dec (FIX: cleanup)
   }
   main#main {
     padding-left: calc(2rem + 3vw);
@@ -1997,7 +2187,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 18vw;
     margin-top: -2.9999988vw;
   }
+<<<<<<< HEAD
   #header div.logo-header {
+=======
+  #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
     font-size: 6vw;
     right: 9.9130434783vw;
     top: 11.25vw;
@@ -2046,7 +2240,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 12vw;
     margin-top: -1.9999992vw;
   }
+<<<<<<< HEAD
   #header div.logo-header {
+=======
+  #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
     font-size: 4vw;
     right: 8.6086956522vw;
     top: 7.5vw;
@@ -2172,6 +2370,10 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: unloadTransition; /* the name of the animation we defined above */
     animation-fill-mode: forwards;
+<<<<<<< HEAD
+=======
+    border-bottom: 4px dotted rgba(2, 40, 102, 0.3333333333);
+>>>>>>> 7648dec (FIX: cleanup)
   }
   body.past-header.just-scrolled.toc-on #header {
     display: none !important;
@@ -2181,11 +2383,19 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 9vw;
     margin-top: -1.4999994vw;
   }
+<<<<<<< HEAD
   #header div.logo-header {
     font-size: 3vw;
     top: 5.625vw;
   }
   #header div.logo-header a.bread-crumb {
+=======
+  #header h1 {
+    font-size: 3vw;
+    top: 5.625vw;
+  }
+  #header h1 a.bread-crumb {
+>>>>>>> 7648dec (FIX: cleanup)
     font-size: 2.5rem;
   }
   #nav {
@@ -2281,8 +2491,13 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   body.past-header #header #logo {
     right: 5vw;
   }
+<<<<<<< HEAD
   body #header div.logo-header,
   body.past-header #header div.logo-header {
+=======
+  body #header h1,
+  body.past-header #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
     right: 8.3333333333vw;
   }
   #nav #nav-inner {
@@ -2318,7 +2533,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 12vw;
     margin-top: -1.9999992vw;
   }
+<<<<<<< HEAD
   #header div.logo-header {
+=======
+  #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
     margin-top: 0;
     font-size: 4vw;
     right: 12vw;
@@ -2495,7 +2714,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   padding: 0;
   margin: 0;
   padding-bottom: 1rem;
+<<<<<<< HEAD
   border-bottom: 4px dotted rgba(255, 255, 255, 0.3333333333);
+=======
+  border-bottom: 4px dashed rgba(255, 255, 255, 0.3333333333);
+>>>>>>> 7648dec (FIX: cleanup)
   margin-bottom: 0.5rem;
 }
 .sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption .small-line {
@@ -2547,6 +2770,12 @@ body.theme-rocket.has-video {
 body.theme-rocket.header-0 {
   background-color: #575757;
 }
+<<<<<<< HEAD
+=======
+body.theme-rocket #header * {
+  color: #f7cd55;
+}
+>>>>>>> 7648dec (FIX: cleanup)
 body.theme-rocket a[data-add-class=theme-rocket] {
   text-decoration: none !important;
 }
@@ -2631,7 +2860,11 @@ body.theme-rocket.no-touch #footer {
 body.theme-rocket.no-touch #footer:hover {
   opacity: 1;
 }
+<<<<<<< HEAD
 body.theme-rocket.no-touch.past-header #header .logo-header {
+=======
+body.theme-rocket.no-touch.past-header #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
   background-color: transparent;
 }
 
@@ -2657,6 +2890,17 @@ body.menu-on #header * {
   color: #022866 !important;
 }
 
+<<<<<<< HEAD
+=======
+body.theme-rocket.title-colour-yellow #header * {
+  color: #f7cd55;
+}
+
+body.theme-rocket.title-colour-blue #header * {
+  color: #022866 !important;
+}
+
+>>>>>>> 7648dec (FIX: cleanup)
 @media only screen and (max-width: 1050px) {
   body.theme-rocket.footer-visible main#main blockquote.main-quote {
     top: 10vh;
@@ -2676,6 +2920,18 @@ body.theme-moon * {
 body.theme-moon #header #logo {
   background-image: url(./images/logo-small-inverted.2b3f89d8.svg);
 }
+<<<<<<< HEAD
+=======
+body.theme-moon #header span {
+  color: #e4b105;
+}
+body.theme-moon #header h1 {
+  color: #e4b105;
+}
+body.theme-moon #header * {
+  color: #e4b105;
+}
+>>>>>>> 7648dec (FIX: cleanup)
 body.theme-moon a[data-add-class=theme-moon] {
   text-decoration: none !important;
 }
@@ -2881,10 +3137,13 @@ body[data-theme=theme-moon].menu-on #nav #open-icon .cls-2 {
     stroke: #333 !important;
   }
 }
+<<<<<<< HEAD
 body.theme-moon.has-bg-image-loaded #header * {
   color: #e4b105;
 }
 
+=======
+>>>>>>> 7648dec (FIX: cleanup)
 blockquote.main-quote,
 theme-rocket #main #content-below-quote *,
 footer {
@@ -3107,7 +3366,11 @@ body.mouse-over-logo.no-touch #logo {
   z-index: 99999999999 !important;
 }
 
+<<<<<<< HEAD
 body.mouse-over-logo #header .logo-header {
+=======
+body.mouse-over-logo #header h1 {
+>>>>>>> 7648dec (FIX: cleanup)
   position: relative;
   z-index: 9999999999;
 }
@@ -3172,7 +3435,11 @@ body.theme-sun #content-below-quote h2 {
 .arrow-down {
   rotate: 105deg;
   transform-origin: center; /* change to e.g. "top center" for a pendulum effect */
+<<<<<<< HEAD
   animation: swing 2.3s ease-in-out infinite alternate;
+=======
+  animation: swing 0.3s ease-in-out infinite alternate;
+>>>>>>> 7648dec (FIX: cleanup)
   animation-delay: 1s;
 }
 

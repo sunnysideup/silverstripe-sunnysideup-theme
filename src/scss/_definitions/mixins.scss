@@ -1,0 +1,47 @@
+/**
+ * Example usage:
+ * .asymmetric-card {
+ *   @include sketch-border(6px, 2px, 5px, 1px, #3b82f6);
+ * }
+ * .action-button {
+ *   @include sketch-border(4px, #10b981);
+ * }
+ * .top-bottom-frame {
+ *   @include sketch-border(5px 0 3px 0, #6366f1);
+ * }
+ * .heading-underline {
+ *   @include sketch-border($top: 0, $right: 0, $bottom: 4px, $left: 0, $color: #f59e0b);
+ * }
+ */
+
+@mixin sketch-border(
+  $top: 5px,
+  $right: $top,
+  $bottom: $top,
+  $left: $right,
+  $color: #475569
+) {
+  // If a color is passed as the 2nd argument (e.g. 4px, #3b82f6)
+  @if type-of($right) == 'color' {
+    $color: $right;
+    $right: $top;
+    $bottom: $top;
+    $left: $top;
+  }
+
+  border-style: solid;
+  border-color: $color;
+
+  // If a shorthand list is passed (e.g. 5px 0 3px 0, #3b82f6)
+  @if length($top) > 1 {
+    border-width: $top;
+  } @else {
+    border-top-width: $top;
+    border-right-width: $right;
+    border-bottom-width: $bottom;
+    border-left-width: $left;
+  }
+
+  border-radius: 8px 12px 10px 6px;
+  filter: url('#smooth-sketch');
+}

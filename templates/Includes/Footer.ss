@@ -56,3 +56,13 @@
         This website has gone into battery saving mode. This is a small part of our effort to reduce climate impact. Click to return to website.
     </p>
 </div>
+<%-- funny borders --%>
+<svg style="width: 0; height: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+  <defs>
+    <filter id="smooth-sketch">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+  </defs>
+</svg>

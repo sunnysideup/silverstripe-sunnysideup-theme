@@ -84,9 +84,12 @@ var bodyClass = {
       } else {
         bodyClass.bodyObject.classList.add('no-touch');
       }
+<<<<<<< HEAD
       window.setTimeout(function () {
         bodyClass.bodyObject.classList.add('splash-completed');
       }, 2000);
+=======
+>>>>>>> 7648dec (FIX: cleanup)
     });
     bodyClass.bodyObject.classList.remove('body-unloaded');
     // window.addEventListener('beforeunload', function () {

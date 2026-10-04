@@ -17,5 +17,11 @@
   "dist/images/3.svg": "./images/3.5e46335a.svg",
   "dist/images/logo-small-inverted.svg": "./images/logo-small-inverted.2b3f89d8.svg",
   "dist/images/logo-small.svg": "./images/logo-small.05f038e4.svg",
+<<<<<<< HEAD
   "dist/main.css.map": "./main.css.map"
+=======
+  "dist/app.js.map": "./app.js.map",
+  "dist/main.css.map": "./main.css.map",
+  "dist/runtime.js.map": "./runtime.js.map"
+>>>>>>> 7648dec (FIX: cleanup)
 }
