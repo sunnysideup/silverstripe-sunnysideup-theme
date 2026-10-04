@@ -8,15 +8,6 @@ body.theme-moon {
         #logo {
             background-image: url(./images/logo-small-inverted.svg);
         }
-        span {
-            color: $colour_burned_sunny_side_up;
-        }
-        h1 {
-            color: $colour_burned_sunny_side_up;
-        }
-        * {
-            color: $colour_burned_sunny_side_up;
-        }
     }
     a[data-add-class="theme-moon"] {
         text-decoration: none !important;
@@ -275,6 +266,14 @@ body[data-theme="theme-moon"] {
         }
         .menu-arrow {
             stroke: $colour_outer_space_love !important;
+        }
+    }
+}
+body.theme-moon.has-bg-image-loaded {
+
+    #header {
+        * {
+            color: $colour_burned_sunny_side_up;
         }
     }
 }

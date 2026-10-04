@@ -103,7 +103,7 @@ body.show-logo {
         z-index: 99999;
         height: 0 !important;
         border: none !important;
-        h1 {
+        .logo-header {
             display: none!important;
         }
         .bread-crumb {

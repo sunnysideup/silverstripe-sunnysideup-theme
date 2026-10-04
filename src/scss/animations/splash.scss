@@ -1,0 +1,17 @@
+
+body {
+    #header * {
+        color: transparent;
+        transition: color 1.5s ease-in;
+    }
+
+    &.splash-completed {
+        #header * {
+            color: $colour_sunny_side_up_yellow;
+        }
+
+        &.title-colour-blue #header * {
+            color: $colour_blue_cobalter !important;
+        }
+    }
+}

@@ -8,7 +8,7 @@
             height: 24vw;
             margin-top: calc(24vw * -0.1666666);
         }
-        h1 {
+        div.logo-header {
             margin-top: 0;
             font-size: calc(24vw / 3);
             right: calc(24vw / 2.3);
@@ -19,7 +19,7 @@
         padding-left: calc(2rem + 3vw);
         padding-right: calc(2rem + 3vw);
         p {
-            text-align: center;
+            text-align: left;
         }
     }
     main#main {
@@ -60,7 +60,7 @@
             height: 18vw;
             margin-top: calc(18vw * -0.1666666);
         }
-        h1 {
+        div.logo-header {
             font-size: calc(18vw / 3);
             right: calc(6vw + (18vw / 4.6));
             top: calc(18vw / 1.6);
@@ -134,7 +134,7 @@
             height: 12vw;
             margin-top: calc(12vw * -0.1666666);
         }
-        h1 {
+        div.logo-header {
             font-size: calc(12vw / 3);
             right: calc(6vw + (12vw / 4.6));
             top: calc(12vw / 1.6);
@@ -277,7 +277,7 @@
             animation-iteration-count: 1; /* how many times the animation will play */
             animation-name: unloadTransition; /* the name of the animation we defined above */
             animation-fill-mode: forwards;
-            border-bottom: 4px dotted  $colour_blue_cobalter_half; //#022866!important;
+            // border-bottom: 4px dotted  $colour_blue_cobalter_half; //#022866!important;
         }
     }
     body.past-header.just-scrolled.toc-on {
@@ -291,7 +291,7 @@
             height: 9vw;
             margin-top: calc(9vw * -0.1666666);
         }
-        h1 {
+        div.logo-header {
             font-size: calc(9vw / 3);
             top: calc(9vw / 1.6);
             a.bread-crumb {
@@ -413,7 +413,7 @@
             #logo {
                 right: 5vw;
             }
-            h1 {
+            div.logo-header {
                 right: calc(5vw + (5vw / 1.5));
             }
         }
@@ -471,7 +471,7 @@
             height: 12vw;
             margin-top: calc(12vw * -0.1666666);
         }
-        h1 {
+        div.logo-header {
             margin-top: 0;
             font-size: calc(12vw / 3);
             right: 12vw;

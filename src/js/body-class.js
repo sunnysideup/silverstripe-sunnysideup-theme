@@ -45,6 +45,9 @@ export const bodyClass = {
             } else {
                 bodyClass.bodyObject.classList.add('no-touch')
             }
+            window.setTimeout(function () {
+                bodyClass.bodyObject.classList.add('splash-completed')
+            }, 2000)
         })
         bodyClass.bodyObject.classList.remove('body-unloaded')
         // window.addEventListener('beforeunload', function () {

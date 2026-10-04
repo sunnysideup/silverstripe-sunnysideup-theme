@@ -52,10 +52,6 @@ main#main {
                     vertical-align: baseline;
                     height: 1.2em;
                     width: 1.2em;
-                    transition: transform 0.1s ease-in-out;
-                    &:hover {
-                        transform: rotate(90deg);
-                    }
                 }
             }
             .Typewriter__wrapper,

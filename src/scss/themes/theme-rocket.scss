@@ -10,11 +10,7 @@ body.theme-rocket {
         background-color: $colour_yep_thats_grey;
     }
 
-    #header {
-        * {
-            color: $colour_sunny_side_up_yellow;
-        }
-    }
+
     a[data-add-class="theme-rocket"] {
         text-decoration: none !important;
     }
@@ -121,7 +117,7 @@ body.theme-rocket {
         }
         &.past-header {
             #header {
-                h1 {
+                .logo-header {
                     background-color: transparent;
                 }
             }
@@ -164,16 +160,8 @@ body.menu-on {
     }
 }
 
-body.theme-rocket.title-colour-yellow {
-    #header * {
-        color: $colour_sunny_side_up_yellow;
-    }
-}
-body.theme-rocket.title-colour-blue {
-    #header * {
-        color: $colour_blue_cobalter !important;
-    }
-}
+
+
 
 @media only screen and (max-width: 1050px) {
     body.theme-rocket.footer-visible {
@@ -183,3 +171,16 @@ body.theme-rocket.title-colour-blue {
         }
     }
 }
+
+// body.theme-rocket.has-bg-image-loaded {
+//     #header {
+//         * {
+//             color: $colour_sunny_side_up_yellow;
+//         }
+//     }
+// }
+// body.theme-rocket.has-bg-image-loaded.title-colour-blue {
+//     #header * {
+//         color: $colour_blue_cobalter !important;
+//     }
+// }

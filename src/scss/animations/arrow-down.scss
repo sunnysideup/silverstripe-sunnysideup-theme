@@ -1,7 +1,7 @@
 .arrow-down {
     rotate: 105deg;
     transform-origin: center; /* change to e.g. "top center" for a pendulum effect */
-    animation: swing 0.3s ease-in-out infinite alternate;
+    animation: swing 2.3s ease-in-out infinite alternate;
     animation-delay: 1s;
 }
 
