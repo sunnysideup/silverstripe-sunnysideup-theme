@@ -5,7 +5,7 @@
     z-index: 999;
     display: grid;
     place-items: center;
-    background: #aaa; //#575757;//#000;// #f7cd55;
+    background: #575757;//#000;// #f7cd55;
     animation: splash-fade 1s ease 1.5s forwards;
     place-content: center;
     div {
