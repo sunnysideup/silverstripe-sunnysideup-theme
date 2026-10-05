@@ -55,7 +55,7 @@
                         padding: 0;
                         margin: 0;
                         padding-bottom: 1rem;
-                        border-bottom: 4px dotted #ffffff55;
+                        @include sketch-border(0 0 4px 0, #ffffff);
                         margin-bottom: 0.5rem;
                     }
                     .small-line {

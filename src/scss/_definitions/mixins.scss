@@ -13,35 +13,44 @@
  *   @include sketch-border($top: 0, $right: 0, $bottom: 4px, $left: 0, $color: #f59e0b);
  * }
  */
-
 @mixin sketch-border(
-  $top: 5px,
-  $right: $top,
-  $bottom: $top,
-  $left: $right,
-  $color: #475569
+  $top: 3px,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $color: #475569,
+  $depth: 4px,
+  $waves: 'random',
+  $inset: 0px
 ) {
-  // If a color is passed as the 2nd argument (e.g. 4px, #3b82f6)
+  $t: 0px; $r: 0px; $b: 0px; $l: 0px;
+
+  // Handle color passed as 2nd argument: @include sketch-border(3px, #3b82f6)
   @if type-of($right) == 'color' {
     $color: $right;
-    $right: $top;
-    $bottom: $top;
-    $left: $top;
+    $right: null;
   }
 
-  border-style: solid;
-  border-color: $color;
-
-  // If a shorthand list is passed (e.g. 5px 0 3px 0, #3b82f6)
+  // Handle shorthand list e.g. (3px 0 0 0)
   @if length($top) > 1 {
-    border-width: $top;
+    $t: nth($top, 1);
+    $r: if(length($top) >= 2, nth($top, 2), $t);
+    $b: if(length($top) >= 3, nth($top, 3), $t);
+    $l: if(length($top) >= 4, nth($top, 4), $r);
   } @else {
-    border-top-width: $top;
-    border-right-width: $right;
-    border-bottom-width: $bottom;
-    border-left-width: $left;
+    $t: $top;
+    $r: if($right != null, $right, $t);
+    $b: if($bottom != null, $bottom, $t);
+    $l: if($left != null, $left, $r);
   }
 
-  border-radius: 8px 12px 10px 6px;
-  filter: url('#smooth-sketch');
+  // Emit clean individual values to CSS Custom Properties
+  --sketch-color: #{$color};
+  --sketch-top: #{$t};
+  --sketch-right: #{$r};
+  --sketch-bottom: #{$b};
+  --sketch-left: #{$l};
+  --sketch-depth: #{$depth};
+  --sketch-waves: #{$waves};
+  --sketch-inset: #{$inset};
 }

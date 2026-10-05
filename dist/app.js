@@ -84,12 +84,9 @@ var bodyClass = {
       } else {
         bodyClass.bodyObject.classList.add('no-touch');
       }
-<<<<<<< HEAD
       window.setTimeout(function () {
         bodyClass.bodyObject.classList.add('splash-completed');
       }, 2000);
-=======
->>>>>>> 7648dec (FIX: cleanup)
     });
     bodyClass.bodyObject.classList.remove('body-unloaded');
     // window.addEventListener('beforeunload', function () {
@@ -289,6 +286,285 @@ var bodyClass = {
   }
 };
 bodyClass.init();
+
+/***/ }),
+
+/***/ "../sun/src/js/borders.js":
+/*!********************************!*\
+  !*** ../sun/src/js/borders.js ***!
+  \********************************/
+/***/ (function() {
+
+(function initSketchBorders() {
+  var num = function num(val) {
+    var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    if (!val) return fallback;
+    var n = parseFloat(val.toString().trim().split(/\s+/)[0]);
+    return Number.isNaN(n) ? fallback : n;
+  };
+  var VOID_TAGS = new Set(['INPUT', 'TEXTAREA', 'SELECT', 'IMG']);
+
+  /**
+   * Generates a multi-wave Quadratic Bézier SVG path string,
+   * dynamically scaling wave count and depth based on line length.
+   */
+  function buildSidePath(x1, y1, x2, y2, requestedWaves, configuredDepth, seeds) {
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    var len = Math.hypot(dx, dy);
+    if (len === 0) return '';
+
+    // --- DYNAMIC LENGTH-ADAPTIVE WRIGGLINESS ---
+    var waves = requestedWaves;
+    var depth = configuredDepth;
+    if (len < 60) {
+      // Very short lines (e.g. input field height ~30-40px)
+      waves = 1; // Single clean arc
+      depth = Math.min(configuredDepth, Math.max(1, len * 0.04)); // Subtle 1px - 1.5px peak
+    } else if (len < 200) {
+      // Medium lines
+      waves = Math.min(requestedWaves, 2);
+      depth = Math.min(configuredDepth, Math.max(1.5, len * 0.025));
+    } else if (len > 500) {
+      // Very long spans (e.g. wide fieldsets / middleColumn)
+      depth = configuredDepth * 1.15; // Slightly deeper bow for wide spans
+    }
+    if (waves <= 0) return "M ".concat(x1.toFixed(1), ",").concat(y1.toFixed(1), " L ").concat(x2.toFixed(1), ",").concat(y2.toFixed(1), " ");
+    var nx = -dy / len;
+    var ny = dx / len;
+    var d = "M ".concat(x1.toFixed(1), ",").concat(y1.toFixed(1), " ");
+    var dt = 1 / waves;
+    for (var i = 0; i < waves; i++) {
+      var s = seeds[i] || {
+        dir: 1,
+        factor: 1
+      };
+      var sx = x1 + dx * (i * dt);
+      var sy = y1 + dy * (i * dt);
+      var ex = x1 + dx * ((i + 1) * dt);
+      var ey = y1 + dy * ((i + 1) * dt);
+      var mx = (sx + ex) / 2;
+      var my = (sy + ey) / 2;
+      var peak = depth * s.factor * s.dir;
+      var cx = mx + nx * peak;
+      var cy = my + ny * peak;
+      d += "Q ".concat(cx.toFixed(1), ",").concat(cy.toFixed(1), " ").concat(ex.toFixed(1), ",").concat(ey.toFixed(1), " ");
+    }
+    return d;
+  }
+  function getSideSeed(rawWaves) {
+    var waves = 1;
+    var parsed = parseInt(rawWaves, 10);
+    if (!Number.isNaN(parsed) && parsed >= 1) {
+      waves = Math.min(3, parsed);
+    } else {
+      waves = Math.floor(Math.random() * 3) + 1;
+    }
+    var seeds = [];
+    var dir = Math.random() < 0.5 ? 1 : -1;
+    for (var i = 0; i < 3; i++) {
+      seeds.push({
+        dir: dir,
+        factor: 0.75 + Math.random() * 0.5
+      });
+      dir *= -1;
+    }
+    return {
+      waves: waves,
+      seeds: seeds
+    };
+  }
+  function renderBorder(el) {
+    var targetType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'main';
+    var isPseudo = targetType !== 'main';
+    var pseudoSel = isPseudo ? "::".concat(targetType) : null;
+    var style = isPseudo ? window.getComputedStyle(el, pseudoSel) : window.getComputedStyle(el);
+    var color = (style.getPropertyValue('--sketch-color') || '').trim();
+    if (!color) return;
+    if (isPseudo && (style.content === 'none' || style.display === 'none')) return;
+    var depth = num(style.getPropertyValue('--sketch-depth'), 4);
+    var rawWaves = (style.getPropertyValue('--sketch-waves') || '').trim();
+    var inset = num(style.getPropertyValue('--sketch-inset'), 0);
+    var topW = num(style.getPropertyValue('--sketch-top'), 0);
+    var rightW = num(style.getPropertyValue('--sketch-right'), 0);
+    var bottomW = num(style.getPropertyValue('--sketch-bottom'), 0);
+    var leftW = num(style.getPropertyValue('--sketch-left'), 0);
+    var strokeW = Math.max(topW, rightW, bottomW, leftW, 2);
+    var sides = {
+      top: topW > 0,
+      right: rightW > 0,
+      bottom: bottomW > 0,
+      left: leftW > 0
+    };
+    var isVoid = VOID_TAGS.has(el.tagName);
+    var container = isVoid ? el.parentElement : el;
+    if (!container) return;
+    if (!isPseudo && window.getComputedStyle(container).position === 'static') {
+      container.style.position = 'relative';
+    }
+    if (!el._sketchState) el._sketchState = {};
+    if (!el._sketchState[targetType]) {
+      el._sketchState[targetType] = {
+        top: getSideSeed(rawWaves),
+        right: getSideSeed(rawWaves),
+        bottom: getSideSeed(rawWaves),
+        left: getSideSeed(rawWaves)
+      };
+    }
+    var state = el._sketchState[targetType];
+    var overlayClass = isPseudo ? "curved-border-overlay--".concat(targetType) : 'curved-border-overlay';
+    var svg = isVoid ? el.nextElementSibling : container.querySelector(":scope > .".concat(overlayClass));
+    if (!svg || !svg.classList.contains(overlayClass)) {
+      svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.className.baseVal = "curved-border-overlay ".concat(overlayClass);
+      svg.style.cssText = 'position:absolute;pointer-events:none;z-index:10;overflow:visible;top:0;left:0;';
+      var _path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      _path.setAttribute('fill', 'none');
+      _path.setAttribute('stroke-linecap', 'round');
+      _path.setAttribute('stroke-linejoin', 'round');
+      svg.appendChild(_path);
+      if (isVoid) el.insertAdjacentElement('afterend', svg);else container.appendChild(svg);
+    }
+    var path = svg.querySelector('path');
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', strokeW);
+    function updatePath() {
+      var cRect = container.getBoundingClientRect();
+      var x = 0;
+      var y = 0;
+      var w = el.offsetWidth || 0;
+      var h = el.offsetHeight || 0;
+      if (isVoid) {
+        var eRect = el.getBoundingClientRect();
+        x = eRect.left - cRect.left;
+        y = eRect.top - cRect.top;
+        w = eRect.width;
+        h = eRect.height;
+      } else if (isPseudo) {
+        x = num(style.left, 0) + num(style.marginLeft, 0);
+        y = num(style.top, 0) + num(style.marginTop, 0);
+        var compW = style.getPropertyValue('width');
+        var compH = style.getPropertyValue('height');
+        var parsedW = num(compW, -1);
+        var parsedH = num(compH, -1);
+        var realW = cRect.width || container.offsetWidth;
+        var realH = cRect.height || container.offsetHeight;
+        w = parsedW >= 0 ? parsedW : realW;
+        h = parsedH >= 0 ? parsedH : realH;
+      } else {
+        w = cRect.width || w;
+        h = cRect.height || h;
+      }
+      x -= inset;
+      y -= inset;
+      w += inset * 2;
+      h += inset * 2;
+      if (w <= 0 || h <= 0) return;
+      var pad = strokeW + Math.abs(depth) + 6;
+      var topOffset = y - pad;
+      var leftOffset = x - pad;
+      var svgW = w + pad * 2;
+      var svgH = h + pad * 2;
+      svg.style.top = "".concat(topOffset, "px");
+      svg.style.left = "".concat(leftOffset, "px");
+      svg.style.width = "".concat(svgW, "px");
+      svg.style.height = "".concat(svgH, "px");
+      svg.setAttribute('viewBox', "0 0 ".concat(svgW, " ").concat(svgH));
+      var x0 = pad,
+        y0 = pad;
+      var x1 = pad + w,
+        y1 = pad + h;
+      var d = '';
+      if (sides.top) d += buildSidePath(x0, y0, x1, y0, state.top.waves, depth, state.top.seeds);
+      if (sides.right) d += buildSidePath(x1, y0, x1, y1, state.right.waves, depth, state.right.seeds);
+      if (sides.bottom) d += buildSidePath(x1, y1, x0, y1, state.bottom.waves, depth, state.bottom.seeds);
+      if (sides.left) d += buildSidePath(x0, y1, x0, y0, state.left.waves, depth, state.left.seeds);
+      path.setAttribute('d', d.trim());
+    }
+    updatePath();
+    if (!el._sketchObservers) el._sketchObservers = {};
+    if (!el._sketchObservers[targetType]) {
+      el._sketchObservers[targetType] = new ResizeObserver(updatePath);
+      el._sketchObservers[targetType].observe(el);
+    }
+  }
+  function scan() {
+    // YOUR CUSTOM SELECTOR
+    var selector = '[class*="sketch"], [data-sketch], h2, fieldset, .middleColumn, input[type="submit"]';
+    document.querySelectorAll(selector).forEach(function (el) {
+      renderBorder(el, 'main');
+      renderBorder(el, 'before');
+      renderBorder(el, 'after');
+    });
+  }
+
+  // --- ANIMATION & RESIZE TRACKING LOOP ---
+  var keepAliveUntil = 0;
+  var animFrameId = null;
+  function triggerAnimationTracking() {
+    var ms = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 800;
+    keepAliveUntil = Math.max(keepAliveUntil, performance.now() + ms);
+    if (!animFrameId) {
+      loop();
+    }
+  }
+  function loop() {
+    scan();
+    if (performance.now() < keepAliveUntil) {
+      animFrameId = requestAnimationFrame(loop);
+    } else {
+      animFrameId = null;
+    }
+  }
+
+  // Triggers for animations, hovers, layout updates, and focus
+  ['transitionstart', 'transitionrun', 'animationstart'].forEach(function (evt) {
+    window.addEventListener(evt, function () {
+      return triggerAnimationTracking(1200);
+    }, {
+      capture: true,
+      passive: true
+    });
+  });
+  ['transitionend', 'animationend', 'transitioncancel', 'animationcancel'].forEach(function (evt) {
+    window.addEventListener(evt, function () {
+      return triggerAnimationTracking(200);
+    }, {
+      capture: true,
+      passive: true
+    });
+  });
+  ['pointerenter', 'pointerleave', 'click', 'focusin', 'focusout'].forEach(function (evt) {
+    window.addEventListener(evt, function () {
+      return triggerAnimationTracking(600);
+    }, {
+      capture: true,
+      passive: true
+    });
+  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      return triggerAnimationTracking(600);
+    });
+  } else {
+    triggerAnimationTracking(600);
+  }
+  window.addEventListener('load', function () {
+    return triggerAnimationTracking(600);
+  });
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () {
+      return triggerAnimationTracking(400);
+    });
+  }
+  var observer = new MutationObserver(function () {
+    return triggerAnimationTracking(600);
+  });
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})();
 
 /***/ }),
 
@@ -919,10 +1195,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_images__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_js_images__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _js_image_hover__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/image-hover */ "../sun/src/js/image-hover.js");
 /* harmony import */ var _js_image_hover__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_js_image_hover__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _js_print__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/print */ "../sun/src/js/print.js");
-/* harmony import */ var _js_print__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_print__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _js_battery_saver__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/battery-saver */ "../sun/src/js/battery-saver.js");
-/* harmony import */ var _js_battery_saver__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_battery_saver__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _js_borders__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/borders */ "../sun/src/js/borders.js");
+/* harmony import */ var _js_borders__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_borders__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _js_print__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/print */ "../sun/src/js/print.js");
+/* harmony import */ var _js_print__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_print__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _js_battery_saver__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/battery-saver */ "../sun/src/js/battery-saver.js");
+/* harmony import */ var _js_battery_saver__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_js_battery_saver__WEBPACK_IMPORTED_MODULE_13__);
 // // non-themed app
 // import 'site/app/client/javascript/MyJavascriptFile';
 //
@@ -932,6 +1210,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 // // your themed app files
 // import './js/partials/SomeOtherJavascriptFile';
+
 
 
 

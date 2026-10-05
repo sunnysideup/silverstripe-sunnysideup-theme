@@ -12,7 +12,7 @@
         font-size: clamp(2.5rem, calc((10vw + 6vh) / 2), calc((10vw + 6vh) / 2));
         color: #fff;
         animation: splash-fade 1s ease 0.7s forwards;
-        font-family: "Oswald", sans-serif;;
+        font-family: "Oswald", sans-serif;
     }
 }
 

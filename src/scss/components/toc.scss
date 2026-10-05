@@ -145,7 +145,7 @@ body.has-toc.toc-on {
                 display: block;
                 width: 100%;
                 content: ' ';
-                border-bottom: 4px dotted $colour_modern_iron;
+                @include sketch-border(0 0 4px 0, $colour_modern_iron);
                 position: absolute;
                 clear: both;
                 left: 0;

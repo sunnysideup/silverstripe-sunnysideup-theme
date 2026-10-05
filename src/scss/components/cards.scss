@@ -5,7 +5,7 @@
     padding: 3rem;
     border-radius: 2rem;
     border-top-left-radius: 0;
-    border: 4px dotted $colour_modern_iron;
+    @include sketch-border(2px, $colour_modern_iron);
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     .card {
         /* Styles for your cards */

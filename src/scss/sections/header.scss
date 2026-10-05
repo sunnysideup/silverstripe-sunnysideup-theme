@@ -87,10 +87,10 @@ body.past-header:not(.menu-on) {
 body.past-header.just-scrolled.scrolled-up {
     #header {
         opacity: 1;
-    }
-    color: $colour_blue_cobalter_highlights;
-    * {
         color: $colour_blue_cobalter_highlights;
+        * {
+            color: $colour_blue_cobalter_highlights;
+        }
     }
 }
 // body.footer-visible {

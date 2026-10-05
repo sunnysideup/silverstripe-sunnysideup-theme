@@ -1,16 +1,33 @@
 .arrow-down {
-    rotate: 105deg;
-    transform-origin: center; /* change to e.g. "top center" for a pendulum effect */
-    animation: swing 2.3s ease-in-out infinite alternate;
-    animation-delay: 1s;
+    --beat-delay: 2.5s;     /* initial pause */
+    --beat-duration: 1.4s;  /* one full "lub-dub" plus rest */
+    --beat-distance: 8px;   /* how far the strong beat pulls down */
+
+    rotate: 90deg;
+    transform-origin: center;
+    animation: heartbeat var(--beat-duration) var(--beat-delay) infinite;
 }
 
-@keyframes swing {
-    from {
-        rotate: 105deg;
+@keyframes heartbeat {
+    0% {
+        translate: 0 0;
+        animation-timing-function: ease-out;
     }
-    to {
-        rotate: 75deg;
+    12% {   /* "lub": strong pull */
+        translate: 0 var(--beat-distance);
+        animation-timing-function: ease-in;
+    }
+    24% {
+        translate: 0 0;
+        animation-timing-function: ease-out;
+    }
+    36% {   /* "dub": softer pull */
+        translate: 0 calc(var(--beat-distance) * 0.6);
+        animation-timing-function: ease-in-out;
+    }
+    55%,
+    100% {  /* rest */
+        translate: 0 0;
     }
 }
 
@@ -18,6 +35,5 @@
 @media (prefers-reduced-motion: reduce) {
     .arrow-down {
         animation: none;
-        rotate: 90deg;
     }
 }

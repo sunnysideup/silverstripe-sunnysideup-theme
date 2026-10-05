@@ -169,7 +169,7 @@
             h1:before,
             h2:before {
                 display: block;
-                border-top: 4px dotted $colour_modern_iron;
+                @include sketch-border(4px 0 0 0, $colour_modern_iron_half);
             }
             h1,
             h2 {
@@ -235,9 +235,11 @@
                     margin-top: 0;
                 }
                 h2 + p,
+                h2 + h3,
+                h2 + h4,
                 h2 + ul,
                 h2 + ol {
-                    padding-top: 1.2rem;
+                    padding-top: 2.3rem;
                 }
                 .image-container {
                     padding-left: 0 !important;

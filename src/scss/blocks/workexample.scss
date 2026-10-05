@@ -26,11 +26,11 @@
         .dotted-line {
             position: absolute;
             width: 50px;
-            border-left: 4px dotted $colour_modern_iron;
+            @include sketch-border(0 0 0 5px, $colour_modern_iron);
             bottom: 9rem;
             top: 0;
-            margin-top: -2rem;
-            left: calc(50% + 1px);
+            margin-top: -1.7rem;
+            left: calc(50% + -2px);
             z-index: -1;
         }
         img {

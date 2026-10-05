@@ -39,8 +39,6 @@ body.body-unloaded main#main {
 }
 
 /* variables */
-<<<<<<< HEAD
-=======
 /**
  * Example usage:
  * .asymmetric-card {
@@ -56,7 +54,6 @@ body.body-unloaded main#main {
  *   @include sketch-border($top: 0, $right: 0, $bottom: 4px, $left: 0, $color: #f59e0b);
  * }
  */
->>>>>>> 7648dec (FIX: cleanup)
 * {
   color: #333;
   scroll-behavior: smooth;
@@ -158,7 +155,6 @@ body.no-rocket-show.no-quote .main-quote {
   display: none;
 }
 
-<<<<<<< HEAD
 body #header * {
   color: transparent;
   transition: color 1.5s ease-in;
@@ -168,90 +164,6 @@ body.splash-completed #header * {
 }
 body.splash-completed.title-colour-blue #header * {
   color: #022866 !important;
-=======
-footer#footer {
-  background-color: rgba(87, 87, 87, 0.8);
-  padding-top: 6vh;
-  padding-right: 6vw;
-  padding-bottom: 6vh;
-  position: relative;
-  z-index: 35;
-}
-footer#footer div.col {
-  padding-bottom: 2vh;
-  text-align: center;
-}
-footer#footer p {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  color: #fff;
-}
-footer#footer address {
-  padding: 0;
-  padding: 0;
-  margin: 0;
-  margin: 0;
-  clear: both;
-  clear: both;
-  padding-bottom: 1rem;
-  padding-bottom: 1rem;
-}
-footer#footer ul {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  list-style: none;
-}
-footer#footer li {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  list-style: none;
-}
-footer#footer #theme-selectors {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  padding-bottom: 1rem;
-  display: none;
-}
-footer#footer * {
-  font-size: 2rem;
-  color: #fff;
-}
-footer#footer a {
-  color: #fff;
-  text-decoration: none;
-}
-footer#footer a:link {
-  color: #fff;
-}
-footer#footer a:visited {
-  color: #fff;
-}
-footer#footer a:hover {
-  color: #f7cd55;
-}
-footer#footer li.current a {
-  color: #f7cd55;
-  font-weight: 600;
-}
-footer#footer li.section a {
-  font-weight: 600;
-}
-footer#footer .image-holder {
-  display: block;
-}
-footer#footer .image-holder img {
-  max-width: 100%;
-  width: 200px;
-  display: inline-block;
-  margin: 0;
->>>>>>> 7648dec (FIX: cleanup)
 }
 
 #header {
@@ -274,16 +186,11 @@ footer#footer .image-holder img {
   right: 6vw;
   z-index: 3;
 }
-<<<<<<< HEAD
 #header .logo-header {
-=======
-#header h1 {
->>>>>>> 7648dec (FIX: cleanup)
   font-weight: 500;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   line-height: 1;
-<<<<<<< HEAD
   position: absolute;
   text-align: right;
   z-index: 3;
@@ -302,31 +209,6 @@ footer#footer .image-holder img {
   opacity: 1;
 }
 #header .logo-header a.bread-crumb {
-=======
-  position: relative;
-  color: #022866;
-}
-#header h1 * {
-  color: #022866;
-}
-#header h1 {
-  position: absolute;
-  text-align: right;
-  z-index: 3;
-  margin-left: 17vw;
-}
-#header h1 a {
-  text-decoration: none;
-}
-#header h1 a,
-#header h1 span {
-  opacity: 0.7;
-}
-#header h1 a.page-title {
-  opacity: 1;
-}
-#header h1 a.bread-crumb {
->>>>>>> 7648dec (FIX: cleanup)
   display: block;
   padding-top: 0.5rem;
   font-size: 2rem;
@@ -347,11 +229,7 @@ body.past-header:not(.menu-on) #header #logo {
   margin-top: 0;
   z-index: 0;
 }
-<<<<<<< HEAD
 body.past-header:not(.menu-on) #header .logo-header {
-=======
-body.past-header:not(.menu-on) #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
   margin-top: 0.67em;
   margin-left: 0vw;
   color: #575757;
@@ -361,7 +239,6 @@ body.past-header:not(.menu-on) #header h1 {
   opacity: 1;
   top: 0px;
 }
-<<<<<<< HEAD
 body.past-header:not(.menu-on) #header .logo-header * {
   color: #575757;
 }
@@ -369,15 +246,6 @@ body.past-header:not(.menu-on) #header .logo-header .page-title {
   color: #022866;
 }
 body.past-header:not(.menu-on) #header .logo-header .bread-crumb {
-=======
-body.past-header:not(.menu-on) #header h1 * {
-  color: #575757;
-}
-body.past-header:not(.menu-on) #header h1 .page-title {
-  color: #022866;
-}
-body.past-header:not(.menu-on) #header h1 .bread-crumb {
->>>>>>> 7648dec (FIX: cleanup)
   display: none !important;
 }
 body.past-header:not(.menu-on) #header svg {
@@ -386,16 +254,11 @@ body.past-header:not(.menu-on) #header svg {
 
 body.past-header.just-scrolled.scrolled-up #header {
   opacity: 1;
-}
-<<<<<<< HEAD
-body.past-header.just-scrolled.scrolled-up {
   color: #022866;
 }
-body.past-header.just-scrolled.scrolled-up * {
+body.past-header.just-scrolled.scrolled-up #header * {
   color: #022866;
 }
-=======
->>>>>>> 7648dec (FIX: cleanup)
 
 @media only screen and (max-width: 1049px) {
   body.footer-visible #nav {
@@ -423,7 +286,7 @@ body.past-header.just-scrolled.scrolled-up * {
   background-color: #f7cd55;
   border-radius: 50%;
   box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
-  border: 4px dotted #ffffff;
+  border: 4px solid #ffffff;
 }
 #nav a {
   text-decoration: none;
@@ -512,11 +375,7 @@ body.show-logo #header {
   height: 0 !important;
   border: none !important;
 }
-<<<<<<< HEAD
 body.show-logo #header .logo-header {
-=======
-body.show-logo #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
   display: none !important;
 }
 body.show-logo #header .bread-crumb {
@@ -612,7 +471,7 @@ body.menu-on .collapsibleListHasOpen > li.collapsibleListNotOpen {
   font-size: 2rem !important;
   margin-top: 1vh !important;
   margin-bottom: 1vh !important;
-  opacity: 0.6 !important;
+  opacity: 0.77 !important;
 }
 body.menu-on .collapsibleListHasOpen > li.collapsibleListOpen {
   display: list-item;
@@ -660,7 +519,6 @@ body.past-header.scrolled-up.just-scrolled #nav {
     font-size: calc(1rem + 2vh);
   }
 }
-<<<<<<< HEAD
 footer#footer {
   background-color: rgba(87, 87, 87, 0.8);
   padding-top: 6vh;
@@ -745,8 +603,6 @@ footer#footer .image-holder img {
   margin: 0;
 }
 
-=======
->>>>>>> 7648dec (FIX: cleanup)
 .typography p,
 .typography ul,
 .typography ol,
@@ -793,10 +649,6 @@ footer#footer .image-holder img {
 .typography h1 *,
 .typography h2 * {
   color: #022866;
-}
-.typography h1,
-.typography h2 {
-  border-bottom: 4px dotted #022866;
 }
 .typography h1:before,
 .typography h2:before {
@@ -898,8 +750,9 @@ footer#footer .image-holder img {
   width: auto !important;
   height: auto !important;
   margin: 0 auto;
-  border: 4px dotted #a7a7a7;
   border-radius: 2rem;
+  box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #aaa;
 }
 .typography .captionImage {
   width: auto !important;
@@ -958,7 +811,7 @@ footer#footer .image-holder img {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-style: solid;
-  text-decoration-color: rgba(2, 40, 102, 0.3333333333) !important;
+  text-decoration-color: #a7a7a7 !important;
 }
 .typography a:hover {
   filter: drop-shadow(0 0 12px #f7cd55);
@@ -1082,8 +935,15 @@ footer#footer .image-holder img {
 }
 .typography form fieldset,
 .typography form .userform-fields {
-  border: 2px dotted #a7a7a7 !important;
-  border-top-right-radius: 1rem;
+  border: none;
+  --sketch-color: #95c93d;
+  --sketch-top: 4px;
+  --sketch-right: 4px;
+  --sketch-bottom: 4px;
+  --sketch-left: 4px;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
   padding: 3rem 3vw;
   background-color: #fff;
   margin: 2rem 0;
@@ -1144,7 +1004,7 @@ footer#footer .image-holder img {
 }
 .typography form fieldset .field,
 .typography form .userform-fields .field {
-  padding-top: 1rem;
+  padding-top: 3rem;
   width: 100%;
   padding-bottom: 1rem;
 }
@@ -1157,6 +1017,15 @@ footer#footer .image-holder img {
 .typography form .userform-fields .middleColumn {
   display: block;
   text-align: left;
+  border: none !important;
+  --sketch-color: rgba(167, 167, 167, 0.4666666667);
+  --sketch-top: 1px;
+  --sketch-right: 1px;
+  --sketch-bottom: 1px;
+  --sketch-left: 1px;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
 }
 .typography form fieldset .middleColumn input,
 .typography form fieldset .middleColumn textarea,
@@ -1170,26 +1039,24 @@ footer#footer .image-holder img {
   margin-top: 0px;
   padding: 1.5rem;
   font-weight: 600;
-  border-bottom: 4px dotted #a7a7a7;
+  border: none !important;
+  display: block;
   color: #111;
+  border-top-right-radius: 1rem;
 }
-.typography form fieldset .middleColumn input:focus,
+.typography form fieldset .middleColumn input:focus, .typography form fieldset .middleColumn input:not(.no-value),
 .typography form fieldset .middleColumn textarea:focus,
+.typography form fieldset .middleColumn textarea:not(.no-value),
 .typography form fieldset .middleColumn select:focus,
+.typography form fieldset .middleColumn select:not(.no-value),
 .typography form .userform-fields .middleColumn input:focus,
+.typography form .userform-fields .middleColumn input:not(.no-value),
 .typography form .userform-fields .middleColumn textarea:focus,
-.typography form .userform-fields .middleColumn select:focus {
-  border-bottom: 3px solid #a6bd7f;
+.typography form .userform-fields .middleColumn textarea:not(.no-value),
+.typography form .userform-fields .middleColumn select:focus,
+.typography form .userform-fields .middleColumn select:not(.no-value) {
   outline: none !important;
   background-color: #a6bd7f;
-}
-.typography form fieldset .middleColumn input,
-.typography form fieldset .middleColumn textarea,
-.typography form fieldset .middleColumn select,
-.typography form .userform-fields .middleColumn input,
-.typography form .userform-fields .middleColumn textarea,
-.typography form .userform-fields .middleColumn select {
-  border-top-right-radius: 1rem;
 }
 .typography form fieldset .middleColumn input.no-value,
 .typography form fieldset .middleColumn textarea.no-value,
@@ -1197,7 +1064,8 @@ footer#footer .image-holder img {
 .typography form .userform-fields .middleColumn input.no-value,
 .typography form .userform-fields .middleColumn textarea.no-value,
 .typography form .userform-fields .middleColumn select.no-value {
-  border-bottom-color: #022866 !important;
+  background-color: #e6e6e6 !important;
+  color: #fff !important;
 }
 .typography form fieldset .middleColumn input.no-value:focus,
 .typography form fieldset .middleColumn textarea.no-value:focus,
@@ -1205,7 +1073,7 @@ footer#footer .image-holder img {
 .typography form .userform-fields .middleColumn input.no-value:focus,
 .typography form .userform-fields .middleColumn textarea.no-value:focus,
 .typography form .userform-fields .middleColumn select.no-value:focus {
-  border-bottom: 3px solid #f7cd55 !important;
+  background-color: #f7cd55 !important;
 }
 .typography form fieldset .middleColumn select,
 .typography form .userform-fields .middleColumn select {
@@ -1355,31 +1223,6 @@ footer#footer .image-holder img {
   border-top-right-radius: 1rem;
   font-size: 2rem;
 }
-.typography form .btn-toolbar {
-  padding: 0;
-  display: block;
-  text-align: right;
-}
-.typography form .btn-toolbar input {
-  padding: 1.3rem 1.7rem;
-  background: #022866;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem;
-  border: 2px dotted #a7a7a7;
-  text-decoration: none !important;
-  width: auto;
-  text-align: center;
-  font-weight: 600;
-  color: #fff;
-}
-.typography form .btn-toolbar input:hover {
-  margin-top: -1px;
-  margin-bottom: 1px;
-}
-.typography form .btn-toolbar input:active {
-  color: #000;
-  background: #f7cd55;
-}
 .typography form p {
   margin-top: 1.7rem !important;
   margin-left: 0 !important;
@@ -1412,7 +1255,38 @@ footer#footer .image-holder img {
   position: relative;
   left: 50%;
 }
-
+.typography form .btn-toolbar {
+  padding: 0;
+  display: block;
+  text-align: right;
+}
+.typography form .btn-toolbar input {
+  border: none !important;
+  --sketch-color: #95c93d;
+  --sketch-top: 4px;
+  --sketch-right: 4px;
+  --sketch-bottom: 4px;
+  --sketch-left: 4px;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
+  padding: 1.3rem 1.7rem;
+  color: #95c93d;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  text-decoration: none !important;
+  width: auto;
+  text-align: center;
+  font-weight: 600;
+}
+.typography form .btn-toolbar input:hover {
+  background: #95c93d;
+  color: #fff;
+}
+.typography form .btn-toolbar input:active {
+  color: #000;
+  background: #f7cd55;
+}
 .field.checkbox {
   font-size: 2 !important;
 }
@@ -1800,13 +1674,6 @@ main#main blockquote.main-quote p .shiner svg {
   vertical-align: baseline;
   height: 1.2em;
   width: 1.2em;
-<<<<<<< HEAD
-=======
-  transition: transform 0.1s ease-in-out;
-}
-main#main blockquote.main-quote p .shiner svg:hover {
-  transform: rotate(90deg);
->>>>>>> 7648dec (FIX: cleanup)
 }
 main#main blockquote.main-quote p .Typewriter__wrapper,
 main#main blockquote.main-quote p .Typewriter__wrapper * {
@@ -2045,7 +1912,6 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   margin-bottom: 6rem !important;
 }
 
-<<<<<<< HEAD
 @media only screen and (min-width: 1050px) {
   .toc-on #SiblingsAndChildren {
     border-top: 1px solid transparent;
@@ -2054,7 +1920,14 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     display: block;
     width: 100%;
     content: " ";
-    border-bottom: 4px dotted #a7a7a7;
+    --sketch-color: #a7a7a7;
+    --sketch-top: 0;
+    --sketch-right: 0;
+    --sketch-bottom: 4px;
+    --sketch-left: 0;
+    --sketch-depth: 4px;
+    --sketch-waves: random;
+    --sketch-inset: 0px;
     position: absolute;
     clear: both;
     left: 0;
@@ -2062,23 +1935,6 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     margin-top: 2rem;
   }
 }
-=======
-.toc-on #SiblingsAndChildren {
-  border-top: 1px solid transparent;
-}
-.toc-on #SiblingsAndChildren h2:after {
-  display: block;
-  width: 100%;
-  content: " ";
-  border-bottom: 4px dotted #a7a7a7;
-  position: absolute;
-  clear: both;
-  left: 0;
-  right: 0;
-  margin-top: 2rem;
-}
-
->>>>>>> 7648dec (FIX: cleanup)
 .card-holder {
   display: grid;
   gap: 3rem;
@@ -2086,7 +1942,14 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   padding: 3rem;
   border-radius: 2rem;
   border-top-left-radius: 0;
-  border: 4px dotted #a7a7a7;
+  --sketch-color: #a7a7a7;
+  --sketch-top: 2px;
+  --sketch-right: 2px;
+  --sketch-bottom: 2px;
+  --sketch-left: 2px;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 .card-holder .card {
@@ -2141,11 +2004,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 24vw;
     margin-top: -3.9999984vw;
   }
-<<<<<<< HEAD
   #header div.logo-header {
-=======
-  #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
     margin-top: 0;
     font-size: 8vw;
     right: 10.4347826087vw;
@@ -2156,11 +2015,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     padding-right: calc(2rem + 3vw);
   }
   blockquote.main-quote p {
-<<<<<<< HEAD
     text-align: left;
-=======
-    text-align: center;
->>>>>>> 7648dec (FIX: cleanup)
   }
   main#main {
     padding-left: calc(2rem + 3vw);
@@ -2187,11 +2042,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 18vw;
     margin-top: -2.9999988vw;
   }
-<<<<<<< HEAD
   #header div.logo-header {
-=======
-  #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
     font-size: 6vw;
     right: 9.9130434783vw;
     top: 11.25vw;
@@ -2240,11 +2091,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 12vw;
     margin-top: -1.9999992vw;
   }
-<<<<<<< HEAD
   #header div.logo-header {
-=======
-  #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
     font-size: 4vw;
     right: 8.6086956522vw;
     top: 7.5vw;
@@ -2266,7 +2113,14 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   main#main .element h1:before,
   main#main .element h2:before {
     display: block;
-    border-top: 4px dotted #a7a7a7;
+    --sketch-color: rgba(167, 167, 167, 0.4666666667);
+    --sketch-top: 4px;
+    --sketch-right: 0;
+    --sketch-bottom: 0;
+    --sketch-left: 0;
+    --sketch-depth: 4px;
+    --sketch-waves: random;
+    --sketch-inset: 0px;
   }
   main#main .element h1,
   main#main .element h2 {
@@ -2340,11 +2194,15 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     margin-top: 0;
   }
   main#main .element.dnadesign__elemental__models__elementcontent h2 + p,
+  main#main .element.dnadesign__elemental__models__elementcontent h2 + h3,
+  main#main .element.dnadesign__elemental__models__elementcontent h2 + h4,
   main#main .element.dnadesign__elemental__models__elementcontent h2 + ul,
   main#main .element.dnadesign__elemental__models__elementcontent h2 + ol, main#main .element.sunnysideup__app__elements__hostingcalculator h2 + p,
+  main#main .element.sunnysideup__app__elements__hostingcalculator h2 + h3,
+  main#main .element.sunnysideup__app__elements__hostingcalculator h2 + h4,
   main#main .element.sunnysideup__app__elements__hostingcalculator h2 + ul,
   main#main .element.sunnysideup__app__elements__hostingcalculator h2 + ol {
-    padding-top: 1.2rem;
+    padding-top: 2.3rem;
   }
   main#main .element.dnadesign__elemental__models__elementcontent .image-container, main#main .element.sunnysideup__app__elements__hostingcalculator .image-container {
     padding-left: 0 !important;
@@ -2370,10 +2228,6 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: unloadTransition; /* the name of the animation we defined above */
     animation-fill-mode: forwards;
-<<<<<<< HEAD
-=======
-    border-bottom: 4px dotted rgba(2, 40, 102, 0.3333333333);
->>>>>>> 7648dec (FIX: cleanup)
   }
   body.past-header.just-scrolled.toc-on #header {
     display: none !important;
@@ -2383,19 +2237,11 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 9vw;
     margin-top: -1.4999994vw;
   }
-<<<<<<< HEAD
   #header div.logo-header {
     font-size: 3vw;
     top: 5.625vw;
   }
   #header div.logo-header a.bread-crumb {
-=======
-  #header h1 {
-    font-size: 3vw;
-    top: 5.625vw;
-  }
-  #header h1 a.bread-crumb {
->>>>>>> 7648dec (FIX: cleanup)
     font-size: 2.5rem;
   }
   #nav {
@@ -2491,13 +2337,8 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   body.past-header #header #logo {
     right: 5vw;
   }
-<<<<<<< HEAD
   body #header div.logo-header,
   body.past-header #header div.logo-header {
-=======
-  body #header h1,
-  body.past-header #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
     right: 8.3333333333vw;
   }
   #nav #nav-inner {
@@ -2533,11 +2374,7 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
     height: 12vw;
     margin-top: -1.9999992vw;
   }
-<<<<<<< HEAD
   #header div.logo-header {
-=======
-  #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
     margin-top: 0;
     font-size: 4vw;
     right: 12vw;
@@ -2623,11 +2460,18 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
 .sunnysideup__app__elements__workexample .work-example-images .dotted-line {
   position: absolute;
   width: 50px;
-  border-left: 4px dotted #a7a7a7;
+  --sketch-color: #a7a7a7;
+  --sketch-top: 0;
+  --sketch-right: 0;
+  --sketch-bottom: 0;
+  --sketch-left: 5px;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
   bottom: 9rem;
   top: 0;
-  margin-top: -2rem;
-  left: calc(50% + 1px);
+  margin-top: -1.7rem;
+  left: calc(50% - 2px);
   z-index: -1;
 }
 .sunnysideup__app__elements__workexample .work-example-images img {
@@ -2714,11 +2558,14 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   padding: 0;
   margin: 0;
   padding-bottom: 1rem;
-<<<<<<< HEAD
-  border-bottom: 4px dotted rgba(255, 255, 255, 0.3333333333);
-=======
-  border-bottom: 4px dashed rgba(255, 255, 255, 0.3333333333);
->>>>>>> 7648dec (FIX: cleanup)
+  --sketch-color: #ffffff;
+  --sketch-top: 0;
+  --sketch-right: 0;
+  --sketch-bottom: 4px;
+  --sketch-left: 0;
+  --sketch-depth: 4px;
+  --sketch-waves: random;
+  --sketch-inset: 0px;
   margin-bottom: 0.5rem;
 }
 .sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption .small-line {
@@ -2770,12 +2617,6 @@ body.theme-rocket.has-video {
 body.theme-rocket.header-0 {
   background-color: #575757;
 }
-<<<<<<< HEAD
-=======
-body.theme-rocket #header * {
-  color: #f7cd55;
-}
->>>>>>> 7648dec (FIX: cleanup)
 body.theme-rocket a[data-add-class=theme-rocket] {
   text-decoration: none !important;
 }
@@ -2860,11 +2701,7 @@ body.theme-rocket.no-touch #footer {
 body.theme-rocket.no-touch #footer:hover {
   opacity: 1;
 }
-<<<<<<< HEAD
 body.theme-rocket.no-touch.past-header #header .logo-header {
-=======
-body.theme-rocket.no-touch.past-header #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
   background-color: transparent;
 }
 
@@ -2890,17 +2727,6 @@ body.menu-on #header * {
   color: #022866 !important;
 }
 
-<<<<<<< HEAD
-=======
-body.theme-rocket.title-colour-yellow #header * {
-  color: #f7cd55;
-}
-
-body.theme-rocket.title-colour-blue #header * {
-  color: #022866 !important;
-}
-
->>>>>>> 7648dec (FIX: cleanup)
 @media only screen and (max-width: 1050px) {
   body.theme-rocket.footer-visible main#main blockquote.main-quote {
     top: 10vh;
@@ -2920,18 +2746,6 @@ body.theme-moon * {
 body.theme-moon #header #logo {
   background-image: url(./images/logo-small-inverted.2b3f89d8.svg);
 }
-<<<<<<< HEAD
-=======
-body.theme-moon #header span {
-  color: #e4b105;
-}
-body.theme-moon #header h1 {
-  color: #e4b105;
-}
-body.theme-moon #header * {
-  color: #e4b105;
-}
->>>>>>> 7648dec (FIX: cleanup)
 body.theme-moon a[data-add-class=theme-moon] {
   text-decoration: none !important;
 }
@@ -3137,13 +2951,10 @@ body[data-theme=theme-moon].menu-on #nav #open-icon .cls-2 {
     stroke: #333 !important;
   }
 }
-<<<<<<< HEAD
 body.theme-moon.has-bg-image-loaded #header * {
   color: #e4b105;
 }
 
-=======
->>>>>>> 7648dec (FIX: cleanup)
 blockquote.main-quote,
 theme-rocket #main #content-below-quote *,
 footer {
@@ -3366,11 +3177,7 @@ body.mouse-over-logo.no-touch #logo {
   z-index: 99999999999 !important;
 }
 
-<<<<<<< HEAD
 body.mouse-over-logo #header .logo-header {
-=======
-body.mouse-over-logo #header h1 {
->>>>>>> 7648dec (FIX: cleanup)
   position: relative;
   z-index: 9999999999;
 }
@@ -3433,29 +3240,39 @@ body.theme-sun #content-below-quote h2 {
 }
 
 .arrow-down {
-  rotate: 105deg;
-  transform-origin: center; /* change to e.g. "top center" for a pendulum effect */
-<<<<<<< HEAD
-  animation: swing 2.3s ease-in-out infinite alternate;
-=======
-  animation: swing 0.3s ease-in-out infinite alternate;
->>>>>>> 7648dec (FIX: cleanup)
-  animation-delay: 1s;
+  --beat-delay: 2.5s; /* initial pause */
+  --beat-duration: 1.4s; /* one full "lub-dub" plus rest */
+  --beat-distance: 8px; /* how far the strong beat pulls down */
+  rotate: 90deg;
+  transform-origin: center;
+  animation: heartbeat var(--beat-duration) var(--beat-delay) infinite;
 }
 
-@keyframes swing {
-  from {
-    rotate: 105deg;
+@keyframes heartbeat {
+  0% {
+    translate: 0 0;
+    animation-timing-function: ease-out;
   }
-  to {
-    rotate: 75deg;
+  12% { /* "lub": strong pull */
+    translate: 0 var(--beat-distance);
+    animation-timing-function: ease-in;
+  }
+  24% {
+    translate: 0 0;
+    animation-timing-function: ease-out;
+  }
+  36% { /* "dub": softer pull */
+    translate: 0 calc(var(--beat-distance) * 0.6);
+    animation-timing-function: ease-in-out;
+  }
+  55%, 100% { /* rest */
+    translate: 0 0;
   }
 }
 /* Respect users who prefer less motion */
 @media (prefers-reduced-motion: reduce) {
   .arrow-down {
     animation: none;
-    rotate: 90deg;
   }
 }
 @page {

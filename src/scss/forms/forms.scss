@@ -15,8 +15,8 @@ $background_color_6: transparent;
         margin-bottom: 2rem;
         fieldset,
         .userform-fields {
-            border: 2px dotted $colour_modern_iron !important;
-            border-top-right-radius: 1rem;
+            border: none;
+            @include sketch-border(4px, $colour_ekos_green);
             padding: 3rem 3vw;
             background-color: $colour_white;
             margin: 2rem 0;
@@ -49,7 +49,7 @@ $background_color_6: transparent;
                 line-height: 1.2;
             }
             .field {
-                padding-top: 1rem;
+                padding-top: 3rem;
                 width: 100%;
                 padding-bottom: 1rem;
             }
@@ -61,6 +61,8 @@ $background_color_6: transparent;
             .middleColumn {
                 display: block;
                 text-align: left;
+                border: none!important;
+                @include sketch-border(1px, $colour_modern_iron_half);
                 input,
                 textarea,
                 select {
@@ -70,19 +72,21 @@ $background_color_6: transparent;
                     margin-top: 0px;
                     padding: 1.5rem;
                     font-weight: 600;
-                    border-bottom: 4px dotted $colour_modern_iron;
+                    border: none!important;
+                    display: block;
                     color: $colour_black_lighter;
-                    &:focus {
-                        border-bottom: 3px solid $colour_burngreen;
+                    border-top-right-radius: 1rem;
+                    &:focus,
+                    &:not(.no-value) {
                         outline: none !important;
                         background-color: $colour_burngreen;
                     }
-                    border-top-right-radius: 1rem;
                     &.no-value {
-                        border-bottom-color: $colour_blue_cobalter !important;
+                        background-color: $colour_light_grey_aotrom !important;
+                        color: $colour_white !important;
                     }
                     &.no-value:focus {
-                        border-bottom: 3px solid $colour_sunny_side_up_yellow !important;
+                        background-color: $colour_sunny_side_up_yellow !important;
                     }
                 }
 
@@ -119,6 +123,7 @@ $background_color_6: transparent;
                         border: 0;
                     }
                 }
+
             }
             p.checkbox {
                 display: block;
@@ -208,31 +213,7 @@ $background_color_6: transparent;
                 font-size: 2rem;
             }
         }
-        .btn-toolbar {
-            padding: 0;
-            display: block;
-            text-align: right;
-            input {
-                padding: 1.3rem 1.7rem;
-                background: $colour_blue_cobalter;
-                border-top-right-radius: 0;
-                border-bottom-left-radius: 1rem;
-                border: 2px dotted $colour_modern_iron;
-                text-decoration: none !important;
-                width: auto;
-                text-align: center;
-                font-weight: 600;
-                color: $colour_white;
-                &:hover {
-                    margin-top: -1px;
-                    margin-bottom: 1px;
-                }
-                &:active {
-                    color: $colour_black;
-                    background: $colour_hypocrite_yellow;
-                }
-            }
-        }
+
         p {
             margin-top: 1.7rem !important;
             margin-left: 0 !important;
@@ -264,6 +245,34 @@ $background_color_6: transparent;
             z-index: 9;
             position: relative;
             left: 50%;
+        }
+        .btn-toolbar {
+            padding: 0;
+            display: block;
+            text-align: right;
+            input {
+                border: none!important;
+                @include sketch-border(4px, $colour_ekos_green);
+                padding: 1.3rem 1.7rem;
+                color: $colour_ekos_green;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 1rem;
+                text-decoration: none !important;
+                width: auto;
+                text-align: center;
+                font-weight: 600;
+                &:hover {
+                    background:$colour_ekos_green;
+                    color: #fff;
+                }
+                &:active {
+                    color: $colour_black;
+                    background: $colour_hypocrite_yellow;
+                }
+            }
+        }
+        input[type="submit"] {
+
         }
     }
 }
