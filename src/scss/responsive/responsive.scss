@@ -34,7 +34,8 @@
         // }
         .typography h1:before,
         .typography h2:before {
-            display: none;
+            display: block;
+            @include sketch-border(4px 0 0 0, $colour_modern_iron_half);
         }
         .typography {
             .image-container {
@@ -166,11 +167,6 @@
     }
     main#main {
         .element {
-            h1:before,
-            h2:before {
-                display: block;
-                @include sketch-border(4px 0 0 0, $colour_modern_iron_half);
-            }
             h1,
             h2 {
                 padding-top: 1.2rem;

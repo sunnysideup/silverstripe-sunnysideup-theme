@@ -3,7 +3,7 @@
     gap: 3rem;
     background: #ffffff55;
     padding: 3rem;
-    border-radius: 2rem;
+    border-radius: 0;
     border-top-left-radius: 0;
     @include sketch-border(2px, $colour_modern_iron);
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
