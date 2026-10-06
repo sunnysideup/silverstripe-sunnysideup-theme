@@ -252,14 +252,6 @@ body.past-header:not(.menu-on) #header svg {
   filter: grayscale(100%);
 }
 
-body.past-header.just-scrolled.scrolled-up #header {
-  opacity: 1;
-  color: #022866;
-}
-body.past-header.just-scrolled.scrolled-up #header * {
-  color: #022866;
-}
-
 @media only screen and (max-width: 1049px) {
   body.footer-visible #nav {
     height: 0;
@@ -908,7 +900,6 @@ footer#footer .image-holder img {
 .typography strong,
 .typography b {
   font-weight: 600;
-  color: #022866;
 }
 .typography .last-updated {
   font-weight: 200;
@@ -2231,16 +2222,6 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
   body.past-header #header {
     opacity: 0;
     display: none;
-  }
-  body.past-header.scrolled-up.just-scrolled:not(.menu-on):not(.show-logo) #header {
-    opacity: 1;
-    display: block;
-    animation-duration: 1s; /* the duration of the animation */
-    animation-timing-function: ease-out; /* how the animation will behave */
-    animation-delay: 7s; /* how long to delay the animation from starting */
-    animation-iteration-count: 1; /* how many times the animation will play */
-    animation-name: unloadTransition; /* the name of the animation we defined above */
-    animation-fill-mode: forwards;
   }
   body.past-header.just-scrolled.toc-on #header {
     display: none !important;

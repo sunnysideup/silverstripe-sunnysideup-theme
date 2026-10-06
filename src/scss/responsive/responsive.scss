@@ -269,19 +269,19 @@
             display: none;
         }
     }
-    body.past-header.scrolled-up.just-scrolled:not(.menu-on):not(.show-logo) {
-        #header {
-            opacity: 1;
-            display: block;
-            animation-duration: 1s; /* the duration of the animation */
-            animation-timing-function: ease-out; /* how the animation will behave */
-            animation-delay: 7s; /* how long to delay the animation from starting */
-            animation-iteration-count: 1; /* how many times the animation will play */
-            animation-name: unloadTransition; /* the name of the animation we defined above */
-            animation-fill-mode: forwards;
-            // border-bottom: 4px dotted  $colour_blue_cobalter_half; //#022866!important;
-        }
-    }
+    // body.past-header.scrolled-up.just-scrolled:not(.menu-on):not(.show-logo) {
+    //     #header {
+    //         opacity: 1;
+    //         display: block;
+    //         animation-duration: 1s; /* the duration of the animation */
+    //         animation-timing-function: ease-out; /* how the animation will behave */
+    //         animation-delay: 7s; /* how long to delay the animation from starting */
+    //         animation-iteration-count: 1; /* how many times the animation will play */
+    //         animation-name: unloadTransition; /* the name of the animation we defined above */
+    //         animation-fill-mode: forwards;
+    //         // border-bottom: 4px dotted  $colour_blue_cobalter_half; //#022866!important;
+    //     }
+    // }
     body.past-header.just-scrolled.toc-on {
         #header {
             display: none !important;
