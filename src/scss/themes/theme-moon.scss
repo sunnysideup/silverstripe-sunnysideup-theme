@@ -276,3 +276,8 @@ body.theme-moon.has-bg-image-loaded {
         }
     }
 }
+
+// This always applies - even with the rocket overrule
+body[data-theme="theme-moon"] {
+    background-color: $colour_sunny_side_up_dark_purple!important;
+}

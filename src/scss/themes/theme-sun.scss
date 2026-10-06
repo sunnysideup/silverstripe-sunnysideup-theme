@@ -10,6 +10,10 @@ body.theme-sun {
         }
     }
 }
-body[data-theme="theme-sun"] {
+// This always applies - even with the rocket overrule
+body[data-theme="theme-sun"]:not(.has-bg-image-loaded) {
+    background-color: $colour_yep_thats_grey!important;
+}
+body[data-theme="theme-sun"].has-bg-image-loaded {
     background-color: $colour_light_grey_aotrom!important;
 }
