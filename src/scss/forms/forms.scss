@@ -52,11 +52,16 @@ $background_color_6: transparent;
                 padding-top: 3rem;
                 width: 100%;
                 padding-bottom: 1rem;
+                span.description {
+                    font-family: serif;
+                    font-style: italic;
+                }
             }
             label {
                 font-size: 2rem;
                 // font-style: italic;
                 color: $colour_yep_thats_grey !important;
+                font-weight: bold;
             }
             .middleColumn {
                 display: block;
@@ -75,7 +80,6 @@ $background_color_6: transparent;
                     border: none!important;
                     display: block;
                     color: $colour_black_lighter;
-                    border-top-right-radius: 1rem;
                     &:focus,
                     &:not(.no-value) {
                         outline: none !important;
@@ -112,6 +116,9 @@ $background_color_6: transparent;
                     margin-top: 0px;
                     padding-top: 0px;
                     padding-bottom: 0.5rem;
+                    label {
+                        font-weight: normal;
+                    }
                 }
                 .radio,
                 .checkbox {
@@ -163,17 +170,20 @@ $background_color_6: transparent;
             .field + span.message {
                 margin-top: -0.8rem;
             }
-
-            input.password,
-            input.numeric,
-            input.currency,
-            input.date {
+            .field.password .middleColumn,
+            .field.numeric .middleColumn,
+            .field.currency .middleColumn,
+            .field.date .middleColumn
+            {
                 max-width: 27rem;
             }
             .optionset,
             .checkboxset {
                 label.left {
                     border: 0;
+                }
+                .middleColumn {
+                    padding: 2rem;
                 }
             }
             .radio {
@@ -209,7 +219,6 @@ $background_color_6: transparent;
                 border-bottom: 3px solid $colour_vexy !important;
                 display: block;
                 background-color: $colour_light_grey_aotrom;
-                border-top-right-radius: 1rem;
                 font-size: 2rem;
             }
         }
@@ -255,7 +264,6 @@ $background_color_6: transparent;
                 @include sketch-border(4px, $colour_ekos_green);
                 padding: 1.3rem 1.7rem;
                 color: $colour_ekos_green;
-                border-top-right-radius: 0;
                 border-bottom-left-radius: 1rem;
                 text-decoration: none !important;
                 width: auto;

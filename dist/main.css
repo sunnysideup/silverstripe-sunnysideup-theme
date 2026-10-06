@@ -1008,10 +1008,16 @@ footer#footer .image-holder img {
   width: 100%;
   padding-bottom: 1rem;
 }
+.typography form fieldset .field span.description,
+.typography form .userform-fields .field span.description {
+  font-family: serif;
+  font-style: italic;
+}
 .typography form fieldset label,
 .typography form .userform-fields label {
   font-size: 2rem;
   color: #575757 !important;
+  font-weight: bold;
 }
 .typography form fieldset .middleColumn,
 .typography form .userform-fields .middleColumn {
@@ -1042,7 +1048,6 @@ footer#footer .image-holder img {
   border: none !important;
   display: block;
   color: #111;
-  border-top-right-radius: 1rem;
 }
 .typography form fieldset .middleColumn input:focus, .typography form fieldset .middleColumn input:not(.no-value),
 .typography form fieldset .middleColumn textarea:focus,
@@ -1102,6 +1107,10 @@ footer#footer .image-holder img {
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 0.5rem;
+}
+.typography form fieldset .middleColumn li label,
+.typography form .userform-fields .middleColumn li label {
+  font-weight: normal;
 }
 .typography form fieldset .middleColumn .radio,
 .typography form fieldset .middleColumn .checkbox,
@@ -1166,14 +1175,14 @@ footer#footer .image-holder img {
 .typography form .userform-fields .field + span.message {
   margin-top: -0.8rem;
 }
-.typography form fieldset input.password,
-.typography form fieldset input.numeric,
-.typography form fieldset input.currency,
-.typography form fieldset input.date,
-.typography form .userform-fields input.password,
-.typography form .userform-fields input.numeric,
-.typography form .userform-fields input.currency,
-.typography form .userform-fields input.date {
+.typography form fieldset .field.password .middleColumn,
+.typography form fieldset .field.numeric .middleColumn,
+.typography form fieldset .field.currency .middleColumn,
+.typography form fieldset .field.date .middleColumn,
+.typography form .userform-fields .field.password .middleColumn,
+.typography form .userform-fields .field.numeric .middleColumn,
+.typography form .userform-fields .field.currency .middleColumn,
+.typography form .userform-fields .field.date .middleColumn {
   max-width: 27rem;
 }
 .typography form fieldset .optionset label.left,
@@ -1181,6 +1190,12 @@ footer#footer .image-holder img {
 .typography form .userform-fields .optionset label.left,
 .typography form .userform-fields .checkboxset label.left {
   border: 0;
+}
+.typography form fieldset .optionset .middleColumn,
+.typography form fieldset .checkboxset .middleColumn,
+.typography form .userform-fields .optionset .middleColumn,
+.typography form .userform-fields .checkboxset .middleColumn {
+  padding: 2rem;
 }
 .typography form fieldset .radio,
 .typography form .userform-fields .radio {
@@ -1220,7 +1235,6 @@ footer#footer .image-holder img {
   border-bottom: 3px solid #0028c9 !important;
   display: block;
   background-color: #e6e6e6;
-  border-top-right-radius: 1rem;
   font-size: 2rem;
 }
 .typography form p {
@@ -1272,7 +1286,6 @@ footer#footer .image-holder img {
   --sketch-inset: 0px;
   padding: 1.3rem 1.7rem;
   color: #95c93d;
-  border-top-right-radius: 0;
   border-bottom-left-radius: 1rem;
   text-decoration: none !important;
   width: auto;
@@ -2476,10 +2489,10 @@ body.has-toc.toc-on .typography #content-below-quote h2.toc-active i.active {
 }
 .sunnysideup__app__elements__workexample .work-example-images img {
   box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #aaa;
   padding: 2rem;
   padding-bottom: 5rem;
   background-color: white;
-  border: 1px solid #aaa;
   width: calc(100% - 4rem) !important;
   display: block;
 }
