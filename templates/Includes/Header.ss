@@ -39,12 +39,9 @@
         }
     }
 }
-<%-- body.title-colour-blue #splash-screen  {
-    background-col: #022866;
+body.title-colour-blue #splash-screen  {
+    background-color: #022866;
 }
-body.title-colour-blue #splash-screen div {
-    background: #f7cd55; // Example blue color
-} --%>
 
 @keyframes splash-fade {
     to { opacity: 0; visibility: hidden; }
