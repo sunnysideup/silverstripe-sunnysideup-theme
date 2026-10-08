@@ -39,7 +39,7 @@
         }
     }
 }
-body.title-colour-blue #splash-screen  {
+body:not(.title-colour-blue) #splash-screen  {
     background-color: #022866;
 }
 
