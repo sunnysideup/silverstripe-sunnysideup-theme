@@ -5,16 +5,46 @@
     z-index: 999;
     display: grid;
     place-items: center;
-    background: #575757;//#000;// #f7cd55;
-    animation: splash-fade 1s ease 1.5s forwards;
     place-content: center;
-    div {
+    background: #f7cd55;
+    animation: splash-fade 1s ease 1.5s forwards;
+
+    .splash-screen-inner {
         font-size: clamp(2.5rem, calc((10vw + 6vh) / 2), calc((10vw + 6vh) / 2));
-        color: #fff;
         animation: splash-fade 1s ease 0.7s forwards;
         font-family: "Oswald", sans-serif;
     }
+
+    .splash-word {
+        color: #fff;
+        position: relative;
+        display: inline-block;
+    }
+
+    .splash-underline {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: clamp(4px, 0.12em, 7px);
+        overflow: visible;
+        pointer-events: none;
+
+        path {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 7px;
+            stroke-linecap: round;
+            vector-effect: non-scaling-stroke;
+        }
+    }
 }
+<%-- body.title-colour-blue #splash-screen  {
+    background-col: #022866;
+}
+body.title-colour-blue #splash-screen div {
+    background: #f7cd55; // Example blue color
+} --%>
 
 @keyframes splash-fade {
     to { opacity: 0; visibility: hidden; }
@@ -22,7 +52,9 @@
 </style>
 
 <div id="splash-screen">
-    <div class="splash-screen-inner"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %></div>
+    <div class="splash-screen-inner">
+        <span class="splash-word"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %><svg class="splash-underline" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 10 Q50 0 100 10" /></svg></span>
+    </div>
 </div>
 <header id="print" style="display: none;">
     <img src="_resources/themes/sun/dist/images/logo-small.svg" alt="Sunny Side Up Logo" />
