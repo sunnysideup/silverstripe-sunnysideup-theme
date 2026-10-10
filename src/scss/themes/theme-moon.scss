@@ -89,6 +89,13 @@ body.theme-moon {
         #content-below-quote blockquote p {
             border-left-color: $colour_burned_sunny_side_up_thirty_percent !important;
         }
+    mark,
+        strong,
+        b {
+            display: inline-block;
+            background-image: linear-gradient(transparent 60%, $colour_sunny_side_up_green_darker 60% 90%, transparent 90%);
+            padding: 0 0.1em;
+        }
     }
 
     form {
