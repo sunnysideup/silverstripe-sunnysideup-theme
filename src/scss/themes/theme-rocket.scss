@@ -1,6 +1,10 @@
 body {
     transition: background-color 0.3s ease;
     background-color: $colour_yep_thats_grey;
+    --overlay-color-blue: #02286699;
+    --overlay-color-yellow: #f7cd5599;
+    --overlay-color-purple: #3a075a99;
+    --overlay-color-green: #00ab0699;
 }
 body.theme-rocket {
     &.has-video {
@@ -8,6 +12,14 @@ body.theme-rocket {
     }
     &.header-0 {
         background-color: $colour_yep_thats_grey;
+
+    }
+    &[class*=" footer-"],
+    &[class^="footer-"] {
+        --overlay-color-blue: transparent;
+        --overlay-color-yellow: transparent;
+        --overlay-color-purple: transparent;
+        --overlay-color-green: transparent;
     }
 
 

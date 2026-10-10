@@ -32,10 +32,16 @@
         //     padding-left: 3vw;
         //     padding-right: 3vw;
         // }
-        .typography h1:before,
+        h2 {
+            border-bottom: 4px solid $colour_modern_iron_half;
+            &::before {
+                display: none;
+            }
+        }
         .typography h2:before {
             display: block;
             @include sketch-border(4px 0 0 0, $colour_modern_iron_half);
+
         }
         .typography {
             .image-container {
@@ -167,7 +173,6 @@
     }
     main#main {
         .element {
-            h1,
             h2 {
                 padding-top: 1.2rem;
                 margin-top: 0;
@@ -175,6 +180,9 @@
                 border-bottom: none;
                 .icon {
                     margin-top: 0px;
+                }
+                &:before {
+                    display: block;
                 }
             }
             li {

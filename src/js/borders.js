@@ -1,4 +1,5 @@
 (function initSketchBorders() {
+  if (!window.matchMedia('(min-width: 900px)').matches) return;
   const num = (val, fallback = 0) => {
     if (!val) return fallback;
     const n = parseFloat(val.toString().trim().split(/\s+/)[0]);

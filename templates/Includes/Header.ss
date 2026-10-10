@@ -6,13 +6,14 @@
     display: grid;
     place-items: center;
     place-content: center;
-    background: #f7cd55;
+    background-color: #555;
     animation: splash-fade 1s ease 1.5s forwards;
 
     .splash-screen-inner {
         font-size: clamp(2.5rem, calc((10vw + 6vh) / 2), calc((10vw + 6vh) / 2));
         animation: splash-fade 1s ease 0.7s forwards;
         font-family: "Oswald", sans-serif;
+        padding: 0 2rem;
     }
 
     .splash-word {
@@ -39,16 +40,21 @@
         }
     }
 }
-body:not(.title-colour-blue) #splash-screen  {
+<%-- body:not(.title-colour-blue) #splash-screen  {
     background-color: #022866;
-}
+} --%>
+#splash-screen.level1 {background-color: #f7cd55; }
+#splash-screen.level2 {background-color: #022866; }
+#splash-screen.level3 {background-color: #00ab06; }
+#splash-screen.level4 {background-color: #3a075a; }
+#splash-screen.level5 {background-color: #555555; }
 
 @keyframes splash-fade {
     to { opacity: 0; visibility: hidden; }
 }
 </style>
 
-<div id="splash-screen">
+<div id="splash-screen" class="level$CalculatedLevel">
     <div class="splash-screen-inner">
         <span class="splash-word"><% if $IsHomePage %>$SiteConfig.Title<% else %>$Title<% end_if %><svg class="splash-underline" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 10 Q50 0 100 10" /></svg></span>
     </div>

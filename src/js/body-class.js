@@ -228,6 +228,21 @@ export const bodyClass = {
                 } else if (shadow === 'light') {
                     shadowColour =
                         'linear-gradient(210deg, #FFFFFF77 12%, transparent 88%)'
+                } else if (shadow === 'fullblue') {
+                    shadowColour =
+                        'linear-gradient(var(--overlay-color-blue, transparent), var(--overlay-color-blue, transparent))'
+                }
+                else if (shadow === 'fullyellow') {
+                    shadowColour =
+                        'linear-gradient(var(--overlay-color-yellow, transparent), var(--overlay-color-yellow, transparent))'
+                }
+                else if (shadow === 'fullgreen') {
+                    shadowColour =
+                        'linear-gradient(var(--overlay-color-green, transparent), var(--overlay-color-green, transparent))'
+                }
+                else if (shadow === 'fullpurple') {
+                    shadowColour =
+                        'linear-gradient(var(--overlay-color-purple, transparent), var(--overlay-color-purple, transparent))'
                 }
                 if (videoId && isLandscape()) {
                     const videoUrl =
