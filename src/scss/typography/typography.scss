@@ -296,9 +296,12 @@
         border-top-right-radius: 1rem;
         color: $colour_hypocrite_yellow;
     }
+    mark,
     strong,
     b {
-        font-weight: 600;
+        display: inline-block;
+        background: linear-gradient(transparent 40%, $colour_sunny_side_up_yellow_less 40%, transparent 20%);
+        padding: 0 0.1rem;
     }
 
     .last-updated {
