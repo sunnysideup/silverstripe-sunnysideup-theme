@@ -71,6 +71,10 @@
                         @media only screen and (min-width: 450px) {
                             font-size: 16px;
                         }
+                        strong {
+                            background: $colour_rose_storm_darker;
+                            padding: 0.1em 0.2em;
+                        }
                     }
                 }
                 &.is-active {
