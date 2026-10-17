@@ -21,3 +21,6 @@ import './js/image-hover'
 import './js/borders'
 import './js/print'
 import './js/battery-saver'
+
+
+import 'PROJECT_ROOT_DIR/vendor/sunnysideup/slideshowblock/client/src/main';
