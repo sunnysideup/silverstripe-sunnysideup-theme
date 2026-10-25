@@ -1,28 +1,27 @@
-.body-loaded :is(
-    a,
-    button,
-    input,
-    textarea,
-    select,
-    #header,
-    #header *,
-    #nav,
-    #nav *,
-    #footer,
-    .main-quote,
-    .element,
-    .image-container img
-) {
+// Everything animates between states once the page has loaded (menu fly-in,
+// menu arrows, colours, ...). This must stay universal: many components rely on
+// a transition of left/right/margin/height etc. and it costs nothing until
+// a property actually changes.
+.body-loaded * {
     transition-property:
+        width,
+        min-width,
         color,
         background-color,
         opacity,
-        width,
         height,
+        min-height,
+        max-height,
+        max-width,
         left,
+        right,
         top,
-        border-color,
-        box-shadow;
+        bottom,
+        border-radius,
+        border,
+        box-shadow,
+        margin;
     transition-duration: 0.37s;
     transition-timing-function: ease-out;
+    transition-delay: 0s;
 }

@@ -21,15 +21,14 @@
         overflow: hidden;
         text-align: left;
         text-wrap: balance;
-        font: normal 200 var(--quote-size) / var(--quote-line-height) var(--font-headers);
         letter-spacing: -0.02em;
-        color: var(--colour-blue-cobalter);
+        color: var(--colour-quote);
         background: transparent;
         border-color: transparent;
-        filter: drop-shadow(0 0 6px var(--colour-sunny-side-up-yellow));
+        filter: drop-shadow(0 0 6px var(--quote-glow));
         &,
         * {
-            color: var(--colour-blue-cobalter);
+            color: var(--colour-quote);
         }
 
         .shiner {
@@ -72,6 +71,22 @@
 @media (prefers-reduced-motion: reduce) {
     .main-quote .shiner {
         animation: none;
+    }
+}
+
+// font: needs the extra specificity to beat the generic "blockquote p" italic rule
+main#main blockquote.main-quote p {
+    font: normal 500 var(--quote-size) / var(--quote-line-height) var(--font-headers);
+}
+
+// desktop: the text starts exactly at the vertical centre of the page and runs down
+@media (min-width: 1050px) {
+    .main-quote {
+        transform: none;
+        p {
+            transform: translateY(-0.65em);
+            padding: 0;
+        }
     }
 }
 

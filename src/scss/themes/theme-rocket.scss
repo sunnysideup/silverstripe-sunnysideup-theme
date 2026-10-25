@@ -2,7 +2,36 @@ body {
     transition: background-color 0.3s ease;
     background-color: var(--colour-yep-thats-grey);
 }
+// forms stay readable on the dark moon background and over the rocket photo
+body:is(.theme-moon, .theme-rocket) form {
+    * {
+        color: var(--colour-form-text) !important;
+    }
+    .middleColumn {
+        input,
+        textarea,
+        select {
+            border-bottom-color: var(--colour-form-text) !important;
+        }
+    }
+    span.readonly {
+        border-bottom-color: var(--colour-form-text) !important;
+    }
+    .btn-toolbar input {
+        background: var(--colour-button-bg);
+    }
+}
+
+// ---------------------------------------------------------------------
+// ROCKET THEME (hero photo at the top and bottom of the page)
+// Variable overrides first, specific layout rules below.
+// ---------------------------------------------------------------------
 body.theme-rocket {
+    --colour-quote: #{$colour_white};
+    --quote-glow: #000;
+    --colour-footer-bg: #{$colour_blue_cobalter};
+    --colour-button-bg: #{$colour_hypocrite_yellow};
+
     &.has-video {
         background-color: $colour_black;
     }
@@ -20,22 +49,10 @@ body.theme-rocket {
         blockquote.main-quote {
             position: fixed;
             margin-top: 0 !important;
-            p {
-                filter: drop-shadow(0 0 6px #000);
-                background: none;
-                color: $colour_white !important;
-                * {
-                    color: $colour_white !important;
-                }
-            }
         }
-
         #content-below-quote {
             background-color: transparent;
             opacity: 1;
-            * {
-                color: #fff;
-            }
             a,
             a:link,
             a:visited {
@@ -47,46 +64,15 @@ body.theme-rocket {
             background: transparent;
         }
     }
-    form {
-        * {
-            color: $colour_law_firm_report_cover !important;
-        }
-        .middleColumn {
-            input,
-            textarea,
-            select {
-                border-bottom-color: $colour_law_firm_report_cover !important;
-            }
-        }
-        span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover !important;
-        }
-        .btn-toolbar {
-            input {
-                background: $colour_hypocrite_yellow;
-            }
-        }
-    }
     #Breadcrumbs {
         border-color: $colour_white !important;
     }
-    #footer {
-        background-color: $colour_purple_spirituality_in_the_sun;
-        * {
-            color: $colour_white;
+    #footer #theme-selectors {
+        svg {
+            fill: $colour_white;
         }
-        p {
-            color: $colour_white;
-        }
-        #theme-selectors {
-            svg {
-                fill: $colour_white;
-            }
-            #theme-rocket {
-                svg {
-                    fill: $colour_sunny_side_up_yellow;
-                }
-            }
+        #theme-rocket svg {
+            fill: $colour_sunny_side_up_yellow;
         }
     }
     &.past-header {

@@ -13,12 +13,15 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
 
 #content-below-quote {
     min-height: 70vh;
+    // jumping here (the arrow in the hero quote) puts the first line of text
+    // exactly in the vertical middle of the screen
+    scroll-margin-top: calc(50dvh - var(--element-padding-top));
 }
 
 .element:not(#{$element-slideshow}) {
     @include sketch-border(4px 0 0 0, var(--colour-divider), $pseudo: before);
     margin-top: var(--element-gap);
-    padding-top: 2.3rem;
+    padding-top: var(--element-padding-top);
     clear: both;
     scroll-margin-top: 10rem; // so anchor links do not hide behind the header
 
@@ -42,9 +45,10 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
                 grid-column: 2;
                 min-width: 0;
             }
+            // a block can hold several titles (e.g. "Delve deeper" + "Also see"):
+            // each one starts a new row in column 1, its content follows in column 2
             > .content-element__title {
                 grid-column: 1;
-                grid-row: 1;
                 padding-bottom: 0;
             }
         }

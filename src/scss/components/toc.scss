@@ -88,15 +88,8 @@ body.has-toc.toc-on {
             .element > div > * {
                 display: none;
             }
-            #SiblingsAndChildren {
-                display: block;
-            }
-            #SiblingsAndChildren > * {
-                display: none;
-            }
             #SiblingsAndChildren h2,
             #SiblingsAndChildren h1 {
-                display: block;
                 margin-top: 0;
             }
             h1,

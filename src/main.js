@@ -22,6 +22,7 @@ import './js/toc'
 import './js/collapsible-menu'
 import './js/form'
 import './js/work-example'
+import './js/carousel'
 import './js/print'
 import './js/battery-saver'
 

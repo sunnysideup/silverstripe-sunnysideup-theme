@@ -1,14 +1,50 @@
+// ---------------------------------------------------------------------
+// MOON THEME
+// Mostly a set of variable overrides (see _definitions/tokens.scss):
+// components read the variables, so nothing needs repeating here.
+// Slideshow overrides live in theme-moon-slideshow.scss (do not touch).
+// ---------------------------------------------------------------------
 body.theme-moon {
+    --colour-page: #{$colour_sunny_side_up_dark_purple};
+    --colour-text: #{$colour_hypocrite_yellow_lighter};
+    --colour-link: #{$colour_hypocrite_yellow_lighter};
+    --colour-link-hover: #{$colour_burned_sunny_side_up};
+    --colour-link-line: #{$colour_sunny_side_up_green};
+    --colour-link-line-hover: #{$colour_burned_sunny_side_up};
+    --link-weight: 600;
+    --colour-heading: #{$colour_hypocrite_yellow_lighter};
+    --colour-marker: #{$colour_hypocrite_yellow_lighter};
+    --colour-highlight: #{$colour_sunny_side_up_green_darker};
     --colour-divider: #{$colour_burned_sunny_side_up_thirty_percent};
-    background-color: $colour_sunny_side_up_dark_purple !important;
+    --colour-rule: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-border: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-image-border: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-pre-bg: #{$colour_blue_cobalter};
+    --colour-pre-text: #{$colour_white};
+    --colour-cell-bg: #{$colour_white};
+    --colour-cell-text: #{$colour_darker_grey_catch_22};
+    --colour-table-head-text: #{$colour_hypocrite_yellow_lighter};
+    --colour-quote: #{$colour_overcast_sunny_side_up};
+    --colour-footer-bg: #{$colour_boot_black_semi};
+    --colour-footer-accent: #{$colour_ekos_green};
+    --colour-button-bg: #{$colour_burned_sunny_side_up};
+    --colour-card-text: #fff;
+    --colour-caption-link-text: #333;
+    --colour-caption-link-line: #{$colour_burned_sunny_side_up_thirty_percent};
 
+    background-color: var(--colour-page) !important;
+
+    // same specificity as before, so vendor styles (incl. the slideshow) are overruled as they always were
+    &,
     * {
-        color: $colour_hypocrite_yellow_lighter;
+        color: var(--colour-text);
     }
-    #header {
-        #logo {
-            background-image: url(./images/logo-small-inverted.svg);
-        }
+    .typography :where(.sunnysideup__slideshowblock__blocks__slideshowblock) * {
+        color: var(--colour-text);
+    }
+
+    #header #logo {
+        background-image: url(./images/logo-small-inverted.svg);
     }
     a[data-add-class="theme-moon"] {
         text-decoration: none !important;
@@ -20,177 +56,26 @@ body.theme-moon {
             stroke: $colour_sunny_side_up_green_darker !important;
         }
     }
-    .typography {
-        * {
-            color: $colour_hypocrite_yellow_lighter;
-        }
-        a:link,
-        a:visited {
-            text-decoration-color: $colour_sunny_side_up_green !important;
-            font-weight: 600;
-            &:hover {
-                color: $colour_burned_sunny_side_up !important;
-                text-decoration-color: $colour_burned_sunny_side_up !important;
-            }
-        }
-        h1,
-        h2 {
-            text-transform: uppercase;
-            color: $colour_blue_cobalter;
-            border-bottom-color: $colour_burned_sunny_side_up_thirty_percent !important;
-        }
-        h2,
-        h3 {
-            color: $colour_hypocrite_yellow_lighter !important;
-            span {
-                color: $colour_hypocrite_yellow_lighter;
-                i {
-                    color: $colour_hypocrite_yellow_lighter;
-                }
-            }
-        }
-        pre {
-            background-color: $colour_blue_cobalter;
-            color: $colour_white;
-        }
-        th {
-            color: $colour_hypocrite_yellow_lighter;
-        }
-        td {
-            background-color: $colour_white;
-            color: $colour_darker_grey_catch_22;
-            * {
-                color: $colour_darker_grey_catch_22 !important;
-            }
-        }
-        hr {
-            border-color: $colour_burned_sunny_side_up_thirty_percent !important;
-        }
-        .media,
-        .image-container,
-        blockquote p {
-            background-color: transparent;
-            // background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_outer_space_love, $colour_law_firm_report_cover);
-            background: transparent;
-            border-color: transparent;
-        }
-        img {
-            border-color: $colour_burned_sunny_side_up_thirty_percent;
-        }
-        li {
-            &::marker {
-                color: $colour_hypocrite_yellow_lighter;
-            }
-        }
-        #content-below-quote blockquote p {
-            border-left-color: $colour_burned_sunny_side_up_thirty_percent !important;
-        }
-        mark,
-        strong,
-        b {
-            display: inline-block;
-            background-image: linear-gradient(
-                transparent 60%,
-                $colour_sunny_side_up_green_darker 60% 90%,
-                transparent 90%
-            );
-            padding: 0 0.1em;
-        }
-    }
-
-    form {
-        * {
-            color: $colour_law_firm_report_cover !important;
-        }
-        .middleColumn {
-            input,
-            textarea,
-            select {
-                border-bottom-color: $colour_law_firm_report_cover !important;
-            }
-        }
-        span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover !important;
-        }
-        .btn-toolbar {
-            input {
-                background: $colour_burned_sunny_side_up;
-            }
-        }
-    }
-    .sunnysideup__app__elements__workexample {
-        .content-element__content {
-            h3 {
-                color: $colour_hypocrite_yellow_lighter !important;
-            }
-            .dotted-line {
-                border-color: $colour_burned_sunny_side_up_thirty_percent;
-            }
-            .card-holder {
-                color: #fff;
-                * {
-                    color: #fff;
-                }
-                border-color: $colour_burned_sunny_side_up_thirty_percent;
-            }
-            .work-example-images {
-                p.caption {
-                    a {
-                        color: #333 !important;
-                        &:link,
-                        &:visited {
-                            color: #333 !important;
-                            border-color: $colour_burned_sunny_side_up_thirty_percent;
-                        }
-                    }
-                }
-            }
-        }
-    }
     #Breadcrumbs {
-        border-color: $colour_burned_sunny_side_up_thirty_percent !important;
+        border-color: var(--colour-border) !important;
     }
     footer#footer {
-        background-color: $colour_boot_black_semi;
-        img {
-            // filter: invert(1);
-        }
-        * {
-            color: $colour_white;
-        }
-        p {
-            color: $colour_white;
-        }
-        li.current a,
-        a:hover {
-            color: $colour_ekos_green !important;
-        }
-        #theme-selectors {
-            svg {
-                fill: $colour_white;
-                &:hover {
-                    fill: $colour_ekos_green !important;
-                }
+        #theme-selectors svg {
+            fill: $colour_white;
+            &:hover {
+                fill: var(--colour-footer-accent) !important;
             }
-            #theme-moon {
-                svg {
-                    fill: $colour_ekos_green !important;
-                }
-            }
+        }
+        #theme-moon svg {
+            fill: var(--colour-footer-accent) !important;
         }
     }
     &.past-header {
         #header {
             border-color: #fff !important;
             background-color: $colour_burned_sunny_side_up;
-            // &:before {
-            //     border-top-color:  #000000c4;
-            // }
             * {
                 color: #fff;
-            }
-            .page-title {
-                color: $colour_white;
             }
         }
         #nav {
@@ -200,55 +85,8 @@ body.theme-moon {
     #BackgroundVideo {
         background-color: $colour_black;
     }
-    main#main {
-        blockquote.main-quote {
-            p {
-                color: $colour_overcast_sunny_side_up !important;
-                * {
-                    color: $colour_overcast_sunny_side_up !important;
-                }
-            }
-        }
-    }
-
-    .sunnysideup__slideshowblock__blocks__slideshowblock {
-        .slideshow {
-            background: transparent !important;
-        }
-
-        .sunnysideup__slideshowblock__blocks__slideshowblock .slideshow-slide__heading mark {
-            background: $colour_overcast_sunny_side_up !important;
-            color: $colour_sunny_side_up_dark_purple !important;
-        }
-        .slideshow-title__pill {
-            color: $colour_sunny_side_up_dark_purple !important;
-        }
-        mark {
-            background: $colour_green !important;
-        }
-        .slideshow-card * {
-            color: $colour_sunny_side_up_dark_purple !important;
-        }
-        .slideshow-flow__node {
-            * {
-                color: $colour_sunny_side_up_dark_purple !important;
-            }
-        }
-
-        .slideshow-flow__node.slideshow-flow__node--highlight,
-        .slideshow-cards .slideshow-card--highlight {
-            * {
-                color: $colour_overcast_sunny_side_up !important;
-            }
-        }
-        .slideshow-pricing__band {
-            * {
-                color: $colour_sunny_side_up_dark_purple !important;
-            }
-        }
-
-    }
 }
+
 /** importantly this applies top to bottom */
 body[data-theme="theme-moon"] {
     background-color: $colour_sunny_side_up_dark_purple !important;
@@ -327,20 +165,3 @@ body[data-theme="theme-moon"] {
 }
 
 
-:where(body.theme-moon .slideshow) {
-//   --slideshow-surface: #fff;
-//   --slideshow-surface-2: #faf6ec;
-//   --slideshow-text: #1b1b1b;
-  --slideshow-muted: #fff!important;
-//   --slideshow-muted-half: color-mix(in srgb, var(--slideshow-muted) 30%, transparent);
-//   --slideshow-line: #e9e3d4;
-//   --slideshow-accent: #f6b21b;
-//   --slideshow-accent-ink: #1b1b1b;
-//   --slideshow-accent-soft: color-mix(in srgb, var(--slideshow-accent) 18%, transparent);
-//   --slideshow-warning: #c2410c;
-//   --slideshow-warning-soft: color-mix(in srgb, var(--slideshow-warning) 10%, transparent);
-//   --slideshow-radius: 1.25rem;
-//   --slideshow-radius-sm: 0.75rem;
-//   --slideshow-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-//   --slideshow-slide-height: clamp(32rem, 72vh, 42rem);
-}

@@ -37,7 +37,9 @@ body {
 main#main {
     position: relative;
     z-index: 2;
-    padding-top: 120vh;
+    // the hero (quote) must have faded out completely before the first text scrolls into view:
+    // the viewport is 100vh tall, the fade takes --header-range, plus a little breathing room
+    padding-top: calc(var(--header-range) + 100vh + 15vh);
     padding-bottom: 2rem;
 }
 footer#footer {

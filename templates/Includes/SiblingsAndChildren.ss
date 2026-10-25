@@ -1,7 +1,8 @@
 <% if $MenuChildren || $Siblings || $PhotoCredit %>
 <div id="SiblingsAndChildren" class="element dnadesign__elemental__models__elementcontent">
+<div class="content-element__content">
 <% if $MenuChildren %>
-    <h2>Delve Deeper</h2>
+    <h2 class="content-element__title">Delve Deeper</h2>
     <% if MenuChildren.count = 1 %>
         <p>
             Please also visit our <% loop MenuChildren %><a href="$Link">$Title</a><% end_loop %> page.
@@ -15,7 +16,7 @@
 <% end_if %>
 
 <% if $Siblings %>
-    <h2>Also See</h2>
+    <h2 class="content-element__title">Also See</h2>
     <% if Siblings.count = 1 %>
         <p>
             Please also visit our <% loop Siblings %><a href="$Link">$Title</a><% end_loop %> page in the
@@ -30,9 +31,10 @@
 <% end_if %>
 
     <% if $PhotoCredit %>
-        <h2>Intro Photo Credit</h2>
+        <h2 class="content-element__title">Intro Photo Credit</h2>
         <p>$PhotoCredit. All rights reserved.</p>
     <% end_if %>
 
+</div>
 </div>
 <% end_if %>

@@ -211,7 +211,8 @@ body.menu-on {
     }
     .collapsibleListHasOpen {
         > li.collapsibleListNotOpen {
-            font-size: 2rem !important;
+            // scales with screen height, between a min and a max
+            font-size: clamp(2.2rem, 2vh + 0.6rem, 3rem) !important;
             margin-top: 1vh !important;
             margin-bottom: 1vh !important;
             opacity: 0.77 !important;

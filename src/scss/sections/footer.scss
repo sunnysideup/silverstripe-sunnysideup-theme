@@ -1,5 +1,5 @@
 footer#footer {
-    background-color: $colour_yep_thats_grey_semi;
+    background-color: var(--colour-footer-bg);
     padding-top: 6vh;
     padding-right: 6vw;
     padding-bottom: 6vh;
@@ -61,15 +61,23 @@ footer#footer {
             color: $colour_white;
         }
         &:hover {
-            color: $colour_sunny_side_up_yellow;
+            color: var(--colour-footer-accent);
         }
     }
     li.current a {
-        color: $colour_sunny_side_up_yellow;
+        color: var(--colour-footer-accent);
         font-weight: 600;
     }
     li.section a {
         font-weight: 600;
+    }
+
+    // small flag under the partner logos (a real <img>, see Footer.ss)
+    .pride-flag {
+        display: block;
+        width: 6rem;
+        height: auto;
+        margin: 2rem auto 0; // centred on mobile, like the logos (left aligned from 450px)
     }
 
     .image-holder {

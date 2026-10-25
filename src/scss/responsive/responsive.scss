@@ -87,6 +87,9 @@ footer#footer {
             text-align: left;
             padding-top: 0;
         }
+        .pride-flag {
+            margin-inline: 0;
+        }
     }
 }
 
@@ -161,6 +164,8 @@ footer#footer {
     }
     body.menu-on #nav {
         z-index: 999;
+        right: auto; // anchor to the left edge: the menu opens from the left
+        left: 0;
     }
 
     main#main {

@@ -79,6 +79,31 @@
   --colour-divider: var(--colour-modern-iron-half);
   --colour-page: var(--colour-light-grey-aotrom);
 
+  // --- semantic colours used by components; themes only override these ---
+  --colour-link-hover: var(--colour-link);
+  --colour-link-line: var(--colour-modern-iron);
+  --colour-link-line-hover: var(--colour-sunny-side-up-yellow);
+  --link-weight: inherit;
+  --colour-marker: var(--colour-blue-cobalter);
+  --colour-highlight: color-mix(in srgb, var(--colour-sunny-side-up-green) 40%, transparent); // mark / strong underline (softer than solid, so links stay dominant)
+  --colour-rule: var(--colour-blue-cobalter-half-non-transparent); // hr
+  --colour-border: var(--colour-modern-iron); // blockquote, cards, dotted lines
+  --colour-image-border: #aaa;
+  --colour-pre-bg: var(--colour-darker-grey-catch-22);
+  --colour-pre-text: var(--colour-hypocrite-yellow);
+  --colour-cell-bg: transparent; // table cells
+  --colour-cell-text: var(--colour-text);
+  --colour-table-head-text: var(--colour-white);
+  --colour-quote: var(--colour-blue-cobalter); // hero quote
+  --quote-glow: var(--colour-sunny-side-up-yellow);
+  --colour-footer-bg: var(--colour-yep-thats-grey-semi);
+  --colour-footer-accent: var(--colour-sunny-side-up-yellow);
+  --colour-button-bg: transparent;
+  --colour-form-text: var(--colour-law-firm-report-cover);
+  --colour-card-text: var(--colour-text);
+  --colour-caption-link-text: var(--colour-outer-space-love);
+  --colour-caption-link-line: var(--colour-burned-sunny-side-up);
+
   // --- fonts ---
   --font-body: "Nunito Sans", sans-serif;
   --font-condensed: "Nunito Sans", sans-serif;
@@ -90,12 +115,13 @@
   --page-offset-left: var(--page-gutter);
   --page-offset-right: var(--page-gutter);
   --element-gap: 6rem;
+  --element-padding-top: 2.3rem; // space between an element's divider and its text
   --title-col: minmax(0, 1fr);
-  --body-col: minmax(0, 2.6fr);
+  --body-col: minmax(0, 1.6fr);
   --title-gap: 3vw;
 
   // --- hero quote ---
-  --quote-size: clamp(3.4rem, 3.6vw + 4.4vh + 1rem, 11rem);
+  --quote-size: clamp(3rem, 3vw + 3.4vh + 1rem, 9rem);
   --quote-line-height: 1.12;
   --quote-max-width: 22ch;
 
@@ -109,7 +135,7 @@
 @media (min-width: 900px) {
   :root {
     --title-col: minmax(0, 1fr);
-    --body-col: minmax(0, 2.6fr);
+    --body-col: minmax(0, 1.6fr);
   }
 }
 @media (min-width: 1050px) {

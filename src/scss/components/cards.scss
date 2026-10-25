@@ -5,7 +5,11 @@
     padding: 3rem;
     border-radius: 0;
     border-top-left-radius: 0;
-    @include sketch-border(2px, $colour_modern_iron);
+    @include sketch-border(2px, var(--colour-border));
+    &,
+    * {
+        color: var(--colour-card-text);
+    }
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     .card {
         /* Styles for your cards */

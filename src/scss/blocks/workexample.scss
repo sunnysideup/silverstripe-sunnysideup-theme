@@ -1,59 +1,162 @@
-.sunnysideup__app__elements__workexample {
-    .content-element__content {
-        h3 {
-            color: $colour_blue_cobalter_highlights;
-            text-transform: none;
-            padding-left: calc(3rem + 1px) !important;
-            padding-bottom: 0 !important;
-            margin-bottom: 1rem !important;
-            .open-close {
-                display: none !important;
+// ---------------------------------------------------------------------
+// WORK EXAMPLE
+//   left column:  title + written details (no box, no divider)
+//   right column: screenshots as a swipeable carousel (js/carousel.js adds arrows)
+// ---------------------------------------------------------------------
+.element.sunnysideup__app__elements__workexample {
+    // no divider above this block
+    &::before {
+        content: none;
+    }
+
+    // title: full width above the grid
+    > .content-element__content > .content-element__title {
+        width: 100%;
+        margin: 0 0 2rem;
+        padding: 0;
+        color: var(--colour-heading);
+        text-transform: none;
+        .open-close {
+            display: none !important;
+        }
+    }
+
+    // grid: details left, slides right
+    .work-example-body {
+        display: grid;
+        gap: 2rem var(--title-gap);
+        min-width: 0;
+    }
+    // intro panel: same height as the picture on desktop
+    .work-example-details {
+        min-width: 0;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 2rem;
+        border-radius: 2rem;
+        background: var(--colour-rose-storm);
+        &,
+        * {
+            color: #fff;
+        }
+        a {
+            text-decoration-color: #fff !important;
+        }
+    }
+    .work-example-cards {
+        display: grid;
+        gap: 1.5rem;
+        .card {
+            h4,
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            p {
+                font-size: 1.8rem;
+                padding-bottom: 0;
             }
         }
     }
+
+    // ---- carousel ----
     .work-example-images {
-        padding-bottom: 4rem;
         position: relative;
+        min-width: 0;
+        display: flex;
+        gap: 2rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        overscroll-behavior-x: contain;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        > a,
+        > .image-container,
+        > img {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            min-width: 0;
+        }
         a {
             filter: none;
-        }
-        .image-container {
-            padding-bottom: 1rem !important;
-            img.not-first {
-                margin-top: -3rem !important;
-            }
-        }
-        .dotted-line {
-            @include sketch-border(0 0 0 5px, $colour_modern_iron);
-            position: absolute;
-            width: 50px;
-            bottom: 9rem;
-            top: 0;
-            margin-top: -1.7rem;
-            left: calc(50% + -2px);
-            z-index: -1;
-        }
-        img {
-            box-shadow: 7px 7px 12px 2px rgba(0, 0, 0, 0.5);
-            border: 1px solid #aaa;
-            padding: 2rem;
-            padding-bottom: 5rem;
-            background-color: white;
-            width: calc(100% - 4rem) !important;
             display: block;
         }
+        .image-container {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        img,
+        .image-container img {
+            display: block;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin: 0 !important;
+            padding: 0;
+            border: 1px solid var(--colour-image-border);
+            border-radius: 2rem;
+            background: transparent;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
         p.caption {
-            margin-top: 0 !important;
-            padding-bottom: 4rem !important;
-            a {
-                text-decoration: none !important;
-                background-color: #fff !important;
-                padding: 0.5rem 1rem;
-                border-radius: 0!important;
-                color: $colour_outer_space_love !important;
-                border-bottom: 4px solid $colour_burned_sunny_side_up;
-                font-style: normal;
-            }
+            display: none; // captions live on the pictures' alt text; keep the carousel clean
+        }
+        &.is-dragging {
+            scroll-snap-type: none;
+            cursor: grabbing;
+        }
+    }
+
+    .carousel-wrap {
+        position: relative;
+        min-width: 0;
+    }
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        z-index: 3;
+        width: 4.4rem;
+        height: 4.4rem;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+        color: var(--colour-blue-cobalter);
+        font-size: 2.6rem;
+        line-height: 1;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        &:hover {
+            background: #fff;
+        }
+        &[disabled] {
+            opacity: 0;
+            pointer-events: none;
+        }
+        &.prev {
+            left: 1rem;
+        }
+        &.next {
+            right: 1rem;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .element.sunnysideup__app__elements__workexample .work-example-body {
+        grid-template-columns: var(--title-col) var(--body-col);
+        align-items: stretch; // panel and picture get the same height
+        > .work-example-details {
+            grid-column: 1;
+        }
+        > .carousel-wrap,
+        > .work-example-images {
+            grid-column: 2;
+            grid-row: 1;
         }
     }
 }
