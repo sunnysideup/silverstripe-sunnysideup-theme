@@ -24,9 +24,9 @@
             }
         }
         .dotted-line {
+            @include sketch-border(0 0 0 5px, $colour_modern_iron);
             position: absolute;
             width: 50px;
-            @include sketch-border(0 0 0 5px, $colour_modern_iron);
             bottom: 9rem;
             top: 0;
             margin-top: -1.7rem;
@@ -51,7 +51,6 @@
                 padding: 0.5rem 1rem;
                 border-radius: 0!important;
                 color: $colour_outer_space_love !important;
-                // border: 1px solid $colour_burned_sunny_side_up;
                 border-bottom: 4px solid $colour_burned_sunny_side_up;
                 font-style: normal;
             }

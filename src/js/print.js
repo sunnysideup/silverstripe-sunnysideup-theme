@@ -1,4 +1,4 @@
-window.addEventListener('beforeprint', event => {
-    const el = document.querySelector('#content-below-quote')
-    el.scrollIntoView({ behavior: 'smooth' })
+// make sure the content (not the hero) is what gets printed
+window.addEventListener('beforeprint', () => {
+    document.getElementById('content-below-quote')?.scrollIntoView()
 })

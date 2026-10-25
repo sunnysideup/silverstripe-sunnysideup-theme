@@ -1,7 +1,4 @@
 .typography {
-    // *, a:link, a:visited {
-    //     color: $colour_vexy;
-    // }
     p,
     ul,
     ol,
@@ -35,25 +32,11 @@
     h2 {
         margin-top: 1.5em;
         padding-bottom: 0.5rem;
-        // font-variant-caps: small-caps;
         text-transform: uppercase;
-        color: $colour_blue_cobalter;
+        color: var(--colour-heading);
         * {
-            color: $colour_blue_cobalter;
+            color: var(--colour-heading);
         }
-        &:before {
-            position: absolute;
-            height: 2rem;
-            width: auto;
-            left: 0;
-            right: 0;
-            display: block;
-            content: " ";
-            margin-top: -2rem;
-        }
-        // &::after {
-        //     @include sketch-border(0 0 4px 0, $colour_blue_cobalter);
-        // }
     }
     h1 {
         line-height: 1.29;
@@ -162,7 +145,6 @@
         display: block;
         padding: 2rem 0!important;
         margin: 2rem auto !important;
-        // background: $colour_grey_white_grey;
         box-sizing: border-box;
         width: 100%;
         text-align: left;
@@ -191,7 +173,6 @@
         clear: both;
     }
 
-
     i,
     em,
     blockquote,
@@ -205,11 +186,9 @@
         text-decoration: underline;
         text-decoration-thickness: 4px;
         text-decoration-style: solid;
-        // text-decoration-skip-ink: none;
         text-decoration-color: $colour_modern_iron!important;
         &:hover {
             filter: drop-shadow(0 0 12px $colour_sunny_side_up_yellow);
-            // border-bottom: 3px solid $colour_blue_cobalter;
             text-decoration-color: $colour_sunny_side_up_yellow!important;
         }
         &:active {

@@ -1,0 +1,34 @@
+// ---------------------------------------------------------------------
+// SCROLL ZONES
+// js/scroll/zones.js publishes how far we have scrolled as two numbers:
+//   --header-progress  0 = top of page  ->  1 = hero scrolled away
+//   --footer-progress  0 = footer far   ->  1 = footer fully revealed
+// Everything that fades / shrinks while scrolling just uses those.
+// ---------------------------------------------------------------------
+:root {
+    --header-progress: 0;
+    --footer-progress: 0;
+    --header-range: 70vh; // how far you scroll before the hero is gone
+    --footer-range: 180vh; // how far from the bottom the footer starts to appear
+}
+
+body {
+    position: relative; // anchors the zones below
+}
+
+// invisible measuring strips (observed by IntersectionObserver)
+.scroll-zone {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    visibility: hidden;
+    pointer-events: none;
+}
+.scroll-zone--header {
+    top: 0;
+    height: var(--header-range);
+}
+.scroll-zone--footer {
+    bottom: 0;
+    height: var(--footer-range);
+}

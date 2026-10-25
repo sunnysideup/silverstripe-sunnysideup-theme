@@ -1,104 +1,94 @@
-main#main {
-    blockquote.main-quote {
-        position: absolute;
-        top: 50vh;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        padding: 0;
+// ---------------------------------------------------------------------
+// HERO QUOTE
+// Size and width are driven by variables (see tokens.scss):
+//   --quote-size         font size, scales with viewport width AND height
+//   --quote-max-width    line length; text-wrap: balance evens out the lines
+//   --quote-line-height
+// ---------------------------------------------------------------------
+.main-quote {
+    position: absolute;
+    top: 50dvh;
+    inset-inline: 0;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0 var(--page-gutter);
+
+    p {
+        display: block;
         margin: 0;
-        p {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
-            display: block;
-            margin: 0;
-            background-color: transparent;
-            background: transparent;
-            border-color: transparent;
-            font-size: calc(((1vh + 2.5vw)) + 24px);
-            letter-spacing: -0.5px;
-            filter: drop-shadow(0 0 6px $colour_sunny_side_up_yellow);
-            // background: linear-gradient(270deg, #00000000, #fff, #00000000);
-            line-height: 1.3;
-            overflow: hidden;
-            font-weight: 200;
+        padding: 4rem 0;
+        max-width: var(--quote-max-width);
+        overflow: hidden;
+        text-align: left;
+        text-wrap: balance;
+        font: normal 200 var(--quote-size) / var(--quote-line-height) var(--font-headers);
+        letter-spacing: -0.02em;
+        color: var(--colour-blue-cobalter);
+        background: transparent;
+        border-color: transparent;
+        filter: drop-shadow(0 0 6px var(--colour-sunny-side-up-yellow));
+        &,
+        * {
+            color: var(--colour-blue-cobalter);
+        }
+
+        .shiner {
+            display: inline-block;
+            cursor: help;
+            text-align: right;
+            text-decoration: none !important;
             font-style: normal;
-            font-family: $base_font_headers;
-            color: $colour_blue_cobalter;
-            * {
-                color: $colour_blue_cobalter;
+            animation: shine 4.2s infinite; // 2.1s glow + 2.1s pause
+            &.italic {
+                font-style: italic;
             }
-            // &.has-typing-mode {
-            //     // visibility: hidden;
-            // }
-            .shiner {
-                display: inline-block;
-                cursor: help;
-                text-align: right;
-                animation: shine;
-                animation-duration: 4.2s; /* Full cycle: 2.1s of blinking + 2.1s pause */
-                animation-iteration-count: infinite;
-                text-decoration: none !important;
-                font-style: normal;
-                &.italic {
-                    font-style: italic;
-                }
-                &.smaller {
-                    font-size: 70%;
-                }
-                svg {
-                    vertical-align: baseline;
-                    height: 1.2em;
-                    width: 1.2em;
-                }
+            &.smaller {
+                font-size: 70%;
             }
-            .Typewriter__wrapper,
-            .Typewriter__wrapper * {
-                visibility: visible;
+            svg {
+                vertical-align: baseline;
+                height: 1.2em;
+                width: 1.2em;
             }
+        }
+        .Typewriter__wrapper,
+        .Typewriter__wrapper * {
+            visibility: visible;
         }
     }
 }
 
 @keyframes shine {
-    0% {
-        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
-    }
-    30% {
-        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
+    0%,
+    30%,
+    70%,
+    100% {
+        filter: drop-shadow(0 0 0 var(--colour-sunny-side-up-yellow));
     }
     50% {
-        filter: drop-shadow(0 0 20px $colour_sunny_side_up_yellow);
+        filter: drop-shadow(0 0 20px var(--colour-sunny-side-up-yellow));
     }
-    70% {
-        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
-    }
-    100% {
-        filter: drop-shadow(0 0 0px $colour_sunny_side_up_yellow);
+}
+@media (prefers-reduced-motion: reduce) {
+    .main-quote .shiner {
+        animation: none;
     }
 }
 
-body.footer-visible {
-    main#main {
-        blockquote.main-quote {
-            display: none !important;
-            // p {
-            //     .blinker {
-            //         &.smaller {
-            //             rotate: 180deg;
-            //         }
-            //     }
-            // }
+// short landscape screens: height is the limiting factor
+@media (max-height: 400px) {
+    .main-quote {
+        padding-top: 60vh;
+        p {
+            font-size: calc(3vw + 3vh);
         }
     }
 }
 
-body.no-rocket-show.past-header {
-    main#main {
-        blockquote.main-quote {
-            opacity: 0 !important;
-        }
-    }
+// the quote disappears once the footer scrolls into view / the header is passed
+body.footer-visible .main-quote {
+    display: none;
+}
+body.no-rocket-show.past-header .main-quote {
+    opacity: 0;
 }

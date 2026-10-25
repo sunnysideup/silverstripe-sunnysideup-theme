@@ -1,23 +1,13 @@
-var formfields = document.querySelectorAll(
-  'input, select, textarea'
-)
-for (var J = formfields.length - 1; J >= 0; --J) {
-  formfields[J].addEventListener('change', adjustStyling, false)
-  formfields[J].addEventListener('keyup', adjustStyling, false)
-  formfields[J].addEventListener('focus', adjustStyling, false)
-  formfields[J].addEventListener('blur', adjustStyling, false)
-  formfields[J].addEventListener('mousedown', adjustStyling, false)
+// Marks empty form fields with .no-value (used for floating label styling).
+const FIELDS = 'input, select, textarea'
 
-  var evt = document.createEvent('HTMLEvents')
-  evt.initEvent('change', false, true)
-  formfields[J].dispatchEvent(evt)
-}
+const mark = (field) => field.classList.toggle('no-value', !field.value.trim())
 
-function adjustStyling (zEvent) {
-  var inpVal = zEvent.target.value
-  if (inpVal && inpVal.replace(/^\s+|\s+$/g, '')) {
-    zEvent.target.classList.remove('no-value')
-  } else {
-    zEvent.target.classList.add('no-value')
-  }
-}
+// one delegated listener instead of five per field
+;['input', 'change', 'focusin', 'focusout'].forEach((type) => {
+    document.addEventListener(type, (event) => {
+        if (event.target.matches?.(FIELDS)) mark(event.target)
+    })
+})
+
+document.querySelectorAll(FIELDS).forEach(mark)

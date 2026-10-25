@@ -1,56 +1,156 @@
-/**
- * Example usage:
- * .asymmetric-card {
- *   @include sketch-border(6px, 2px, 5px, 1px, #3b82f6);
- * }
- * .action-button {
- *   @include sketch-border(4px, #10b981);
- * }
- * .top-bottom-frame {
- *   @include sketch-border(5px 0 3px 0, #6366f1);
- * }
- * .heading-underline {
- *   @include sketch-border($top: 0, $right: 0, $bottom: 4px, $left: 0, $color: #f59e0b);
- * }
- */
+@use "sass:math";
+@use "sass:list";
+
+// ---------------------------------------------------------------------
+// SKETCH BORDERS - pure CSS, no JavaScript
+//
+// Draws hand-drawn looking wavy lines on any side(s) of an element by
+// painting a coloured pseudo-element through tiled SVG wave masks.
+//
+//   .foo { @include sketch-border(4px, var(--colour-blue-cobalter)); }
+//   .foo { @include sketch-border(4px 0 0 0, red); }              // top only
+//   .foo { @include sketch-border(0 0 4px 0, red, $pseudo: before); }
+//
+// Randomness: there are 6 wave shapes. Every side uses a different one,
+// and siblings (:nth-child) rotate through the shapes, so repeated
+// elements do not look identical - all decided at compile time.
+//
+// Tweak $sketch-depth to make all waves bigger / smaller.
+// ---------------------------------------------------------------------
+$sketch-depth: 5px !default;
+$sketch-segment: 240; // px per wave; 4 waves per tile
+$sketch-shapes: (
+    (1, -0.8, 1.1, -0.9),
+    (-1, 0.9, -0.7, 1.2),
+    (0.8, -1.2, 0.9, -1),
+    (-0.9, 1, -1.1, 0.8),
+    (1.2, -0.7, 0.8, -1.1),
+    (-0.8, 1.1, -1, 0.9)
+);
+
+// the full height of a tile for a given line thickness
+@function sketch-tile-size($thickness, $depth) {
+    @return math.div($thickness, 1px) + 2 * (math.ceil(math.div($depth, 1px) * 0.7) + 1);
+}
+
+// one wave tile as a data-uri
+@function sketch-tile($shape, $thickness, $depth, $vertical: false) {
+    $t: math.div($thickness, 1px);
+    $d: math.div($depth, 1px);
+    $h: sketch-tile-size($thickness, $depth);
+    $mid: math.div($h, 2);
+    $factors: list.nth($sketch-shapes, ($shape - 1) % 6 + 1);
+    $half: math.div($sketch-segment, 2);
+    $path: if($vertical, "M#{$mid} 0", "M0 #{$mid}");
+
+    @for $i from 0 to 4 {
+        $from: $i * $sketch-segment;
+        $control: $mid + list.nth($factors, $i + 1) * $d;
+        @if $vertical {
+            $path: "#{$path} Q#{$control} #{$from + $half} #{$mid} #{$from + $sketch-segment}";
+        } @else {
+            $path: "#{$path} Q#{$from + $half} #{$control} #{$from + $sketch-segment} #{$mid}";
+        }
+    }
+
+    $w: if($vertical, $h, 4 * $sketch-segment);
+    $ht: if($vertical, 4 * $sketch-segment, $h);
+
+    @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$ht}' viewBox='0 0 #{$w} #{$ht}'%3E%3Cpath d='#{$path}' fill='none' stroke='%23000' stroke-width='#{$t}'/%3E%3C/svg%3E");
+}
+
+// mask layers (top, right, bottom, left) for one shape rotation
+@function sketch-images($shape, $t, $r, $b, $l, $depth) {
+    $images: ();
+    @if $t > 0 { $images: list.append($images, sketch-tile($shape, $t * 1px, $depth), comma); }
+    @if $r > 0 { $images: list.append($images, sketch-tile($shape + 1, $r * 1px, $depth, true), comma); }
+    @if $b > 0 { $images: list.append($images, sketch-tile($shape + 2, $b * 1px, $depth), comma); }
+    @if $l > 0 { $images: list.append($images, sketch-tile($shape + 3, $l * 1px, $depth, true), comma); }
+    @return $images;
+}
+
 @mixin sketch-border(
-  $top: 3px,
-  $right: null,
-  $bottom: null,
-  $left: null,
-  $color: #475569,
-  $depth: 4px,
-  $waves: 'random',
-  $inset: 0px
+    $sides: 3px,
+    $color: var(--colour-modern-iron),
+    $depth: $sketch-depth,
+    $shape: 1,
+    $pseudo: after
 ) {
-  $t: 0px; $r: 0px; $b: 0px; $l: 0px;
+    // normalise "4px" / "4px 0" / "4px 0 2px" / "4px 0 2px 1px" (CSS shorthand order)
+    $count: list.length($sides);
+    $t: math.div(list.nth($sides, 1), 1px);
+    $r: $t;
+    $b: $t;
+    $l: $t;
+    @if $count >= 2 { $r: math.div(list.nth($sides, 2), 1px); $b: $t; $l: $r; }
+    @if $count >= 3 { $b: math.div(list.nth($sides, 3), 1px); }
+    @if $count >= 4 { $l: math.div(list.nth($sides, 4), 1px); }
 
-  // Handle color passed as 2nd argument: @include sketch-border(3px, #3b82f6)
-  @if type-of($right) == 'color' {
-    $color: $right;
-    $right: null;
-  }
+    // size of the pseudo element = element + half of the biggest tile on each side
+    $biggest: 0;
+    @each $side in $t, $r, $b, $l {
+        @if $side > 0 {
+            $biggest: math.max($biggest, sketch-tile-size($side * 1px, $depth));
+        }
+    }
+    $edge: math.div($biggest, 2);
 
-  // Handle shorthand list e.g. (3px 0 0 0)
-  @if length($top) > 1 {
-    $t: nth($top, 1);
-    $r: if(length($top) >= 2, nth($top, 2), $t);
-    $b: if(length($top) >= 3, nth($top, 3), $t);
-    $l: if(length($top) >= 4, nth($top, 4), $r);
-  } @else {
-    $t: $top;
-    $r: if($right != null, $right, $t);
-    $b: if($bottom != null, $bottom, $t);
-    $l: if($left != null, $left, $r);
-  }
+    $sizes: ();
+    $positions: ();
+    @if $t > 0 {
+        $h: sketch-tile-size($t * 1px, $depth);
+        $sizes: list.append($sizes, #{$sketch-segment * 4}px #{$h}px, comma);
+        $positions: list.append($positions, 0 #{$edge - math.div($h, 2)}px, comma);
+    }
+    @if $r > 0 {
+        $w: sketch-tile-size($r * 1px, $depth);
+        $sizes: list.append($sizes, #{$w}px #{$sketch-segment * 4}px, comma);
+        $positions: list.append($positions, calc(100% - #{$edge - math.div($w, 2)}px) 0, comma);
+    }
+    @if $b > 0 {
+        $h: sketch-tile-size($b * 1px, $depth);
+        $sizes: list.append($sizes, #{$sketch-segment * 4}px #{$h}px, comma);
+        $positions: list.append($positions, 0 calc(100% - #{$edge - math.div($h, 2)}px), comma);
+    }
+    @if $l > 0 {
+        $w: sketch-tile-size($l * 1px, $depth);
+        $sizes: list.append($sizes, #{$w}px #{$sketch-segment * 4}px, comma);
+        $positions: list.append($positions, #{$edge - math.div($w, 2)}px 0, comma);
+    }
+    $repeats: ();
+    @if $t > 0 { $repeats: list.append($repeats, repeat-x, comma); }
+    @if $r > 0 { $repeats: list.append($repeats, repeat-y, comma); }
+    @if $b > 0 { $repeats: list.append($repeats, repeat-x, comma); }
+    @if $l > 0 { $repeats: list.append($repeats, repeat-y, comma); }
 
-  // Emit clean individual values to CSS Custom Properties
-  --sketch-color: #{$color};
-  --sketch-top: #{$t};
-  --sketch-right: #{$r};
-  --sketch-bottom: #{$b};
-  --sketch-left: #{$l};
-  --sketch-depth: #{$depth};
-  --sketch-waves: #{$waves};
-  --sketch-inset: #{$inset};
+    position: relative;
+
+    &::#{$pseudo} {
+        content: "";
+        position: absolute;
+        inset: -#{$edge}px;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $color;
+        -webkit-mask-size: $sizes;
+        mask-size: $sizes;
+        -webkit-mask-position: $positions;
+        mask-position: $positions;
+        -webkit-mask-repeat: $repeats;
+        mask-repeat: $repeats;
+        $images: sketch-images($shape, $t, $r, $b, $l, $depth);
+        -webkit-mask-image: $images;
+        mask-image: $images;
+    }
+    // rotate the shapes between siblings so repeated blocks differ
+    &:nth-child(3n + 2)::#{$pseudo} {
+        $images: sketch-images($shape + 2, $t, $r, $b, $l, $depth);
+        -webkit-mask-image: $images;
+        mask-image: $images;
+    }
+    &:nth-child(3n)::#{$pseudo} {
+        $images: sketch-images($shape + 4, $t, $r, $b, $l, $depth);
+        -webkit-mask-image: $images;
+        mask-image: $images;
+    }
 }

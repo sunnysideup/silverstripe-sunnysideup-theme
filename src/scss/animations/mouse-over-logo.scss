@@ -1,5 +1,5 @@
 
-body.mouse-over-logo.no-touch {
+body:has(#logo:hover).no-touch {
     #BackgroundImage {
         animation-duration: 0.3s; /* the duration of the animation */
         animation-timing-function: ease-out; /* how the animation will behave */
@@ -38,7 +38,7 @@ body.mouse-over-logo.no-touch {
     }
 }
 
-body.mouse-over-logo {
+body:has(#logo:hover) {
     #header {
         .logo-header {
             position: relative;

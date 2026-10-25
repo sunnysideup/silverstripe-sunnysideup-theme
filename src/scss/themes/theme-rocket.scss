@@ -1,27 +1,17 @@
 body {
     transition: background-color 0.3s ease;
-    background-color: $colour_yep_thats_grey;
-    --overlay-color-blue: #02286699;
-    --overlay-color-yellow: #f7cd5599;
-    --overlay-color-purple: #3a075a99;
-    --overlay-color-green: #00ab0699;
+    background-color: var(--colour-yep-thats-grey);
 }
 body.theme-rocket {
     &.has-video {
         background-color: $colour_black;
     }
-    &.header-0 {
-        background-color: $colour_yep_thats_grey;
-
-    }
-    &[class*=" footer-"],
-    &[class^="footer-"] {
+    &.footer-visible {
         --overlay-color-blue: transparent;
         --overlay-color-yellow: transparent;
         --overlay-color-purple: transparent;
         --overlay-color-green: transparent;
     }
-
 
     a[data-add-class="theme-rocket"] {
         text-decoration: none !important;
@@ -46,12 +36,6 @@ body.theme-rocket {
             * {
                 color: #fff;
             }
-            h1,
-            h2 {
-                &:before {
-                    border-top-color: transparent;
-                }
-            }
             a,
             a:link,
             a:visited {
@@ -62,12 +46,7 @@ body.theme-rocket {
             border: none;
             background: transparent;
         }
-        // background-color: #00000037;
     }
-    #BackgroundImage.has-bg-image-loaded {
-        opacity: 1;
-    }
-
     form {
         * {
             color: $colour_law_firm_report_cover !important;
@@ -137,30 +116,17 @@ body.theme-rocket {
     }
 }
 
-@media only screen and (min-width: 1050px) {
+@media (min-width: 1050px) {
     body.theme-rocket {
+        main#main blockquote.main-quote {
+            margin-inline: var(--page-offset-left) var(--page-offset-right);
+        }
         #nav {
             background-color: $colour_white_ten_percent;
         }
         &.menu-on {
             #nav {
                 background-color: $colour_sunny_side_up_yellow;
-            }
-        }
-        main#main {
-            blockquote.main-quote {
-                margin-right: 7vw;
-                margin-left: calc(19vw + 7vw);
-            }
-        }
-    }
-}
-@media only screen and (min-width: 1350px) {
-    body.theme-rocket {
-        main#main {
-            blockquote.main-quote {
-                margin-right: 11vw;
-                margin-left: calc(19vw + 11vw);
             }
         }
     }
@@ -172,9 +138,6 @@ body.menu-on {
     }
 }
 
-
-
-
 @media only screen and (max-width: 1050px) {
     body.theme-rocket.footer-visible {
         main#main blockquote.main-quote {
@@ -184,15 +147,3 @@ body.menu-on {
     }
 }
 
-// body.theme-rocket.has-bg-image-loaded {
-//     #header {
-//         * {
-//             color: $colour_sunny_side_up_yellow;
-//         }
-//     }
-// }
-// body.theme-rocket.has-bg-image-loaded.title-colour-blue {
-//     #header * {
-//         color: $colour_blue_cobalter !important;
-//     }
-// }

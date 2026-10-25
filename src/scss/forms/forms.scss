@@ -29,9 +29,6 @@ $background_color_6: transparent;
                 font-size: 2rem;
                 text-transform: uppercase;
                 font-weight: bold;
-                &:before {
-                    border: none !important;
-                }
             }
             h1,
             h2,
@@ -59,7 +56,6 @@ $background_color_6: transparent;
             }
             label {
                 font-size: 2rem;
-                // font-style: italic;
                 color: $colour_yep_thats_grey !important;
                 font-weight: bold;
             }
@@ -260,11 +256,11 @@ $background_color_6: transparent;
             display: block;
             text-align: right;
             input {
-                border: none!important;
-                @include sketch-border(4px, $colour_ekos_green);
+                // inputs cannot have pseudo elements: hand-drawn look via uneven radii
+                border: 4px solid $colour_ekos_green !important;
+                border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
                 padding: 1.3rem 1.7rem;
                 color: $colour_ekos_green;
-                border-bottom-left-radius: 1rem;
                 text-decoration: none !important;
                 width: auto;
                 text-align: center;
@@ -278,9 +274,6 @@ $background_color_6: transparent;
                     background: $colour_hypocrite_yellow;
                 }
             }
-        }
-        input[type="submit"] {
-
         }
     }
 }

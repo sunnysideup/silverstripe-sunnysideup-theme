@@ -4,7 +4,6 @@
     top: 0;
     left: 0;
     right: 0;
-    zoom: 1;
     img {
         display: none;
     }
@@ -84,22 +83,7 @@ body.past-header:not(.menu-on) {
         }
     }
 }
-// body.past-header.just-scrolled.scrolled-up {
-//     #header {
-//         opacity: 1;
-//         color: $colour_blue_cobalter_highlights;
-//         * {
-//             color: $colour_blue_cobalter_highlights;
-//         }
-//     }
-// }
-// body.footer-visible {
 //     #header,
-//     #header * {
-//         height: 0;
-//         overflow: hidden;
-//     }
-// }
 
 @media only screen and (max-width: 1049px) {
     body.footer-visible {

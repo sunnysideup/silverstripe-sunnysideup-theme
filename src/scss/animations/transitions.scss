@@ -1,25 +1,28 @@
-.body-loaded * {
+.body-loaded :is(
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    #header,
+    #header *,
+    #nav,
+    #nav *,
+    #footer,
+    .main-quote,
+    .element,
+    .image-container img
+) {
     transition-property:
-        width,
-        min-width,
         color,
         background-color,
         opacity,
+        width,
         height,
-        min-height,
-        min-width,
-        max-height,
-        max-width,
         left,
-        right,
         top,
-        bottom,
-        color,
-        border-radius,
-        border,
-        box-shadow,
-        margin;
+        border-color,
+        box-shadow;
     transition-duration: 0.37s;
     transition-timing-function: ease-out;
-    transition-delay: 0s;
 }

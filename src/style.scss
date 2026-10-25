@@ -1,8 +1,8 @@
 @import "scss/animations/page-transitions";
+@import "scss/animations/scroll-zones";
 
 /* variables */
-@import "scss/_definitions/fonts";
-@import "scss/_definitions/colours";
+@import "scss/_definitions/tokens";
 @import "scss/_definitions/mixins";
 
 /// basics
@@ -18,6 +18,7 @@
 
 //typography
 @import "scss/typography/typography";
+@import "scss/blocks/element";
 @import "scss/forms/forms";
 @import "scss/forms/fancy-checkboxes";
 @import "scss/forms/fancy-slider";
@@ -56,7 +57,6 @@
 @import "scss/animations/transitions";
 @import "scss/animations/mouse-over-logo";
 @import "scss/animations/blinker";
-@import "scss/animations/image-hover";
 @import "scss/animations/arrow-down";
 
 @import "scss/print/print";

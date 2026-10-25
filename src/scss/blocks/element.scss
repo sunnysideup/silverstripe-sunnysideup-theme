@@ -1,0 +1,58 @@
+// ---------------------------------------------------------------------
+// ELEMENTAL BLOCKS
+//
+//   .element
+//     .content-element__content
+//       h2.content-element__title      <- column 1 (from 900px)
+//       p, ul, img, ...                <- column 2
+//
+// - Every block gets ONE divider on top (sketch line on ::before).
+// - The slideshow block is deliberately excluded: it is left alone.
+// ---------------------------------------------------------------------
+$element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
+
+#content-below-quote {
+    min-height: 70vh;
+}
+
+.element:not(#{$element-slideshow}) {
+    @include sketch-border(4px 0 0 0, var(--colour-divider), $pseudo: before);
+    margin-top: var(--element-gap);
+    padding-top: 2.3rem;
+    clear: both;
+    scroll-margin-top: 10rem; // so anchor links do not hide behind the header
+
+    // titles are part of the block, not part of the content flow
+    > .content-element__content > .content-element__title {
+        margin: 0;
+        padding: 0 0 1.5rem;
+    }
+}
+
+// two column layout for text blocks
+@media (min-width: 900px) {
+    .element:is(.dnadesign__elemental__models__elementcontent, .sunnysideup__app__elements__hostingcalculator) {
+        > .content-element__content {
+            display: grid;
+            grid-template-columns: var(--title-col) var(--body-col);
+            column-gap: var(--title-gap);
+            align-items: start;
+
+            > * {
+                grid-column: 2;
+                min-width: 0;
+            }
+            > .content-element__title {
+                grid-column: 1;
+                grid-row: 1;
+                padding-bottom: 0;
+            }
+        }
+        // images fill the content column
+        .image-container img {
+            margin-inline: 0 0;
+            margin-left: auto;
+            max-width: 100%;
+        }
+    }
+}

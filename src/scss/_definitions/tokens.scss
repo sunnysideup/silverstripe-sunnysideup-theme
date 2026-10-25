@@ -1,0 +1,199 @@
+// ---------------------------------------------------------------------
+// DESIGN TOKENS
+// Everything is a CSS custom property on :root, so any value can be
+// changed (or overridden per theme / per element) at runtime.
+// The SCSS aliases at the bottom exist so that older partials keep working.
+// Prefer var(--...) in new code.
+// ---------------------------------------------------------------------
+:root {
+  // --- colours (duplicates alias their canonical value) ---
+  --colour-white: #fff;
+  --colour-black: #000;
+  --colour-white-ten-percent: #ffffff22;
+  --colour-boot-black: #040403;
+  --colour-boot-black-semi: #040403cc;
+  --colour-black-lighter: #111;
+  --colour-almost-black-dreamless-sleep: var(--colour-black-lighter);
+  --colour-darker-grey-catch-22: #222;
+  --colour-outer-space-love: #333;
+  --colour-black-rock-n-roll: #191919;
+  --colour-lucky-grey: #777777;
+  --colour-yep-thats-grey: #575757;
+  --colour-yep-thats-grey-light: #55555500;
+  --colour-yep-thats-grey-semi: #575757cc;
+  --colour-yep-thats-grey-revers: #959595;
+  --colour-light-grey-gravel-fint: #bbb;
+  --colour-screaming-grey: #aaa;
+  --colour-modern-iron: #a7a7a7;
+  --colour-modern-iron-half: #a7a7a777;
+  --colour-light-grey-aotrom: #e6e6e6;
+  --colour-light-grey-aotrom-fifty-percent: #e6e6e677;
+  --colour-overcast-sunny-side-up: #c3bfb3;
+  --colour-transparent: transparent;
+  --colour-grey-white-grey: linear-gradient(270deg, var(--colour-light-grey-aotrom), var(--colour-white), var(--colour-light-grey-aotrom));
+  --colour-sunny-side-up-yellow: #f7cd55;
+  --colour-sunny-side-up-yellow-less: #f7cd55cc;
+  --colour-sunny-side-up-yellow-ten-percent: #f7cd5522;
+  --colour-hypocrite-yellow: var(--colour-sunny-side-up-yellow);
+  --colour-hypocrite-yellow-lighter: #c6b380;
+  --colour-yellow: yellow;
+  --colour-burned-sunny-side-up: #e4b105;
+  --colour-burned-sunny-side-up-thirty-percent: #e4b10533;
+  --colour-organic-egg-yolk: var(--colour-burned-sunny-side-up);
+  --colour-sunny-side-up-green: #00ab06;
+  --colour-sunny-side-up-green-darker: #0f3d11;
+  --colour-painty-green: #386548;
+  --colour-on-the-fence-green: #81ce86;
+  --colour-on-the-fence-green-transparent: var(--colour-on-the-fence-green);
+  --colour-burngreen: #a6bd7f;
+  --colour-ekos-green: #95c93d;
+  --colour-green: green;
+  --colour-purple-spirituality-in-the-sun: var(--colour-blue-cobalter);
+  --colour-blue-cobalter-highlights: var(--colour-blue-cobalter);
+  --colour-blue-cobalter: #022866;
+  --colour-blue-cobalter-half: #02286655;
+  --colour-blue-cobalter-half-non-transparent: #b9c7ff;
+  --colour-blue-cobalter-lighter: #8ca6f9;
+  --colour-vexy: #0028c9;
+  --colour-center-shake-blue: #0032b9;
+  --colour-law-firm-report-cover: #0d3a59;
+  --colour-sunny-side-up-sky: #c6e3ea;
+  --colour-purple: purple;
+  --colour-climate-negative: #6a36c2;
+  --colour-anthroposofia: #3a075a;
+  --colour-sunny-side-up-dark-purple: #200233;
+  --colour-red: red;
+  --colour-pink: pink;
+  --colour-rose-storm: #ef5d5d;
+  --colour-rose-storm-darker: #b42e2e;
+  --colour-patrick-star-skin-colour: #ff7b7b;
+  --colour-cable-car-red: #fc4b15;
+  --colour-ranch-style-beans-with-onions: #240000;
+  --colour-orange: orange;
+  --colour-minty-just-add-chocolate: #8dfdfa;
+
+  // --- semantic colours: change these to re-theme ---
+  --colour-text: var(--colour-outer-space-love);
+  --colour-heading: var(--colour-blue-cobalter);
+  --colour-link: var(--colour-outer-space-love);
+  --colour-divider: var(--colour-modern-iron-half);
+  --colour-page: var(--colour-light-grey-aotrom);
+
+  // --- fonts ---
+  --font-body: "Nunito Sans", sans-serif;
+  --font-condensed: "Nunito Sans", sans-serif;
+  --font-headers: "Oswald", sans-serif;
+
+  // --- layout ---
+  --nav-width: 18vw;
+  --page-gutter: calc(2rem + 3vw);
+  --page-offset-left: var(--page-gutter);
+  --page-offset-right: var(--page-gutter);
+  --element-gap: 6rem;
+  --title-col: minmax(0, 1fr);
+  --body-col: minmax(0, 2.6fr);
+  --title-gap: 3vw;
+
+  // --- hero quote ---
+  --quote-size: clamp(3.4rem, 3.6vw + 4.4vh + 1rem, 11rem);
+  --quote-line-height: 1.12;
+  --quote-max-width: 22ch;
+
+  // --- overlays ---
+  --overlay-color-blue: #02286699;
+  --overlay-color-yellow: #f7cd5599;
+  --overlay-color-purple: #3a075a99;
+  --overlay-color-green: #00ab0699;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --title-col: minmax(0, 1fr);
+    --body-col: minmax(0, 2.6fr);
+  }
+}
+@media (min-width: 1050px) {
+  :root {
+    --page-offset-left: calc(var(--nav-width) + 7vw);
+    --page-offset-right: 7vw;
+  }
+}
+@media (min-width: 1350px) {
+  :root {
+    --page-offset-left: calc(var(--nav-width) + 11vw);
+    --page-offset-right: 11vw;
+  }
+}
+
+// ---- SCSS aliases (legacy names -> CSS variables) ----
+$colour_white: var(--colour-white);
+$colour_black: var(--colour-black);
+$colour_white_ten_percent: var(--colour-white-ten-percent);
+$colour_boot_black: var(--colour-boot-black);
+$colour_boot_black_semi: var(--colour-boot-black-semi);
+$colour_black_lighter: var(--colour-black-lighter);
+$colour_almost_black_dreamless_sleep: var(--colour-almost-black-dreamless-sleep);
+$colour_darker_grey_catch_22: var(--colour-darker-grey-catch-22);
+$colour_outer_space_love: var(--colour-outer-space-love);
+$colour_black_rock_n_roll: var(--colour-black-rock-n-roll);
+$colour_lucky_grey: var(--colour-lucky-grey);
+$colour_yep_thats_grey: var(--colour-yep-thats-grey);
+$colour_yep_thats_grey_light: var(--colour-yep-thats-grey-light);
+$colour_yep_thats_grey_semi: var(--colour-yep-thats-grey-semi);
+$colour_yep_thats_grey_revers: var(--colour-yep-thats-grey-revers);
+$colour_light_grey_gravel_fint: var(--colour-light-grey-gravel-fint);
+$colour_screaming_grey: var(--colour-screaming-grey);
+$colour_modern_iron: var(--colour-modern-iron);
+$colour_modern_iron_half: var(--colour-modern-iron-half);
+$colour_light_grey_aotrom: var(--colour-light-grey-aotrom);
+$colour_light_grey_aotrom_fifty_percent: var(--colour-light-grey-aotrom-fifty-percent);
+$colour_overcast_sunny_side_up: var(--colour-overcast-sunny-side-up);
+$colour_transparent: var(--colour-transparent);
+$colour_grey_white_grey: var(--colour-grey-white-grey);
+$colour_sunny_side_up_yellow: var(--colour-sunny-side-up-yellow);
+$colour_sunny_side_up_yellow_less: var(--colour-sunny-side-up-yellow-less);
+$colour_sunny_side_up_yellow_ten_percent: var(--colour-sunny-side-up-yellow-ten-percent);
+$colour_hypocrite_yellow: var(--colour-hypocrite-yellow);
+$colour_hypocrite_yellow_lighter: var(--colour-hypocrite-yellow-lighter);
+$colour_yellow: var(--colour-yellow);
+$colour_burned_sunny_side_up: var(--colour-burned-sunny-side-up);
+$colour_burned_sunny_side_up_thirty_percent: var(--colour-burned-sunny-side-up-thirty-percent);
+$colour_organic_egg_yolk: var(--colour-organic-egg-yolk);
+$colour_sunny_side_up_green: var(--colour-sunny-side-up-green);
+$colour_sunny_side_up_green_darker: var(--colour-sunny-side-up-green-darker);
+$colour_painty_green: var(--colour-painty-green);
+$colour_on_the_fence_green: var(--colour-on-the-fence-green);
+$colour_on_the_fence_green_transparent: var(--colour-on-the-fence-green-transparent);
+$colour_burngreen: var(--colour-burngreen);
+$colour_ekos_green: var(--colour-ekos-green);
+$colour_green: var(--colour-green);
+$colour_purple_spirituality_in_the_sun: var(--colour-purple-spirituality-in-the-sun);
+$colour_blue_cobalter_highlights: var(--colour-blue-cobalter-highlights);
+$colour_blue_cobalter: var(--colour-blue-cobalter);
+$colour_blue_cobalter_half: var(--colour-blue-cobalter-half);
+$colour_blue_cobalter_half_non_transparent: var(--colour-blue-cobalter-half-non-transparent);
+$colour_blue_cobalter_lighter: var(--colour-blue-cobalter-lighter);
+$colour_vexy: var(--colour-vexy);
+$colour_center_shake_blue: var(--colour-center-shake-blue);
+$colour_law_firm_report_cover: var(--colour-law-firm-report-cover);
+$colour_sunny_side_up_sky: var(--colour-sunny-side-up-sky);
+$colour_purple: var(--colour-purple);
+$colour_climate_negative: var(--colour-climate-negative);
+$colour_anthroposofia: var(--colour-anthroposofia);
+$colour_sunny_side_up_dark_purple: var(--colour-sunny-side-up-dark-purple);
+$colour_red: var(--colour-red);
+$colour_pink: var(--colour-pink);
+$colour_rose_storm: var(--colour-rose-storm);
+$colour_rose_storm_darker: var(--colour-rose-storm-darker);
+$colour_patrick_star_skin_colour: var(--colour-patrick-star-skin-colour);
+$colour_cable_car_red: var(--colour-cable-car-red);
+$colour_ranch_style_beans_with_onions: var(--colour-ranch-style-beans-with-onions);
+$colour_orange: var(--colour-orange);
+$colour_minty_just_add_chocolate: var(--colour-minty-just-add-chocolate);
+$colour-white: var(--colour-white);
+$colour_navy: var(--colour-blue-cobalter);
+$colour_blue: var(--colour-blue-cobalter);
+
+$base_font: var(--font-body);
+$base_font_condensed: var(--font-condensed);
+$base_font_headers: var(--font-headers);

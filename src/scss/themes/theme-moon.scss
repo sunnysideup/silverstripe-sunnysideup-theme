@@ -1,4 +1,5 @@
 body.theme-moon {
+    --colour-divider: #{$colour_burned_sunny_side_up_thirty_percent};
     background-color: $colour_sunny_side_up_dark_purple !important;
 
     * {
@@ -46,12 +47,6 @@ body.theme-moon {
                 i {
                     color: $colour_hypocrite_yellow_lighter;
                 }
-            }
-        }
-        h1,
-        h2 {
-            &:before {
-                border-color: $colour_burned_sunny_side_up_thirty_percent !important;
             }
         }
         pre {

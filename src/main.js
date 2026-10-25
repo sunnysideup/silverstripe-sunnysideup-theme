@@ -1,26 +1,29 @@
-// // non-themed app
-// import 'site/app/client/javascript/MyJavascriptFile';
+// Entry point. Order matters only where noted.
 //
-//
-// // vendor modules
-// import 'site/vendor/myvendor/mypackage/client/javascript/MyJavascriptFile';
-//
-// // your themed app files
-// import './js/partials/SomeOtherJavascriptFile';
-import './js/cookie'
-import './js/body-class'
-import './js/scroll-to-content-below-quote'
+//   1. state + theme   (set up <body> before anything is painted)
+//   2. layout helpers  (hero background, scroll zones)
+//   3. interaction     (menu, toc, forms, ...)
+
+// 1. state + theme
+import './js/body-state'
+import './js/theme'
+
+// 2. layout helpers
+import './js/background'
+import './js/scroll/zones'
+import './js/scroll/direction'
+import './js/hash-scroll'
+import './js/images'
+
+// 3. interaction
+import './js/menu-toggle'
+import './js/shiner'
 import './js/toc'
 import './js/collapsible-menu'
-import './js/scroll-manager'
 import './js/form'
 import './js/work-example'
-import './js/mouse-over-logo'
-import './js/images'
-import './js/image-hover'
-import './js/borders'
 import './js/print'
 import './js/battery-saver'
 
-
+// slideshow block (vendor) - leave alone
 import 'PROJECT_ROOT_DIR/vendor/sunnysideup/slideshowblock/client/src/main';
