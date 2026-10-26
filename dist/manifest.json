@@ -4,7 +4,6 @@
   "dist/editor.css": "./editor.css",
   "dist/runtime.js": "./runtime.js",
   "dist/images/SSU_Logo_horizontal_.png": "./images/SSU_Logo_horizontal_.aa9ab930.png",
-  "dist/images/progress-pride-flag.webp": "./images/progress-pride-flag.f7bfa3d6.webp",
   "dist/images/2.svg": "./images/2.f126efff.svg",
   "dist/images/7.svg": "./images/7.2a4ee250.svg",
   "dist/images/9.svg": "./images/9.6d568cf1.svg",
@@ -18,5 +17,8 @@
   "dist/images/logo-small.svg": "./images/logo-small.05f038e4.svg",
   "dist/app.js.map": "./app.js.map",
   "dist/main.css.map": "./main.css.map",
-  "dist/runtime.js.map": "./runtime.js.map"
+  "dist/runtime.js.map": "./runtime.js.map",
+  "dist/images/close.svg": "./images/close.e2759bc8.svg",
+  "dist/images/maximise.svg": "./images/maximise.1a1177ba.svg",
+  "dist/images/minimise.svg": "./images/minimise.6ced10ac.svg"
 }

@@ -13,7 +13,7 @@
     > .content-element__content > .content-element__title {
         width: 100%;
         margin: 0 0 2rem;
-        padding: 0;
+        padding: 0 3rem; // same indent as the text in the info panel
         color: var(--colour-heading);
         text-transform: none;
         .open-close {
@@ -32,15 +32,20 @@
         min-width: 0;
         height: 100%;
         box-sizing: border-box;
-        padding: 2rem;
+        padding: 3rem;
         border-radius: 2rem;
-        background: var(--colour-rose-storm);
+        background: var(--colour-rose-storm); // same as the work examples overview
         &,
         * {
             color: #fff;
         }
         a {
             text-decoration-color: #fff !important;
+        }
+        h4 {
+            display: inline-block; // shaded label, like <strong> in the overview
+            background: var(--colour-rose-storm-darker);
+            padding: 0.1em 0.4em;
         }
     }
     .work-example-cards {
@@ -86,6 +91,14 @@
         .image-container {
             margin: 0 !important;
             padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+            box-shadow: none;
+            border: none !important;
+            background: transparent !important;
+            overflow: hidden;
+            border-radius: 1rem;
         }
         img,
         .image-container img {
@@ -95,14 +108,15 @@
             height: auto !important;
             margin: 0 !important;
             padding: 0;
-            border: 1px solid var(--colour-image-border);
-            border-radius: 2rem;
+            border: none;
+            box-shadow: none; // the generic .typography image shadow/border must not apply in the frame
+            border-radius: 1rem;
             background: transparent;
             user-select: none;
             -webkit-user-drag: none;
         }
         p.caption {
-            display: none; // captions live on the pictures' alt text; keep the carousel clean
+            display: none; // shown in the info panel instead (see carousel.js)
         }
         &.is-dragging {
             scroll-snap-type: none;
@@ -110,9 +124,32 @@
         }
     }
 
+    // window frame: 2rem border with minimise / maximise / close at the top right
     .carousel-wrap {
         position: relative;
         min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 3rem 2rem 4rem; // top 1.5x, bottom 2x of the 2rem side border
+        border-radius: 2rem;
+        background: var(--colour-light-grey-gravel-fint); // palette grey (#bbb)
+    }
+    .window-buttons {
+        position: absolute;
+        top: 0;
+        right: 2rem; // lines up with the right edge of the image
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        span {
+            width: 1.4rem;
+            height: 1.4rem;
+            background: center / contain no-repeat;
+            &.minimise { background-image: url(../../images/minimise.svg); }
+            &.maximise { background-image: url(../../images/maximise.svg); }
+            &.close { background-image: url(../../images/close.svg); }
+        }
     }
     .carousel-arrow {
         position: absolute;

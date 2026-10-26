@@ -45,9 +45,9 @@
 } --%>
 #splash-screen.level1 {background-color: #f7cd55; }
 #splash-screen.level2 {background-color: #022866; }
-#splash-screen.level3 {background-color: #00ab06; }
+#splash-screen.level3 {background-color: #649979; }
 #splash-screen.level4 {background-color: #3a075a; }
-#splash-screen.level5 {background-color: #555555; }
+#splash-screen.level5 {background-color: #ef5d5d; }
 
 @keyframes splash-fade {
     to { opacity: 0; visibility: hidden; }

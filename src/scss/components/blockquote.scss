@@ -11,7 +11,7 @@
     inset-inline: 0;
     transform: translateY(-50%);
     margin: 0;
-    padding: 0 var(--page-gutter);
+    padding: 0 var(--page-gutter); // mobile gutter (dropped on desktop below)
 
     p {
         display: block;
@@ -83,6 +83,7 @@ main#main blockquote.main-quote p {
 @media (min-width: 1050px) {
     .main-quote {
         transform: none;
+        padding-inline: 0; // main already has its own left/right margin on desktop
         p {
             transform: translateY(-0.65em);
             padding: 0;

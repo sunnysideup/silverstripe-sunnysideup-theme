@@ -103,6 +103,7 @@ body {
   --colour-burned-sunny-side-up-thirty-percent: #e4b10533;
   --colour-organic-egg-yolk: var(--colour-burned-sunny-side-up);
   --colour-sunny-side-up-green: #00ab06;
+  --colour-sunny-side-up-green-2: #1E3B29;
   --colour-sunny-side-up-green-darker: #0f3d11;
   --colour-painty-green: #386548;
   --colour-on-the-fence-green: #81ce86;
@@ -2034,6 +2035,7 @@ main#main blockquote.main-quote p {
 @media (min-width: 1050px) {
   .main-quote {
     transform: none;
+    padding-inline: 0;
   }
   .main-quote p {
     transform: translateY(-0.65em);
@@ -2639,7 +2641,7 @@ footer#footer #theme-selectors {
 .element.sunnysideup__app__elements__workexample > .content-element__content > .content-element__title {
   width: 100%;
   margin: 0 0 2rem;
-  padding: 0;
+  padding: 0 3rem;
   color: var(--colour-heading);
   text-transform: none;
 }
@@ -2655,7 +2657,7 @@ footer#footer #theme-selectors {
   min-width: 0;
   height: 100%;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 2rem;
   background: var(--colour-rose-storm);
 }
@@ -2665,6 +2667,11 @@ footer#footer #theme-selectors {
 }
 .element.sunnysideup__app__elements__workexample .work-example-details a {
   text-decoration-color: #fff !important;
+}
+.element.sunnysideup__app__elements__workexample .work-example-details h4 {
+  display: inline-block;
+  background: var(--colour-rose-storm-darker);
+  padding: 0.1em 0.4em;
 }
 .element.sunnysideup__app__elements__workexample .work-example-cards {
   display: grid;
@@ -2706,6 +2713,14 @@ footer#footer #theme-selectors {
 .element.sunnysideup__app__elements__workexample .work-example-images .image-container {
   margin: 0 !important;
   padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none !important;
+  background: transparent !important;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 .element.sunnysideup__app__elements__workexample .work-example-images img,
 .element.sunnysideup__app__elements__workexample .work-example-images .image-container img {
@@ -2715,8 +2730,9 @@ footer#footer #theme-selectors {
   height: auto !important;
   margin: 0 !important;
   padding: 0;
-  border: 1px solid var(--colour-image-border);
-  border-radius: 2rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 1rem;
   background: transparent;
   user-select: none;
   -webkit-user-drag: none;
@@ -2731,6 +2747,34 @@ footer#footer #theme-selectors {
 .element.sunnysideup__app__elements__workexample .carousel-wrap {
   position: relative;
   min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  background: var(--colour-light-grey-gravel-fint);
+}
+.element.sunnysideup__app__elements__workexample .window-buttons {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.element.sunnysideup__app__elements__workexample .window-buttons span {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: center/contain no-repeat;
+}
+.element.sunnysideup__app__elements__workexample .window-buttons span.minimise {
+  background-image: url(./images/minimise.6ced10ac.svg);
+}
+.element.sunnysideup__app__elements__workexample .window-buttons span.maximise {
+  background-image: url(./images/maximise.1a1177ba.svg);
+}
+.element.sunnysideup__app__elements__workexample .window-buttons span.close {
+  background-image: url(./images/close.e2759bc8.svg);
 }
 .element.sunnysideup__app__elements__workexample .carousel-arrow {
   position: absolute;
@@ -2785,7 +2829,7 @@ footer#footer #theme-selectors {
 }
 @media only screen and (min-width: 450px) {
   .sunnysideup__app__elements__workexampleall .content-element__content .work-example-images {
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 .sunnysideup__app__elements__workexampleall .content-element__content .work-example-images {
@@ -2838,33 +2882,7 @@ footer#footer #theme-selectors {
   padding: 0;
   margin: 0;
   padding-bottom: 1rem;
-  position: relative;
-}
-.sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption h3::after {
-  content: "";
-  position: absolute;
-  inset: -7px;
-  z-index: 1;
-  pointer-events: none;
-  background-color: #ffffff;
-  -webkit-mask-size: 960px 14px;
-  mask-size: 960px 14px;
-  -webkit-mask-position: 0 calc(100% - 0px);
-  mask-position: 0 calc(100% - 0px);
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 11 240 7 Q360 1 480 7 Q600 11.5 720 7 Q840 2 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 11 240 7 Q360 1 480 7 Q600 11.5 720 7 Q840 2 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-}
-.sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption h3:nth-child(3n+2)::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 13 240 7 Q360 3.5 480 7 Q600 11 720 7 Q840 1.5 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 13 240 7 Q360 3.5 480 7 Q600 11 720 7 Q840 1.5 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-}
-.sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption h3:nth-child(3n)::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 12 240 7 Q360 3 480 7 Q600 12.5 720 7 Q840 2.5 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27960%27 height=%2714%27 viewBox=%270 0 960 14%27%3E%3Cpath d=%27M0 7 Q120 12 240 7 Q360 3 480 7 Q600 12.5 720 7 Q840 2.5 960 7%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%274%27/%3E%3C/svg%3E");
-}
-.sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption h3 {
+  border-bottom: 3px solid #fff;
   margin-bottom: 0.5rem;
 }
 .sunnysideup__app__elements__workexampleall .content-element__content .work-example-images .work-example-image .work-example-image-caption .small-line {
