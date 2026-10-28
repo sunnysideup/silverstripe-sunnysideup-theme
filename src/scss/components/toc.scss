@@ -73,9 +73,12 @@ body.has-toc {
 body.has-toc.toc-on {
     .typography {
         #content-below-quote {
+            // only the headings are shown: the same space above and below each one,
+            // measured from the divider line (on top of every block) to the heading
+            // and from the heading to the next divider line
             .element {
-                padding: 0;
-                margin-top: 3rem !important;
+                margin-top: 0 !important;
+                padding: 2.5rem 0 !important;
             }
             margin-bottom: 75vh;
             > * {
@@ -88,12 +91,11 @@ body.has-toc.toc-on {
             .element > div > * {
                 display: none;
             }
-            #SiblingsAndChildren h2,
-            #SiblingsAndChildren h1 {
-                margin-top: 0;
-            }
             h1,
             h2 {
+                margin: 0 !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
                 width: auto !important;
                 display: block !important;
                 &.open-close.icon {
@@ -121,10 +123,4 @@ body.has-toc.toc-on {
 
 .bottom-space {
     margin-bottom: 6rem !important;
-}
-@media (min-width: 1050px) {
-    .toc-on #SiblingsAndChildren h2 {
-        @include sketch-border(0 0 4px 0, $colour_modern_iron);
-        padding-bottom: 2rem;
-    }
 }

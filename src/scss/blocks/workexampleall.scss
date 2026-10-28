@@ -33,7 +33,7 @@
                 }
                 .work-example-image-caption {
                     position: absolute;
-                    background-color: $colour_rose_storm;
+                    background-color: var(--colour-heading);
                     padding: 2rem;
                     border-radius: 1.3rem;
                     opacity: 0;
@@ -72,8 +72,12 @@
                             font-size: 16px;
                         }
                         strong {
-                            background: $colour_rose_storm_darker;
+                            background: var(--colour-burned-sunny-side-up);
                             padding: 0.1em 0.2em;
+                            &,
+                            * {
+                                color: var(--colour-blue-cobalter) !important;
+                            }
                         }
                     }
                 }

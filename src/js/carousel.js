@@ -1,5 +1,5 @@
 // Work example screenshots: window frame, swipeable carousel with arrows,
-// and a "Shown here" caption in the info panel that follows the current slide.
+// and a "Shown" caption in the info panel that follows the current slide.
 // Touch / trackpad swiping is native (CSS scroll-snap); arrows + mouse drag added here.
 
 function setup (track) {
@@ -29,16 +29,28 @@ function setup (track) {
     }
     const captions = slides.map(captionFor)
     let captionText = null
+    let captionCard = null
     if (panel && captions.some(Boolean)) {
         const card = document.createElement('div')
-        card.className = 'card'
-        card.innerHTML = '<h4>Shown here</h4><p></p>'
+        card.className = 'card card--shown'
+        card.innerHTML = '<h4>Shown</h4><p></p>'
         panel.appendChild(card)
         captionText = card.querySelector('p')
+        captionCard = card
+        captionText.textContent = captions[0] || '' // no flash on first load
     }
 
     const slideWidth = () => track.clientWidth + parseFloat(getComputedStyle(track).columnGap || 0)
     const current = () => Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / slideWidth())))
+
+    // briefly highlight the "Shown" label when the slide changes
+    let flashTimer = 0
+    const flash = () => {
+        if (!captionCard) return
+        captionCard.classList.add('is-changing')
+        window.clearTimeout(flashTimer)
+        flashTimer = window.setTimeout(() => captionCard.classList.remove('is-changing'), 900)
+    }
 
     let prev, next
     const update = () => {
@@ -46,7 +58,13 @@ function setup (track) {
             prev.disabled = track.scrollLeft < 4
             next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4
         }
-        if (captionText) captionText.textContent = captions[current()] || ''
+        if (captionText) {
+            const text = captions[current()] || ''
+            if (text !== captionText.textContent) {
+                captionText.textContent = text
+                flash()
+            }
+        }
     }
 
     if (slides.length > 1) {

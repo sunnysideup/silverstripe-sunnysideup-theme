@@ -34,19 +34,33 @@
         box-sizing: border-box;
         padding: 3rem;
         border-radius: 2rem;
-        background: var(--colour-rose-storm); // same as the work examples overview
+        background: #fff;
+        border: 2px solid var(--colour-light-grey-gravel-fint); // #bbb
         &,
         * {
-            color: #fff;
+            color: var(--colour-blue-cobalter);
         }
         a {
-            text-decoration-color: #fff !important;
+            text-decoration-color: var(--colour-blue-cobalter) !important;
         }
         h4 {
-            display: inline-block; // shaded label, like <strong> in the overview
-            background: var(--colour-rose-storm-darker);
-            padding: 0.1em 0.4em;
+            display: inline-block; // shaded label, dark red, white text
+            background: var(--colour-burned-sunny-side-up);
+            padding: 0.25rem 0.5rem !important;
+            &,
+            * {
+                color: #fff;
+            }
         }
+    }
+    // the "Shown" label is yellow and flashes dark green when the slide changes
+    .work-example-details .card--shown h4 {
+        background: var(--colour-burned-sunny-side-up);
+        transition: background-color 0.5s ease;
+    }
+    .work-example-details .card--shown.is-changing h4 {
+        background: var(--colour-sunny-side-up-green-darker);
+        transition-duration: 0.15s;
     }
     .work-example-cards {
         display: grid;
@@ -59,6 +73,7 @@
             }
             p {
                 font-size: 1.8rem;
+                padding-top: 0.5rem;
                 padding-bottom: 0;
             }
         }
@@ -137,7 +152,7 @@
     .window-buttons {
         position: absolute;
         top: 0;
-        right: 2rem; // lines up with the right edge of the image
+        right: 2.7rem;
         height: 3rem;
         display: flex;
         align-items: center;
@@ -161,24 +176,28 @@
         padding: 0;
         border: none;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.85);
         color: var(--colour-blue-cobalter);
-        font-size: 2.6rem;
-        line-height: 1;
+        font-size: 0; // arrow is a background image (same as the menu arrows)
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'23.5%2022.5%2031%2029'%3E%3Cpath%20d%3D'M26%2037H50%20M40%2025L52%2037L40%2049'%20fill%3D'none'%20stroke%3D'%23bbbbbb'%20stroke-width%3D'5'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'/%3E%3C/svg%3E");
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
         cursor: pointer;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         &:hover {
-            background: #fff;
+            background-color: #fff;
         }
         &[disabled] {
             opacity: 0;
             pointer-events: none;
         }
         &.prev {
-            left: 1rem;
+            left: calc(1rem - 1px); // 1px further out
+            scale: -1 1; // same arrow, pointing left
         }
         &.next {
-            right: 1rem;
+            right: calc(1rem - 1px);
         }
     }
 }

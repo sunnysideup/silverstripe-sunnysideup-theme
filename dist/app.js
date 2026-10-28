@@ -633,7 +633,7 @@ _dom_js__WEBPACK_IMPORTED_MODULE_0__.body.classList.remove('body-unloaded');
 /***/ (function() {
 
 // Work example screenshots: window frame, swipeable carousel with arrows,
-// and a "Shown here" caption in the info panel that follows the current slide.
+// and a "Shown" caption in the info panel that follows the current slide.
 // Touch / trackpad swiping is native (CSS scroll-snap); arrows + mouse drag added here.
 
 function setup(track) {
@@ -661,12 +661,15 @@ function setup(track) {
   };
   var captions = slides.map(captionFor);
   var captionText = null;
+  var captionCard = null;
   if (panel && captions.some(Boolean)) {
     var card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = '<h4>Shown here</h4><p></p>';
+    card.className = 'card card--shown';
+    card.innerHTML = '<h4>Shown</h4><p></p>';
     panel.appendChild(card);
     captionText = card.querySelector('p');
+    captionCard = card;
+    captionText.textContent = captions[0] || ''; // no flash on first load
   }
   var slideWidth = function slideWidth() {
     return track.clientWidth + parseFloat(getComputedStyle(track).columnGap || 0);
@@ -674,13 +677,30 @@ function setup(track) {
   var current = function current() {
     return Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / slideWidth())));
   };
+
+  // briefly highlight the "Shown" label when the slide changes
+  var flashTimer = 0;
+  var flash = function flash() {
+    if (!captionCard) return;
+    captionCard.classList.add('is-changing');
+    window.clearTimeout(flashTimer);
+    flashTimer = window.setTimeout(function () {
+      return captionCard.classList.remove('is-changing');
+    }, 900);
+  };
   var prev, next;
   var update = function update() {
     if (prev) {
       prev.disabled = track.scrollLeft < 4;
       next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
     }
-    if (captionText) captionText.textContent = captions[current()] || '';
+    if (captionText) {
+      var text = captions[current()] || '';
+      if (text !== captionText.textContent) {
+        captionText.textContent = text;
+        flash();
+      }
+    }
   };
   if (slides.length > 1) {
     var make = function make(cls, label, char) {
@@ -1353,13 +1373,16 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           e.target.classList.toggle('toc-active');
           if (body.classList.contains('toc-on') === false) {
-            window.location.hash = hash;
+            // update the URL without jumping, then glide to the heading
+            // once the layout has settled (margins/padding transition for ~0.4s).
+            // The heading's scroll-margin-top (CSS) puts it in the vertical middle.
+            window.history.replaceState(null, '', '#' + hash);
             window.setTimeout(function () {
               document.querySelector('#' + hash).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
               });
-            }, 100);
+            }, 450);
           } else {
             window.setTimeout(function () {
               document.querySelector('#toc-1').scrollIntoView({

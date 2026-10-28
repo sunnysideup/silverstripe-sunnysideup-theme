@@ -8,6 +8,7 @@
   "dist/images/7.svg": "./images/7.2a4ee250.svg",
   "dist/images/9.svg": "./images/9.6d568cf1.svg",
   "dist/images/5.svg": "./images/5.c8e04b40.svg",
+  "dist/images/close.svg": "./images/close.e2759bc8.svg",
   "dist/images/8.svg": "./images/8.29aacce3.svg",
   "dist/images/1.svg": "./images/1.1ae5d529.svg",
   "dist/images/6.svg": "./images/6.37a8b6a8.svg",
@@ -15,10 +16,9 @@
   "dist/images/3.svg": "./images/3.5e46335a.svg",
   "dist/images/logo-small-inverted.svg": "./images/logo-small-inverted.2b3f89d8.svg",
   "dist/images/logo-small.svg": "./images/logo-small.05f038e4.svg",
+  "dist/images/maximise.svg": "./images/maximise.1a1177ba.svg",
+  "dist/images/minimise.svg": "./images/minimise.6ced10ac.svg",
   "dist/app.js.map": "./app.js.map",
   "dist/main.css.map": "./main.css.map",
-  "dist/runtime.js.map": "./runtime.js.map",
-  "dist/images/close.svg": "./images/close.e2759bc8.svg",
-  "dist/images/maximise.svg": "./images/maximise.1a1177ba.svg",
-  "dist/images/minimise.svg": "./images/minimise.6ced10ac.svg"
+  "dist/runtime.js.map": "./runtime.js.map"
 }

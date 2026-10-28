@@ -51,7 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         e.target.classList.toggle('toc-active')
                         if (body.classList.contains('toc-on') === false) {
-                            window.location.hash = hash
+                            // update the URL without jumping, then glide to the heading
+                            // once the layout has settled (margins/padding transition for ~0.4s).
+                            // The heading's scroll-margin-top (CSS) puts it in the vertical middle.
+                            window.history.replaceState(null, '', '#' + hash)
                             window.setTimeout(function () {
                                 document
                                     .querySelector('#' + hash)
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         behavior: 'smooth',
                                         block: 'start'
                                     })
-                            }, 100)
+                            }, 450)
                         } else {
                             window.setTimeout(function () {
                                 document

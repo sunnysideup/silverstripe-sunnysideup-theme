@@ -60,3 +60,10 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
         }
     }
 }
+
+// jumping to a block via the table of contents puts its heading exactly in the
+// vertical middle of the screen (same as the arrow in the hero quote)
+#content-below-quote h1[id^="toc-"],
+#content-below-quote h2[id^="toc-"] {
+    scroll-margin-top: 50dvh;
+}
