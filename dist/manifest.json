@@ -17,5 +17,8 @@
   "dist/images/logo-small-inverted.svg": "./images/logo-small-inverted.2b3f89d8.svg",
   "dist/images/logo-small.svg": "./images/logo-small.05f038e4.svg",
   "dist/images/maximise.svg": "./images/maximise.1a1177ba.svg",
-  "dist/images/minimise.svg": "./images/minimise.6ced10ac.svg"
+  "dist/images/minimise.svg": "./images/minimise.6ced10ac.svg",
+  "dist/app.js.map": "./app.js.map",
+  "dist/main.css.map": "./main.css.map",
+  "dist/runtime.js.map": "./runtime.js.map"
 }

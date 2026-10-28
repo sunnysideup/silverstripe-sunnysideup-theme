@@ -38,8 +38,9 @@ main#main {
     position: relative;
     z-index: 2;
     // the hero (quote) must have faded out completely before the first text scrolls into view:
-    // the viewport is 100vh tall, the fade takes --header-range, plus a little breathing room
-    padding-top: calc(var(--header-range) + 100vh + 15vh);
+    // the viewport is 100vh tall and the fade takes --header-range, so the first text only
+    // appears as the last of the quote disappears
+    padding-top: calc(var(--header-range) + 100vh);
     padding-bottom: 2rem;
 }
 footer#footer {
