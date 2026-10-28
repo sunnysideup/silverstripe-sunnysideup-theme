@@ -44,6 +44,13 @@
             &.smaller {
                 font-size: 70%;
             }
+            // not hovered: same colour as the quote (white on the rocket hero),
+            // not the generic link colour. Must stay above the hover rule.
+            &,
+            &:link,
+            &:visited {
+                color: var(--colour-quote);
+            }
             // hover: yellow (beats the generic link and quote colours)
             &:hover,
             &:hover * {
