@@ -46,7 +46,7 @@
                 </picture>
             </a>
             <% end_if %>
-            <%-- <img class="pride-flag" src="$resourceURL(/themes/sun/dist/images/progress-pride-flag.webp)" alt="" title="We like diversity" width="1000" height="635" loading="lazy" /> --%>
+            <%-- <img class="pride-flag" src="$resourceURL(/themes/sun/dist/images/progress-pride-flag.webp)" alt="everyone is welcome" title="everyone is welcome" width="1000" height="635" loading="lazy" /> --%>
 
         </div>
     </div>
