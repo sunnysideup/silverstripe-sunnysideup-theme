@@ -122,9 +122,9 @@
   --title-gap: 3vw;
 
   // --- hero quote ---
-  --quote-size: clamp(3rem, 3vw + 3.4vh + 1rem, 9rem);
+  --quote-size: clamp(3rem, 3.5vw + 3.5vh + 1rem, 15rem);
   --quote-line-height: 1.12;
-  --quote-max-width: 22ch;
+  --quote-max-width: 85%;
 
   // --- overlays ---
   --overlay-color-blue: #02286699;
