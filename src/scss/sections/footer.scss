@@ -5,6 +5,10 @@ footer#footer {
     padding-bottom: 6vh;
     position: relative;
     z-index: 35;
+    * {
+        font-size: 2rem;
+        color: $colour_white;
+    }
     div.col {
         padding-bottom: 2vh;
         text-align: center;
@@ -47,10 +51,7 @@ footer#footer {
         padding-bottom: 1rem;
         display: none;
     }
-    * {
-        font-size: 2rem;
-        color: $colour_white;
-    }
+
     a {
         color: $colour_white;
         text-decoration: none;
@@ -75,8 +76,9 @@ footer#footer {
     // small flag under the partner logos (a real <img>, see Footer.ss)
     .pride-flag {
         display: block;
-        width: 6rem;
-        height: auto;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
         margin: 2rem auto 0; // centred on mobile, like the logos (left aligned from 450px)
     }
 

@@ -87,3 +87,4 @@
     </filter>
   </defs>
 </svg>
+<% include WonkyLinesSprite %>
