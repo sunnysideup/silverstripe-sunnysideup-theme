@@ -39,7 +39,7 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
         margin: 0 auto;
         z-index: 1;
         pointer-events: none;
-        color: color-mix(in srgb, var(--colour-modern-iron) 35%, black);
+        color: var(--colour-separator) !important;
     }
 
     // titles are part of the block, not part of the content flow

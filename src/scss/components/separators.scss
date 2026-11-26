@@ -24,11 +24,15 @@
   border: 0 !important;
   color: inherit;
   overflow: visible;
+  opacity: 0.5;
   background:
     linear-gradient(90deg,
+      transparent,
+      var(--sep-line) 8%,
       var(--sep-line) calc(50% - var(--sep-gap) * var(--sep-scale)),
       transparent 0 calc(50% + var(--sep-gap) * var(--sep-scale)),
-      var(--sep-line) 0)
+      var(--sep-line) 0 92%,
+      transparent)
     center / 100% 2px no-repeat;
 }
 
