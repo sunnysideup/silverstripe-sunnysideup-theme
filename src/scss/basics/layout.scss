@@ -58,12 +58,11 @@ body.no-rocket-show.no-quote {
     }
 }
 
-// simple layout: plain page, main starts at 50% of the screen height.
-body.simple-layout.no-rocket-show {
-    background-color: $colour_light_grey_aotrom;
-    #main {
-        padding: 50vh 0 2rem;
-    }
+// simple layout: plain page, main keeps its default top padding (see body.no-rocket-show.no-quote).
+body.simple-layout.no-rocket-show[data-theme] {
+    // !important and [data-theme] to beat body[data-theme=theme-sun]:not(.has-bg-image-loaded);
+    // --colour-page follows the sun / moon theme
+    background-color: var(--colour-page) !important;
     #BackgroundImage,
     .main-quote {
         display: none;

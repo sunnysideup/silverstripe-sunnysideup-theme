@@ -26,5 +26,10 @@ import './js/carousel'
 import './js/print'
 import './js/battery-saver'
 
-// slideshow block (vendor) - leave alone
-import 'PROJECT_ROOT_DIR/vendor/sunnysideup/slideshowblock/client/src/main';
+// slideshow block (vendor) - JS + SCSS, only if the package is installed
+const slideshow = import.meta.webpackContext('PROJECT_ROOT_DIR/vendor', {
+  recursive: true,
+  regExp: /^\.\/sunnysideup\/slideshowblock\/client\/src\/(main\.js|scss\/main\.scss)$/,
+  exclude: /\/vendor\/(?!sunnysideup(\/slideshowblock(\/client(\/src(\/.*)?)?)?)?$)/,
+});
+slideshow.keys().forEach(slideshow);
