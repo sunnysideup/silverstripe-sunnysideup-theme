@@ -267,7 +267,7 @@
             }
         }
     }
-    hr {
+    hr:not(.sep) {
         height: 0;
         border-top: 4px dotted var(--colour-rule);
         border-bottom: none;

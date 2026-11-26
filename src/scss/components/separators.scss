@@ -9,35 +9,33 @@
    ========================================================================== */
 
 .sep {
-  --sep-line: color-mix(in oklab, currentColor 22%, transparent);
-  --sep-ink: color-mix(in oklab, currentColor 55%, transparent);
+  --sep-line: color-mix(in oklab, currentColor 70%, transparent);
+  --sep-ink: currentColor;
   --sep-gap: 1.75rem;
-  --sep-width: min(100%, 28rem);
+  --sep-width: 100%;
+  --sep-scale: 2.4;
 
   display: grid;
   place-items: center;
   inline-size: var(--sep-width);
-  block-size: 1.25rem;
+  block-size: calc(1.25rem * var(--sep-scale)) !important;
   margin: 2.5rem auto;
   padding: 0;
-  border: 0;
+  border: 0 !important;
   color: inherit;
   overflow: visible;
   background:
     linear-gradient(90deg,
-      transparent,
-      var(--sep-line) 15%,
-      var(--sep-line) calc(50% - var(--sep-gap)),
-      transparent 0 calc(50% + var(--sep-gap)),
-      var(--sep-line) 0 85%,
-      transparent)
-    center / 100% 1px no-repeat;
+      var(--sep-line) calc(50% - var(--sep-gap) * var(--sep-scale)),
+      transparent 0 calc(50% + var(--sep-gap) * var(--sep-scale)),
+      var(--sep-line) 0)
+    center / 100% 2px no-repeat;
 }
 
 .sep::after {
   content: "";
-  inline-size: var(--sep-w, 0);
-  block-size: var(--sep-h, 0);
+  inline-size: calc(var(--sep-w, 0px) * var(--sep-scale));
+  block-size: calc(var(--sep-h, 0px) * var(--sep-scale));
   background: var(--sep-ink);
   -webkit-mask: var(--sep-mask, none) center / contain no-repeat;
   mask: var(--sep-mask, none) center / contain no-repeat;

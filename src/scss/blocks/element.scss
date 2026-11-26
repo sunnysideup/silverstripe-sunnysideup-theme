@@ -25,7 +25,7 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
 .element:not(#{$element-slideshow}) {
     position: relative;
     margin-top: var(--element-gap);
-    padding-top: var(--element-padding-top);
+    padding-top: calc(var(--element-padding-top) + 6rem); // room below the separator
     clear: both;
     scroll-margin-top: 10rem; // so anchor links do not hide behind the header
 
@@ -39,7 +39,7 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
         margin: 0 auto;
         z-index: 1;
         pointer-events: none;
-        color: var(--colour-divider);
+        color: color-mix(in srgb, var(--colour-modern-iron) 35%, black);
     }
 
     // titles are part of the block, not part of the content flow
