@@ -1,28 +1,16 @@
-const debounce = (callback, timeout, _this) => {
-    let timer
-    return e => {
-        const _that = this
-        if (timer) clearTimeout(timer)
-        timer = setTimeout(() => {
-            callback.call(_this || _that, e)
-        }, timeout)
+// After 60 seconds without any interaction, show the "battery saving" screen.
+const overlay = document.getElementById('battery-saver-div')
+const IDLE_AFTER = 60000
+
+if (overlay) {
+    let timer = 0
+    const arm = () => {
+        window.clearTimeout(timer)
+        timer = window.setTimeout(() => { overlay.style.display = 'flex' }, IDLE_AFTER)
     }
+    overlay.addEventListener('click', () => { overlay.style.display = 'none' })
+    ;['pointerdown', 'keydown', 'scroll'].forEach((type) =>
+        window.addEventListener(type, arm, { passive: true })
+    )
+    arm()
 }
-
-const userAction = debounce(function () {
-    const fullScreenDiv = document.getElementById('battery-saver-div')
-
-    // Show the div when the document is loaded
-    fullScreenDiv.style.display = 'flex'
-
-    // Add click event listener
-    fullScreenDiv.addEventListener('click', function () {
-        fullScreenDiv.style.display = 'none'
-    })
-}, 60000)
-
-document.addEventListener('click', userAction, false)
-document.addEventListener('scroll', userAction, false)
-document.addEventListener('popstate', userAction, false)
-
-userAction()

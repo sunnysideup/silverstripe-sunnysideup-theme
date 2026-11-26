@@ -1,21 +1,50 @@
+// ---------------------------------------------------------------------
+// MOON THEME
+// Mostly a set of variable overrides (see _definitions/tokens.scss):
+// components read the variables, so nothing needs repeating here.
+// Slideshow overrides live in theme-moon-slideshow.scss (do not touch).
+// ---------------------------------------------------------------------
 body.theme-moon {
-    background-color: $colour_sunny_side_up_dark_purple;
+    --colour-page: #{$colour_sunny_side_up_dark_purple};
+    --colour-text: #{$colour_hypocrite_yellow_lighter};
+    --colour-link: #{$colour_hypocrite_yellow_lighter};
+    --colour-link-hover: #{$colour_burned_sunny_side_up};
+    --colour-link-line: #{$colour_sunny_side_up_green};
+    --colour-link-line-hover: #{$colour_burned_sunny_side_up};
+    --link-weight: 600;
+    --colour-heading: #{$colour_hypocrite_yellow_lighter};
+    --colour-marker: #{$colour_hypocrite_yellow_lighter};
+    --colour-highlight: #{$colour_sunny_side_up_green_darker};
+    --colour-divider: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-rule: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-border: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-image-border: #{$colour_burned_sunny_side_up_thirty_percent};
+    --colour-pre-bg: #{$colour_blue_cobalter};
+    --colour-pre-text: #{$colour_white};
+    --colour-cell-bg: #{$colour_white};
+    --colour-cell-text: #{$colour_darker_grey_catch_22};
+    --colour-table-head-text: #{$colour_hypocrite_yellow_lighter};
+    --colour-quote: #{$colour_overcast_sunny_side_up};
+    --colour-footer-bg: #{$colour_boot_black_semi};
+    --colour-footer-accent: #{$colour_ekos_green};
+    --colour-button-bg: #{$colour_burned_sunny_side_up};
+    --colour-card-text: #fff;
+    --colour-caption-link-text: #333;
+    --colour-caption-link-line: #{$colour_burned_sunny_side_up_thirty_percent};
+
+    background-color: var(--colour-page) !important;
+
+    // same specificity as before, so vendor styles (incl. the slideshow) are overruled as they always were
+    &,
     * {
-        color: $colour_burned_sunny_side_up;
+        color: var(--colour-text);
     }
-    #header {
-        #logo {
-            background-image: url(./images/logo-small-inverted.svg);
-        }
-        span {
-            color: $colour_burned_sunny_side_up;
-        }
-        h1 {
-            color: $colour_burned_sunny_side_up;
-        }
-        * {
-            color: $colour_burned_sunny_side_up;
-        }
+    .typography :where(.sunnysideup__slideshowblock__blocks__slideshowblock) * {
+        color: var(--colour-text);
+    }
+
+    #header #logo {
+        background-image: url(./images/logo-small-inverted.svg);
     }
     a[data-add-class="theme-moon"] {
         text-decoration: none !important;
@@ -27,163 +56,26 @@ body.theme-moon {
             stroke: $colour_sunny_side_up_green_darker !important;
         }
     }
-    .typography {
-        * {
-            color: $colour_burned_sunny_side_up;
-        }
-        a:link,
-        a:visited {
-            color: $colour_sunny_side_up_green !important;
-        }
-        h1,
-        h2 {
-            text-transform: uppercase;
-            color: $colour_blue_cobalter;
-            border-bottom-color: $colour_burned_sunny_side_up !important;
-        }
-        h2 {
-            color: $colour_burned_sunny_side_up !important;
-            span {
-                color: $colour_burned_sunny_side_up;
-                i {
-                    color: $colour_burned_sunny_side_up;
-                }
-            }
-        }
-        h1,
-        h2 {
-            &:before {
-                border-color: $colour_burned_sunny_side_up !important;
-            }
-        }
-        pre {
-            background-color: $colour_blue_cobalter;
-            color: $colour_white;
-        }
-        th {
-            color: $colour_burned_sunny_side_up;
-        }
-        td {
-            background-color: $colour_white;
-            color: $colour_darker_grey_catch_22;
-            * {
-                color: $colour_darker_grey_catch_22 !important;
-            }
-        }
-        hr {
-            border-color: $colour_burned_sunny_side_up !important;
-        }
-        .media,
-        .image-container,
-        blockquote p {
-            background-color: transparent;
-            // background: linear-gradient(to left, $colour_law_firm_report_cover, $colour_outer_space_love, $colour_law_firm_report_cover);
-            background: transparent;
-            border-color: transparent;
-        }
-        img {
-            border-color: $colour_burned_sunny_side_up;
-        }
-        li {
-            &::marker {
-                // color: $colour_burned_sunny_side_up;
-            }
-        }
-    }
-
-    form {
-        * {
-            color: $colour_law_firm_report_cover !important;
-        }
-        .middleColumn {
-            input,
-            textarea,
-            select {
-                border-bottom-color: $colour_law_firm_report_cover !important;
-            }
-        }
-        span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover !important;
-        }
-        .btn-toolbar {
-            input {
-                background: $colour_burned_sunny_side_up;
-            }
-        }
-    }
-    .sunnysideup__app__elements__workexample {
-        .content-element__content {
-            h3 {
-                color: $colour_burned_sunny_side_up !important;
-            }
-            .dotted-line {
-                border-color: $colour_burned_sunny_side_up;
-            }
-            .card-holder {
-                color: #fff;
-                * {
-                    color: #fff;
-                }
-                border-color: $colour_burned_sunny_side_up;
-            }
-            .work-example-images {
-                p.caption {
-                    a {
-                        color: #333 !important;
-                        &:link,
-                        &:visited {
-                            color: #333 !important;
-                            border-color: $colour_burned_sunny_side_up;
-                        }
-                    }
-                }
-            }
-        }
-    }
     #Breadcrumbs {
-        border-color: $colour_burned_sunny_side_up !important;
+        border-color: var(--colour-border) !important;
     }
     footer#footer {
-        background-color: $colour_boot_black_semi;
-        img {
-            // filter: invert(1);
-        }
-        * {
-            color: $colour_white;
-        }
-        p {
-            color: $colour_white;
-        }
-        li.current a,
-        a:hover {
-            color: $colour_ekos_green !important;
-        }
-        #theme-selectors {
-            svg {
-                fill: $colour_white;
-                &:hover {
-                    fill: $colour_ekos_green !important;
-                }
+        #theme-selectors svg {
+            fill: $colour_white;
+            &:hover {
+                fill: var(--colour-footer-accent) !important;
             }
-            #theme-moon {
-                svg {
-                    fill: $colour_ekos_green !important;
-                }
-            }
+        }
+        #theme-moon svg {
+            fill: var(--colour-footer-accent) !important;
         }
     }
     &.past-header {
         #header {
-            border-color: $colour_burned_sunny_side_up;
+            border-color: #fff !important;
             background-color: $colour_burned_sunny_side_up;
-            // &:before {
-            //     border-top-color:  #000000c4;
-            // }
             * {
                 color: #fff;
-            }
-            .page-title {
-                color: $colour_white;
             }
         }
         #nav {
@@ -193,17 +85,9 @@ body.theme-moon {
     #BackgroundVideo {
         background-color: $colour_black;
     }
-    main#main {
-        blockquote {
-            p {
-                color: $colour_overcast_sunny_side_up !important;
-                * {
-                    color: $colour_overcast_sunny_side_up !important;
-                }
-            }
-        }
-    }
 }
+
+/** importantly this applies top to bottom */
 body[data-theme="theme-moon"] {
     background-color: $colour_sunny_side_up_dark_purple !important;
     &.menu-on {
@@ -267,3 +151,17 @@ body[data-theme="theme-moon"] {
         }
     }
 }
+body.theme-moon.has-bg-image-loaded {
+    #header {
+        * {
+            color: $colour_burned_sunny_side_up;
+        }
+    }
+}
+
+// This always applies - even with the rocket overrule
+body[data-theme="theme-moon"] {
+    background-color: $colour_sunny_side_up_dark_purple !important;
+}
+
+

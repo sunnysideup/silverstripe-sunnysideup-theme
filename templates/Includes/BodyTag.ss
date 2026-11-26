@@ -1,7 +1,7 @@
 <body
     class="
-        theme-rocket title-colour-$TitleColour
-        <% if $NoRocketShow %>no-rocket-show<% else %>has-rocket-show<% end_if %>
+        title-colour-$TitleColour
+        <% if $NoRocketShow %>no-rocket-show<% else %>has-rocket-show theme-rocket<% end_if %>
         <% if $HasQuote %>has-quote<% else %>no-quote<% end_if %>
         <% if $HasVideo %>has-video<% else %>no-video<% end_if %>
     "

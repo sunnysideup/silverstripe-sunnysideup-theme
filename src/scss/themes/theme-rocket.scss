@@ -1,52 +1,58 @@
 body {
     transition: background-color 0.3s ease;
-    background-color: $colour_yep_thats_grey;
-    &.has-bg-image-loaded {
-        background-color: #55555500;
+    background-color: var(--colour-yep-thats-grey);
+}
+// forms stay readable on the dark moon background and over the rocket photo
+body:is(.theme-moon, .theme-rocket) form {
+    * {
+        color: var(--colour-form-text) !important;
+    }
+    .middleColumn {
+        input,
+        textarea,
+        select {
+            border-bottom-color: var(--colour-form-text) !important;
+        }
+    }
+    span.readonly {
+        border-bottom-color: var(--colour-form-text) !important;
+    }
+    .btn-toolbar input {
+        background: var(--colour-button-bg);
     }
 }
+
+// ---------------------------------------------------------------------
+// ROCKET THEME (hero photo at the top and bottom of the page)
+// Variable overrides first, specific layout rules below.
+// ---------------------------------------------------------------------
 body.theme-rocket {
+    --colour-quote: #{$colour_white};
+    --quote-glow: #000;
+    --colour-footer-bg: #{$colour_blue_cobalter};
+    --colour-button-bg: #{$colour_hypocrite_yellow};
+
     &.has-video {
         background-color: $colour_black;
     }
-    &.header-0 {
-        background-color: $colour_yep_thats_grey;
+    &.footer-visible {
+        --overlay-color-blue: transparent;
+        --overlay-color-yellow: transparent;
+        --overlay-color-purple: transparent;
+        --overlay-color-green: transparent;
     }
 
-    #header {
-        * {
-            color: $colour_sunny_side_up_yellow;
-        }
-    }
     a[data-add-class="theme-rocket"] {
         text-decoration: none !important;
     }
     #main {
-        blockquote {
+        blockquote.main-quote {
             position: fixed;
             margin-top: 0 !important;
-            p {
-                filter: drop-shadow(0 0 6px #000);
-                background: none;
-                color: $colour_white !important;
-                * {
-                    color: $colour_white !important;
-                }
-            }
         }
-
         #content-below-quote {
             background-color: transparent;
             opacity: 1;
-            * {
-                color: #fff;
-            }
-            h1,
-            h2 {
-                &:before {
-                    border-top-color: transparent;
-                }
-            }
             a,
             a:link,
             a:visited {
@@ -57,52 +63,16 @@ body.theme-rocket {
             border: none;
             background: transparent;
         }
-        // background-color: #00000037;
-    }
-    #BackgroundImage.has-bg-image-loaded {
-        opacity: 1;
-    }
-
-    form {
-        * {
-            color: $colour_law_firm_report_cover !important;
-        }
-        .middleColumn {
-            input,
-            textarea,
-            select {
-                border-bottom-color: $colour_law_firm_report_cover !important;
-            }
-        }
-        span.readonly {
-            border-bottom-color: $colour_law_firm_report_cover !important;
-        }
-        .btn-toolbar {
-            input {
-                background: $colour_hypocrite_yellow;
-            }
-        }
     }
     #Breadcrumbs {
         border-color: $colour_white !important;
     }
-    #footer {
-        background-color: $colour_purple_spirituality_in_the_sun;
-        * {
-            color: $colour_white;
+    #footer #theme-selectors {
+        svg {
+            fill: $colour_white;
         }
-        p {
-            color: $colour_white;
-        }
-        #theme-selectors {
-            svg {
-                fill: $colour_white;
-            }
-            #theme-rocket {
-                svg {
-                    fill: $colour_sunny_side_up_yellow;
-                }
-            }
+        #theme-rocket svg {
+            fill: $colour_sunny_side_up_yellow;
         }
     }
     &.past-header {
@@ -124,7 +94,7 @@ body.theme-rocket {
         }
         &.past-header {
             #header {
-                h1 {
+                .logo-header {
                     background-color: transparent;
                 }
             }
@@ -132,8 +102,11 @@ body.theme-rocket {
     }
 }
 
-@media only screen and (min-width: 1050px) {
+@media (min-width: 1050px) {
     body.theme-rocket {
+        main#main blockquote.main-quote {
+            margin-inline: var(--page-offset-left) var(--page-offset-right);
+        }
         #nav {
             background-color: $colour_white_ten_percent;
         }
@@ -142,37 +115,10 @@ body.theme-rocket {
                 background-color: $colour_sunny_side_up_yellow;
             }
         }
-        main#main {
-            blockquote.main-quote {
-                margin-right: 7vw;
-                margin-left: calc(19vw + 7vw);
-            }
-        }
-    }
-}
-@media only screen and (min-width: 1350px) {
-    body.theme-rocket {
-        main#main {
-            blockquote.main-quote {
-                margin-right: 11vw;
-                margin-left: calc(19vw + 11vw);
-            }
-        }
     }
 }
 
 body.menu-on {
-    #header * {
-        color: $colour_blue_cobalter !important;
-    }
-}
-
-body.theme-rocket.title-colour-yellow {
-    #header * {
-        color: $colour_sunny_side_up_yellow;
-    }
-}
-body.theme-rocket.title-colour-blue {
     #header * {
         color: $colour_blue_cobalter !important;
     }
@@ -186,3 +132,4 @@ body.theme-rocket.title-colour-blue {
         }
     }
 }
+

@@ -1,17 +1,21 @@
 * {
-    color: $colour_outer_space_love;
+    color: var(--colour-text);
+}
+html {
     scroll-behavior: smooth;
 }
-a {
-    color: $colour_outer_space_love;
-    &:link {
-        color: $colour_outer_space_love;
-    }
-    &:visited {
-        color: $colour_outer_space_love;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
-//all items in main with id set scroll-margin-top higher
-main *[id] {
+a,
+a:link,
+a:visited {
+    color: var(--colour-link);
+}
+
+// headings and elements with an id: keep them clear of the fixed header on anchor jumps
+main [id] {
     scroll-margin-top: 10rem;
 }

@@ -4,16 +4,31 @@ footer {
         a {
             text-decoration: none;
             display: inline-block;
-            margin-right: 2rem;
+            margin-right: 3rem;
             opacity: 0.77;
             svg {
-                height: 20px !important;
-                width: 20px !important;
+                height: 4rem !important;
+                width: 4rem !important;
                 fill: $colour_white;
                 &:hover {
                     fill: $colour_sunny_side_up_yellow !important;
                 }
             }
+        }
+    }
+}
+body[data-theme="theme-sun"] {
+    #footer #theme-selectors #theme-sun {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
+        }
+    }
+}
+
+body[data-theme="theme-moon"] {
+    #footer #theme-selectors #theme-moon {
+        svg {
+            fill: $colour_sunny_side_up_yellow;
         }
     }
 }

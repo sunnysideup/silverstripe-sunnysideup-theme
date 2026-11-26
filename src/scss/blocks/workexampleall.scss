@@ -4,13 +4,14 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 720px), 1fr));
+            @media only screen and (min-width: 450px) {
+                grid-template-columns: repeat(auto-fit, minmax(min(350px, 680px), 1fr));
+            }
             justify-content: space-between; /* spread columns to fill row */
             gap: 5rem; /* vertical spacing (and fallback) */
             .work-example-image {
                 position: relative;
-                min-width: 280px;
-                max-width: 520px;
                 cursor: zoom-in;
                 a {
                     filter: none;
@@ -32,7 +33,7 @@
                 }
                 .work-example-image-caption {
                     position: absolute;
-                    background-color: $colour_rose_storm;
+                    background-color: var(--colour-heading);
                     padding: 2rem;
                     border-radius: 1.3rem;
                     opacity: 0;
@@ -44,13 +45,18 @@
                     display: flex;
                     flex-direction: column;
                     flex-wrap: nowrap;
-                    justify-content: space-evenly;
+                    justify-content: center;
+                    gap: 0.5rem;
+
                     h3 {
                         font-size: 20px;
                         line-height: 1;
                         color: #fff !important;
                         padding: 0;
                         margin: 0;
+                        padding-bottom: 1rem;
+                        border-bottom: 3px solid #fff;
+                        margin-bottom: 0.5rem;
                     }
                     .small-line {
                         pointer-events: none;
@@ -61,6 +67,17 @@
                         }
                         a {
                             text-decoration: underline;
+                        }
+                        @media only screen and (min-width: 450px) {
+                            font-size: 16px;
+                        }
+                        strong {
+                            background: var(--colour-burned-sunny-side-up);
+                            padding: 0.1em 0.2em;
+                            &,
+                            * {
+                                color: var(--colour-blue-cobalter) !important;
+                            }
                         }
                     }
                 }

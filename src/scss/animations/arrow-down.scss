@@ -1,0 +1,39 @@
+.arrow-down {
+    --beat-delay: 2.5s;     /* initial pause */
+    --beat-duration: 1.4s;  /* one full "lub-dub" plus rest */
+    --beat-distance: 8px;   /* how far the strong beat pulls down */
+
+    rotate: 90deg;
+    transform-origin: center;
+    animation: heartbeat var(--beat-duration) var(--beat-delay) infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        translate: 0 0;
+        animation-timing-function: ease-out;
+    }
+    12% {   /* "lub": strong pull */
+        translate: 0 var(--beat-distance);
+        animation-timing-function: ease-in;
+    }
+    24% {
+        translate: 0 0;
+        animation-timing-function: ease-out;
+    }
+    36% {   /* "dub": softer pull */
+        translate: 0 calc(var(--beat-distance) * 0.6);
+        animation-timing-function: ease-in-out;
+    }
+    55%,
+    100% {  /* rest */
+        translate: 0 0;
+    }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    .arrow-down {
+        animation: none;
+    }
+}

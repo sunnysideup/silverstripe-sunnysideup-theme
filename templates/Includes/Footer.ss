@@ -46,6 +46,7 @@
                 </picture>
             </a>
             <% end_if %>
+            <img class="pride-flag" src="$resourceURL(/themes/sun/dist/images/progress-pride-flag.webp)" alt="everyone is welcome" title="everyone is welcome" width="1000" height="635" loading="lazy" />
 
         </div>
     </div>
@@ -56,3 +57,34 @@
         This website has gone into battery saving mode. This is a small part of our effort to reduce climate impact. Click to return to website.
     </p>
 </div>
+<%-- funny borders --%>
+<svg style="width: 0; height: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+  <defs>
+    <filter id="smooth-sketch-1">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" seed="1" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+    <filter id="smooth-sketch-2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" seed="42" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+    <filter id="smooth-sketch-3">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" seed="99" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+    <filter id="smooth-sketch-4">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" seed="147" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+    <filter id="smooth-sketch-5">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" seed="210" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="1" />
+    </filter>
+  </defs>
+</svg>
+<% include WonkyLinesSprite %>

@@ -1,0 +1,59 @@
+// Slideshow block overrides for the moon theme.
+// Kept byte-for-byte as it was in theme-moon.scss - do not edit.
+body.theme-moon {
+    .sunnysideup__slideshowblock__blocks__slideshowblock {
+        .slideshow {
+            background: transparent !important;
+        }
+
+        .sunnysideup__slideshowblock__blocks__slideshowblock .slideshow-slide__heading mark {
+            background: $colour_overcast_sunny_side_up !important;
+            color: $colour_sunny_side_up_dark_purple !important;
+        }
+        .slideshow-title__pill {
+            color: $colour_sunny_side_up_dark_purple !important;
+        }
+        mark {
+            background: $colour_green !important;
+        }
+        .slideshow-card * {
+            color: $colour_sunny_side_up_dark_purple !important;
+        }
+        .slideshow-flow__node {
+            * {
+                color: $colour_sunny_side_up_dark_purple !important;
+            }
+        }
+
+        .slideshow-flow__node.slideshow-flow__node--highlight,
+        .slideshow-cards .slideshow-card--highlight {
+            * {
+                color: $colour_overcast_sunny_side_up !important;
+            }
+        }
+        .slideshow-pricing__band {
+            * {
+                color: $colour_sunny_side_up_dark_purple !important;
+            }
+        }
+
+    }
+}
+
+:where(body.theme-moon .slideshow) {
+//   --slideshow-surface: #fff;
+//   --slideshow-surface-2: #faf6ec;
+//   --slideshow-text: #1b1b1b;
+  --slideshow-muted: #fff!important;
+//   --slideshow-muted-half: color-mix(in srgb, var(--slideshow-muted) 30%, transparent);
+//   --slideshow-line: #e9e3d4;
+//   --slideshow-accent: #f6b21b;
+//   --slideshow-accent-ink: #1b1b1b;
+//   --slideshow-accent-soft: color-mix(in srgb, var(--slideshow-accent) 18%, transparent);
+//   --slideshow-warning: #c2410c;
+//   --slideshow-warning-soft: color-mix(in srgb, var(--slideshow-warning) 10%, transparent);
+//   --slideshow-radius: 1.25rem;
+//   --slideshow-radius-sm: 0.75rem;
+//   --slideshow-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+//   --slideshow-slide-height: clamp(32rem, 72vh, 42rem);
+}

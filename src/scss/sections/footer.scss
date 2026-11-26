@@ -1,10 +1,14 @@
 footer#footer {
-    background-color: $colour_yep_thats_grey_semi;
+    background-color: var(--colour-footer-bg);
     padding-top: 6vh;
     padding-right: 6vw;
     padding-bottom: 6vh;
     position: relative;
     z-index: 35;
+    * {
+        font-size: 2rem;
+        color: $colour_white;
+    }
     div.col {
         padding-bottom: 2vh;
         text-align: center;
@@ -47,10 +51,7 @@ footer#footer {
         padding-bottom: 1rem;
         display: none;
     }
-    * {
-        font-size: 2rem;
-        color: $colour_white;
-    }
+
     a {
         color: $colour_white;
         text-decoration: none;
@@ -61,15 +62,24 @@ footer#footer {
             color: $colour_white;
         }
         &:hover {
-            color: $colour_sunny_side_up_yellow;
+            color: var(--colour-footer-accent);
         }
     }
     li.current a {
-        color: $colour_sunny_side_up_yellow;
+        color: var(--colour-footer-accent);
         font-weight: 600;
     }
     li.section a {
         font-weight: 600;
+    }
+
+    // small flag under the partner logos (a real <img>, see Footer.ss)
+    .pride-flag {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin: 2rem auto 0; // centred on mobile, like the logos (left aligned from 450px)
     }
 
     .image-holder {

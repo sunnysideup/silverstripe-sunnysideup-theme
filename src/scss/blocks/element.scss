@@ -1,0 +1,99 @@
+// ---------------------------------------------------------------------
+// ELEMENTAL BLOCKS
+//
+//   .element
+//     .content-element__content
+//       h2.content-element__title      <- column 1 (from 900px)
+//       p, ul, img, ...                <- column 2
+//
+// - Every block gets ONE divider on top (wonky line on ::before, one of 12 unique shapes).
+// - The slideshow block is deliberately excluded: it is left alone.
+// ---------------------------------------------------------------------
+$element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
+
+#content-below-quote {
+    min-height: 70vh;
+    // jumping here (the arrow in the hero quote) puts the first line of text
+    // exactly in the vertical middle of the screen
+    scroll-margin-top: calc(50dvh - var(--element-padding-top));
+}
+
+.element:not(#{$element-slideshow}) {
+    position: relative;
+    margin-top: var(--element-gap);
+    padding-top: var(--element-padding-top);
+    clear: both;
+    scroll-margin-top: 10rem; // so anchor links do not hide behind the header
+
+    // ------------------------------------------------------------------
+    // Wonky divider line on top of every block.
+    // 12 unique hand-drawn lines (from src/images/wonky-lines.svg sprite)
+    // are rotated via :nth-child so adjacent blocks never look identical.
+    // Each line is a 960x14px tile that repeats seamlessly (repeat-x).
+    // ------------------------------------------------------------------
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -7px; // half of the 14px tile, so the stroke centres on the block's top edge
+        height: 14px;
+        z-index: 1;
+        pointer-events: none;
+        background-color: var(--colour-divider);
+        -webkit-mask-size: 960px 14px;
+        mask-size: 960px 14px;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+        -webkit-mask-repeat: repeat-x;
+        mask-repeat: repeat-x;
+    }
+    @for $i from 1 through 12 {
+        &:nth-child(12n + #{$i})::before {
+            -webkit-mask-image: wonky-line-mask($i);
+            mask-image: wonky-line-mask($i);
+        }
+    }
+
+    // titles are part of the block, not part of the content flow
+    > .content-element__content > .content-element__title {
+        margin: 0;
+        padding: 0 0 1.5rem;
+    }
+}
+
+// two column layout for text blocks
+@media (min-width: 900px) {
+    .element:is(.dnadesign__elemental__models__elementcontent, .sunnysideup__app__elements__hostingcalculator) {
+        > .content-element__content {
+            display: grid;
+            grid-template-columns: var(--title-col) var(--body-col);
+            column-gap: var(--title-gap);
+            align-items: start;
+
+            > * {
+                grid-column: 2;
+                min-width: 0;
+            }
+            // a block can hold several titles (e.g. "Delve deeper" + "Also see"):
+            // each one starts a new row in column 1, its content follows in column 2
+            > .content-element__title {
+                grid-column: 1;
+                padding-bottom: 0;
+            }
+        }
+        // images fill the content column
+        .image-container img {
+            margin-inline: 0 0;
+            margin-left: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+// jumping to a block via the table of contents puts its heading exactly in the
+// vertical middle of the screen (same as the arrow in the hero quote)
+#content-below-quote h1[id^="toc-"],
+#content-below-quote h2[id^="toc-"] {
+    scroll-margin-top: 50dvh;
+}

@@ -1,6 +1,4 @@
-document.addEventListener('click', e => {
-    const item = e.target.closest('.work-example-image')
-    if (!item) return
-
-    item.classList.toggle('is-active')
+// tap / click on a work example image to show its caption
+document.addEventListener('click', (event) => {
+    event.target.closest('.work-example-image')?.classList.toggle('is-active')
 })
