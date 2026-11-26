@@ -57,3 +57,15 @@ body.no-rocket-show.no-quote {
         display: none;
     }
 }
+
+// simple layout: plain page, main starts at 50% of the screen height.
+body.simple-layout.no-rocket-show {
+    background-color: $colour_light_grey_aotrom;
+    #main {
+        padding: 50vh 0 2rem;
+    }
+    #BackgroundImage,
+    .main-quote {
+        display: none;
+    }
+}
