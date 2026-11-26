@@ -15,8 +15,7 @@ $background_color_6: transparent;
         margin-bottom: 2rem;
         fieldset,
         .userform-fields {
-            border: none;
-            @include sketch-border(4px, $colour_ekos_green);
+            border: 4px solid $colour_ekos_green;
             padding: 3rem 3vw;
             background-color: $colour_white;
             margin: 2rem 0;
@@ -62,8 +61,7 @@ $background_color_6: transparent;
             .middleColumn {
                 display: block;
                 text-align: left;
-                border: none!important;
-                @include sketch-border(1px, $colour_modern_iron_half);
+                border: 1px solid $colour_modern_iron_half !important;
                 input,
                 textarea,
                 select {
@@ -256,9 +254,8 @@ $background_color_6: transparent;
             display: block;
             text-align: right;
             input {
-                // inputs cannot have pseudo elements: hand-drawn look via uneven radii
                 border: 4px solid $colour_ekos_green !important;
-                border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+                border-radius: 0;
                 padding: 1.3rem 1.7rem;
                 color: $colour_ekos_green;
                 text-decoration: none !important;
