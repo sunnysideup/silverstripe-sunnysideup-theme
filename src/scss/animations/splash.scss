@@ -10,6 +10,8 @@ body {
             color: $colour_sunny_side_up_yellow;
         }
 
+        // no hero image: the sun theme title is blue, moon keeps the yellow default
+        &.no-rocket-show.theme-sun #header *,
         &.title-colour-blue #header * {
             color: $colour_blue_cobalter !important;
         }

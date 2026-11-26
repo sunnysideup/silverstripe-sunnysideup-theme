@@ -73,15 +73,21 @@ footer#footer {
         font-weight: 600;
     }
 
-    // small flag under the partner logos (a real <img>, see Footer.ss)
-    .pride-flag {
-        display: block;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        margin: 2rem auto 0; // centred on mobile, like the logos (left aligned from 450px)
+    .footer-icons {
+        display: flex;
+        margin: 2rem 0; // centred on mobile, like the logos (left aligned from 450px)
+        gap: 2rem;
+        img {
+            display: block;
+            height: 5rem;
+            border: 2px solid #fff;
+            box-sizing: border-box;
+            // small flag under the partner logos (a real <img>, see Footer.ss)
+            &.pride-flag {
+                border-radius: 50%;
+            }
+        }
     }
-
     .image-holder {
         display: block;
         img {
