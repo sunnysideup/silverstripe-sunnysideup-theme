@@ -16,6 +16,7 @@
         padding: 0 3rem; // same indent as the text in the info panel
         color: var(--colour-heading);
         text-transform: none;
+        border-bottom: 4px solid var(--colour-heading); // #bbb
         .open-close {
             display: none !important;
         }
@@ -47,6 +48,7 @@
             display: inline-block; // shaded label, dark red, white text
             background: var(--colour-burned-sunny-side-up);
             padding: 0.25rem 0.5rem !important;
+            border-radius: 0.5rem;
             &,
             * {
                 color: #fff;
