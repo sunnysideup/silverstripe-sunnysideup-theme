@@ -46,8 +46,10 @@
                 </picture>
             </a>
             <% end_if %>
-            <img class="pride-flag" src="$resourceURL(/themes/sun/dist/images/progress-pride-flag.webp)" alt="everyone is welcome" title="everyone is welcome" width="1000" height="635" loading="lazy" />
-
+            <div class="footer-icons">
+                <img class="pride-flag" src="$resourceURL(/themes/sun/dist/images/progress-pride-flag.webp)" alt="everyone is welcome" title="everyone is welcome" width="50" height="50" loading="lazy" />
+                <img class="climate-action" src="$resourceURL(/themes/sun/dist/images/nz-warming-1853-2025.png)" alt="we support strong climate action" title="we support strong climate action" width="89" height="50" loading="lazy" />
+            </div>
         </div>
     </div>
 </footer>
@@ -87,4 +89,3 @@
     </filter>
   </defs>
 </svg>
-<% include WonkyLinesSprite %>

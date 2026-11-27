@@ -3,8 +3,6 @@
 
 /* variables */
 @import "scss/_definitions/tokens";
-@import "scss/_definitions/mixins";
-@import "scss/_definitions/wonky-lines";
 
 /// basics
 @import "scss/basics/basictags";
@@ -34,6 +32,7 @@
 @import "scss/components/collapsible-list";
 @import "scss/components/toc";
 @import "scss/components/cards";
+@import "scss/components/separators";
 @import "scss/components/battery-saver";
 
 //responsive
@@ -52,7 +51,7 @@
 
 // @import '~site/googlemap/css/googleMap.css'';
 
-@import "~PROJECT_ROOT_DIR/vendor/sunnysideup/slideshowblock/client/src/style.scss";
+// @import "~PROJECT_ROOT_DIR/vendor/sunnysideup/slideshowblock/client/src/style.scss";
 
 //specials - animations should be last!
 

@@ -6,7 +6,7 @@
 //       h2.content-element__title      <- column 1 (from 900px)
 //       p, ul, img, ...                <- column 2
 //
-// - Every block gets ONE divider on top (wonky line on ::before, one of 12 unique shapes).
+// - Every block gets ONE divider on top (a motif separator, chosen per block in the CMS).
 // - The slideshow block is deliberately excluded: it is left alone.
 // ---------------------------------------------------------------------
 $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
@@ -18,41 +18,28 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
     scroll-margin-top: calc(50dvh - var(--element-padding-top));
 }
 
+#{$element-slideshow} > .sep {
+    display: none;
+}
+
 .element:not(#{$element-slideshow}) {
     position: relative;
     margin-top: var(--element-gap);
-    padding-top: var(--element-padding-top);
+    padding-top: calc(var(--element-padding-top) + 6rem); // room below the separator
     clear: both;
     scroll-margin-top: 10rem; // so anchor links do not hide behind the header
 
-    // ------------------------------------------------------------------
-    // Wonky divider line on top of every block.
-    // 12 unique hand-drawn lines (from src/images/wonky-lines.svg sprite)
-    // are rotated via :nth-child so adjacent blocks never look identical.
-    // Each line is a 960x14px tile that repeats seamlessly (repeat-x).
-    // ------------------------------------------------------------------
-    &::before {
-        content: "";
+    // The separator (<hr class="sep sep--xxx">) is rendered by ElementHolder.ss
+    // and sits centred on the block's top edge. See components/separators.scss.
+    > .sep {
         position: absolute;
-        left: 0;
-        right: 0;
-        top: -7px; // half of the 14px tile, so the stroke centres on the block's top edge
-        height: 14px;
+        top: 0;
+        inset-inline: 0;
+        transform: translateY(-50%);
+        margin: 0 auto;
         z-index: 1;
         pointer-events: none;
-        background-color: var(--colour-divider);
-        -webkit-mask-size: 960px 14px;
-        mask-size: 960px 14px;
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-        -webkit-mask-repeat: repeat-x;
-        mask-repeat: repeat-x;
-    }
-    @for $i from 1 through 12 {
-        &:nth-child(12n + #{$i})::before {
-            -webkit-mask-image: wonky-line-mask($i);
-            mask-image: wonky-line-mask($i);
-        }
+        color: var(--colour-separator) !important;
     }
 
     // titles are part of the block, not part of the content flow

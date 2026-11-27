@@ -57,3 +57,14 @@ body.no-rocket-show.no-quote {
         display: none;
     }
 }
+
+// simple layout: plain page, main keeps its default top padding (see body.no-rocket-show.no-quote).
+body.simple-layout.no-rocket-show[data-theme] {
+    // !important and [data-theme] to beat body[data-theme=theme-sun]:not(.has-bg-image-loaded);
+    // --colour-page follows the sun / moon theme
+    background-color: var(--colour-page) !important;
+    #BackgroundImage,
+    .main-quote {
+        display: none;
+    }
+}
