@@ -8,10 +8,12 @@
    ========================================================================== */
 
 .sep {
-    --sep-line: color-mix(in oklab, currentColor 50%, transparent);
+    --sep-line: color-mix(in oklab, currentColor 33%, transparent);
     --sep-ink: var(--sep-line);
     --sep-gap: 1.75rem;
     --sep-width: 100%;
+    --sep-scale: 1.35; /* size of every motif (1 = original) */
+    --sep-grow: calc(var(--sep-w, 0px) * (var(--sep-scale) - 1) / 2); /* extra half-width */
 
     display: grid;
     place-items: center;
@@ -26,21 +28,21 @@
             90deg,
             transparent,
             var(--sep-line) 15%,
-            var(--sep-line) calc(50% - var(--sep-gap-start, calc(var(--sep-gap) + var(--sep-room, 0.6rem)))),
-            transparent 0 calc(50% + var(--sep-gap-end, calc(var(--sep-gap) + var(--sep-room, 0.6rem)))),
+            var(--sep-line) calc(50% - var(--sep-gap-start, calc(var(--sep-gap) + var(--sep-room, 0.6rem))) - var(--sep-grow)),
+            transparent 0 calc(50% + var(--sep-gap-end, calc(var(--sep-gap) + var(--sep-room, 0.6rem))) + var(--sep-grow)),
             var(--sep-line) 0 85%,
             transparent
         )
-        center / 100% 1px no-repeat;
+        center / 100% 3px no-repeat;
 }
 
 .sep::after {
     content: "";
-    inline-size: var(--sep-w, 0);
-    block-size: var(--sep-h, 0);
+    inline-size: calc(var(--sep-w, 0px) * var(--sep-scale));
+    block-size: calc(var(--sep-h, 0px) * var(--sep-scale));
     background: var(--sep-ink);
     mask: var(--sep-mask, none) center / contain no-repeat;
-    translate: 0 calc(-1 * var(--sep-lift, 0px));
+    translate: 0 calc(-1 * var(--sep-lift, 0px) * var(--sep-scale));
 }
 
 /* Classic ----------------------------------------------------------------- */
@@ -216,10 +218,11 @@
 
 /* Koru */
 .sep--koru {
-    --sep-gap: 1.4rem;
     --sep-w: 24px;
     --sep-h: 14px;
-    --sep-gap-start: 12px; /* hairline runs straight into the stem */
+    /* half the motif width (12px) plus the same space on each side */
+    --sep-gap-start: calc(12px + 1.6rem);
+    --sep-gap-end: calc(12px + 1.6rem);
     --sep-lift: 6px;
     --sep-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 14'%3E%3Cpath d='M0 12H5C9 12 11 11 13 8.5S18 3 21 4.5s2.5 5.5-.5 6.5-4.5-1.5-3-3.5 3.5-.5 3 1' fill='none' stroke='black' stroke-width='1'/%3E%3C/svg%3E");
 }

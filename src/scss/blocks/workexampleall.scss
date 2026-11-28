@@ -34,7 +34,7 @@
                 .work-example-image-caption {
                     position: absolute;
                     background-color: var(--colour-heading);
-                    padding: 2rem;
+                    padding: 3rem 2rem;
                     border-radius: 1.3rem;
                     opacity: 0;
                     top: 0;
@@ -85,6 +85,10 @@
                     cursor: zoom-out;
                     .work-example-image-caption {
                         opacity: 0.97 !important;
+                        gap: 1.2rem;
+                        h3 {
+                            margin-bottom: 0.7rem;
+                        }
                     }
                     .small-line {
                         pointer-events: auto;

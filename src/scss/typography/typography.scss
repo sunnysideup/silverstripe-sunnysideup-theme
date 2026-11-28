@@ -285,7 +285,9 @@
     mark,
     strong,
     b {
-        display: inline-block;
+        display: inline;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
         background-image: linear-gradient(transparent 75%, var(--colour-highlight) 75% 90%, transparent 90%);
         padding: 0 0.1em;
     }
