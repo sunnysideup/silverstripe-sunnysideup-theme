@@ -25,20 +25,13 @@ $element-slideshow: ".sunnysideup__slideshowblock__blocks__slideshowblock";
 .element:not(#{$element-slideshow}) {
     position: relative;
     margin-top: var(--element-gap);
-    padding-top: calc(var(--element-padding-top) + 6rem); // room below the separator
+    padding-top: calc(var(--element-padding-top) + 0); // room below the separator
     clear: both;
     scroll-margin-top: 10rem; // so anchor links do not hide behind the header
 
     // The separator (<hr class="sep sep--xxx">) is rendered by ElementHolder.ss
     // and sits centred on the block's top edge. See components/separators.scss.
     > .sep {
-        position: absolute;
-        top: 0;
-        inset-inline: 0;
-        transform: translateY(-50%);
-        margin: 0 auto;
-        z-index: 1;
-        pointer-events: none;
         color: var(--colour-separator) !important;
     }
 

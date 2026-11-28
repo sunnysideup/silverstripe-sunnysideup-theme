@@ -53,7 +53,7 @@ main#main {
 footer#footer {
     margin-top: var(--footer-gap, 160vh);
     #theme-selectors {
-        display: block;
+        display: flex;
     }
 }
 
@@ -80,8 +80,9 @@ footer#footer {
     }
     footer#footer {
         padding: 4rem 6vw;
-        #theme-selectors a {
-            margin-inline: 0 1.5rem;
+        #theme-selectors,
+        .footer-icons {
+            justify-content: flex-start;
         }
         div.col {
             text-align: left;
